@@ -6,21 +6,25 @@
 
 bool Game::initialize()
 {
+	Logger* logger = Logger::getInstance();
+
 	// Initialize the video subsystem
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
 		// Subsystem initialization failed, report error and exit.
-		Logger::logSDLError("Failed to initialize video subsystem");
+		logger->log(Logger::ERROR, "Failed to initialize video subsystem");
 		SDL_Quit();
 		return false;
 	}
+	logger->log(Logger::INFO, "Initialized video subsystem");
 
 	// Initialize SDL_Image
 	if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG) {
-		Logger::logSDLError("Failed to load SDL_Image");
+		logger->log(Logger::ERROR, "Failed to initialize SDL_Image");
 		SDL_Quit();
 		return false;
 	}
+	logger->log(Logger::INFO, "Initialized SDL_Image");
 
 	// Create the window used for rendering
 	window = SDL_CreateWindow(WIN_TITLE, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, WIN_WIDTH, WIN_HEIGHT, SDL_WINDOW_OPENGL);
@@ -28,10 +32,11 @@ bool Game::initialize()
 	if (window == nullptr)
 	{
 		// Window creation failed, report error, clean up and exit.
-		Logger::logSDLError("Failed to create window");
+		logger->log(Logger::ERROR, "Failed to create window");
 		SDL_Quit();
 		return false;
 	}
+	logger->log(Logger::INFO, "Created window");
 
 	// Create a renderer with hardware acceleration and vsync enabled
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -39,11 +44,12 @@ bool Game::initialize()
 	if (renderer == nullptr)
 	{
 		// Render creation failed, report error, clean up and exit.
-		Logger::logSDLError("Failed to create renderer");
+		logger->log(Logger::ERROR, "Failed to create renderer");
 		SDL_DestroyWindow(window);
 		SDL_Quit();
 		return false;
 	}
+	logger->log(Logger::INFO, "Created renderer");
 
 	auto resourceManager = ResourceManager::getInstance();
 
@@ -51,20 +57,22 @@ bool Game::initialize()
 	if(txtrBackground == nullptr)
 	{
 		// Loading texture failed, report error, clean up and exit.
-		Logger::logSDLError("Failed to load texture");
+		logger->log(Logger::ERROR, "Failed to load texture");
 		SDL_DestroyWindow(window);
 		SDL_Quit();
 	}
+	logger->log(Logger::INFO, "Loaded texture");
 
 	txtrLogo = resourceManager->loadTexture("Images/Icon/bengine.fw.png", renderer);
 	if (txtrLogo == nullptr)
 	{
 		// Loading texture failed, report error, clean up and exit.
-		Logger::logSDLError("Failed to load texture");
+		logger->log(Logger::ERROR, "Failed to load texture");
 		SDL_DestroyTexture(txtrBackground);
 		SDL_DestroyWindow(window);
 		SDL_Quit();
 	}
+	logger->log(Logger::INFO, "Loaded texture");
 
 	return true;
 }
@@ -76,6 +84,7 @@ bool Game::run()
 	{
 		if (!update())
 		{
+			Logger::getInstance()->log(Logger::INFO, "Exiting application");
 			SDL_DestroyTexture(txtrBackground);
 			SDL_DestroyTexture(txtrLogo);
 			SDL_DestroyRenderer(renderer);
@@ -111,9 +120,6 @@ bool Game::update()
 		}
 	}
 
-	mouse->outputState();
-	keyboard->outputState();
-
 	mouse->swapStates();
 	keyboard->swapStates();
 
@@ -132,7 +138,7 @@ void Game::draw()
 
 	for (int x = 0; x < tiles.x; ++x)
 	{
-		for (int y = 0; y < tiles.y; ++y)
+		for (int y = 0; y < tiles.y; ++y)  
 		{
 			Renderer::renderTexture(txtrBackground, renderer, x * tileSize.x, y * tileSize.y);
 		}

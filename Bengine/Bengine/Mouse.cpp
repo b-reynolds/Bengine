@@ -1,13 +1,14 @@
 #include "Mouse.h"
 #include <SDL.h>
 #include <cstdio>
+#include "Logger.h"
 
 Mouse* Mouse::instance = nullptr;
 
 Mouse::Mouse() { }
 
 /**
-* Returns a reference to the singleton instance of the Mouse class
+* Returns a pointer to the singleton instance of the Mouse class
 */
 Mouse* Mouse::getInstance()
 {
@@ -40,8 +41,10 @@ Vector2D<int> Mouse::getPosition()
 */
 void Mouse::setMouseState(const unsigned int& button, const bool& state)
 {
-	if (button < BUTTONS_MIN || button > BUTTONS_MIN) return;
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return;
 	mouseState[button] = state;
+	Logger::getInstance()->log(Logger::DEBUG, std::string("Mouse Button (") +
+		std::to_string(button) + ") State: " + (state ? "Down" : "Up"));
 }
 
 /**
@@ -55,6 +58,11 @@ void Mouse::swapStates()
 	}
 	previousPosition = currentPosition;
 	currentPosition = getPosition();
+	if (currentPosition != previousPosition)
+	{
+		Logger::getInstance()->log(Logger::DEBUG, std::string("Mouse Moved: ") +
+			std::to_string(currentPosition.x) + ", " + std::to_string(currentPosition.y));
+	}
 }
 
 /**
@@ -63,7 +71,7 @@ void Mouse::swapStates()
 */
 bool Mouse::isButtonDown(const unsigned int& button)
 {
-	if (button < BUTTONS_MIN || button > BUTTONS_MIN) return false;
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return mouseState[button];
 }
 
@@ -73,7 +81,7 @@ bool Mouse::isButtonDown(const unsigned int& button)
 */
 bool Mouse::isButtonPressed(const unsigned int& button)
 {
-	if (button < BUTTONS_MIN || button > BUTTONS_MIN) return false;
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return mouseState[button] && !prevMouseState[button];
 }
 
@@ -83,7 +91,7 @@ bool Mouse::isButtonPressed(const unsigned int& button)
 */
 bool Mouse::isButtonReleased(const unsigned int& button)
 {
-	if (button < BUTTONS_MIN || button > BUTTONS_MIN) return false;
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return !mouseState[button] && prevMouseState[button];
 }
 
@@ -93,25 +101,6 @@ bool Mouse::isButtonReleased(const unsigned int& button)
 */
 bool Mouse::isButtonUp(const unsigned int& button)
 {
-	if (button < BUTTONS_MIN || button > BUTTONS_MIN) return false;
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return !mouseState[button];
-}
-
-/**
-* Output mouse state information to the console
-*/
-void Mouse::outputState()
-{
-	if (currentPosition != previousPosition)
-	{
-		printf("Mouse Position: %d, %d\n", currentPosition.x, currentPosition.y);
-	}
-	for(auto i = BUTTONS_MIN; i <= BUTTONS_MAX; ++i)
-	{
-		if(isButtonDown(i) || isButtonReleased(i))
-		{
-			printf("Button: %d\n Down: %d, Pressed: %d, Up: %d, Released: %d\n", i,
-				isButtonDown(i), isButtonPressed(i), isButtonUp(i), isButtonReleased(i));
-		}
-	}
 }

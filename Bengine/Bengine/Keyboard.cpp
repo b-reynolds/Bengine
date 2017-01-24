@@ -1,12 +1,13 @@
 #include "Keyboard.h"
 #include <cstdio>
+#include "Logger.h"
 
 Keyboard* Keyboard::instance = nullptr;
 
 Keyboard::Keyboard() { }
 
 /**
-* Returns a reference to the singleton instance of the Keyboard class
+* Returns a pointer to the singleton instance of the Keyboard class
 */
 Keyboard* Keyboard::getInstance()
 {
@@ -30,6 +31,8 @@ Keyboard::~Keyboard()
 void Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return;
+	Logger::getInstance()->log(Logger::DEBUG, std::string("Key (") +
+		std::to_string(key) + "/" + static_cast<char>(key) + ") State: " + (state ? "Down" : "Up"));
 	keyStates[key] = state;
 }
 
@@ -82,19 +85,4 @@ bool Keyboard::isKeyUp(const SDL_Keycode &key)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
 	return !keyStates[key];
-}
-
-/**
-* Output keyboard state information to the console
-*/
-void Keyboard::outputState()
-{
-	for(auto i = KEYCODES_MIN; i <= KEYCODES_MAX; ++i)
-	{
-		if(isKeyDown(i) || isKeyReleased(i))
-		{
-			printf("Key: %c (%d)\n Down: %d, Pressed: %d, Up: %d, Released: %d\n", i, static_cast<char>(i),
-				isKeyDown(i), isKeyPressed(i), isKeyUp(i), isKeyReleased(i));
-		}
-	}
 }

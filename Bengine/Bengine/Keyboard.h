@@ -29,7 +29,5 @@ public:
 	bool isKeyReleased(const SDL_Keycode &key);
 	bool isKeyUp(const SDL_Keycode &key);
 
-	void outputState();
-
 };
 
