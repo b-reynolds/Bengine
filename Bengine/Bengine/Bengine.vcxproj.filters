@@ -22,6 +22,9 @@
     <Filter Include="Debugging">
       <UniqueIdentifier>{2fd5121f-ed02-4da1-ab93-58615715bd6c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Data Types">
+      <UniqueIdentifier>{f2d13bbb-e647-4163-9c29-00db39725260}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -31,9 +34,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Vector2D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
@@ -48,6 +48,9 @@
     <ClCompile Include="Game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="Vector2D.cpp">
+      <Filter>Data Types</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -57,9 +60,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Keyboard.h">
@@ -73,6 +73,9 @@
     </ClInclude>
     <ClInclude Include="Game.h">
       <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2D.h">
+      <Filter>Data Types</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
