@@ -1,8 +1,8 @@
 #pragma once
 #include <SDL.h>
 
-#define KEYCODE_MIN 0
-#define KEYCODE_MAX 255
+#define KEYCODES_MIN 0
+#define KEYCODES_MAX 255
 
 class Keyboard
 {
@@ -12,8 +12,8 @@ private:
 	static Keyboard *instance;
 	Keyboard();
 
-	bool keyStates[KEYCODE_MAX] = { false };
-	bool prevKeyStates[KEYCODE_MAX] = { false };
+	bool keyStates[KEYCODES_MAX] = { false };
+	bool prevKeyStates[KEYCODES_MAX] = { false };
 
 public:
 
@@ -28,6 +28,8 @@ public:
 	bool isKeyPressed(const SDL_Keycode &key);
 	bool isKeyReleased(const SDL_Keycode &key);
 	bool isKeyUp(const SDL_Keycode &key);
+
+	void outputState();
 
 };
 

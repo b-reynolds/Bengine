@@ -6,7 +6,7 @@ Keyboard* Keyboard::instance = nullptr;
 Keyboard::Keyboard() { }
 
 /**
-* Returns a referece to the singleton instance of the Keyboard class
+* Returns a reference to the singleton instance of the Keyboard class
 */
 Keyboard* Keyboard::getInstance()
 {
@@ -23,13 +23,13 @@ Keyboard::~Keyboard()
 }
 
 /**
-* Set the current state of a key (True = Down, False = Up)
+* Set the current state of a key
 * @param key The keycode to set
-* @param state The state of the key
+* @param state The state of the key (True = Down, False = Up)
 */
 void Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
 {
-	if (key < KEYCODE_MIN || key > KEYCODE_MAX) return;
+	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return;
 	keyStates[key] = state;
 }
 
@@ -38,7 +38,7 @@ void Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
 */
 void Keyboard::swapStates()
 {
-	for(int i = 0; i < 255; ++i)
+	for(auto i = KEYCODES_MIN; i <= KEYCODES_MAX; ++i)
 	{
 		prevKeyStates[i] = keyStates[i];
 	}
@@ -50,27 +50,27 @@ void Keyboard::swapStates()
  */
 bool Keyboard::isKeyDown(const SDL_Keycode &key)
 {
-	if (key < KEYCODE_MIN || key > KEYCODE_MAX) return false;
+	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
 	return keyStates[key];
 }
 
 /**
-* Returns true if the specified key is currently down, and was up in the previous frame
+* Returns true if the specified key is currently down and was up in the previous frame
 * @param key The keycode to poll
 */
 bool Keyboard::isKeyPressed(const SDL_Keycode &key)
 {
-	if (key < KEYCODE_MIN || key > KEYCODE_MAX) return false;
+	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
 	return keyStates[key] && !prevKeyStates[key];
 }
 
 /**
-* Returns true if the specified key is currently up, and was down in the previous frame
+* Returns true if the specified key is currently up and was down in the previous frame
 * @param key The keycode to poll
 */
-bool Keyboard::isKeyReleased(const SDL_Keycode& key)
+bool Keyboard::isKeyReleased(const SDL_Keycode &key)
 {
-	if (key < KEYCODE_MIN || key > KEYCODE_MAX) return false;
+	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
 	return prevKeyStates[key] && !keyStates[key];
 }
 
@@ -80,6 +80,21 @@ bool Keyboard::isKeyReleased(const SDL_Keycode& key)
 */
 bool Keyboard::isKeyUp(const SDL_Keycode &key)
 {
-	if (key < KEYCODE_MIN || key > KEYCODE_MAX) return false;
+	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
 	return !keyStates[key];
+}
+
+/**
+* Output keyboard state information to the console
+*/
+void Keyboard::outputState()
+{
+	for(auto i = KEYCODES_MIN; i <= KEYCODES_MAX; ++i)
+	{
+		if(isKeyDown(i) || isKeyReleased(i))
+		{
+			printf("Key: %c (%d)\n Down: %d, Pressed: %d, Up: %d, Released: %d\n", i, static_cast<char>(i),
+				isKeyDown(i), isKeyPressed(i), isKeyUp(i), isKeyReleased(i));
+		}
+	}
 }
