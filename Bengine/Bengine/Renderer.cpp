@@ -1,4 +1,5 @@
 #include "Renderer.h"
+#include "Vector2D.h"
 
 /**
 * Draw a texture to the renderer at the specified position
@@ -9,18 +10,12 @@
 */
 void Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const int& x, const int& y)
 {
-	// Create a destionation rectangle
-	SDL_Rect destination;
-
-	// Set the rectangles position
-	destination.x = x;
-	destination.y = y;
-
 	// Query the texture's width and height
-	SDL_QueryTexture(texture, nullptr, nullptr, &destination.w, &destination.h);
+	auto textureSize = Vector2D<int>(0, 0);
+	SDL_QueryTexture(texture, nullptr, nullptr, &textureSize.x, &textureSize.y);
 
-	// Render the texture at the destination rectangle
-	SDL_RenderCopy(renderer, texture, nullptr, &destination);
+	// Render the texture
+	renderTexture(texture, renderer, x, y, textureSize.x, textureSize.y);
 }
 
 /**
@@ -32,7 +27,7 @@ void Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const
 * @param width The width of the texture in pixels
 * @param height The height of the texture in pixels
 */
-void Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const int& x, const int& y, const int& width, const int& height)
+void Renderer::renderTexture(SDL_Texture *texture, SDL_Renderer *renderer, const int &x, const int &y, const int &width, const int &height)
 {
 	// Create a destionation rectangle
 	SDL_Rect destination;
