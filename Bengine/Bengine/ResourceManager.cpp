@@ -1,5 +1,6 @@
 #include "ResourceManager.h"
 #include "Logger.h"
+#include <SDL_image.h>
 
 ResourceManager* ResourceManager::instance = nullptr;
 
@@ -22,36 +23,17 @@ ResourceManager::~ResourceManager()
 }
 
 /**
-* Load a texture from a BMP file
-* @param filePath The file path of the bitmap image
+* Load a texture from an image file (BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV)
+* @param filePath The file path of the image
 * @param renderer The renderer to upload the image to
 */
 SDL_Texture* ResourceManager::loadTexture(const std::string& filePath, SDL_Renderer* renderer)
 {
-	// Create a texture and initialize it to NULL
-	SDL_Texture *texture = nullptr;
-
-	// Load in a bitmap image using the specified path
-	SDL_Surface *image = SDL_LoadBMP(filePath.c_str());
-
-	if (image != nullptr)
+	SDL_Texture *texture = IMG_LoadTexture(renderer, filePath.c_str());
+	if (texture == nullptr)
 	{
-		// Upload the image to the texture
-		texture = SDL_CreateTextureFromSurface(renderer, image);
-
-		// Free the image
-		SDL_FreeSurface(image);
-
-		if (texture == nullptr)
-		{
-			// Texture creation failed, report error and return NULL.
-			Logger::logSDLError("Failed to create texture");
-		}
-	}
-	else
-	{
-		// Image loading failed, report error and return NULL.
-		Logger::logSDLError("Failed to load bitmap");
+		// Texture creation failed, report error and return NULL.
+		Logger::logSDLError("Failed to load texture");
 	}
 	return texture;
 }
