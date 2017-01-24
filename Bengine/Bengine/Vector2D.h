@@ -13,9 +13,11 @@ public:
 	Vector2D(const T &x, const T &y) : x(x), y(y) {}
 
 	Vector2D& operator+(const Vector2D &v) { x += v.x; y += v.y; return *this; }
-	Vector2D& operator+=(const Vector2D& v) { x += v.x; y += v.y; return *this; }
-	Vector2D& operator-=(const Vector2D& v) { x -= v.x; y -= v.y; return *this; }
-	Vector2D& operator*=(const Vector2D& v) { x *= v.x; y *= v.y; return *this; }
-	Vector2D& operator/=(const Vector2D& v) { x /= v.x; y /= v.y; return *this; }
+	Vector2D& operator+=(const Vector2D &v) { x += v.x; y += v.y; return *this; }
+	Vector2D& operator-=(const Vector2D &v) { x -= v.x; y -= v.y; return *this; }
+	Vector2D& operator*=(const Vector2D &v) { x *= v.x; y *= v.y; return *this; }
+	Vector2D& operator/=(const Vector2D &v) { x /= v.x; y /= v.y; return *this; }
+	bool operator==(const Vector2D &v) { return x == v.x && y == v.y; }
+	bool operator!=(const Vector2D &v) { return !(*this == v); }
 
 };
