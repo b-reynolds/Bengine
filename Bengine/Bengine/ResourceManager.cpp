@@ -33,7 +33,7 @@ SDL_Texture* ResourceManager::loadTexture(const std::string& filePath, SDL_Rende
 	if (texture == nullptr)
 	{
 		// Texture creation failed, report error and return NULL.
-		Logger::logSDLError("Failed to load texture");
+		Logger::getInstance()->log(Logger::ERROR, "Failed to load texture");
 	}
 	return texture;
 }

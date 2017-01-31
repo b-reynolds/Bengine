@@ -18,12 +18,12 @@ public:
 	~Logger();
 	
 	/**
-	 * Enumeration of logging levels
+	 * Enumeration of logging severity levels
 	 */	
 	enum Severity { ERROR, INFO, DEBUG };
 
 	/**
-	 * Enumeration of logging output mediums
+	 * Enumeration of logging output modes
 	 */
 	enum LogMode { CONSOLE, FILE, ALL };
 
@@ -36,10 +36,6 @@ public:
 	void setLogMode(const LogMode &logMode);
 
 	void log(const Severity &severity, const std::string &message) const;
-
-	
-	static void logSDLError(const std::string &message);
-	static void logError(const std::string &message);
 
 };
 

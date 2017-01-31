@@ -33,7 +33,5 @@ public:
 	bool isButtonReleased(const unsigned int &button);
 	bool isButtonUp(const unsigned int &button);
 
-	void outputState();
-
 };
 

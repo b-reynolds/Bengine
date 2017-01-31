@@ -17,7 +17,8 @@ Logger::Logger()
 }
 
 /**
- * Returns a string containing a timestamp in format [D-M-Y H-M-S]
+ * @brief Returns a string containing the system's locale time in format D-M-Y H-M-S
+ * @return std::string
  */
 std::string Logger::getTimestamp()
 {
@@ -25,11 +26,12 @@ std::string Logger::getTimestamp()
 	auto time = *localtime(&t);
 	std::stringstream stringStream;
 	stringStream << std::put_time(&time, "%d-%m-%Y %H-%M-%S");
-	return "[" + stringStream.str() + "]";
+	return stringStream.str();
 }
 
 /**
-* Returns a pointer to the singleton instance of the Logger class
+* @brief Returns a pointer to the singleton instance of the Logger class
+* @return Logger*
 */
 Logger* Logger::getInstance()
 {
@@ -40,14 +42,19 @@ Logger* Logger::getInstance()
 	return instance;
 }
 
+/** Deconstructor
+ * Delete dynamically allocated Logger instance 
+ */
 Logger::~Logger()
 {
 	delete instance;
 }
 
+
 /**
-* Set the file path of the log file
-* @param filePath The file path
+* @brief Set the destination file path of the log file
+* @param filePath The destination file path of the log file
+* @return void
 */
 void Logger::setLogFile(const std::string& filePath)
 {
@@ -55,7 +62,7 @@ void Logger::setLogFile(const std::string& filePath)
 }
 
 /**
-* Set the log mode
+* @brief Set the log mode
 * @param logMode The log mode
 */
 void Logger::setLogMode(const LogMode& logMode)
@@ -64,9 +71,10 @@ void Logger::setLogMode(const LogMode& logMode)
 }
 
 /**
- * Log a message to the console and or log file depending on Severity and LogMode level
+ * @brief Log a message to the console and or log file depending on Severity and LogMode level
  * @param severity The Severity level of the log
  * @param message The message to log
+ * @return void
  */
 void Logger::log(const Severity& severity, const std::string& message) const
 {
@@ -77,15 +85,15 @@ void Logger::log(const Severity& severity, const std::string& message) const
 		case ERROR:
 			messageType = "ERROR";
 			break;
-		case INFO:
-			messageType = "INFO";
-			break;
 		case DEBUG:
 			messageType = "DEBUG";
 			break;
+		default:
+			messageType = "INFO";
+			break;
 	}
 	std::string timeStamp = getTimestamp();
-	std::string output = timeStamp + " " + messageType + ": " + message;
+	std::string output = "[" + timeStamp + "] " + messageType + ": " + message;
 	switch(logMode)
 	{
 		case CONSOLE:
@@ -94,7 +102,7 @@ void Logger::log(const Severity& severity, const std::string& message) const
 		case FILE:
 			writeToFile(logFile, output);
 			break;
-		case ALL:
+		default:
 			std::cout << output << std::endl;
 			writeToFile(logFile, output);
 			break;
@@ -102,30 +110,13 @@ void Logger::log(const Severity& severity, const std::string& message) const
 }
 
 /**
- * Append a string to a file
+ * @brief Append a string to a file
  * @param filePath The path to the file
  * @param message The message to be written
+ * @return void
  */
 void Logger::writeToFile(const std::string& filePath, const std::string& message)
 {
 	std::ofstream logFile(filePath.c_str(), std::ios_base::out | std::ios_base::app);
 	logFile << message << std::endl;
-}
-
-/**
- * Outputs an error message to the console followed by SDL_GetError information
- * @param message The message to output
- */
-void Logger::logSDLError(const std::string& message)
-{
-	std::cout << "Error: " << message << ": " << SDL_GetError() << std::endl;
-}
-
-/**
-* Outputs an error message to the console
-* @param message The message to output
-*/
-void Logger::logError(const std::string& message)
-{
-	std::cout << "Error: " << message << ": " << std::endl;
 }
