@@ -1,41 +1,43 @@
 #pragma once
 #include <string>
 
-class Logger
+namespace BG
 {
+	class Logger
+	{
 
-private:
+	private:
 
-	static Logger *instance;
-	Logger();
+		static Logger *instance;
+		Logger();
 
-	static std::string getTimestamp();
-	static void writeToFile(const std::string &filePath, const std::string &message);
+		static std::string getTimestamp();
+		static void writeToFile(const std::string &filePath, const std::string &message);
 
-public:
+	public:
 
-	static Logger* getInstance();
-	~Logger();
-	
-	/**
-	 * Enumeration of logging severity levels
-	 */	
-	enum Severity { ERROR, INFO, DEBUG };
+		static Logger* getInstance();
+		~Logger();
 
-	/**
-	 * Enumeration of logging output modes
-	 */
-	enum LogMode { CONSOLE, FILE, ALL };
+		/**
+		 * Enumeration of logging severity levels
+		 */
+		enum Severity { ERROR, INFO, DEBUG };
 
-	std::string logFile;
+		/**
+		 * Enumeration of logging output modes
+		 */
+		enum LogMode { CONSOLE, FILE, ALL };
 
-	Severity severity;
-	LogMode logMode;
+		std::string logFile;
 
-	void setLogFile(const std::string &filePath);
-	void setLogMode(const LogMode &logMode);
+		Severity severity;
+		LogMode logMode;
 
-	void log(const Severity &severity, const std::string &message) const;
+		void setLogFile(const std::string &filePath);
+		void setLogMode(const LogMode &logMode);
 
-};
+		void log(const Severity &severity, const std::string &message) const;
 
+	};
+}

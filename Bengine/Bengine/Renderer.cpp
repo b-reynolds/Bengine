@@ -8,7 +8,7 @@
 * @param x The x coordinate in pixels
 * @param y The y coordinate in pixels
 */
-void Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const int& x, const int& y)
+void BG::Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const int& x, const int& y)
 {
 	// Query the texture's width and height
 	auto textureSize = Vector2<int>(0, 0);
@@ -27,7 +27,7 @@ void Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const
 * @param width The width of the texture in pixels
 * @param height The height of the texture in pixels
 */
-void Renderer::renderTexture(SDL_Texture *texture, SDL_Renderer *renderer, const int &x, const int &y, const int &width, const int &height)
+void BG::Renderer::renderTexture(SDL_Texture *texture, SDL_Renderer *renderer, const int &x, const int &y, const int &width, const int &height)
 {
 	// Create a destionation rectangle
 	SDL_Rect destination;

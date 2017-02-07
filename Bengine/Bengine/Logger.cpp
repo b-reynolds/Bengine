@@ -7,11 +7,11 @@
 #include <iomanip>
 #include <sstream>
 
-Logger* Logger::instance = nullptr;
+BG::Logger* BG::Logger::instance = nullptr;
 
-Logger::Logger()
+BG::Logger::Logger()
 {
-	severity = DEBUG;
+	severity = INFO;
 	logMode = ALL;
 	logFile = "log.txt";
 }
@@ -20,7 +20,7 @@ Logger::Logger()
  * @brief Returns a string containing the system's locale time in format D-M-Y H-M-S
  * @return std::string
  */
-std::string Logger::getTimestamp()
+std::string BG::Logger::getTimestamp()
 {
 	auto t = time(nullptr);
 	auto time = *localtime(&t);
@@ -33,7 +33,7 @@ std::string Logger::getTimestamp()
 * @brief Returns a pointer a singleton instance of the Logger class
 * @return Logger*
 */
-Logger* Logger::getInstance()
+BG::Logger* BG::Logger::getInstance()
 {
 	if(instance == nullptr)
 	{
@@ -45,7 +45,7 @@ Logger* Logger::getInstance()
 /** Deconstructor
  * Delete dynamically allocated Logger instance 
  */
-Logger::~Logger()
+BG::Logger::~Logger()
 {
 	delete instance;
 }
@@ -56,7 +56,7 @@ Logger::~Logger()
 * @param filePath The destination file path of the log file
 * @return void
 */
-void Logger::setLogFile(const std::string& filePath)
+void BG::Logger::setLogFile(const std::string& filePath)
 {
 	logFile = filePath;
 }
@@ -65,7 +65,7 @@ void Logger::setLogFile(const std::string& filePath)
 * @brief Set the log mode
 * @param logMode The log mode
 */
-void Logger::setLogMode(const LogMode& logMode)
+void BG::Logger::setLogMode(const LogMode& logMode)
 {
 	this->logMode = logMode;
 }
@@ -76,7 +76,7 @@ void Logger::setLogMode(const LogMode& logMode)
  * @param message The message to log
  * @return void
  */
-void Logger::log(const Severity& severity, const std::string& message) const
+void BG::Logger::log(const Severity& severity, const std::string& message) const
 {
 	if (this->severity < severity) return;
 	std::string messageType = "";
@@ -115,7 +115,7 @@ void Logger::log(const Severity& severity, const std::string& message) const
  * @param message The message to be written
  * @return void
  */
-void Logger::writeToFile(const std::string& filePath, const std::string& message)
+void BG::Logger::writeToFile(const std::string& filePath, const std::string& message)
 {
 	std::ofstream logFile(filePath.c_str(), std::ios_base::out | std::ios_base::app);
 	if (logFile.is_open())
