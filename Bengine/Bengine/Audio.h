@@ -8,19 +8,17 @@ namespace BG
 
 	public:
 
-		const int INFINITE = -1;
-
-		static void playSoundEffect(Mix_Chunk* soundEffect, const int &channel);
 		static void playSoundEffect(Mix_Chunk* soundEffect, const int &channel, const int &loops);
 
-		static void playMusic(Mix_Music* music);
-		static void playMusic(Mix_Music* music, const int &loops);
+		static void playMusic(Mix_Music* music, const int &loops, const int &fadeInMilliseconds);
+		static void stopMusic(const int &fadeOutMilliseconds);
+
+		static void setMusicPaused(const bool &state);
+		static void setMusicVolume(int volume);
 
 		static bool isMusicPlaying();
 		static bool isMusicPaused();
-		static void pauseMusic();
-		static void resumeMusic();
-		static void stopMusic();
+		static int getMusicVolume();
 
 	};
 }
