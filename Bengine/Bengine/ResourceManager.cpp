@@ -14,11 +14,8 @@ BG::ResourceManager::ResourceManager() {}
  * @param a The alpha value
  * @param renderer The renderer to use
  */
-SDL_Texture* BG::ResourceManager::createTexture(const int& size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer* renderer)
+SDL_Texture* BG::ResourceManager::createTexture(const int &size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer* renderer)
 {
-	auto myInt = 1;
-	auto myString = "HELLO";
-
 	auto texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, size, size);
 	unsigned char* bytes = nullptr;
 	int pitch = 0;
@@ -109,7 +106,7 @@ SDL_Texture* BG::ResourceManager::getTexture(const std::string &filePath, SDL_Re
 * @brief Returns the specified Mix_Chunk* from the loadedSoundEffects. If it doesn't yet exist, loads and stores it.
 * @param filePath The file path of the desired sound resource
 */
-Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string& filePath)
+Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string &filePath)
 {
 	auto result = loadedSoundEffects.find(filePath);
 	if(result != loadedSoundEffects.end())
@@ -127,7 +124,7 @@ Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string& filePath)
 * @brief Returns the specified Mix_Chunk* from the loadedMusic. If it doesn't yet exist, loads and stores it.
 * @param filePath The file path of the desired sound resource
 */
-Mix_Music* BG::ResourceManager::getMusic(const std::string& filePath)
+Mix_Music* BG::ResourceManager::getMusic(const std::string &filePath)
 {
 	auto result = loadedMusic.find(filePath);
 	if (result != loadedMusic.end())
@@ -146,7 +143,7 @@ Mix_Music* BG::ResourceManager::getMusic(const std::string& filePath)
 * @param filePath The file path of the image
 * @param renderer The renderer to upload the image to
 */
-SDL_Texture* BG::ResourceManager::loadTexture(const std::string& filePath, SDL_Renderer* renderer)
+SDL_Texture* BG::ResourceManager::loadTexture(const std::string &filePath, SDL_Renderer* renderer)
 {
 	auto texture = IMG_LoadTexture(renderer, filePath.c_str());
 	if(texture != nullptr)
@@ -164,7 +161,7 @@ SDL_Texture* BG::ResourceManager::loadTexture(const std::string& filePath, SDL_R
 * @brief Load a sound effect from a file (WAVE, MOD, MIDI, OGG, MP3)
 * @param filePath The file path of the sound
 */
-Mix_Chunk* BG::ResourceManager::loadSoundEffect(const std::string& filePath)
+Mix_Chunk* BG::ResourceManager::loadSoundEffect(const std::string &filePath)
 {
 	auto soundEffect = Mix_LoadWAV(filePath.c_str());
 	if (soundEffect != nullptr)
@@ -182,7 +179,7 @@ Mix_Chunk* BG::ResourceManager::loadSoundEffect(const std::string& filePath)
 * @brief Load music from a file (WAVE, MOD, MIDI, OGG, MP3)
 * @param filePath The file path of the sound
 */
-Mix_Music* BG::ResourceManager::loadMusic(const std::string& filePath)
+Mix_Music* BG::ResourceManager::loadMusic(const std::string &filePath)
 {
 	auto music = Mix_LoadMUS(filePath.c_str());
 	if(music != nullptr)
@@ -200,7 +197,7 @@ Mix_Music* BG::ResourceManager::loadMusic(const std::string& filePath)
  * @brief Free a texture resource and remove it from the loadedTextures map
  * @param filePath The file path of the image
  */
-void BG::ResourceManager::freeTexture(const std::string& filePath)
+void BG::ResourceManager::freeTexture(const std::string &filePath)
 {
 	std::map<std::string, SDL_Texture*>::iterator iterator = loadedTextures.begin();
 	while(iterator != loadedTextures.end())
@@ -222,7 +219,7 @@ void BG::ResourceManager::freeTexture(const std::string& filePath)
 * @brief Free a sound effect resource and remove it from the loadedSoundEffects map
 * @param filePath The file path of the sound
 */
-void BG::ResourceManager::freeSoundEffect(const std::string& filePath)
+void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 {
 	std::map<std::string, Mix_Chunk*>::iterator iterator = loadedSoundEffects.begin();
 	while (iterator != loadedSoundEffects.end())
@@ -244,7 +241,7 @@ void BG::ResourceManager::freeSoundEffect(const std::string& filePath)
 * @brief Free a music resource and remove it from the loadedMusic map
 * @param filePath The file path of the sound
 */
-void BG::ResourceManager::freeMusic(const std::string& filePath)
+void BG::ResourceManager::freeMusic(const std::string &filePath)
 {
 	std::map<std::string, Mix_Music*>::iterator iterator = loadedMusic.begin();
 	while (iterator != loadedMusic.end())
