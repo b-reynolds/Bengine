@@ -1,26 +1,41 @@
 #pragma once
 #include <SDL_render.h>
+#include <SDL_mixer.h>
 #include <map>
 
-class ResourceManager
+namespace BG
 {
+	class ResourceManager
+	{
 
-private:
+	private:
 
-	std::map<std::string, SDL_Texture*> textureMap;
+		std::map<std::string, SDL_Texture*> loadedTextures;
+		std::map<std::string, Mix_Chunk*> loadedSoundEffects;
+		std::map <std::string, Mix_Music*> loadedMusic;
 
-	static ResourceManager *instance;
-	ResourceManager();
+		static ResourceManager *instance;
+		ResourceManager();
 
-	static SDL_Texture* createTexture(const int &size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer *renderer);
-	static SDL_Texture* loadTexture(const std::string &filePath, SDL_Renderer *renderer);
+		static SDL_Texture* createTexture(const int &size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer *renderer);
+		static SDL_Texture* loadTexture(const std::string &filePath, SDL_Renderer *renderer);
 
-public:
+		static Mix_Chunk* loadSoundEffect(const std::string &filePath);
+		static Mix_Music* loadMusic(const std::string &filePath);
 
-	static ResourceManager* getInstance();
-	ResourceManager::~ResourceManager();
+	public:
 
-	SDL_Texture* getTexture(const std::string &filePath, SDL_Renderer *renderer);
+		static ResourceManager* getInstance();
+		ResourceManager::~ResourceManager();
 
-};
+		SDL_Texture* getTexture(const std::string &filePath, SDL_Renderer *renderer);
+		Mix_Chunk* getSoundEffect(const std::string &filePath);
+		Mix_Music* getMusic(const std::string &filePath);
+
+		void freeTexture(const std::string &filePath);
+		void freeSoundEffect(const std::string &filePath);
+		void freeMusic(const std::string &filePath);
+
+	};
+}
 

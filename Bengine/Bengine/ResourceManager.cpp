@@ -2,9 +2,9 @@
 #include "Logger.h"
 #include <SDL_image.h>
 
-ResourceManager* ResourceManager::instance = nullptr;
+BG::ResourceManager* BG::ResourceManager::instance = nullptr;
 
-ResourceManager::ResourceManager() {}
+BG::ResourceManager::ResourceManager() {}
 
 /**
  * @brief Returns a SDL_Texture* of the specified size and colour
@@ -14,7 +14,7 @@ ResourceManager::ResourceManager() {}
  * @param a The alpha value
  * @param renderer The renderer to use
  */
-SDL_Texture* ResourceManager::createTexture(const int& size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer* renderer)
+SDL_Texture* BG::ResourceManager::createTexture(const int& size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer* renderer)
 {
 	auto myInt = 1;
 	auto myString = "HELLO";
@@ -38,7 +38,7 @@ SDL_Texture* ResourceManager::createTexture(const int& size, const unsigned char
 /**
 * @brief Returns a pointer to a singleton instance of the Logger class
 */
-ResourceManager* ResourceManager::getInstance()
+BG::ResourceManager* BG::ResourceManager::getInstance()
 {
 	if(instance == nullptr)
 	{
@@ -48,28 +48,47 @@ ResourceManager* ResourceManager::getInstance()
 }
 
 /** Deconstructor
-* Delete dynamically memory
+* Free dynamically memory
 */
-ResourceManager::~ResourceManager()
+BG::ResourceManager::~ResourceManager()
 {
-	std::map<std::string, SDL_Texture*>::iterator iterator = textureMap.begin();
-	while(iterator != textureMap.end())
+	std::map<std::string, SDL_Texture*>::iterator iterator = loadedTextures.begin();
+	while(iterator != loadedTextures.end())
 	{
-		delete iterator->second;
-		++iterator;
+		SDL_DestroyTexture(iterator->second);
+		iterator = loadedTextures.erase(iterator);
 	}
+
+	std::map<std::string, Mix_Chunk*>::iterator iterator2 = loadedSoundEffects.begin();
+	while (iterator2 != loadedSoundEffects.end())
+	{
+		Mix_FreeChunk(iterator2->second);
+		iterator2 = loadedSoundEffects.erase(iterator2);
+	}
+
+	IMG_Quit();
+
+	std::map<std::string, Mix_Music*>::iterator iterator3 = loadedMusic.begin();
+	while (iterator3 != loadedMusic.end())
+	{
+		Mix_FreeMusic(iterator3->second);
+		iterator3 = loadedMusic.erase(iterator3);
+	}
+
+	Mix_Quit();
+
 	delete instance;
 }
 
 /**
- * @brief Returns the specified SDL_Texture from the textureMap. If it doesn't yet exist, loads and stores it.
+ * @brief Returns the specified SDL_Texture from loadedTextures. If it doesn't yet exist, loads and stores it.
  * @param filePath The file path of the desired image resource
  * @param renderer The renderer to use
  */
-SDL_Texture* ResourceManager::getTexture(const std::string &filePath, SDL_Renderer* renderer)
+SDL_Texture* BG::ResourceManager::getTexture(const std::string &filePath, SDL_Renderer* renderer)
 {
-	auto result = textureMap.find(filePath);
-	if (result != textureMap.end())
+	auto result = loadedTextures.find(filePath);
+	if (result != loadedTextures.end())
 	{
 		return result->second;
 	}
@@ -81,19 +100,55 @@ SDL_Texture* ResourceManager::getTexture(const std::string &filePath, SDL_Render
 		texture = createTexture(32, 255, 0, 255, 255, renderer);
 	}
 
-	textureMap.insert(std::pair<std::string, SDL_Texture*>(filePath, texture));
+	loadedTextures.insert(std::pair<std::string, SDL_Texture*>(filePath, texture));
 
 	return texture;
 }
 
 /**
-* Load a texture from an image file (BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV)
+* @brief Returns the specified Mix_Chunk* from the loadedSoundEffects. If it doesn't yet exist, loads and stores it.
+* @param filePath The file path of the desired sound resource
+*/
+Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string& filePath)
+{
+	auto result = loadedSoundEffects.find(filePath);
+	if(result != loadedSoundEffects.end())
+	{
+		return result->second;
+	}
+
+	auto soundEffect = loadSoundEffect(filePath);
+	loadedSoundEffects.insert(std::pair<std::string, Mix_Chunk*>(filePath, soundEffect));
+
+	return soundEffect;
+}
+
+/**
+* @brief Returns the specified Mix_Chunk* from the loadedMusic. If it doesn't yet exist, loads and stores it.
+* @param filePath The file path of the desired sound resource
+*/
+Mix_Music* BG::ResourceManager::getMusic(const std::string& filePath)
+{
+	auto result = loadedMusic.find(filePath);
+	if (result != loadedMusic.end())
+	{
+		return result->second;
+	}
+
+	auto music = loadMusic(filePath);
+	loadedMusic.insert(std::pair<std::string, Mix_Music*>(filePath, music));
+
+	return music;
+}
+
+/**
+* @brief Load a texture from a file (BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV)
 * @param filePath The file path of the image
 * @param renderer The renderer to upload the image to
 */
-SDL_Texture* ResourceManager::loadTexture(const std::string& filePath, SDL_Renderer* renderer)
+SDL_Texture* BG::ResourceManager::loadTexture(const std::string& filePath, SDL_Renderer* renderer)
 {
-	SDL_Texture* texture = IMG_LoadTexture(renderer, filePath.c_str());
+	auto texture = IMG_LoadTexture(renderer, filePath.c_str());
 	if(texture != nullptr)
 	{
 		Logger::getInstance()->log(Logger::INFO, "Loaded \"" + filePath + "\"");
@@ -103,4 +158,109 @@ SDL_Texture* ResourceManager::loadTexture(const std::string& filePath, SDL_Rende
 		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\"");
 	}
 	return texture;
+}
+
+/**
+* @brief Load a sound effect from a file (WAVE, MOD, MIDI, OGG, MP3)
+* @param filePath The file path of the sound
+*/
+Mix_Chunk* BG::ResourceManager::loadSoundEffect(const std::string& filePath)
+{
+	auto soundEffect = Mix_LoadWAV(filePath.c_str());
+	if (soundEffect != nullptr)
+	{
+		Logger::getInstance()->log(Logger::INFO, "Loaded \"" + filePath + "\"");
+	}
+	else
+	{
+		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\"");
+	}
+	return soundEffect;
+}
+
+/**
+* @brief Load music from a file (WAVE, MOD, MIDI, OGG, MP3)
+* @param filePath The file path of the sound
+*/
+Mix_Music* BG::ResourceManager::loadMusic(const std::string& filePath)
+{
+	auto music = Mix_LoadMUS(filePath.c_str());
+	if(music != nullptr)
+	{
+		Logger::getInstance()->log(Logger::INFO, "Loaded \"" + filePath + "\"");
+	}
+	else
+	{
+		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\"");
+	}
+	return music;
+}
+
+/**
+ * @brief Free a texture resource and remove it from the loadedTextures map
+ * @param filePath The file path of the image
+ */
+void BG::ResourceManager::freeTexture(const std::string& filePath)
+{
+	std::map<std::string, SDL_Texture*>::iterator iterator = loadedTextures.begin();
+	while(iterator != loadedTextures.end())
+	{
+		if(iterator->first == filePath)
+		{
+			auto texture = iterator->second;
+			SDL_DestroyTexture(texture);
+			texture = nullptr;
+			iterator = loadedTextures.erase(iterator);
+		}
+		else
+		{
+			++iterator;
+		}
+	}
+}
+
+/**
+* @brief Free a sound effect resource and remove it from the loadedSoundEffects map
+* @param filePath The file path of the sound
+*/
+void BG::ResourceManager::freeSoundEffect(const std::string& filePath)
+{
+	std::map<std::string, Mix_Chunk*>::iterator iterator = loadedSoundEffects.begin();
+	while (iterator != loadedSoundEffects.end())
+	{
+		if (iterator->first == filePath)
+		{
+			auto soundEffect = iterator->second;
+			Mix_FreeChunk(soundEffect);
+			soundEffect = nullptr;
+			iterator = loadedSoundEffects.erase(iterator);
+		}
+		else
+		{
+			++iterator;
+		}
+	}
+}
+
+/**
+* @brief Free a music resource and remove it from the loadedMusic map
+* @param filePath The file path of the sound
+*/
+void BG::ResourceManager::freeMusic(const std::string& filePath)
+{
+	std::map<std::string, Mix_Music*>::iterator iterator = loadedMusic.begin();
+	while (iterator != loadedMusic.end())
+	{
+		if (iterator->first == filePath)
+		{
+			auto music = iterator->second;
+			Mix_FreeMusic(music);
+			music = nullptr;
+			iterator = loadedMusic.erase(iterator);
+		}
+		else
+		{
+			++iterator;
+		}
+	}
 }
