@@ -45,31 +45,31 @@ BG::ResourceManager* BG::ResourceManager::getInstance()
 }
 
 /** Deconstructor
-* Free dynamically memory
+* Free dynamically allocated memory
 */
 BG::ResourceManager::~ResourceManager()
 {
-	std::map<std::string, SDL_Texture*>::iterator iterator = mpTextures.begin();
-	while(iterator != mpTextures.end())
+	std::map<std::string, SDL_Texture*>::iterator itTextures = mpTextures.begin();
+	while(itTextures != mpTextures.end())
 	{
-		SDL_DestroyTexture(iterator->second);
-		iterator = mpTextures.erase(iterator);
+		SDL_DestroyTexture(itTextures->second);
+		itTextures = mpTextures.erase(itTextures);
 	}
 
-	std::map<std::string, Mix_Chunk*>::iterator iterator2 = mpSoundEffects.begin();
-	while (iterator2 != mpSoundEffects.end())
+	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects.begin();
+	while (itSoundEffects != mpSoundEffects.end())
 	{
-		Mix_FreeChunk(iterator2->second);
-		iterator2 = mpSoundEffects.erase(iterator2);
+		Mix_FreeChunk(itSoundEffects->second);
+		itSoundEffects = mpSoundEffects.erase(itSoundEffects);
 	}
 
 	IMG_Quit();
 
-	std::map<std::string, Mix_Music*>::iterator iterator3 = mpMusic.begin();
-	while (iterator3 != mpMusic.end())
+	std::map<std::string, Mix_Music*>::iterator itMusic = mpMusic.begin();
+	while (itMusic != mpMusic.end())
 	{
-		Mix_FreeMusic(iterator3->second);
-		iterator3 = mpMusic.erase(iterator3);
+		Mix_FreeMusic(itMusic->second);
+		itMusic = mpMusic.erase(itMusic);
 	}
 
 	Mix_Quit();
