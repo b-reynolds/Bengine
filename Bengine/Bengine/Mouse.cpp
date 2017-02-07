@@ -1,7 +1,6 @@
 #include "Mouse.h"
-#include <SDL.h>
-#include <cstdio>
 #include "Logger.h"
+#include <SDL.h>
 
 BG::Mouse* BG::Mouse::instance = nullptr;
 

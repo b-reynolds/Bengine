@@ -1,5 +1,4 @@
 #include "Keyboard.h"
-#include <cstdio>
 #include "Logger.h"
 
 BG::Keyboard* BG::Keyboard::instance = nullptr;

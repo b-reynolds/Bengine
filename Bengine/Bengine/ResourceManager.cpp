@@ -212,11 +212,9 @@ void BG::ResourceManager::freeTexture(const std::string& filePath)
 			texture = nullptr;
 			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
 			iterator = loadedTextures.erase(iterator);
+			break;
 		}
-		else
-		{
-			++iterator;
-		}
+		++iterator;
 	}
 }
 
@@ -236,11 +234,9 @@ void BG::ResourceManager::freeSoundEffect(const std::string& filePath)
 			soundEffect = nullptr;
 			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
 			iterator = loadedSoundEffects.erase(iterator);
+			break;
 		}
-		else
-		{
-			++iterator;
-		}
+		++iterator;
 	}
 }
 
@@ -260,10 +256,8 @@ void BG::ResourceManager::freeMusic(const std::string& filePath)
 			music = nullptr;
 			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
 			iterator = loadedMusic.erase(iterator);
+			break;
 		}
-		else
-		{
-			++iterator;
-		}
+		++iterator;
 	}
 }
