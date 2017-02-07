@@ -53,26 +53,24 @@ bool Game::initialize()
 
 	auto resourceManager = ResourceManager::getInstance();
 
-	txtrBackground = resourceManager->loadTexture("Images/tile.bmp", renderer);
+	txtrBackground = resourceManager->getTexture("Images/tile.bmp", renderer);
 	if(txtrBackground == nullptr)
 	{
-		// Loading texture failed, report error, clean up and exit.
-		logger->log(Logger::ERROR, "Failed to load texture");
-		SDL_DestroyWindow(window);
-		SDL_Quit();
-	}
-	logger->log(Logger::INFO, "Loaded texture");
-
-	txtrLogo = resourceManager->loadTexture("Images/Icon/bengine.fw.png", renderer);
-	if (txtrLogo == nullptr)
-	{
-		// Loading texture failed, report error, clean up and exit.
-		logger->log(Logger::ERROR, "Failed to load texture");
 		SDL_DestroyTexture(txtrBackground);
 		SDL_DestroyWindow(window);
 		SDL_Quit();
+		return false;
 	}
-	logger->log(Logger::INFO, "Loaded texture");
+
+	txtrLogo = resourceManager->getTexture("Images/Icon/bengine.fw.png", renderer);
+		
+	if (txtrLogo == nullptr)
+	{
+		SDL_DestroyTexture(txtrBackground);
+		SDL_DestroyWindow(window);
+		SDL_Quit();
+		return false;
+	}
 
 	return true;
 }
@@ -145,9 +143,10 @@ void Game::draw()
 	}
 
 	auto logoSize = Vector2D<int>();
+	
 	SDL_QueryTexture(txtrLogo, nullptr, nullptr, &logoSize.x, &logoSize.y);
 
-	Renderer::renderTexture(txtrLogo, renderer, WIN_WIDTH / 2 - logoSize.x / 2, WIN_HEIGHT / 2 - logoSize.y / 2);
+	Renderer::renderTexture(txtrLogo, renderer, WIN_WIDTH / 2 - logoSize.x / 2, WIN_HEIGHT / 2 - logoSize.y / 2, logoSize.x, logoSize.y );
 
 	// Update the screen
 	SDL_RenderPresent(renderer);
@@ -155,8 +154,8 @@ void Game::draw()
 
 Game::Game()
 {
-	mouse = Mouse::getInstance();
-	keyboard = Keyboard::getInstance();
+	mouse = BG::Mouse::getInstance();
+	keyboard = BG::Keyboard::getInstance();
 	renderer = nullptr;
 	window = nullptr;
 	txtrBackground = nullptr;

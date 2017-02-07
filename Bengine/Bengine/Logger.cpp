@@ -30,7 +30,7 @@ std::string Logger::getTimestamp()
 }
 
 /**
-* @brief Returns a pointer to the singleton instance of the Logger class
+* @brief Returns a pointer a singleton instance of the Logger class
 * @return Logger*
 */
 Logger* Logger::getInstance()
@@ -118,5 +118,9 @@ void Logger::log(const Severity& severity, const std::string& message) const
 void Logger::writeToFile(const std::string& filePath, const std::string& message)
 {
 	std::ofstream logFile(filePath.c_str(), std::ios_base::out | std::ios_base::app);
-	logFile << message << std::endl;
+	if (logFile.is_open())
+	{
+		logFile << message << std::endl;
+	}
+	logFile.close();
 }

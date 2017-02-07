@@ -16,8 +16,8 @@ private:
 	SDL_Event event;
 	SDL_Renderer *renderer;
 
-	Mouse *mouse;
-	Keyboard *keyboard;
+	BG::Mouse *mouse;
+	BG::Keyboard *keyboard;
 
 	SDL_Texture *txtrBackground;
 	SDL_Texture *txtrLogo;

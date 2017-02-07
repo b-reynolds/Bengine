@@ -4,30 +4,35 @@
 #define KEYCODES_MIN 0
 #define KEYCODES_MAX 255
 
-class Keyboard
+namespace BG
 {
 
-private:
+	class Keyboard
+	{
 
-	static Keyboard *instance;
-	Keyboard();
+	private:
 
-	bool keyStates[KEYCODES_MAX] = { false };
-	bool prevKeyStates[KEYCODES_MAX] = { false };
+		static Keyboard *instance;
+		Keyboard();
 
-public:
+		bool keyStates[KEYCODES_MAX] = { false };
+		bool prevKeyStates[KEYCODES_MAX] = { false };
 
-	static Keyboard* getInstance();
-	~Keyboard();
+	public:
 
-	void setKeyState(const SDL_Keycode &key, const bool &state);
+		static Keyboard* getInstance();
+		~Keyboard();
 
-	void swapStates();
+		void setKeyState(const SDL_Keycode &key, const bool &state);
 
-	bool isKeyDown(const SDL_Keycode &key);
-	bool isKeyPressed(const SDL_Keycode &key);
-	bool isKeyReleased(const SDL_Keycode &key);
-	bool isKeyUp(const SDL_Keycode &key);
+		void swapStates();
 
-};
+		bool isKeyDown(const SDL_Keycode &key);
+		bool isKeyPressed(const SDL_Keycode &key);
+		bool isKeyReleased(const SDL_Keycode &key);
+		bool isKeyUp(const SDL_Keycode &key);
+
+	};
+
+}
 

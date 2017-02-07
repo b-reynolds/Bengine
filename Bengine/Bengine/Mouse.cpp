@@ -3,14 +3,14 @@
 #include <cstdio>
 #include "Logger.h"
 
-Mouse* Mouse::instance = nullptr;
+BG::Mouse* BG::Mouse::instance = nullptr;
 
-Mouse::Mouse() { }
+BG::Mouse::Mouse() { }
 
 /**
-* Returns a pointer to the singleton instance of the Mouse class
+* Returns a pointer to a singleton instance of the Mouse class
 */
-Mouse* Mouse::getInstance()
+BG::Mouse* BG::Mouse::getInstance()
 {
 	if(instance == nullptr)
 	{
@@ -19,7 +19,7 @@ Mouse* Mouse::getInstance()
 	return instance;
 }
 
-Mouse::~Mouse()
+BG::Mouse::~Mouse()
 {
 	delete instance;
 }
@@ -27,7 +27,7 @@ Mouse::~Mouse()
 /**
  * Returns the x and y coordinates of the mouse
  */
-Vector2D<int> Mouse::getPosition()
+Vector2D<int> BG::Mouse::getPosition()
 {
 	auto mousePosition = Vector2D<int>();
 	SDL_GetMouseState(&mousePosition.x, &mousePosition.y);
@@ -39,7 +39,7 @@ Vector2D<int> Mouse::getPosition()
 * @param button The mouse button to be set (1 = Left, 2 = Middle, 3 = Right)
 * @param state The state of the button (True = Down, False = Up)
 */
-void Mouse::setMouseState(const unsigned int& button, const bool& state)
+void BG::Mouse::setMouseState(const unsigned int& button, const bool& state)
 {
 	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return;
 	mouseState[button] = state;
@@ -50,7 +50,7 @@ void Mouse::setMouseState(const unsigned int& button, const bool& state)
 /**
 * Copies the current mouse state values into the previous mouse state values in preperation for a new frame
 */
-void Mouse::swapStates()
+void BG::Mouse::swapStates()
 {
 	for (auto i = BUTTONS_MIN; i <= BUTTONS_MAX; ++i)
 	{
@@ -60,8 +60,8 @@ void Mouse::swapStates()
 	currentPosition = getPosition();
 	if (currentPosition != previousPosition)
 	{
-		Logger::getInstance()->log(Logger::DEBUG, std::string("Mouse Moved: ") +
-			std::to_string(currentPosition.x) + ", " + std::to_string(currentPosition.y));
+		Logger::getInstance()->log(Logger::DEBUG, "Mouse Position: " + std::to_string(currentPosition.x) +
+			", " + std::to_string(currentPosition.y));
 	}
 }
 
@@ -69,7 +69,7 @@ void Mouse::swapStates()
 * Returns true if the specified button is currently down
 * @param button The mouse button to poll
 */
-bool Mouse::isButtonDown(const unsigned int& button)
+bool BG::Mouse::isButtonDown(const unsigned int& button)
 {
 	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return mouseState[button];
@@ -79,7 +79,7 @@ bool Mouse::isButtonDown(const unsigned int& button)
 * Returns true if the specified button is currently down and was up in the previous frame
 * @param button The mouse button to poll
 */
-bool Mouse::isButtonPressed(const unsigned int& button)
+bool BG::Mouse::isButtonPressed(const unsigned int& button)
 {
 	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return mouseState[button] && !prevMouseState[button];
@@ -89,7 +89,7 @@ bool Mouse::isButtonPressed(const unsigned int& button)
 * Returns true if the specified button is currently up and was down in the previous frame
 * @param button The mouse button to poll
 */
-bool Mouse::isButtonReleased(const unsigned int& button)
+bool BG::Mouse::isButtonReleased(const unsigned int& button)
 {
 	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return !mouseState[button] && prevMouseState[button];
@@ -99,7 +99,7 @@ bool Mouse::isButtonReleased(const unsigned int& button)
 * Returns true if the specified button is up
 * @param button The mouse button to poll
 */
-bool Mouse::isButtonUp(const unsigned int& button)
+bool BG::Mouse::isButtonUp(const unsigned int& button)
 {
 	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
 	return !mouseState[button];
