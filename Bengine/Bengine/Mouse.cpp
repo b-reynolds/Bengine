@@ -26,7 +26,7 @@ BG::Mouse::~Mouse()
 /**
  * Returns the x and y coordinates of the mouse
  */
-Vector2i BG::Mouse::getPosition()
+BG::Vector2i BG::Mouse::getPosition()
 {
 	auto mousePosition = Vector2i(0, 0);
 	SDL_GetMouseState(&mousePosition.x, &mousePosition.y);

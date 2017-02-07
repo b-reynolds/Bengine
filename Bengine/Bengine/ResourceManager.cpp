@@ -8,7 +8,7 @@ BG::ResourceManager::ResourceManager() {}
 
 /**
  * @brief Returns a SDL_Texture* of the specified size and colour
- * @param r The red vlaue
+ * @param r The red value
  * @param g The green value
  * @param b The blue value
  * @param a The alpha value
@@ -152,7 +152,7 @@ SDL_Texture* BG::ResourceManager::loadTexture(const std::string &filePath, SDL_R
 	}
 	else
 	{
-		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\"");
+		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + IMG_GetError() + ")");
 	}
 	return texture;
 }
@@ -170,7 +170,7 @@ Mix_Chunk* BG::ResourceManager::loadSoundEffect(const std::string &filePath)
 	}
 	else
 	{
-		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\"");
+		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
 	}
 	return soundEffect;
 }
@@ -188,7 +188,7 @@ Mix_Music* BG::ResourceManager::loadMusic(const std::string &filePath)
 	}
 	else
 	{
-		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\"");
+		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
 	}
 	return music;
 }
