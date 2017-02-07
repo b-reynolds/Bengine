@@ -49,27 +49,27 @@ BG::ResourceManager* BG::ResourceManager::getInstance()
 */
 BG::ResourceManager::~ResourceManager()
 {
-	std::map<std::string, SDL_Texture*>::iterator iterator = loadedTextures.begin();
-	while(iterator != loadedTextures.end())
+	std::map<std::string, SDL_Texture*>::iterator iterator = mpTextures.begin();
+	while(iterator != mpTextures.end())
 	{
 		SDL_DestroyTexture(iterator->second);
-		iterator = loadedTextures.erase(iterator);
+		iterator = mpTextures.erase(iterator);
 	}
 
-	std::map<std::string, Mix_Chunk*>::iterator iterator2 = loadedSoundEffects.begin();
-	while (iterator2 != loadedSoundEffects.end())
+	std::map<std::string, Mix_Chunk*>::iterator iterator2 = mpSoundEffects.begin();
+	while (iterator2 != mpSoundEffects.end())
 	{
 		Mix_FreeChunk(iterator2->second);
-		iterator2 = loadedSoundEffects.erase(iterator2);
+		iterator2 = mpSoundEffects.erase(iterator2);
 	}
 
 	IMG_Quit();
 
-	std::map<std::string, Mix_Music*>::iterator iterator3 = loadedMusic.begin();
-	while (iterator3 != loadedMusic.end())
+	std::map<std::string, Mix_Music*>::iterator iterator3 = mpMusic.begin();
+	while (iterator3 != mpMusic.end())
 	{
 		Mix_FreeMusic(iterator3->second);
-		iterator3 = loadedMusic.erase(iterator3);
+		iterator3 = mpMusic.erase(iterator3);
 	}
 
 	Mix_Quit();
@@ -78,14 +78,14 @@ BG::ResourceManager::~ResourceManager()
 }
 
 /**
- * @brief Returns the specified SDL_Texture from loadedTextures. If it doesn't yet exist, loads and stores it.
+ * @brief Returns the specified SDL_Texture from mpTextures. If it doesn't yet exist, loads and stores it.
  * @param filePath The file path of the desired image resource
  * @param renderer The renderer to use
  */
 SDL_Texture* BG::ResourceManager::getTexture(const std::string &filePath, SDL_Renderer* renderer)
 {
-	auto result = loadedTextures.find(filePath);
-	if (result != loadedTextures.end())
+	auto result = mpTextures.find(filePath);
+	if (result != mpTextures.end())
 	{
 		return result->second;
 	}
@@ -97,43 +97,43 @@ SDL_Texture* BG::ResourceManager::getTexture(const std::string &filePath, SDL_Re
 		texture = createTexture(32, 255, 0, 255, 255, renderer);
 	}
 
-	loadedTextures.insert(std::pair<std::string, SDL_Texture*>(filePath, texture));
+	mpTextures.insert(std::pair<std::string, SDL_Texture*>(filePath, texture));
 
 	return texture;
 }
 
 /**
-* @brief Returns the specified Mix_Chunk* from the loadedSoundEffects. If it doesn't yet exist, loads and stores it.
+* @brief Returns the specified Mix_Chunk* from the mpSoundEffects. If it doesn't yet exist, loads and stores it.
 * @param filePath The file path of the desired sound resource
 */
 Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string &filePath)
 {
-	auto result = loadedSoundEffects.find(filePath);
-	if(result != loadedSoundEffects.end())
+	auto result = mpSoundEffects.find(filePath);
+	if(result != mpSoundEffects.end())
 	{
 		return result->second;
 	}
 
 	auto soundEffect = loadSoundEffect(filePath);
-	loadedSoundEffects.insert(std::pair<std::string, Mix_Chunk*>(filePath, soundEffect));
+	mpSoundEffects.insert(std::pair<std::string, Mix_Chunk*>(filePath, soundEffect));
 
 	return soundEffect;
 }
 
 /**
-* @brief Returns the specified Mix_Chunk* from the loadedMusic. If it doesn't yet exist, loads and stores it.
+* @brief Returns the specified Mix_Chunk* from the mpMusic. If it doesn't yet exist, loads and stores it.
 * @param filePath The file path of the desired sound resource
 */
 Mix_Music* BG::ResourceManager::getMusic(const std::string &filePath)
 {
-	auto result = loadedMusic.find(filePath);
-	if (result != loadedMusic.end())
+	auto result = mpMusic.find(filePath);
+	if (result != mpMusic.end())
 	{
 		return result->second;
 	}
 
 	auto music = loadMusic(filePath);
-	loadedMusic.insert(std::pair<std::string, Mix_Music*>(filePath, music));
+	mpMusic.insert(std::pair<std::string, Mix_Music*>(filePath, music));
 
 	return music;
 }
@@ -194,13 +194,13 @@ Mix_Music* BG::ResourceManager::loadMusic(const std::string &filePath)
 }
 
 /**
- * @brief Free a texture resource and remove it from the loadedTextures map
+ * @brief Free a texture resource and remove it from the mpTextures map
  * @param filePath The file path of the image
  */
 void BG::ResourceManager::freeTexture(const std::string &filePath)
 {
-	std::map<std::string, SDL_Texture*>::iterator iterator = loadedTextures.begin();
-	while(iterator != loadedTextures.end())
+	std::map<std::string, SDL_Texture*>::iterator iterator = mpTextures.begin();
+	while(iterator != mpTextures.end())
 	{
 		if(iterator->first == filePath)
 		{
@@ -208,7 +208,7 @@ void BG::ResourceManager::freeTexture(const std::string &filePath)
 			SDL_DestroyTexture(texture);
 			texture = nullptr;
 			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
-			iterator = loadedTextures.erase(iterator);
+			iterator = mpTextures.erase(iterator);
 			break;
 		}
 		++iterator;
@@ -216,13 +216,13 @@ void BG::ResourceManager::freeTexture(const std::string &filePath)
 }
 
 /**
-* @brief Free a sound effect resource and remove it from the loadedSoundEffects map
+* @brief Free a sound effect resource and remove it from the mpSoundEffects map
 * @param filePath The file path of the sound
 */
 void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 {
-	std::map<std::string, Mix_Chunk*>::iterator iterator = loadedSoundEffects.begin();
-	while (iterator != loadedSoundEffects.end())
+	std::map<std::string, Mix_Chunk*>::iterator iterator = mpSoundEffects.begin();
+	while (iterator != mpSoundEffects.end())
 	{
 		if (iterator->first == filePath)
 		{
@@ -230,7 +230,7 @@ void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 			Mix_FreeChunk(soundEffect);
 			soundEffect = nullptr;
 			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
-			iterator = loadedSoundEffects.erase(iterator);
+			iterator = mpSoundEffects.erase(iterator);
 			break;
 		}
 		++iterator;
@@ -238,13 +238,13 @@ void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 }
 
 /**
-* @brief Free a music resource and remove it from the loadedMusic map
+* @brief Free a music resource and remove it from the mpMusic map
 * @param filePath The file path of the sound
 */
 void BG::ResourceManager::freeMusic(const std::string &filePath)
 {
-	std::map<std::string, Mix_Music*>::iterator iterator = loadedMusic.begin();
-	while (iterator != loadedMusic.end())
+	std::map<std::string, Mix_Music*>::iterator iterator = mpMusic.begin();
+	while (iterator != mpMusic.end())
 	{
 		if (iterator->first == filePath)
 		{
@@ -252,7 +252,7 @@ void BG::ResourceManager::freeMusic(const std::string &filePath)
 			Mix_FreeMusic(music);
 			music = nullptr;
 			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
-			iterator = loadedMusic.erase(iterator);
+			iterator = mpMusic.erase(iterator);
 			break;
 		}
 		++iterator;

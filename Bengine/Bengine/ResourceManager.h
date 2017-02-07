@@ -10,9 +10,9 @@ namespace BG
 
 	private:
 
-		std::map<std::string, SDL_Texture*> loadedTextures;
-		std::map<std::string, Mix_Chunk*> loadedSoundEffects;
-		std::map <std::string, Mix_Music*> loadedMusic;
+		std::map<std::string, SDL_Texture*> mpTextures;
+		std::map<std::string, Mix_Chunk*> mpSoundEffects;
+		std::map <std::string, Mix_Music*> mpMusic;
 
 		static ResourceManager *instance;
 		ResourceManager();
