@@ -1,5 +1,5 @@
 #include "Renderer.h"
-#include "Vector2D.h"
+#include "Vector2.h"
 
 /**
 * Draw a texture to the renderer at the specified position
@@ -11,7 +11,7 @@
 void Renderer::renderTexture(SDL_Texture* texture, SDL_Renderer* renderer, const int& x, const int& y)
 {
 	// Query the texture's width and height
-	auto textureSize = Vector2D<int>(0, 0);
+	auto textureSize = Vector2<int>(0, 0);
 	SDL_QueryTexture(texture, nullptr, nullptr, &textureSize.x, &textureSize.y);
 
 	// Render the texture

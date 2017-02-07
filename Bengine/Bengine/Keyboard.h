@@ -6,7 +6,6 @@
 
 namespace BG
 {
-
 	class Keyboard
 	{
 
@@ -33,6 +32,5 @@ namespace BG
 		bool isKeyUp(const SDL_Keycode &key);
 
 	};
-
 }
 
