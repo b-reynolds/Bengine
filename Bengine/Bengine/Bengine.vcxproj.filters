@@ -25,15 +25,15 @@
     <Filter Include="Data Types">
       <UniqueIdentifier>{f2d13bbb-e647-4163-9c29-00db39725260}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Manager">
+      <UniqueIdentifier>{a2797a25-846d-40cd-9238-3e8f0e1e4aec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
@@ -48,15 +48,18 @@
     <ClCompile Include="Game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Resource Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Audio.cpp">
+      <Filter>Resource Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Renderer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Keyboard.h">
@@ -71,8 +74,14 @@
     <ClInclude Include="Game.h">
       <Filter>Game</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2D.h">
+    <ClInclude Include="Vector2.h">
       <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Resource Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>Resource Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
