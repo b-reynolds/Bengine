@@ -1,5 +1,6 @@
 #include "ResourceManager.h"
 #include "Logger.h"
+#include "Window.h"
 #include <SDL_image.h>
 
 BG::ResourceManager* BG::ResourceManager::instance = nullptr;
@@ -77,33 +78,36 @@ BG::ResourceManager::~ResourceManager()
 	delete instance;
 }
 
+
 /**
- * @brief Returns the specified SDL_Texture from mpTextures. If it doesn't yet exist, loads and stores it.
- * @param filePath The file path of the desired image resource
- * @param renderer The renderer to use
- */
-SDL_Texture* BG::ResourceManager::getTexture(const std::string &filePath, SDL_Renderer* renderer)
+* @brief Loads the specified image into a Sprite and returns it.
+* @param filePath The file path of the desired image resource
+* @param window The window the sprite will be rendered to
+*/
+BG::Sprite BG::ResourceManager::getSprite(const std::string& filePath, Window* window)
 {
+	auto renderer = window->getRenderer();
+
 	auto result = mpTextures.find(filePath);
-	if (result != mpTextures.end())
+	if(result != mpTextures.end())
 	{
-		return result->second;
+		return Sprite(result->second, renderer);
 	}
 
 	auto texture = loadTexture(filePath, renderer);
 
-	if(texture == nullptr)
+	if (texture == nullptr)
 	{
 		texture = createTexture(32, 255, 0, 255, 255, renderer);
 	}
 
 	mpTextures.insert(std::pair<std::string, SDL_Texture*>(filePath, texture));
 
-	return texture;
+	return Sprite(texture, renderer);
 }
 
 /**
-* @brief Returns the specified Mix_Chunk* from the mpSoundEffects. If it doesn't yet exist, loads and stores it.
+* @brief Returns the specified Mix_Chunk* from mpSoundEffects. If it doesn't yet exist, loads and stores it.
 * @param filePath The file path of the desired sound resource
 */
 Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string &filePath)
@@ -121,7 +125,7 @@ Mix_Chunk* BG::ResourceManager::getSoundEffect(const std::string &filePath)
 }
 
 /**
-* @brief Returns the specified Mix_Chunk* from the mpMusic. If it doesn't yet exist, loads and stores it.
+* @brief Returns the specified Mix_Chunk* from mpMusic. If it doesn't yet exist, loads and stores it.
 * @param filePath The file path of the desired sound resource
 */
 Mix_Music* BG::ResourceManager::getMusic(const std::string &filePath)

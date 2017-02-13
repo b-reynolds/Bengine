@@ -2,9 +2,12 @@
 #include <SDL_render.h>
 #include <SDL_mixer.h>
 #include <map>
+#include "Sprite.h"
 
 namespace BG
 {
+	class Window;
+
 	class ResourceManager
 	{
 
@@ -28,7 +31,7 @@ namespace BG
 		static ResourceManager* getInstance();
 		ResourceManager::~ResourceManager();
 
-		SDL_Texture* getTexture(const std::string &filePath, SDL_Renderer *renderer);
+		Sprite getSprite(const std::string &filePath, Window* window);
 		Mix_Chunk* getSoundEffect(const std::string &filePath);
 		Mix_Music* getMusic(const std::string &filePath);
 
