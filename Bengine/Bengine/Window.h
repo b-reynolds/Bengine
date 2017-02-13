@@ -2,6 +2,7 @@
 #include <SDL.h>
 #include "Vector2.h"
 #include <string>
+#include "Rectangle.h"
 
 namespace BG
 {
@@ -20,7 +21,8 @@ namespace BG
 		void destroy();
 		
 		void draw(GameObject &gameObject) const;
-		void draw(GameObject &gameObject, const Colour &tint) const; 
+		void draw(GameObject &gameObject, const Colour &tint) const;
+		void draw(const FloatRect &rect, const Colour &colour) const;
 
 		void setPosition(const Vector2i &position) const;
 		Vector2i getPosition() const;

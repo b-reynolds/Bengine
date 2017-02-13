@@ -75,6 +75,14 @@ void BG::Window::draw(GameObject& gameObject, const Colour& tint) const
 	SDL_SetTextureColorMod(gameObject.getSprite()->getTexture(), 255, 255, 255);
 }
 
+void BG::Window::draw(const FloatRect& rect, const Colour& colour) const
+{
+	SDL_Rect bounds = { rect.left, rect.top, rect.width, rect.height };
+	SDL_SetRenderDrawColor(renderer, colour.r, colour.g, colour.b, 255);
+	SDL_RenderDrawRect(renderer, &bounds);
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+}
+
 void BG::Window::setPosition(const Vector2i& position) const
 {
 	SDL_SetWindowPosition(window, position.x, position.y);
