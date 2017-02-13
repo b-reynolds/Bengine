@@ -169,9 +169,13 @@ void Game::draw()
 
 
 	myWindow->draw(objLogo);
+	myWindow->draw(objLogo.getBounds(), BG::Colour(255, 255, 0));
+
 
 	objMouse.getTransform()->setPosition(BG::Vector2f(mouse->getPosition().x, mouse->getPosition().y));
 	myWindow->draw(objMouse);
+
+	myWindow->draw(objMouse.getBounds(), BG::Colour(0, 255, 0));
 
 
 
