@@ -25,7 +25,7 @@ std::string BG::Logger::getTimestamp()
 	auto t = time(nullptr);
 	auto time = *localtime(&t);
 	std::stringstream stringStream;
-	stringStream << std::put_time(&time, "%d-%m-%Y %H-%M-%S");
+	stringStream << std::put_time(&time, "%d-%m-%Y %H:%M:%S");
 	return stringStream.str();
 }
 
