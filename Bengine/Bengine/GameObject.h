@@ -18,6 +18,8 @@ namespace BG
 
 		void setSprite(Sprite* sprite);
 		Sprite* getSprite() const;
+
+		FloatRect getBounds() const;
 			
 	protected:
 
