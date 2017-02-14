@@ -2,43 +2,85 @@
 #include <SDL_render.h>
 #include <SDL_mixer.h>
 #include <map>
-#include "Sprite.h"
+#include "Bengine.h"
+#include "Colour.h"
 
 namespace BG
 {
+	// Forward Declarations
+	struct Colour;
 	class Window;
 
+	/*
+	 * \brief Resource Manager
+	 * Handles the loading and distribution of image and sound resources.
+	 * Insures only one instance of any particular resource is loaded at a time.
+	 */
 	class ResourceManager
 	{
 
-	private:
-
-		std::map<std::string, SDL_Texture*> mpTextures;
-		std::map<std::string, Mix_Chunk*> mpSoundEffects;
-		std::map <std::string, Mix_Music*> mpMusic;
-
-		static ResourceManager *instance;
-		ResourceManager();
-
-		static SDL_Texture* createTexture(const int &size, const unsigned char &r, const unsigned char &g, const unsigned char &b, const unsigned char &a, SDL_Renderer *renderer);
-		static SDL_Texture* loadTexture(const std::string &filePath, SDL_Renderer *renderer);
-
-		static Mix_Chunk* loadSoundEffect(const std::string &filePath);
-		static Mix_Music* loadMusic(const std::string &filePath);
-
 	public:
 
+		/* Returns a pointer to the singleton instance of the Logger class */
 		static ResourceManager* getInstance();
+
+		/* Frees dynamically allocated memory and unloads dependencies */
 		ResourceManager::~ResourceManager();
 
-		Sprite getSprite(const std::string &filePath, Window* window);
-		Mix_Chunk* getSoundEffect(const std::string &filePath);
-		Mix_Music* getMusic(const std::string &filePath);
+		/* Loads an image resource into a Texture and returns it */
+		Texture* getTexture(const std::string &filePath, Window* window);
 
+		/* Free the memory associated with an image resource and remove it from the textures map */
 		void freeTexture(const std::string &filePath);
+
+		/* Loads a sound resource into a SoundEffect and returns it */
+		SoundEffect* getSoundEffect(const std::string &filePath);
+
+		/* Free the memory associated with a sound effect resource and remove it from the sound effects map */
 		void freeSoundEffect(const std::string &filePath);
+
+		/* Loads a sound resource into a Music and returns it */
+		Music* getMusic(const std::string &filePath);
+
+		/* Free the memory associated with a music resource and remove it from the music map */
 		void freeMusic(const std::string &filePath);
 
+	private:
+
+		/* Default colour for placeholder textures */
+		const Colour TEXTURE_COLOUR_DEFAULT = CLR_PINK;
+
+		/* Default size of placeholder textures */
+		const int TEXTURE_SIZE_DEFAULT = 32;
+
+		/* Map used that stores Texture resources */
+		std::map<std::string, Texture*> mpTextures;
+
+		/* Map used that stores SoundEffect resources */
+		std::map<std::string, SoundEffect*> mpSoundEffects;
+
+		/* Map used that stores Music resources */
+		std::map <std::string, Music*> mpMusic;
+
+		/* The singleton instance of ResourceManager */
+		static ResourceManager *instance;
+
+		/* Private default constructor */
+		ResourceManager();
+
+		/* Creates and returns a Texture of the specified size and colour */
+		Texture* createTexture(const int &size, const Colour &colour, Window *window);	
+
+		/* Loads an image resource into a Texture and returns it */
+		Texture* loadTexture(const std::string &filePath, Window* window);
+
+		/* Loads a sound resource into a SoundEffect and returns it */
+		SoundEffect* loadSoundEffect(const std::string &filePath);
+		
+		/* Loads a sound resource into a Music and returns it */
+		Music* loadMusic(const std::string &filePath);
+
 	};
+
 }
 
