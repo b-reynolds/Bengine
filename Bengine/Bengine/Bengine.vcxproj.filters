@@ -119,6 +119,9 @@
     <ClInclude Include="Window.h">
       <Filter>Data Types</Filter>
     </ClInclude>
+    <ClInclude Include="Bengine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Bengine.rc">

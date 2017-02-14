@@ -146,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Audio.h" />
+    <ClInclude Include="Bengine.h" />
     <ClInclude Include="Colour.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
