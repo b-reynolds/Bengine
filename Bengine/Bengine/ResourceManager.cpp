@@ -6,12 +6,15 @@
 #include <SDL_image.h>
 
 // Initialize static members
-BG::ResourceManager* BG::ResourceManager::instance = nullptr;
+std::shared_ptr<BG::ResourceManager> BG::ResourceManager::instance = nullptr;
 
 /**
 * \brief Default Constructor
 */
-BG::ResourceManager::ResourceManager() {}
+BG::ResourceManager::ResourceManager()
+{
+	
+}
 
 /**
  * \brief Frees dynamically allocated memory and unloads dependencies.
@@ -50,21 +53,19 @@ BG::ResourceManager::~ResourceManager()
 
 	// Unload the Mix_Init libraries
 	Mix_Quit();
-
-	delete instance;
 }
 
 /**
 * \brief Returns a pointer to the singleton instance of the Logger class.
 */
-BG::ResourceManager* BG::ResourceManager::getInstance()
+std::shared_ptr<BG::ResourceManager> BG::ResourceManager::getInstance()
 {
 	// If an instance of the class does not exist we create one
 	if (instance == nullptr)
 	{
-		instance = new ResourceManager();
+		instance.reset(new ResourceManager());
 	}
-	return instance;
+	return std::shared_ptr<ResourceManager>(instance);
 }
 
 /** \brief Loads an image resource into a Texture and returns it.

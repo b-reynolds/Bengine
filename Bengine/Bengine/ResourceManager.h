@@ -1,9 +1,11 @@
 #pragma once
+#include "Bengine.h"
 #include <SDL_render.h>
 #include <SDL_mixer.h>
+#include <memory>
 #include <map>
-#include "Bengine.h"
 #include "Colour.h"
+
 
 namespace BG
 {
@@ -22,7 +24,7 @@ namespace BG
 	public:
 
 		/* Returns a pointer to the singleton instance of the Logger class */
-		static ResourceManager* getInstance();
+		static std::shared_ptr<ResourceManager> getInstance();
 
 		/* Frees dynamically allocated memory and unloads dependencies */
 		ResourceManager::~ResourceManager();
@@ -63,7 +65,7 @@ namespace BG
 		std::map <std::string, Music*> mpMusic;
 
 		/* The singleton instance of ResourceManager */
-		static ResourceManager *instance;
+		static std::shared_ptr<ResourceManager> instance;
 
 		/* Private default constructor */
 		ResourceManager();
