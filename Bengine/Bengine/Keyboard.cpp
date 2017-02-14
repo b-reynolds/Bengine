@@ -41,7 +41,7 @@ void BG::Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
 /**
 * Copies the current key state values into the previous key state values in preperation for a new frame
 */
-void BG::Keyboard::swapStates()
+void BG::Keyboard::swapStates() // TODO: Rename?
 {
 	for(auto i = KEYCODES_MIN; i <= KEYCODES_MAX; ++i)
 	{
