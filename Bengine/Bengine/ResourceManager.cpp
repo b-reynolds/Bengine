@@ -6,7 +6,7 @@
 #include <SDL_image.h>
 
 // Initialize static members
-std::shared_ptr<BG::ResourceManager> BG::ResourceManager::instance = nullptr;
+BG::ResourceManager* BG::ResourceManager::instance = nullptr;
 
 /**
 * \brief Default Constructor
@@ -21,57 +21,17 @@ BG::ResourceManager::ResourceManager()
  */
 BG::ResourceManager::~ResourceManager()
 {
-	printf("Resource manager deconstructing..\n");
-
-	// Obtain an instance of the Logger class
-	auto logger = Logger::getInstance();
-
-	// Iterate through the map of textures
-	std::map<std::string, SDL_Texture*>::iterator itTextures = mpTextures.begin();
-	while(itTextures != mpTextures.end())
-	{
-		// Free the texture resource and erase the element from the map
-		SDL_DestroyTexture(itTextures->second);
-		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
-		itTextures = mpTextures.erase(itTextures);
-	}
-
-	// Unload the SDL_IMG libaries
-	IMG_Quit();
-
-	// Iterate through the map of sound effects
-	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects.begin();
-	while (itSoundEffects != mpSoundEffects.end())
-	{
-		// Free the sound effect resource and erase the element from the map
-		Mix_FreeChunk(itSoundEffects->second);
-		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
-		itSoundEffects = mpSoundEffects.erase(itSoundEffects);
-	}
-
-	// Iterate through the map of music
-	std::map<std::string, Mix_Music*>::iterator itMusic = mpMusic.begin();
-	while (itMusic != mpMusic.end())
-	{
-		// Free the music resource and erase the element from the map
-		Mix_FreeMusic(itMusic->second);
-		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
-		itMusic = mpMusic.erase(itMusic);
-	}
-
-	// Unload the Mix_Init libraries
-	Mix_Quit();
+	free();
 }
 
 /**
-* \brief Returns a pointer to the singleton instance of the Logger class.
+* \brief Returns a reference to the singleton instance of the Logger class.
 */
-std::shared_ptr<BG::ResourceManager> BG::ResourceManager::getInstance()
+BG::ResourceManager* BG::ResourceManager::getInstance()
 {
-	// If an instance of the class does not exist we create one
-	if (instance == nullptr)
+	if(instance == nullptr)
 	{
-		instance.reset(new ResourceManager());
+		instance = new ResourceManager();
 	}
 	return instance;
 }
@@ -226,6 +186,51 @@ void BG::ResourceManager::freeMusic(const std::string &filePath)
 		}
 		++iterator;
 	}
+}
+
+/**
+* \brief Free the memory associated with a loaded resources and unload dependencies
+*/
+void BG::ResourceManager::free()
+{
+	// Obtain an instance of the Logger class
+	Logger* logger = Logger::getInstance();
+
+	// Iterate through the map of textures
+	std::map<std::string, SDL_Texture*>::iterator itTextures = mpTextures.begin();
+	while (itTextures != mpTextures.end())
+	{
+		// Free the texture resource and erase the element from the map
+		SDL_DestroyTexture(itTextures->second);
+		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
+		itTextures = mpTextures.erase(itTextures);
+	}
+
+	// Unload the SDL_IMG libaries
+	IMG_Quit();
+
+	// Iterate through the map of sound effects
+	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects.begin();
+	while (itSoundEffects != mpSoundEffects.end())
+	{
+		// Free the sound effect resource and erase the element from the map
+		Mix_FreeChunk(itSoundEffects->second);
+		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
+		itSoundEffects = mpSoundEffects.erase(itSoundEffects);
+	}
+
+	// Iterate through the map of music
+	std::map<std::string, Mix_Music*>::iterator itMusic = mpMusic.begin();
+	while (itMusic != mpMusic.end())
+	{
+		// Free the music resource and erase the element from the map
+		Mix_FreeMusic(itMusic->second);
+		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
+		itMusic = mpMusic.erase(itMusic);
+	}
+
+	// Unload the Mix_Init libraries
+	Mix_Quit();
 }
 
 /**

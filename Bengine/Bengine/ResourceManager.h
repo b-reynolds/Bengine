@@ -1,7 +1,6 @@
 #pragma once
 #include "Bengine.h"
 #include "Colour.h"
-#include <memory>
 #include <map>
 
 namespace BG
@@ -19,8 +18,8 @@ namespace BG
 
 	public:
 
-		/* Returns a pointer to the singleton instance of the Logger class */
-		static std::shared_ptr<ResourceManager> getInstance();
+		/* Returns a reference to the singleton instance of the Logger class */
+		static ResourceManager* getInstance();
 
 		/* Frees dynamically allocated memory and unloads dependencies */
 		ResourceManager::~ResourceManager();
@@ -43,6 +42,9 @@ namespace BG
 		/* Free the memory associated with a music resource and remove it from the music map */
 		void freeMusic(const std::string &filePath);
 
+		/* Free all memory associated with loaded resources and unload all dependencies */
+		void free();
+
 	private:
 
 		/* Default colour for placeholder textures */
@@ -61,7 +63,7 @@ namespace BG
 		std::map <std::string, Music*> mpMusic;
 
 		/* The singleton instance of ResourceManager */
-		static std::shared_ptr<ResourceManager> instance;
+		static ResourceManager* instance;
 
 		/* Private default constructor */
 		ResourceManager();
