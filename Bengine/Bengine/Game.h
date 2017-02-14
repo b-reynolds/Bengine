@@ -2,7 +2,6 @@
 #include <SDL.h>
 #include "Keyboard.h"
 #include "Mouse.h"
-#include "Sprite.h"
 #include "GameObject.h"
 #include "Window.h"
 #include "Logger.h"
@@ -23,8 +22,8 @@ private:
 	BG::Window* myWindow;
 	SDL_Event event;
 
-	BG::Mouse *mouse;
-	BG::Keyboard *keyboard;
+	BG::Mouse* mouse;
+	BG::Keyboard* keyboard;
 	BG::Logger* logger;
 
 	BG::Sprite sprLogo;
@@ -53,6 +52,7 @@ public:
 	bool run();
 
 	Game();
+	~Game();
 
 };
 

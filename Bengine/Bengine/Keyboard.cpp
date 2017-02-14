@@ -19,7 +19,7 @@ BG::Keyboard* BG::Keyboard::getInstance()
 
 BG::Keyboard::~Keyboard()
 {
-	delete instance;
+	printf("Keyboard deconstructing..\n");
 }
 
 /**

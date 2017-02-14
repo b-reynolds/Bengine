@@ -1,10 +1,9 @@
 #include "Game.h"
 #include "Logger.h"
 #include <SDL_image.h>
+#include "Colour.h"
 #include "ResourceManager.h"
 #include "Renderer.h"
-#include "Window.h"
-#include "Colour.h"
 
 float Game::deltaTime = 0.0f;
 
@@ -28,12 +27,14 @@ bool Game::initialize()
 
 	myWindow = new BG::Window("Test", BG::Vector2u(WIN_WIDTH, WIN_HEIGHT));
 
-	auto resourceManager = BG::ResourceManager::getInstance();
+	std::shared_ptr<BG::ResourceManager> resourceManager = BG::ResourceManager::getInstance();
 
-	sprBackground = resourceManager->getSprite("Images/tile.bmp", myWindow);
-	sprLogo = resourceManager->getSprite("Images/Icon/bengine.fw.png", myWindow);
-	sprThing = resourceManager->getSprite("Images/thing.png", myWindow);
-	sprMouse = resourceManager->getSprite("Images/mouse.png", myWindow);
+
+	sprBackground = BG::Sprite(resourceManager->getTexture("Images/tile.bmp", myWindow), myWindow);
+	sprLogo = BG::Sprite(resourceManager->getTexture("Images/Icon/bengine.fw.png", myWindow), myWindow);
+	sprThing = BG::Sprite(resourceManager->getTexture("Images/thing.png", myWindow), myWindow);
+	sprMouse = BG::Sprite(resourceManager->getTexture("Images/mouse.png", myWindow), myWindow);
+
 	sprMouse.setSize(BG::Vector2i(67.83, 51.33));
 	sprMouse.setOrigin(BG::Vector2f(sprMouse.getSize().x / 2, sprMouse.getSize().y / 2));
 
@@ -157,7 +158,6 @@ void Game::draw()
 		}
 	}
 
-
 	for (int j = 1; j <= 3; ++j)
 	{
 		for (int i = 0; i <= 255; ++i)
@@ -170,7 +170,6 @@ void Game::draw()
 
 	myWindow->draw(objLogo);
 	myWindow->draw(objLogo.getBounds(), BG::Colour(255, 255, 0));
-
 
 	objMouse.getTransform()->setPosition(BG::Vector2f(mouse->getPosition().x, mouse->getPosition().y));
 	myWindow->draw(objMouse);
@@ -200,12 +199,17 @@ void Game::exit() const
 
 Game::Game()
 {
-	mouse = BG::Mouse::getInstance();
 	keyboard = BG::Keyboard::getInstance();
 	logger = BG::Logger::getInstance();
+	mouse = BG::Mouse::getInstance();
+
 	myWindow = nullptr;
 
 	NOW = SDL_GetPerformanceCounter();
 	LAST = 0;
 	deltaTime = 0.0f;
+}
+
+Game::~Game()
+{
 }

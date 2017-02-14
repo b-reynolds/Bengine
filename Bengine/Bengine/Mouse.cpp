@@ -20,7 +20,7 @@ BG::Mouse* BG::Mouse::getInstance()
 
 BG::Mouse::~Mouse()
 {
-	delete instance;
+	printf("Mouse deconstructing..\n");
 }
 
 /**

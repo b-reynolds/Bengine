@@ -21,12 +21,18 @@ BG::ResourceManager::ResourceManager()
  */
 BG::ResourceManager::~ResourceManager()
 {
+	printf("Resource manager deconstructing..\n");
+
+	// Obtain an instance of the Logger class
+	auto logger = Logger::getInstance();
+
 	// Iterate through the map of textures
 	std::map<std::string, SDL_Texture*>::iterator itTextures = mpTextures.begin();
 	while(itTextures != mpTextures.end())
 	{
 		// Free the texture resource and erase the element from the map
 		SDL_DestroyTexture(itTextures->second);
+		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
 		itTextures = mpTextures.erase(itTextures);
 	}
 
@@ -39,6 +45,7 @@ BG::ResourceManager::~ResourceManager()
 	{
 		// Free the sound effect resource and erase the element from the map
 		Mix_FreeChunk(itSoundEffects->second);
+		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
 		itSoundEffects = mpSoundEffects.erase(itSoundEffects);
 	}
 
@@ -48,6 +55,7 @@ BG::ResourceManager::~ResourceManager()
 	{
 		// Free the music resource and erase the element from the map
 		Mix_FreeMusic(itMusic->second);
+		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
 		itMusic = mpMusic.erase(itMusic);
 	}
 
@@ -65,7 +73,7 @@ std::shared_ptr<BG::ResourceManager> BG::ResourceManager::getInstance()
 	{
 		instance.reset(new ResourceManager());
 	}
-	return std::shared_ptr<ResourceManager>(instance);
+	return instance;
 }
 
 /** \brief Loads an image resource into a Texture and returns it.

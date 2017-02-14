@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL.h>
+#include <memory>
 
 #define KEYCODES_MIN 0
 #define KEYCODES_MAX 255
@@ -11,7 +12,7 @@ namespace BG
 
 	private:
 
-		static Keyboard *instance;
+		static Keyboard* instance;
 		Keyboard();
 
 		bool keyStates[KEYCODES_MAX] = { false };

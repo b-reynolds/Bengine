@@ -1,5 +1,6 @@
 #pragma once
 #include "Vector2.h"
+#include <memory>
 
 #define BUTTONS_MIN 1
 #define BUTTONS_MAX 3
@@ -11,7 +12,7 @@ namespace BG
 
 	private:
 
-		static Mouse *instance;
+		static Mouse* instance;
 		Mouse();
 
 		bool mouseState[BUTTONS_MAX] = { false };
@@ -25,7 +26,7 @@ namespace BG
 		static Mouse* getInstance();
 		~Mouse();
 
-		static Vector2i getPosition();
+		Vector2i getPosition();
 
 		void setMouseState(const unsigned int &button, const bool &state);
 		void swapStates();

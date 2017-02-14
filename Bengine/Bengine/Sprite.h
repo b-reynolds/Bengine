@@ -4,13 +4,15 @@
 
 namespace BG
 {
+	class Window;
+
 	class Sprite
 	{
 
 	public:
 
 		Sprite();
-		Sprite(SDL_Texture* texture, SDL_Renderer* renderer);
+		Sprite(SDL_Texture* texture, Window* window);
 
 		void setSize(const Vector2i &size);
 		void setFlipped(const bool &state);

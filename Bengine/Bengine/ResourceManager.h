@@ -1,16 +1,12 @@
 #pragma once
 #include "Bengine.h"
-#include <SDL_render.h>
-#include <SDL_mixer.h>
+#include "Colour.h"
 #include <memory>
 #include <map>
-#include "Colour.h"
-
 
 namespace BG
 {
 	// Forward Declarations
-	struct Colour;
 	class Window;
 
 	/*

@@ -1,4 +1,5 @@
 #include "Sprite.h"
+#include "Window.h"
 
 BG::Sprite::Sprite()
 {
@@ -6,10 +7,10 @@ BG::Sprite::Sprite()
 	renderer = nullptr;
 }
 
-BG::Sprite::Sprite(SDL_Texture* texture, SDL_Renderer* renderer)
+BG::Sprite::Sprite(SDL_Texture* texture, Window* window)
 {
 	this->texture = texture;
-	this->renderer = renderer;
+	this->renderer = window->getRenderer();
 	SDL_QueryTexture(texture, nullptr, nullptr, &size.x, &size.y);
 }
 

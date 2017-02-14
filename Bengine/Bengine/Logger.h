@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <memory>
 
 namespace BG
 {
@@ -8,7 +9,7 @@ namespace BG
 
 	private:
 
-		static Logger *instance;
+		static Logger* instance;
 		Logger();
 
 		static std::string getTimestamp();

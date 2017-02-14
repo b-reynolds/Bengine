@@ -17,8 +17,7 @@ BG::Logger::Logger()
 }
 
 /**
- * @brief Returns a string containing the system's locale time in format D-M-Y H-M-S
- * @return std::string
+ * @brief Returns a string containing the system's locale time in format D-M-Y H-M-S#
  */
 std::string BG::Logger::getTimestamp()
 {
@@ -43,11 +42,11 @@ BG::Logger* BG::Logger::getInstance()
 }
 
 /** Deconstructor
- * Delete dynamically allocated Logger instance 
+ * 
  */
 BG::Logger::~Logger()
 {
-	delete instance;
+	printf("Logger deconstructing..\n");
 }
 
 

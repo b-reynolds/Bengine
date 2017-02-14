@@ -20,6 +20,7 @@ namespace BG
 		Sprite* getSprite() const;
 
 		FloatRect getBounds() const;
+
 			
 	protected:
 
