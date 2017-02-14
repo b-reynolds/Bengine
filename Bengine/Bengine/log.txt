@@ -674,3 +674,185 @@
 [14-02-2017 14:43:11] INFO: Freed resource "Images/mouse.png"
 [14-02-2017 14:43:11] INFO: Freed resource "Images/thing.png"
 [14-02-2017 14:43:11] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:17:12] INFO: Initialized video subsystem
+[14-02-2017 21:17:12] INFO: Initialized SDL_Image
+[14-02-2017 21:17:12] INFO: Created window
+[14-02-2017 21:17:12] INFO: Created renderer
+[14-02-2017 21:17:12] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:17:12] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:17:13] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:17:13] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:17:16] INFO: Destroying window
+[14-02-2017 21:17:16] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:17:16] INFO: Unloading Mix_Init
+[14-02-2017 21:17:16] INFO: Unloading IMG_Init
+[14-02-2017 21:17:16] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:17:16] INFO: Exiting application
+[14-02-2017 21:17:16] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:17:16] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:17:16] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:17:16] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:31:57] INFO: Initialized video subsystem
+[14-02-2017 21:31:57] INFO: Initialized SDL_Image
+[14-02-2017 21:31:57] INFO: Created window
+[14-02-2017 21:31:57] INFO: Created renderer
+[14-02-2017 21:31:57] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:31:57] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:31:57] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:31:57] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:31:59] INFO: Destroying window
+[14-02-2017 21:32:00] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:32:00] INFO: Unloading Mix_Init
+[14-02-2017 21:32:00] INFO: Unloading IMG_Init
+[14-02-2017 21:32:00] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:32:00] INFO: Exiting application
+[14-02-2017 21:32:00] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:32:00] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:32:00] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:32:00] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:32:17] INFO: Initialized video subsystem
+[14-02-2017 21:32:17] INFO: Initialized SDL_Image
+[14-02-2017 21:32:17] INFO: Created window
+[14-02-2017 21:32:17] INFO: Created renderer
+[14-02-2017 21:32:17] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:32:17] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:32:17] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:32:18] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:32:19] INFO: Destroying window
+[14-02-2017 21:32:19] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:32:19] INFO: Unloading Mix_Init
+[14-02-2017 21:32:19] INFO: Unloading IMG_Init
+[14-02-2017 21:32:19] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:32:19] INFO: Exiting application
+[14-02-2017 21:32:19] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:32:19] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:32:19] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:32:19] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:33:42] INFO: Initialized video subsystem
+[14-02-2017 21:33:42] INFO: Initialized SDL_Image
+[14-02-2017 21:33:42] INFO: Created window
+[14-02-2017 21:33:42] INFO: Created renderer
+[14-02-2017 21:33:42] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:33:42] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:33:42] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:33:42] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:33:42] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:33:42] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:33:42] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:33:42] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:33:51] INFO: Destroying window
+[14-02-2017 21:33:51] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:33:51] INFO: Unloading Mix_Init
+[14-02-2017 21:33:52] INFO: Unloading IMG_Init
+[14-02-2017 21:33:52] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:33:52] INFO: Exiting application
+[14-02-2017 21:33:56] INFO: Initialized video subsystem
+[14-02-2017 21:33:56] INFO: Initialized SDL_Image
+[14-02-2017 21:33:56] INFO: Created window
+[14-02-2017 21:33:56] INFO: Created renderer
+[14-02-2017 21:33:56] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:33:56] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:33:56] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:33:57] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:33:57] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:33:57] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:33:57] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:33:57] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:34:09] INFO: Destroying window
+[14-02-2017 21:34:09] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:34:09] INFO: Unloading Mix_Init
+[14-02-2017 21:34:09] INFO: Unloading IMG_Init
+[14-02-2017 21:34:09] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:34:09] INFO: Exiting application
+[14-02-2017 21:34:49] INFO: Initialized video subsystem
+[14-02-2017 21:34:49] INFO: Initialized SDL_Image
+[14-02-2017 21:34:49] INFO: Created window
+[14-02-2017 21:34:49] INFO: Created renderer
+[14-02-2017 21:34:49] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:34:49] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:34:49] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:34:50] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:34:50] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:34:50] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:34:50] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:34:50] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:34:59] INFO: Destroying window
+[14-02-2017 21:34:59] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:34:59] INFO: Unloading Mix_Init
+[14-02-2017 21:34:59] INFO: Unloading IMG_Init
+[14-02-2017 21:34:59] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:34:59] INFO: Exiting application
+[14-02-2017 21:36:38] INFO: Initialized video subsystem
+[14-02-2017 21:36:38] INFO: Initialized SDL_Image
+[14-02-2017 21:36:38] INFO: Created window
+[14-02-2017 21:36:38] INFO: Created renderer
+[14-02-2017 21:36:38] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:36:38] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:36:38] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:36:39] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:36:39] INFO: Freed resource "Images/Icon/bengine.fw.png"
+[14-02-2017 21:36:39] INFO: Freed resource "Images/mouse.png"
+[14-02-2017 21:36:39] INFO: Freed resource "Images/thing.png"
+[14-02-2017 21:36:39] INFO: Freed resource "Images/tile.bmp"
+[14-02-2017 21:36:43] INFO: Destroying window
+[14-02-2017 21:36:43] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:36:43] INFO: Unloading Mix_Init
+[14-02-2017 21:36:43] INFO: Unloading IMG_Init
+[14-02-2017 21:36:43] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:36:43] INFO: Exiting application
+[14-02-2017 21:37:30] INFO: Initialized video subsystem
+[14-02-2017 21:37:30] INFO: Initialized SDL_Image
+[14-02-2017 21:37:30] INFO: Created window
+[14-02-2017 21:37:30] INFO: Created renderer
+[14-02-2017 21:37:30] INFO: Loaded "Images/tile.bmp"
+[14-02-2017 21:37:30] INFO: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:37:30] INFO: Loaded "Images/thing.png"
+[14-02-2017 21:37:30] INFO: Loaded "Images/mouse.png"
+[14-02-2017 21:37:33] INFO: Destroying window
+[14-02-2017 21:37:33] INFO: Destroying renderer and freeing associated textures
+[14-02-2017 21:37:33] INFO: Unloading Mix_Init
+[14-02-2017 21:37:33] INFO: Unloading IMG_Init
+[14-02-2017 21:37:33] INFO: Cleaning up SDL subsystems
+[14-02-2017 21:37:33] INFO: Exiting application
+[14-02-2017 21:47:52] Info: Initialized video subsystem
+[14-02-2017 21:47:52] Info: Initialized SDL_Image
+[14-02-2017 21:47:52] Info: Created window
+[14-02-2017 21:47:52] Info: Created renderer
+[14-02-2017 21:47:52] Info: Loaded "Images/tile.bmp"
+[14-02-2017 21:47:52] Info: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:47:52] Info: Loaded "Images/thing.png"
+[14-02-2017 21:47:53] Info: Loaded "Images/mouse.png"
+[14-02-2017 21:47:56] Info: Destroying window
+[14-02-2017 21:47:56] Info: Destroying renderer and freeing associated textures
+[14-02-2017 21:47:56] Info: Unloading Mix_Init
+[14-02-2017 21:47:56] Info: Unloading IMG_Init
+[14-02-2017 21:47:56] Info: Cleaning up SDL subsystems
+[14-02-2017 21:47:56] Info: Exiting application
+[14-02-2017 21:53:32] Info: Initialized video subsystem
+[14-02-2017 21:53:32] Info: Initialized SDL_Image
+[14-02-2017 21:53:32] Info: Created window
+[14-02-2017 21:53:32] Info: Created renderer
+[14-02-2017 21:53:32] Info: Loaded "Images/tile.bmp"
+[14-02-2017 21:53:32] Info: Loaded "Images/Icon/bengine.fw.png"
+[14-02-2017 21:53:32] Info: Loaded "Images/thing.png"
+[14-02-2017 21:53:32] Info: Loaded "Images/mouse.png"
+[14-02-2017 21:53:36] Info: Destroying window
+[14-02-2017 21:53:36] Info: Destroying renderer and freeing associated textures
+[14-02-2017 21:53:36] Info: Unloading Mix_Init
+[14-02-2017 21:53:36] Info: Unloading IMG_Init
+[14-02-2017 21:53:36] Info: Cleaning up SDL subsystems
+[14-02-2017 21:53:36] Info: Exiting application
+[ 14-02-2017 22:06:03 ] Info: Initialized video subsystem
+[ 14-02-2017 22:06:03 ] Info: Initialized SDL_Image
+[ 14-02-2017 22:06:03 ] Info: Created window
+[ 14-02-2017 22:06:03 ] Info: Created renderer
+[ 14-02-2017 22:06:03 ] Info: Loaded "Images/tile.bmp"
+[ 14-02-2017 22:06:03 ] Info: Loaded "Images/Icon/bengine.fw.png"
+[ 14-02-2017 22:06:03 ] Info: Loaded "Images/thing.png"
+[ 14-02-2017 22:06:03 ] Info: Loaded "Images/mouse.png"
+[ 14-02-2017 22:06:05 ] Info: Destroying window
+[ 14-02-2017 22:06:05 ] Info: Destroying renderer and freeing associated textures
+[ 14-02-2017 22:06:05 ] Info: Unloading Mix_Init
+[ 14-02-2017 22:06:05 ] Info: Unloading IMG_Init
+[ 14-02-2017 22:06:05 ] Info: Cleaning up SDL subsystems
+[ 14-02-2017 22:06:05 ] Info: Exiting application

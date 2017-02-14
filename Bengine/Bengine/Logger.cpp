@@ -1,68 +1,36 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Logger.h"
 #include <iostream>
-#include <SDL_error.h>
 #include <fstream>
 #include <ctime>
 #include <iomanip>
 #include <sstream>
+#include "Windows.h"
 
-BG::Logger* BG::Logger::instance = nullptr;
-
-BG::Logger::Logger()
-{
-	severity = INFO;
-	logMode = ALL;
-	logFile = "log.txt";
-}
-
-/**
- * @brief Returns a string containing the system's locale time in format D-M-Y H-M-S#
+/*
+ * \brief Constructor
+ * Assigns default values to class members
  */
-std::string BG::Logger::getTimestamp()
+BG::Logger::Logger()	
 {
-	auto t = time(nullptr);
-	auto time = *localtime(&t);
-	std::stringstream stringStream;
-	stringStream << std::put_time(&time, "%d-%m-%Y %H:%M:%S");
-	return stringStream.str();
+	severity = SEVERITY_DEFAULT;
+	logMode = LOG_MODE_DEFAULT;
+	logFile = LOG_FILE_DEFAULT;
+	logDirectory = LOG_DIRECTORY_DEFAULT;
 }
 
 /**
-* @brief Returns a pointer a singleton instance of the Logger class
-* @return Logger*
+* \brief Returns a reference to the singleton instance of the Logger class
 */
-BG::Logger* BG::Logger::getInstance()
+BG::Logger& BG::Logger::getInstance()
 {
-	if(instance == nullptr)
-	{
-		instance = new Logger();
-	}
+	static Logger instance;
 	return instance;
 }
 
-/** Deconstructor
- * 
- */
-BG::Logger::~Logger()
-{
-	printf("Logger deconstructing..\n");
-}
-
-
 /**
-* @brief Set the destination file path of the log file
-* @param filePath The destination file path of the log file
-* @return void
-*/
-void BG::Logger::setLogFile(const std::string& filePath)
-{
-	logFile = filePath;
-}
-
-/**
-* @brief Set the log mode
-* @param logMode The log mode
+* \brief Set the current log mode
+* \param logMode log mode
 */
 void BG::Logger::setLogMode(const LogMode& logMode)
 {
@@ -70,56 +38,108 @@ void BG::Logger::setLogMode(const LogMode& logMode)
 }
 
 /**
- * @brief Log a message to the console and or log file depending on Severity and LogMode level
- * @param severity The Severity level of the log
- * @param message The message to log
- * @return void
+ * \brief Set the current severity level
+ * \param severity severity level
  */
-void BG::Logger::log(const Severity& severity, const std::string& message) const
+void BG::Logger::setSeverity(const Severity& severity)
 {
-	if (this->severity < severity) return;
-	std::string messageType = "";
-	switch(severity)
+	this->severity = severity;
+}
+
+/**
+* \brief Set the name of the log file
+* \param fileName name of the log file
+*/
+void BG::Logger::setLogFile(const std::string& fileName)
+{
+	logFile = fileName;
+}
+
+/**
+* \brief Set the directory log files are created in
+* \param directory directory
+*/
+void BG::Logger::setLogDirectory(const std::string& directory)
+{
+	logDirectory = directory;
+}
+
+/**
+* \brief Output a message to the console and or log file depending on Severity and LogMode levels
+* \param severity severity level of the log
+* \param message message to log
+*/
+void BG::Logger::log(const Severity& severity, const std::string& message)
+{
+	// If the severity level of the log is less than our set severity level discontinue
+	if (this->severity < severity)
 	{
-		case ERROR:
-			messageType = "ERROR";
-			break;
-		case DEBUG:
-			messageType = "DEBUG";
-			break;
-		default:
-			messageType = "INFO";
-			break;
+		return;
 	}
-	std::string timeStamp = getTimestamp();
-	std::string output = "[" + timeStamp + "] " + messageType + ": " + message;
-	switch(logMode)
+
+	// Format the destination path and output message
+	std::string output = getDateTime("[%d-%m-%Y %H:%M:%S] ") + toString(severity) + ": " + message;
+	std::string destination = logDirectory + "/" + logFile;
+
+	// If the log file directory does not exist then create it
+	if (CreateDirectory(logDirectory.c_str(), nullptr) || GetLastError() == ERROR_ALREADY_EXISTS)
 	{
-		case CONSOLE:
-			std::cout << output << std::endl;
-			break;
-		case FILE:
-			writeToFile(logFile, output);
-			break;
-		default:
-			std::cout << output << std::endl;
-			writeToFile(logFile, output);
-			break;
+		switch (logMode)
+		{
+			case CONSOLE:
+				std::cout << output << std::endl;
+				break;
+			case FILE:
+				writeToFile(destination, output);
+				break;
+			default:
+				std::cout << output << std::endl;
+				writeToFile(destination, output);
+				break;
+		}
 	}
 }
 
 /**
- * @brief Append a string to a file
- * @param filePath The path to the file
- * @param message The message to be written
- * @return void
+ * \brief Returns the string representation of a severity level
+ * \param severity severity level
  */
-void BG::Logger::writeToFile(const std::string& filePath, const std::string& message)
+std::string BG::Logger::toString(const Severity& severity) const
+{
+	switch(severity)
+	{
+		case ERROR:
+			return "Error";
+		case DEBUG:
+			return "Debug";
+		default:
+			return "Info";
+	}
+}
+
+/**
+ * \brief Returns a string containing the system's locale time in the specified format
+ * \param format desired format of the time stamp (e.g. D-M-Y H:M:S)
+ */
+std::string BG::Logger::getDateTime(const std::string &format) const
+{
+	time_t t = time(nullptr);
+	tm time = *localtime(&t);
+	std::stringstream stringStream;
+	stringStream << std::put_time(&time, format.c_str());
+	return stringStream.str();
+}
+
+/**
+ * \brief Opens a file and appends the specified string to it
+ * \param filePath path of the file to open
+ * \param data data to be written
+ */
+void BG::Logger::writeToFile(const std::string& filePath, const std::string& data)
 {
 	std::ofstream logFile(filePath.c_str(), std::ios_base::out | std::ios_base::app);
 	if (logFile.is_open())
 	{
-		logFile << message << std::endl;
+		logFile << data << std::endl;
 	}
-	logFile.close();
 }

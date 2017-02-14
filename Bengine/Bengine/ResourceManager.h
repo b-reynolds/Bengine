@@ -5,20 +5,20 @@
 
 namespace BG
 {
-	// Forward Declarations
+	// Forward Declaration
 	class Window;
 
 	/*
 	 * \brief Resource Manager
 	 * Handles the loading and distribution of image and sound resources.
-	 * Insures only one instance of any particular resource is loaded at a time.
+	 * Insures only one instance of any particular resource is loaded at any one time.
 	 */
 	class ResourceManager
 	{
 
 	public:
 
-		/* Returns a reference to the singleton instance of the Logger class */
+		/* Returns a pointer to the singleton instance of the Resource Manager class */
 		static ResourceManager* getInstance();
 
 		/* Frees dynamically allocated memory and unloads dependencies */
@@ -83,4 +83,3 @@ namespace BG
 	};
 
 }
-

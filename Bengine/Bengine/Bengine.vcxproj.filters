@@ -51,9 +51,6 @@
     <ClCompile Include="Audio.cpp">
       <Filter>Resource Manager</Filter>
     </ClCompile>
-    <ClCompile Include="Renderer.cpp">
-      <Filter>Resource Manager</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Data Types</Filter>
     </ClCompile>
@@ -93,9 +90,6 @@
       <Filter>Resource Manager</Filter>
     </ClInclude>
     <ClInclude Include="Audio.h">
-      <Filter>Resource Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Renderer.h">
       <Filter>Resource Manager</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">

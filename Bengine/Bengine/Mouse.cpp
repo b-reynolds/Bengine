@@ -42,7 +42,7 @@ void BG::Mouse::setMouseState(const unsigned int& button, const bool& state)
 {
 	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return;
 	mouseState[button] = state;
-	Logger::getInstance()->log(Logger::DEBUG, std::string("Mouse Button (") +
+	Logger::getInstance().log(Logger::DEBUG, std::string("Mouse Button (") +
 		std::to_string(button) + ") State: " + (state ? "Down" : "Up"));
 }
 
@@ -59,7 +59,7 @@ void BG::Mouse::swapStates()
 	currentPosition = getPosition();
 	if (currentPosition != previousPosition)
 	{
-		Logger::getInstance()->log(Logger::DEBUG, "Mouse Position: " + std::to_string(currentPosition.x) +
+		Logger::getInstance().log(Logger::DEBUG, "Mouse Position: " + std::to_string(currentPosition.x) +
 			", " + std::to_string(currentPosition.y));
 	}
 }

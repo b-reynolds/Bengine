@@ -33,7 +33,7 @@ void BG::Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
 	keyStates[key] = state;
 	if (prevKeyStates[key] != keyStates[key])
 	{
-		Logger::getInstance()->log(Logger::DEBUG, std::string("Key (") +
+		Logger::getInstance().log(Logger::DEBUG, std::string("Key (") +
 			std::to_string(key) + "/" + static_cast<char>(key) + ") State: " + (state ? "Down" : "Up"));
 	}
 }

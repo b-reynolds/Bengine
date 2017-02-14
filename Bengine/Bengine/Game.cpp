@@ -3,32 +3,33 @@
 #include <SDL_image.h>
 #include "Colour.h"
 #include "ResourceManager.h"
-#include "Renderer.h"
 
 float Game::deltaTime = 0.0f;
 
 bool Game::initialize()
 {
+	BG::Logger logger = BG::Logger::getInstance();
+
 	// Initialize the video subsystem
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
 		// Subsystem initialization failed, report error and exit.
-		logger->log(BG::Logger::ERROR, std::string("Failed to initialize video subsystem (") + SDL_GetError() + ")");
+		logger.log(BG::Logger::ERROR, std::string("Failed to initialize video subsystem (") + SDL_GetError() + ")");
 		return false;
 	}
-	logger->log(BG::Logger::INFO, "Initialized video subsystem");
+	logger.log(BG::Logger::INFO, "Initialized video subsystem");
 
 	// Initialize SDL_Image
-	if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG) {
-		logger->log(BG::Logger::ERROR, std::string("Failed to initialize SDL_Image (") + IMG_GetError() + ")");
+	if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG)
+	{
+		logger.log(BG::Logger::ERROR, std::string("Failed to initialize SDL_Image (") + IMG_GetError() + ")");
 		return false;
 	}
-	logger->log(BG::Logger::INFO, "Initialized SDL_Image");
+	logger.log(BG::Logger::INFO, "Initialized SDL_Image");
 
 	myWindow = new BG::Window("Test", BG::Vector2u(WIN_WIDTH, WIN_HEIGHT));
 
-	std::shared_ptr<BG::ResourceManager> resourceManager = BG::ResourceManager::getInstance();
-
+	auto resourceManager = BG::ResourceManager::getInstance();
 
 	sprBackground = BG::Sprite(resourceManager->getTexture("Images/tile.bmp", myWindow), myWindow);
 	sprLogo = BG::Sprite(resourceManager->getTexture("Images/Icon/bengine.fw.png", myWindow), myWindow);
@@ -188,19 +189,19 @@ void Game::exit() const
 	{
 		myWindow->destroy();
 	}
-	logger->log(BG::Logger::INFO, "Unloading Mix_Init");
+	BG::Logger logger = BG::Logger::getInstance();
+	logger.log(BG::Logger::INFO, "Unloading Mix_Init");
 	Mix_Quit();
-	logger->log(BG::Logger::INFO, "Unloading IMG_Init");
+	logger.log(BG::Logger::INFO, "Unloading IMG_Init");
 	IMG_Quit();
-	logger->log(BG::Logger::INFO, "Cleaning up SDL subsystems");
+	logger.log(BG::Logger::INFO, "Cleaning up SDL subsystems");
 	SDL_Quit();
-	logger->log(BG::Logger::INFO, "Exiting application");
+	logger.log(BG::Logger::INFO, "Exiting application");
 }
 
 Game::Game()
 {
 	keyboard = BG::Keyboard::getInstance();
-	logger = BG::Logger::getInstance();
 	mouse = BG::Mouse::getInstance();
 
 	myWindow = nullptr;

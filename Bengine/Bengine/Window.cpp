@@ -12,10 +12,10 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
 	if(window == nullptr)
 	{
 		// Window creation failed, report error, clean up and exit.
-		logger->log(BG::Logger::ERROR, std::string("Failed to create window (") + SDL_GetError() + ")");
+		logger.log(BG::Logger::ERROR, std::string("Failed to create window (") + SDL_GetError() + ")");
 		SDL_DestroyWindow(window);
 	}
-	logger->log(BG::Logger::INFO, "Created window");
+	logger.log(BG::Logger::INFO, "Created window");
 
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
@@ -23,10 +23,10 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
 	if(renderer == nullptr)
 	{
 		// Render creation failed, report error, clean up and exit.
-		logger->log(BG::Logger::ERROR, std::string("Failed to create renderer (") + SDL_GetError() + ")");
+		logger.log(BG::Logger::ERROR, std::string("Failed to create renderer (") + SDL_GetError() + ")");
 		SDL_DestroyRenderer(renderer);
 	}
-	logger->log(BG::Logger::INFO, "Created renderer");
+	logger.log(BG::Logger::INFO, "Created renderer");
 }
 
 void BG::Window::clear() const
@@ -42,10 +42,10 @@ void BG::Window::display() const
 void BG::Window::destroy()
 {
 	auto logger = Logger::getInstance();
-	logger->log(Logger::INFO, "Destroying window");
+	logger.log(Logger::INFO, "Destroying window");
 	SDL_DestroyWindow(window);
 	window = nullptr;
-	logger->log(Logger::INFO, "Destroying renderer and freeing associated textures");
+	logger.log(Logger::INFO, "Destroying renderer and freeing associated textures");
 	SDL_DestroyRenderer(renderer);
 	renderer = nullptr;
 }

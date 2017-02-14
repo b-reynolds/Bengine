@@ -25,7 +25,7 @@ BG::ResourceManager::~ResourceManager()
 }
 
 /**
-* \brief Returns a reference to the singleton instance of the Logger class.
+* \brief Returns a pointer to the singleton instance of the ResourceManager class.
 */
 BG::ResourceManager* BG::ResourceManager::getInstance()
 {
@@ -84,7 +84,7 @@ void BG::ResourceManager::freeTexture(const std::string &filePath)
 			auto texture = iterator->second;
 			SDL_DestroyTexture(texture);
 			texture = nullptr;
-			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
+			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
 			iterator = mpTextures.erase(iterator);
 			break;
 		}
@@ -132,7 +132,7 @@ void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 			auto soundEffect = iterator->second;
 			Mix_FreeChunk(soundEffect);
 			soundEffect = nullptr;
-			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
+			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
 			iterator = mpSoundEffects.erase(iterator);
 			break;
 		}
@@ -180,7 +180,7 @@ void BG::ResourceManager::freeMusic(const std::string &filePath)
 			auto music = iterator->second;
 			Mix_FreeMusic(music);
 			music = nullptr;
-			Logger::getInstance()->log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
+			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
 			iterator = mpMusic.erase(iterator);
 			break;
 		}
@@ -194,7 +194,7 @@ void BG::ResourceManager::freeMusic(const std::string &filePath)
 void BG::ResourceManager::free()
 {
 	// Obtain an instance of the Logger class
-	Logger* logger = Logger::getInstance();
+	Logger logger = Logger::getInstance();
 
 	// Iterate through the map of textures
 	std::map<std::string, SDL_Texture*>::iterator itTextures = mpTextures.begin();
@@ -202,7 +202,7 @@ void BG::ResourceManager::free()
 	{
 		// Free the texture resource and erase the element from the map
 		SDL_DestroyTexture(itTextures->second);
-		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
+		logger.log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
 		itTextures = mpTextures.erase(itTextures);
 	}
 
@@ -215,7 +215,7 @@ void BG::ResourceManager::free()
 	{
 		// Free the sound effect resource and erase the element from the map
 		Mix_FreeChunk(itSoundEffects->second);
-		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
+		logger.log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
 		itSoundEffects = mpSoundEffects.erase(itSoundEffects);
 	}
 
@@ -225,7 +225,7 @@ void BG::ResourceManager::free()
 	{
 		// Free the music resource and erase the element from the map
 		Mix_FreeMusic(itMusic->second);
-		logger->log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
+		logger.log(Logger::INFO, "Freed resource \"" + itTextures->first + "\"");
 		itMusic = mpMusic.erase(itMusic);
 	}
 
@@ -276,11 +276,11 @@ BG::Texture* BG::ResourceManager::loadTexture(const std::string &filePath, Windo
 	SDL_Texture* texture = IMG_LoadTexture(window->getRenderer(), filePath.c_str());
 	if(texture != nullptr)
 	{
-		Logger::getInstance()->log(Logger::INFO, "Loaded \"" + filePath + "\"");
+		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
 	}
 	else
 	{
-		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + IMG_GetError() + ")");
+		Logger::getInstance().log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + IMG_GetError() + ")");
 	}
 	return texture;
 }
@@ -294,11 +294,11 @@ BG::SoundEffect* BG::ResourceManager::loadSoundEffect(const std::string &filePat
 	auto soundEffect = Mix_LoadWAV(filePath.c_str());
 	if (soundEffect != nullptr)
 	{
-		Logger::getInstance()->log(Logger::INFO, "Loaded \"" + filePath + "\"");
+		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
 	}
 	else
 	{
-		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
+		Logger::getInstance().log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
 	}
 	return soundEffect;
 }
@@ -312,11 +312,11 @@ BG::Music* BG::ResourceManager::loadMusic(const std::string &filePath)
 	auto music = Mix_LoadMUS(filePath.c_str());
 	if(music != nullptr)
 	{
-		Logger::getInstance()->log(Logger::INFO, "Loaded \"" + filePath + "\"");
+		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
 	}
 	else
 	{
-		Logger::getInstance()->log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
+		Logger::getInstance().log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
 	}
 	return music;
 }
