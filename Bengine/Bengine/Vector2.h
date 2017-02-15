@@ -2,6 +2,9 @@
 
 namespace BG
 {
+	/*
+	 * \brief Vector2 template class with operator overloading
+	 */
 	template<class T>
 	struct Vector2
 	{

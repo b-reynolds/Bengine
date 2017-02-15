@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="User Input">
-      <UniqueIdentifier>{8bb719f5-de4a-47aa-9c6b-01f5230ecaf7}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{57c48f0b-3a70-4ee7-a7f5-eb73331b7dd8}</UniqueIdentifier>
     </Filter>
@@ -25,7 +22,13 @@
     <Filter Include="Data Types">
       <UniqueIdentifier>{f2d13bbb-e647-4163-9c29-00db39725260}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Manager">
+    <Filter Include="Input Management">
+      <UniqueIdentifier>{8bb719f5-de4a-47aa-9c6b-01f5230ecaf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Multimedia">
+      <UniqueIdentifier>{434fb5a9-9ffb-49e9-be06-65f3b3e320aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Management">
       <UniqueIdentifier>{a2797a25-846d-40cd-9238-3e8f0e1e4aec}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -34,10 +37,10 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
-      <Filter>User Input</Filter>
+      <Filter>Input Management</Filter>
     </ClCompile>
     <ClCompile Include="Mouse.cpp">
-      <Filter>User Input</Filter>
+      <Filter>Input Management</Filter>
     </ClCompile>
     <ClCompile Include="Logger.cpp">
       <Filter>Debugging</Filter>
@@ -46,10 +49,7 @@
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="ResourceManager.cpp">
-      <Filter>Resource Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="Audio.cpp">
-      <Filter>Resource Manager</Filter>
+      <Filter>Resource Management</Filter>
     </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Data Types</Filter>
@@ -66,16 +66,19 @@
     <ClCompile Include="Window.cpp">
       <Filter>Data Types</Filter>
     </ClCompile>
+    <ClCompile Include="Audio.cpp">
+      <Filter>Multimedia</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Keyboard.h">
-      <Filter>User Input</Filter>
+      <Filter>Input Management</Filter>
     </ClInclude>
     <ClInclude Include="Mouse.h">
-      <Filter>User Input</Filter>
+      <Filter>Input Management</Filter>
     </ClInclude>
     <ClInclude Include="Logger.h">
       <Filter>Debugging</Filter>
@@ -87,10 +90,7 @@
       <Filter>Data Types</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
-      <Filter>Resource Manager</Filter>
-    </ClInclude>
-    <ClInclude Include="Audio.h">
-      <Filter>Resource Manager</Filter>
+      <Filter>Resource Management</Filter>
     </ClInclude>
     <ClInclude Include="Rectangle.h">
       <Filter>Data Types</Filter>
@@ -113,8 +113,11 @@
     <ClInclude Include="Window.h">
       <Filter>Data Types</Filter>
     </ClInclude>
+    <ClInclude Include="Audio.h">
+      <Filter>Multimedia</Filter>
+    </ClInclude>
     <ClInclude Include="Bengine.h">
-      <Filter>Source Files</Filter>
+      <Filter>Debugging</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -31,10 +31,12 @@ bool Game::initialize()
 
 	auto resourceManager = BG::ResourceManager::getInstance();
 
-	sprBackground = BG::Sprite(resourceManager->getTexture("Images/tile.bmp", myWindow), myWindow);
 	sprLogo = BG::Sprite(resourceManager->getTexture("Images/Icon/bengine.fw.png", myWindow), myWindow);
 	sprThing = BG::Sprite(resourceManager->getTexture("Images/thing.png", myWindow), myWindow);
 	sprMouse = BG::Sprite(resourceManager->getTexture("Images/mouse.png", myWindow), myWindow);
+
+	BG::Texture* txtrBackground = resourceManager->getTexture("Images/tile.bmp", myWindow);
+	sprBackground = BG::Sprite(txtrBackground, myWindow);
 
 	sprMouse.setSize(BG::Vector2i(67.83, 51.33));
 	sprMouse.setOrigin(BG::Vector2f(sprMouse.getSize().x / 2, sprMouse.getSize().y / 2));
