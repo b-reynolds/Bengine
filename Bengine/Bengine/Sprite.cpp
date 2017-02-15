@@ -11,10 +11,15 @@ BG::Sprite::Sprite(SDL_Texture* texture, Window* window)
 {
 	this->texture = texture;
 	this->renderer = window->getRenderer();
-	SDL_QueryTexture(texture, nullptr, nullptr, &size.x, &size.y);
+	flipped = SDL_FLIP_NONE;
+	scale = Vector2f(1.0f, 1.0f);
+	int sizeX = 0;
+	int sizeY = 0;
+	SDL_QueryTexture(texture, nullptr, nullptr, &sizeX, &sizeY);
+	size = Vector2f(sizeX, sizeY);
 }
 
-void BG::Sprite::setSize(const Vector2i& size)
+void BG::Sprite::setSize(const Vector2f& size)
 {
 	this->size = size;
 }
@@ -39,9 +44,9 @@ SDL_Renderer* BG::Sprite::getRenderer() const
 	return renderer;
 }
 
-BG::Vector2i BG::Sprite::getSize() const
+BG::Vector2f BG::Sprite::getSize() const
 {
-	return size;
+	return Vector2f(size.x * scale.x, size.y * scale.y);
 }
 
 SDL_RendererFlip BG::Sprite::getFlipped() const
@@ -52,4 +57,14 @@ SDL_RendererFlip BG::Sprite::getFlipped() const
 BG::Vector2f BG::Sprite::getOrigin() const
 {
 	return origin;
+}
+
+void BG::Sprite::setScale(const Vector2f& scale)
+{
+	this->scale = scale;
+}
+
+BG::Vector2f BG::Sprite::getScale() const
+{
+	return scale;
 }
