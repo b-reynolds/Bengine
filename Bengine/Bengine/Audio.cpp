@@ -1,4 +1,5 @@
 #include "Audio.h"
+#include "Logger.h"
 
 /*\
 * \brief Plays a sound effect file
@@ -9,6 +10,15 @@
 void BG::Audio::playSoundEffect(SoundEffect* soundEffect, const int& channel, const int& loops, const int &fadeInMilliseconds)
 {
 	Mix_FadeInChannel(channel, soundEffect, loops, fadeInMilliseconds);
+	if(fadeInMilliseconds == 0)
+	{
+		Logger::getInstance().log(Logger::DEBUG, "Playing sound effect on channel " + std::to_string(channel) + " (" + std::to_string(loops) + " loops)");
+	}
+	else
+	{
+		Logger::getInstance().log(Logger::DEBUG, "Fading in sound effect on channel (" + std::to_string(fadeInMilliseconds) +
+			"ms) (" + std::to_string(channel) + " (" + std::to_string(loops) + " loops)");
+	}
 }
 
 /**
@@ -26,6 +36,14 @@ bool BG::Audio::isChannelPlaying(const int& channel)
 void BG::Audio::stopChannel(const int& channel, const int &fadeOutMilliseconds)
 {
 	Mix_FadeOutChannel(channel, fadeOutMilliseconds);
+	if (fadeOutMilliseconds == 0)
+	{
+		Logger::getInstance().log(Logger::DEBUG, "Stopped channel " + std::to_string(channel));
+	}
+	else
+	{
+		Logger::getInstance().log(Logger::DEBUG, "Fading out channel " + std::to_string(channel) + " (" + std::to_string(fadeOutMilliseconds) + "ms)");
+	}
 }
 
 /**
@@ -37,6 +55,7 @@ void BG::Audio::setChannelPaused(const int &channel, const bool &state)
 	if (isChannelPlaying(channel))
 	{
 		state ? Mix_Pause(channel) : Mix_Resume(channel);
+		Logger::getInstance().log(Logger::DEBUG, (state ? "Paused" : "Resumed") + std::string(" channel ") + std::to_string(channel));
 	}
 }
 
@@ -63,6 +82,7 @@ void BG::Audio::setChannelVolume(const int& channel, int volume)
 		volume = 0;
 	}
 	Mix_Volume(channel, volume);
+	Logger::getInstance().log(Logger::DEBUG, "Set channel " + std::to_string(channel) + "'s volume to" + std::to_string(volume));
 }
 
 /**
@@ -82,6 +102,14 @@ int BG::Audio::getChannelVolume(const int& channel)
 void BG::Audio::playMusic(Music* music, const int& loops, const int& fadeInMilliseconds)
 {
 	Mix_FadeInMusic(music, loops, fadeInMilliseconds);
+	if (fadeInMilliseconds == 0)
+	{
+		Logger::getInstance().log(Logger::DEBUG, "Playing music");
+	}
+	else
+	{
+		Logger::getInstance().log(Logger::DEBUG, "Fading in music (" + std::to_string(fadeInMilliseconds) + "ms)");
+	}
 }
 
 /**
@@ -101,10 +129,12 @@ void BG::Audio::stopMusic(const int &fadeOutMilliseconds)
 	if (fadeOutMilliseconds > 0)
 	{
 		Mix_FadeOutMusic(fadeOutMilliseconds);
+		Logger::getInstance().log(Logger::DEBUG, "Fading out music (" + std::to_string(fadeOutMilliseconds) + "ms)");
 	}
 	else
 	{
 		Mix_HaltMusic();
+		Logger::getInstance().log(Logger::DEBUG, "Stopped music");
 	}
 }
 
@@ -117,10 +147,11 @@ void BG::Audio::setMusicPaused(const bool& state)
 	if (isMusicPlaying())
 	{
 		state ? Mix_PauseMusic() : Mix_ResumeMusic();
+		Logger::getInstance().log(Logger::DEBUG, (state ? "Paused" : "Resumed") + std::string(" music"));
 	}
 }
 
-/**
+/** 
 * \brief Returns true if music is currently paused
 */
 bool BG::Audio::getMusicPaused()
@@ -143,6 +174,7 @@ void BG::Audio::setMusicVolume(int volume)
 		volume = 0;
 	}
 	Mix_VolumeMusic(volume);
+	Logger::getInstance().log(Logger::DEBUG, "Set music volume to " + std::to_string(volume));
 }
 
 /**
