@@ -1,5 +1,5 @@
 #pragma once
-#include <string>
+#include <fstream>
 
 namespace BG
 {
@@ -54,10 +54,10 @@ namespace BG
 		const LogMode LOG_MODE_DEFAULT = ALL;
 
 		/* Default severity level */
-		const Severity SEVERITY_DEFAULT = INFO;
+		const Severity SEVERITY_DEFAULT = DEBUG;
 
 		/* File name of the log file */
-		std::string logFile;
+		std::string logFileName;
 
 		/* Directory log files are created in */
 		std::string logDirectory;
@@ -70,9 +70,6 @@ namespace BG
 		
 		/* Returns a time stamp in the specified format */
 		std::string getDateTime(const std::string &format) const;
-
-		/* Appends data to a file */
-		void writeToFile(const std::string &filePath, const std::string &data);
 
 	};
 }

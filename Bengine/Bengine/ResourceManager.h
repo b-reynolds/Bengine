@@ -1,5 +1,5 @@
 #pragma once
-#include "Bengine.h"
+#include "BengineTypedefs.h"
 #include "Colour.h"
 #include <map>
 
@@ -9,7 +9,7 @@ namespace BG
 	class Window;
 
 	/*
-	 * \brief Resource Manager
+	 * \brief Resource Manager Class
 	 * Handles the loading and distribution of image and sound resources.
 	 * Insures only one instance of any particular resource is loaded at any one time.
 	 */

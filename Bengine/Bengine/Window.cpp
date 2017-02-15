@@ -75,7 +75,7 @@ void BG::Window::draw(GameObject& gameObject) const
 
 	Sprite* sprite = gameObject.getSprite();
 	SDL_Texture* texture = sprite->getTexture();
-	Vector2i size = sprite->getSize();
+	Vector2f size = sprite->getSize();
 	SDL_RendererFlip flipped = sprite->getFlipped();
 	Vector2f sprOrigin = sprite->getOrigin();
 

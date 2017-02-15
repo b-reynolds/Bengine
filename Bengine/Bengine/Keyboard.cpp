@@ -1,5 +1,6 @@
 #include "Keyboard.h"
 #include "Logger.h"
+#include <string>
 
 // Initialize static member
 BG::Keyboard* BG::Keyboard::instance = nullptr;

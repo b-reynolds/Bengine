@@ -8,7 +8,7 @@
 namespace BG
 {
 	/*
-	 * \brief Keyboard Manager
+	 * \brief Keyboard Manager Class
 	 */
 	class Keyboard
 	{

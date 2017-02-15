@@ -72,6 +72,9 @@
     <ClCompile Include="Sprite.cpp">
       <Filter>Rendering</Filter>
     </ClCompile>
+    <ClCompile Include="Bengine.cpp">
+      <Filter>Input Management</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -121,6 +124,9 @@
     </ClInclude>
     <ClInclude Include="Sprite.h">
       <Filter>Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="BengineTypedefs.h">
+      <Filter>Input Management</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

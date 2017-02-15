@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL_mixer.h>
-#include "Bengine.h"
+#include "BengineTypedefs.h"
 
 namespace BG
 {

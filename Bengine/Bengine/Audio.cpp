@@ -1,5 +1,6 @@
 #include "Audio.h"
 #include "Logger.h"
+#include <string>
 
 /*\
 * \brief Plays a sound effect file

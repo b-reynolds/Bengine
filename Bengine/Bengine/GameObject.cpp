@@ -30,6 +30,6 @@ BG::Sprite* BG::GameObject::getSprite() const
 BG::FloatRect BG::GameObject::getBounds() const
 {
 	Vector2f position = transform.getPosition();
-	Vector2i size = sprite->getSize();
+	Vector2f size = sprite->getSize();
 	return FloatRect(position.x, position.y, size.x, size.y);
 }

@@ -1,8 +1,8 @@
-#include "Game.h"
+#include "Bengine.h"
 
 int main(int argc, char* argv[])
 {
-	auto game = Game();
-	game.run();
+	BG::Bengine bengine = BG::Bengine();
+	bengine.run();
 	return 0;
 }

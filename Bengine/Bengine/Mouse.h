@@ -8,7 +8,7 @@
 namespace BG
 {
 	/*
-	* \brief Mouse Manager
+	* \brief Mouse Manager Clas
 	*/
 	class Mouse
 	{

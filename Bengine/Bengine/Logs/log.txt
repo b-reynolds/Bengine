@@ -1,726 +1,1790 @@
-[ 14-02-2017 22:07:26 ] Info: Initialized video subsystem
-[ 14-02-2017 22:07:26 ] Info: Initialized SDL_Image
-[ 14-02-2017 22:07:26 ] Info: Created window
-[ 14-02-2017 22:07:26 ] Info: Created renderer
-[ 14-02-2017 22:07:26 ] Info: Loaded "Images/tile.bmp"
-[ 14-02-2017 22:07:26 ] Info: Loaded "Images/Icon/bengine.fw.png"
-[ 14-02-2017 22:07:26 ] Info: Loaded "Images/thing.png"
-[ 14-02-2017 22:07:27 ] Info: Loaded "Images/mouse.png"
-[ 14-02-2017 22:07:28 ] Info: Destroying window
-[ 14-02-2017 22:07:28 ] Info: Destroying renderer and freeing associated textures
-[ 14-02-2017 22:07:28 ] Info: Unloading Mix_Init
-[ 14-02-2017 22:07:28 ] Info: Unloading IMG_Init
-[ 14-02-2017 22:07:28 ] Info: Cleaning up SDL subsystems
-[ 14-02-2017 22:07:28 ] Info: Exiting application
-[14-02-2017 22:25:06] Info: Initialized video subsystem
-[14-02-2017 22:25:06] Info: Initialized SDL_Image
-[14-02-2017 22:25:06] Info: Created window
-[14-02-2017 22:25:06] Info: Created renderer
-[14-02-2017 22:25:06] Info: Loaded "Images/tile.bmp"
-[14-02-2017 22:25:06] Info: Loaded "Images/Icon/bengine.fw.png"
-[14-02-2017 22:25:06] Info: Loaded "Images/thing.png"
-[14-02-2017 22:25:07] Info: Loaded "Images/mouse.png"
-[14-02-2017 22:25:08] Debug: Mouse Position: 249, 40
-[14-02-2017 22:25:08] Debug: Mouse Position: 303, 73
-[14-02-2017 22:25:08] Debug: Mouse Position: 372, 87
-[14-02-2017 22:25:08] Debug: Mouse Position: 432, 82
-[14-02-2017 22:25:08] Debug: Mouse Position: 478, 58
-[14-02-2017 22:25:08] Debug: Mouse Position: 487, 40
-[14-02-2017 22:25:08] Debug: Mouse Position: 485, 14
-[14-02-2017 22:25:09] Debug: Mouse Position: 485, 13
-[14-02-2017 22:25:09] Debug: Mouse Position: 489, 7
-[14-02-2017 22:25:09] Debug: Mouse Position: 495, 0
-[14-02-2017 22:25:09] Debug: Mouse Position: 489, 14
-[14-02-2017 22:25:09] Debug: Mouse Position: 481, 40
-[14-02-2017 22:25:09] Debug: Mouse Position: 474, 80
-[14-02-2017 22:25:09] Debug: Mouse Position: 496, 162
-[14-02-2017 22:25:09] Debug: Mouse Position: 528, 197
-[14-02-2017 22:25:09] Debug: Mouse Position: 547, 206
-[14-02-2017 22:25:09] Debug: Mouse Position: 561, 207
-[14-02-2017 22:25:09] Debug: Mouse Position: 582, 199
-[14-02-2017 22:25:09] Debug: Mouse Position: 606, 175
-[14-02-2017 22:25:09] Debug: Mouse Position: 630, 132
-[14-02-2017 22:25:09] Debug: Mouse Position: 638, 98
-[14-02-2017 22:25:09] Debug: Mouse Position: 628, 63
-[14-02-2017 22:25:09] Debug: Mouse Position: 606, 44
-[14-02-2017 22:25:09] Debug: Mouse Position: 575, 33
-[14-02-2017 22:25:09] Debug: Mouse Position: 542, 35
-[14-02-2017 22:25:09] Debug: Mouse Position: 512, 53
-[14-02-2017 22:25:09] Debug: Mouse Position: 485, 94
-[14-02-2017 22:25:09] Debug: Mouse Position: 465, 151
-[14-02-2017 22:25:09] Debug: Mouse Position: 451, 207
-[14-02-2017 22:25:10] Debug: Mouse Position: 445, 237
-[14-02-2017 22:25:10] Debug: Mouse Position: 440, 261
-[14-02-2017 22:25:10] Debug: Mouse Position: 435, 278
-[14-02-2017 22:25:10] Debug: Mouse Position: 432, 289
-[14-02-2017 22:25:10] Debug: Mouse Position: 431, 293
-[14-02-2017 22:25:10] Debug: Mouse Position: 429, 289
-[14-02-2017 22:25:10] Debug: Mouse Position: 427, 284
-[14-02-2017 22:25:10] Debug: Mouse Position: 426, 281
-[14-02-2017 22:25:10] Debug: Mouse Position: 425, 281
-[14-02-2017 22:25:10] Debug: Mouse Position: 424, 281
-[14-02-2017 22:25:10] Debug: Mouse Position: 422, 281
-[14-02-2017 22:25:10] Debug: Mouse Position: 418, 281
-[14-02-2017 22:25:10] Debug: Mouse Position: 410, 280
-[14-02-2017 22:25:10] Debug: Mouse Position: 400, 278
-[14-02-2017 22:25:10] Debug: Mouse Position: 383, 276
-[14-02-2017 22:25:10] Debug: Mouse Position: 368, 274
-[14-02-2017 22:25:10] Debug: Mouse Position: 356, 270
-[14-02-2017 22:25:10] Debug: Mouse Position: 354, 269
-[14-02-2017 22:25:11] Debug: Mouse Position: 345, 284
-[14-02-2017 22:25:11] Debug: Mouse Position: 335, 315
-[14-02-2017 22:25:11] Debug: Mouse Position: 332, 394
-[14-02-2017 22:25:11] Debug: Mouse Position: 333, 440
-[14-02-2017 22:25:11] Debug: Mouse Position: 340, 469
-[14-02-2017 22:25:11] Debug: Mouse Position: 350, 488
-[14-02-2017 22:25:11] Debug: Mouse Position: 369, 494
-[14-02-2017 22:25:11] Debug: Mouse Position: 408, 487
-[14-02-2017 22:25:11] Debug: Mouse Position: 501, 432
-[14-02-2017 22:25:11] Debug: Mouse Position: 548, 403
-[14-02-2017 22:25:11] Debug: Mouse Position: 570, 385
-[14-02-2017 22:25:11] Debug: Mouse Position: 583, 358
-[14-02-2017 22:25:11] Debug: Mouse Position: 583, 335
-[14-02-2017 22:25:11] Debug: Mouse Position: 581, 320
-[14-02-2017 22:25:11] Debug: Mouse Position: 567, 281
-[14-02-2017 22:25:11] Debug: Mouse Position: 538, 229
-[14-02-2017 22:25:11] Debug: Mouse Position: 518, 206
-[14-02-2017 22:25:11] Debug: Mouse Position: 490, 197
-[14-02-2017 22:25:11] Debug: Mouse Position: 460, 197
-[14-02-2017 22:25:11] Debug: Mouse Position: 436, 204
-[14-02-2017 22:25:11] Debug: Mouse Position: 415, 217
-[14-02-2017 22:25:11] Debug: Mouse Position: 401, 236
-[14-02-2017 22:25:11] Debug: Mouse Position: 388, 294
-[14-02-2017 22:25:11] Debug: Mouse Position: 391, 303
-[14-02-2017 22:25:11] Debug: Mouse Position: 412, 316
-[14-02-2017 22:25:11] Debug: Mouse Position: 428, 322
-[14-02-2017 22:25:11] Debug: Mouse Position: 471, 333
-[14-02-2017 22:25:11] Debug: Mouse Position: 507, 345
-[14-02-2017 22:25:11] Debug: Mouse Position: 525, 356
-[14-02-2017 22:25:11] Debug: Mouse Position: 527, 371
-[14-02-2017 22:25:11] Debug: Mouse Position: 514, 386
-[14-02-2017 22:25:11] Debug: Mouse Position: 483, 410
-[14-02-2017 22:25:11] Debug: Mouse Position: 442, 447
-[14-02-2017 22:25:11] Debug: Mouse Position: 413, 468
-[14-02-2017 22:25:11] Debug: Mouse Position: 397, 477
-[14-02-2017 22:25:11] Debug: Mouse Position: 382, 478
-[14-02-2017 22:25:11] Debug: Mouse Position: 357, 456
-[14-02-2017 22:25:11] Debug: Mouse Position: 340, 429
-[14-02-2017 22:25:11] Debug: Mouse Position: 333, 404
-[14-02-2017 22:25:12] Debug: Mouse Position: 333, 377
-[14-02-2017 22:25:12] Debug: Mouse Position: 348, 347
-[14-02-2017 22:25:12] Debug: Mouse Position: 370, 322
-[14-02-2017 22:25:12] Debug: Mouse Position: 397, 307
-[14-02-2017 22:25:12] Debug: Mouse Position: 447, 301
-[14-02-2017 22:25:12] Debug: Mouse Position: 480, 301
-[14-02-2017 22:25:12] Debug: Mouse Position: 506, 301
-[14-02-2017 22:25:12] Debug: Mouse Position: 525, 288
-[14-02-2017 22:25:12] Debug: Mouse Position: 531, 272
-[14-02-2017 22:25:12] Debug: Mouse Position: 531, 255
-[14-02-2017 22:25:12] Debug: Mouse Position: 513, 226
-[14-02-2017 22:25:12] Debug: Mouse Position: 487, 200
-[14-02-2017 22:25:12] Debug: Mouse Position: 444, 182
-[14-02-2017 22:25:12] Debug: Mouse Position: 403, 179
-[14-02-2017 22:25:12] Debug: Mouse Position: 375, 190
-[14-02-2017 22:25:12] Debug: Mouse Position: 363, 204
-[14-02-2017 22:25:12] Debug: Mouse Position: 361, 212
-[14-02-2017 22:25:12] Debug: Mouse Position: 364, 214
-[14-02-2017 22:25:12] Debug: Mouse Position: 370, 216
-[14-02-2017 22:25:12] Debug: Mouse Position: 371, 216
-[14-02-2017 22:25:12] Debug: Mouse Position: 372, 216
-[14-02-2017 22:25:12] Debug: Mouse Position: 373, 216
-[14-02-2017 22:25:12] Debug: Mouse Button (1) State: Down
-[14-02-2017 22:25:12] Debug: Mouse Position: 373, 217
-[14-02-2017 22:25:12] Debug: Mouse Button (1) State: Up
-[14-02-2017 22:25:12] Debug: Mouse Button (1) State: Down
-[14-02-2017 22:25:12] Debug: Mouse Button (1) State: Up
-[14-02-2017 22:25:12] Debug: Mouse Position: 373, 218
-[14-02-2017 22:25:12] Debug: Mouse Button (1) State: Down
-[14-02-2017 22:25:13] Debug: Mouse Button (1) State: Up
-[14-02-2017 22:25:13] Debug: Key (99/c) State: Down
-[14-02-2017 22:25:13] Debug: Key (99/c) State: Up
-[14-02-2017 22:25:13] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:13] Debug: Key (99/c) State: Down
-[14-02-2017 22:25:13] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:13] Debug: Key (99/c) State: Up
-[14-02-2017 22:25:13] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:13] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:13] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:13] Debug: Key (99/c) State: Down
-[14-02-2017 22:25:13] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:13] Debug: Key (99/c) State: Up
-[14-02-2017 22:25:13] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:13] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:14] Debug: Key (99/c) State: Down
-[14-02-2017 22:25:14] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:14] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:14] Debug: Key (99/c) State: Up
-[14-02-2017 22:25:14] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:14] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:14] Debug: Key (99/c) State: Down
-[14-02-2017 22:25:14] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:14] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:14] Debug: Key (99/c) State: Up
-[14-02-2017 22:25:14] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:15] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:15] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:15] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:15] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:15] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:15] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:15] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:15] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:15] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:15] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:16] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:16] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:16] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:16] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:16] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:16] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:16] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:16] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:17] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:17] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:17] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:17] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:17] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:17] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:17] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:17] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:18] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:18] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:18] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:18] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:18] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:18] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:18] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:18] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:18] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:19] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:19] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:19] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:19] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:19] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:19] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:20] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:20] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:20] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:20] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:20] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:20] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:20] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:21] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:21] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:21] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:21] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:21] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:21] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:22] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:22] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:22] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:22] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:22] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:22] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:22] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:22] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:22] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:24] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:24] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:24] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:24] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:24] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:24] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:24] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:25] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:25] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:25] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:25] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:25] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:25] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:25] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:25] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:26] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:26] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:26] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:26] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:26] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:26] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:26] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:26] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:26] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:27] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:27] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:27] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:27] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:27] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:27] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:28] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:28] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:28] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:28] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:28] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:28] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:28] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:28] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:29] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:29] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:29] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:29] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:29] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:29] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:29] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:30] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:30] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:30] Debug: Mouse Position: 367, 227
-[14-02-2017 22:25:30] Debug: Mouse Position: 299, 271
-[14-02-2017 22:25:30] Debug: Mouse Position: 277, 308
-[14-02-2017 22:25:30] Debug: Mouse Position: 267, 339
-[14-02-2017 22:25:30] Debug: Mouse Position: 271, 361
-[14-02-2017 22:25:30] Debug: Mouse Position: 297, 382
-[14-02-2017 22:25:30] Debug: Mouse Position: 338, 393
-[14-02-2017 22:25:30] Debug: Mouse Position: 392, 401
-[14-02-2017 22:25:30] Debug: Mouse Position: 436, 377
-[14-02-2017 22:25:30] Debug: Mouse Position: 449, 336
-[14-02-2017 22:25:30] Debug: Mouse Position: 449, 278
-[14-02-2017 22:25:30] Debug: Mouse Position: 440, 232
-[14-02-2017 22:25:30] Debug: Mouse Position: 419, 192
-[14-02-2017 22:25:30] Debug: Mouse Position: 374, 161
-[14-02-2017 22:25:30] Debug: Mouse Position: 333, 157
-[14-02-2017 22:25:30] Debug: Mouse Position: 292, 167
-[14-02-2017 22:25:31] Debug: Mouse Position: 268, 193
-[14-02-2017 22:25:31] Debug: Mouse Position: 260, 241
-[14-02-2017 22:25:31] Debug: Mouse Position: 275, 355
-[14-02-2017 22:25:31] Debug: Mouse Position: 295, 390
-[14-02-2017 22:25:31] Debug: Mouse Position: 323, 402
-[14-02-2017 22:25:31] Debug: Mouse Position: 358, 400
-[14-02-2017 22:25:31] Debug: Mouse Position: 394, 387
-[14-02-2017 22:25:31] Debug: Mouse Position: 419, 367
-[14-02-2017 22:25:31] Debug: Mouse Position: 434, 340
-[14-02-2017 22:25:31] Debug: Mouse Position: 440, 309
-[14-02-2017 22:25:31] Debug: Mouse Position: 438, 279
-[14-02-2017 22:25:31] Debug: Mouse Position: 418, 232
-[14-02-2017 22:25:31] Debug: Mouse Position: 394, 207
-[14-02-2017 22:25:31] Debug: Mouse Position: 366, 192
-[14-02-2017 22:25:31] Debug: Mouse Position: 332, 190
-[14-02-2017 22:25:31] Debug: Mouse Position: 305, 207
-[14-02-2017 22:25:31] Debug: Mouse Position: 283, 246
-[14-02-2017 22:25:31] Debug: Mouse Position: 273, 312
-[14-02-2017 22:25:31] Debug: Mouse Position: 278, 344
-[14-02-2017 22:25:31] Debug: Mouse Position: 297, 369
-[14-02-2017 22:25:31] Debug: Mouse Position: 324, 379
-[14-02-2017 22:25:31] Debug: Mouse Position: 362, 376
-[14-02-2017 22:25:31] Debug: Mouse Position: 422, 331
-[14-02-2017 22:25:31] Debug: Mouse Position: 440, 305
-[14-02-2017 22:25:31] Debug: Mouse Position: 447, 283
-[14-02-2017 22:25:31] Debug: Mouse Position: 444, 264
-[14-02-2017 22:25:31] Debug: Mouse Position: 433, 253
-[14-02-2017 22:25:31] Debug: Mouse Position: 417, 249
-[14-02-2017 22:25:31] Debug: Mouse Position: 405, 249
-[14-02-2017 22:25:31] Debug: Mouse Position: 400, 252
-[14-02-2017 22:25:31] Debug: Mouse Position: 399, 254
-[14-02-2017 22:25:31] Debug: Mouse Position: 400, 254
-[14-02-2017 22:25:31] Debug: Mouse Position: 407, 253
-[14-02-2017 22:25:31] Debug: Mouse Position: 410, 252
-[14-02-2017 22:25:31] Debug: Mouse Position: 412, 254
-[14-02-2017 22:25:31] Debug: Mouse Position: 420, 267
-[14-02-2017 22:25:31] Debug: Mouse Position: 446, 285
-[14-02-2017 22:25:31] Debug: Mouse Position: 474, 299
-[14-02-2017 22:25:32] Debug: Mouse Position: 488, 306
-[14-02-2017 22:25:32] Debug: Mouse Position: 514, 315
-[14-02-2017 22:25:32] Debug: Mouse Position: 534, 320
-[14-02-2017 22:25:32] Debug: Mouse Position: 555, 323
-[14-02-2017 22:25:32] Debug: Mouse Position: 575, 323
-[14-02-2017 22:25:32] Debug: Mouse Position: 594, 320
-[14-02-2017 22:25:32] Debug: Mouse Position: 612, 308
-[14-02-2017 22:25:32] Debug: Mouse Position: 627, 291
-[14-02-2017 22:25:32] Debug: Mouse Position: 639, 268
-[14-02-2017 22:25:32] Debug: Mouse Position: 652, 230
-[14-02-2017 22:25:32] Debug: Mouse Position: 658, 188
-[14-02-2017 22:25:32] Debug: Mouse Position: 660, 151
-[14-02-2017 22:25:32] Debug: Mouse Position: 658, 112
-[14-02-2017 22:25:32] Debug: Mouse Position: 640, 71
-[14-02-2017 22:25:32] Debug: Mouse Position: 610, 29
-[14-02-2017 22:25:32] Debug: Mouse Position: 584, 9
-[14-02-2017 22:25:32] Debug: Mouse Position: 549, 9
-[14-02-2017 22:25:32] Debug: Mouse Position: 521, 9
-[14-02-2017 22:25:32] Debug: Mouse Position: 484, 32
-[14-02-2017 22:25:32] Debug: Mouse Position: 431, 85
-[14-02-2017 22:25:32] Debug: Mouse Position: 388, 147
-[14-02-2017 22:25:32] Debug: Mouse Position: 361, 205
-[14-02-2017 22:25:32] Debug: Mouse Position: 350, 257
-[14-02-2017 22:25:32] Debug: Mouse Position: 343, 317
-[14-02-2017 22:25:32] Debug: Mouse Position: 337, 353
-[14-02-2017 22:25:32] Debug: Mouse Position: 327, 385
-[14-02-2017 22:25:32] Debug: Mouse Position: 315, 413
-[14-02-2017 22:25:32] Debug: Mouse Position: 302, 427
-[14-02-2017 22:25:32] Debug: Mouse Position: 293, 429
-[14-02-2017 22:25:32] Debug: Mouse Position: 268, 419
-[14-02-2017 22:25:32] Debug: Mouse Position: 249, 386
-[14-02-2017 22:25:32] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:33] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:33] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:33] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:34] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:34] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:34] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:34] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:34] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:34] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:34] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:35] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:35] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:35] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:35] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:35] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:35] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:35] Debug: Key (119/w) State: Down
-[14-02-2017 22:25:35] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:36] Debug: Key (97/a) State: Down
-[14-02-2017 22:25:36] Debug: Key (119/w) State: Up
-[14-02-2017 22:25:36] Debug: Key (97/a) State: Up
-[14-02-2017 22:25:36] Debug: Key (115/s) State: Down
-[14-02-2017 22:25:36] Debug: Key (100/d) State: Down
-[14-02-2017 22:25:36] Debug: Key (115/s) State: Up
-[14-02-2017 22:25:36] Debug: Key (100/d) State: Up
-[14-02-2017 22:25:37] Debug: Mouse Position: 270, 378
-[14-02-2017 22:25:37] Debug: Mouse Position: 302, 370
-[14-02-2017 22:25:37] Debug: Mouse Position: 329, 368
-[14-02-2017 22:25:37] Debug: Mouse Position: 357, 368
-[14-02-2017 22:25:37] Debug: Mouse Position: 397, 354
-[14-02-2017 22:25:37] Debug: Mouse Position: 467, 300
-[14-02-2017 22:25:37] Debug: Mouse Position: 554, 209
-[14-02-2017 22:25:37] Debug: Mouse Position: 587, 169
-[14-02-2017 22:25:37] Debug: Mouse Position: 603, 149
-[14-02-2017 22:25:37] Debug: Mouse Position: 609, 139
-[14-02-2017 22:25:37] Debug: Mouse Position: 613, 126
-[14-02-2017 22:25:37] Debug: Mouse Position: 627, 132
-[14-02-2017 22:25:37] Debug: Mouse Position: 771, 140
-[14-02-2017 22:25:37] Debug: Mouse Position: 886, 127
-[14-02-2017 22:25:37] Debug: Mouse Position: 996, 92
-[14-02-2017 22:25:37] Debug: Mouse Position: 1015, 73
-[14-02-2017 22:25:37] Debug: Mouse Position: 1016, 64
-[14-02-2017 22:25:37] Debug: Mouse Position: 1015, 62
-[14-02-2017 22:25:37] Debug: Mouse Position: 1009, 59
-[14-02-2017 22:25:37] Debug: Mouse Position: 1007, 56
-[14-02-2017 22:25:37] Debug: Mouse Position: 997, 48
-[14-02-2017 22:25:38] Debug: Mouse Position: 983, 46
-[14-02-2017 22:25:38] Debug: Mouse Position: 972, 50
-[14-02-2017 22:25:38] Debug: Mouse Position: 965, 48
-[14-02-2017 22:25:38] Debug: Mouse Position: 960, 34
-[14-02-2017 22:25:38] Debug: Mouse Position: 958, 26
-[14-02-2017 22:25:38] Debug: Mouse Position: 958, 25
-[14-02-2017 22:25:38] Debug: Mouse Position: 963, 25
-[14-02-2017 22:25:38] Debug: Mouse Position: 968, 25
-[14-02-2017 22:25:38] Debug: Mouse Position: 984, 22
-[14-02-2017 22:25:38] Debug: Mouse Position: 991, 15
-[14-02-2017 22:25:38] Debug: Mouse Position: 998, 6
-[14-02-2017 22:25:38] Debug: Mouse Position: 1004, 0
-[14-02-2017 22:25:38] Info: Destroying window
-[14-02-2017 22:25:38] Info: Destroying renderer and freeing associated textures
-[14-02-2017 22:25:38] Info: Unloading Mix_Init
-[14-02-2017 22:25:38] Info: Unloading IMG_Init
-[14-02-2017 22:25:38] Info: Cleaning up SDL subsystems
-[14-02-2017 22:25:38] Info: Exiting application
-[14-02-2017 22:43:10] Info: Initialized video subsystem
-[14-02-2017 22:43:10] Info: Initialized SDL_Image
-[14-02-2017 22:43:10] Info: Created window
-[14-02-2017 22:43:10] Info: Created renderer
-[14-02-2017 22:43:10] Info: Loaded "Images/tile.bmp"
-[14-02-2017 22:43:10] Info: Loaded "Images/Icon/bengine.fw.png"
-[14-02-2017 22:43:10] Info: Loaded "Images/thing.png"
-[14-02-2017 22:43:10] Info: Loaded "Images/mouse.png"
-[14-02-2017 22:43:11] Debug: Mouse Position: 331, 19
-[14-02-2017 22:43:11] Debug: Mouse Position: 340, 35
-[14-02-2017 22:43:11] Debug: Mouse Position: 343, 41
-[14-02-2017 22:43:11] Debug: Mouse Position: 346, 43
-[14-02-2017 22:43:11] Debug: Mouse Position: 356, 50
-[14-02-2017 22:43:11] Debug: Mouse Position: 376, 68
-[14-02-2017 22:43:11] Debug: Mouse Position: 452, 133
-[14-02-2017 22:43:11] Debug: Mouse Position: 463, 140
-[14-02-2017 22:43:11] Debug: Mouse Position: 470, 145
-[14-02-2017 22:43:11] Debug: Mouse Position: 472, 148
-[14-02-2017 22:43:12] Debug: Mouse Position: 468, 153
-[14-02-2017 22:43:12] Debug: Mouse Position: 462, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 447, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 434, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 418, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 402, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 385, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 370, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 359, 156
-[14-02-2017 22:43:12] Debug: Mouse Position: 345, 158
-[14-02-2017 22:43:12] Debug: Mouse Position: 338, 161
-[14-02-2017 22:43:12] Debug: Mouse Position: 332, 164
-[14-02-2017 22:43:12] Debug: Mouse Position: 326, 174
-[14-02-2017 22:43:12] Debug: Mouse Position: 322, 183
-[14-02-2017 22:43:12] Debug: Mouse Position: 320, 199
-[14-02-2017 22:43:12] Debug: Mouse Position: 320, 224
-[14-02-2017 22:43:12] Debug: Mouse Position: 325, 255
-[14-02-2017 22:43:12] Debug: Mouse Position: 329, 276
-[14-02-2017 22:43:12] Debug: Mouse Position: 358, 278
-[14-02-2017 22:43:12] Debug: Mouse Position: 360, 276
-[14-02-2017 22:43:13] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:13] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:14] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:14] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:14] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:14] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:14] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:14] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:14] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:14] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:14] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:15] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:15] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:15] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:15] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:15] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:15] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:16] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:16] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:16] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:16] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:16] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:16] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:16] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:16] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:17] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:17] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:17] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:17] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:17] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:17] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:17] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:18] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:18] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:18] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:18] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:18] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:18] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:19] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:19] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:19] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:19] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:19] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:19] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:19] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:19] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:20] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:20] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:20] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:20] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:20] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:20] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:20] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:21] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:21] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:21] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:21] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:21] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:21] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:21] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:21] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:22] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:22] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:22] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:22] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:22] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:22] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:22] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:22] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:23] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:23] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:23] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:23] Debug: Mouse Position: 365, 273
-[14-02-2017 22:43:23] Debug: Mouse Position: 438, 231
-[14-02-2017 22:43:23] Debug: Mouse Position: 555, 203
-[14-02-2017 22:43:23] Debug: Mouse Position: 614, 201
-[14-02-2017 22:43:23] Debug: Mouse Position: 638, 201
-[14-02-2017 22:43:23] Debug: Mouse Position: 671, 201
-[14-02-2017 22:43:23] Debug: Mouse Position: 704, 201
-[14-02-2017 22:43:23] Debug: Mouse Position: 712, 201
-[14-02-2017 22:43:23] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:23] Debug: Mouse Position: 730, 187
-[14-02-2017 22:43:23] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:23] Debug: Mouse Position: 795, 131
-[14-02-2017 22:43:23] Debug: Mouse Position: 828, 112
-[14-02-2017 22:43:23] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:23] Debug: Mouse Position: 836, 109
-[14-02-2017 22:43:23] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:23] Debug: Mouse Position: 839, 108
-[14-02-2017 22:43:24] Debug: Mouse Position: 842, 105
-[14-02-2017 22:43:24] Debug: Mouse Position: 853, 93
-[14-02-2017 22:43:24] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:24] Debug: Mouse Position: 887, 59
-[14-02-2017 22:43:24] Debug: Mouse Position: 893, 53
-[14-02-2017 22:43:24] Debug: Mouse Position: 903, 41
-[14-02-2017 22:43:24] Debug: Mouse Position: 907, 38
-[14-02-2017 22:43:24] Debug: Mouse Position: 909, 36
-[14-02-2017 22:43:24] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:24] Debug: Mouse Position: 914, 33
-[14-02-2017 22:43:24] Debug: Mouse Position: 915, 33
-[14-02-2017 22:43:24] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:24] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:24] Debug: Mouse Position: 916, 33
-[14-02-2017 22:43:24] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:24] Debug: Mouse Position: 918, 31
-[14-02-2017 22:43:24] Debug: Mouse Position: 919, 31
-[14-02-2017 22:43:24] Debug: Mouse Position: 921, 28
-[14-02-2017 22:43:24] Debug: Mouse Position: 925, 26
-[14-02-2017 22:43:25] Debug: Mouse Position: 927, 25
-[14-02-2017 22:43:25] Debug: Mouse Position: 931, 23
-[14-02-2017 22:43:25] Debug: Mouse Position: 934, 20
-[14-02-2017 22:43:25] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:25] Debug: Mouse Position: 935, 20
-[14-02-2017 22:43:25] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:25] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:25] Debug: Mouse Position: 937, 19
-[14-02-2017 22:43:25] Debug: Mouse Position: 938, 18
-[14-02-2017 22:43:25] Debug: Mouse Position: 944, 14
-[14-02-2017 22:43:25] Debug: Mouse Position: 956, 5
-[14-02-2017 22:43:25] Debug: Mouse Position: 975, 0
-[14-02-2017 22:43:25] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:25] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:26] Info: Destroying window
-[14-02-2017 22:43:26] Info: Destroying renderer and freeing associated textures
-[14-02-2017 22:43:26] Info: Unloading Mix_Init
-[14-02-2017 22:43:26] Info: Unloading IMG_Init
-[14-02-2017 22:43:26] Info: Cleaning up SDL subsystems
-[14-02-2017 22:43:26] Info: Exiting application
-[14-02-2017 22:43:50] Info: Initialized video subsystem
-[14-02-2017 22:43:50] Info: Initialized SDL_Image
-[14-02-2017 22:43:50] Info: Created window
-[14-02-2017 22:43:50] Info: Created renderer
-[14-02-2017 22:43:50] Info: Loaded "Images/tile.bmp"
-[14-02-2017 22:43:50] Info: Loaded "Images/Icon/bengine.fw.png"
-[14-02-2017 22:43:50] Info: Loaded "Images/thing.png"
-[14-02-2017 22:43:50] Info: Loaded "Images/mouse.png"
-[14-02-2017 22:43:51] Debug: Mouse Position: 275, 22
-[14-02-2017 22:43:51] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:51] Debug: Mouse Position: 308, 52
-[14-02-2017 22:43:51] Debug: Mouse Position: 325, 65
-[14-02-2017 22:43:51] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:51] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:51] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:51] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:51] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:51] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:52] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:52] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:52] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:52] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:52] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:52] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:52] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:52] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:52] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:53] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:53] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:53] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:53] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:53] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:53] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:53] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:53] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:53] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:53] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:53] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:54] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:54] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:54] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:54] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:54] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:54] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:54] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:54] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:54] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:54] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:55] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:55] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:55] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:55] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:55] Debug: Key (119/w) State: Down
-[14-02-2017 22:43:55] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:55] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:55] Debug: Mouse Position: 323, 66
-[14-02-2017 22:43:55] Debug: Mouse Position: 322, 69
-[14-02-2017 22:43:55] Debug: Mouse Position: 319, 70
-[14-02-2017 22:43:55] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:55] Debug: Mouse Position: 317, 72
-[14-02-2017 22:43:56] Debug: Key (97/a) State: Down
-[14-02-2017 22:43:56] Debug: Key (119/w) State: Up
-[14-02-2017 22:43:56] Debug: Key (115/s) State: Down
-[14-02-2017 22:43:56] Debug: Mouse Position: 320, 72
-[14-02-2017 22:43:56] Debug: Key (100/d) State: Down
-[14-02-2017 22:43:56] Debug: Key (97/a) State: Up
-[14-02-2017 22:43:56] Debug: Mouse Position: 336, 72
-[14-02-2017 22:43:56] Debug: Mouse Position: 353, 76
-[14-02-2017 22:43:56] Debug: Mouse Position: 392, 85
-[14-02-2017 22:43:56] Debug: Mouse Position: 413, 90
-[14-02-2017 22:43:56] Debug: Mouse Position: 420, 91
-[14-02-2017 22:43:56] Debug: Mouse Position: 428, 92
-[14-02-2017 22:43:56] Debug: Key (115/s) State: Up
-[14-02-2017 22:43:56] Debug: Mouse Position: 429, 92
-[14-02-2017 22:43:56] Debug: Key (100/d) State: Up
-[14-02-2017 22:43:56] Debug: Mouse Position: 435, 90
-[14-02-2017 22:43:56] Debug: Mouse Position: 518, 70
-[14-02-2017 22:43:56] Debug: Mouse Position: 703, 44
-[14-02-2017 22:43:56] Debug: Mouse Position: 856, 42
-[14-02-2017 22:43:56] Debug: Mouse Position: 922, 48
-[14-02-2017 22:43:56] Debug: Mouse Position: 933, 49
-[14-02-2017 22:43:56] Debug: Mouse Position: 933, 47
-[14-02-2017 22:43:57] Debug: Mouse Position: 938, 41
-[14-02-2017 22:43:57] Debug: Mouse Position: 956, 26
-[14-02-2017 22:43:57] Debug: Mouse Position: 961, 21
-[14-02-2017 22:43:57] Debug: Mouse Position: 963, 17
-[14-02-2017 22:43:57] Debug: Mouse Position: 965, 8
-[14-02-2017 22:43:57] Debug: Mouse Position: 965, 1
-[14-02-2017 22:43:57] Debug: Mouse Position: 964, 0
-[14-02-2017 22:43:57] Info: Destroying window
-[14-02-2017 22:43:57] Info: Destroying renderer and freeing associated textures
-[14-02-2017 22:43:57] Info: Unloading Mix_Init
-[14-02-2017 22:43:57] Info: Unloading IMG_Init
-[14-02-2017 22:43:57] Info: Cleaning up SDL subsystems
-[14-02-2017 22:43:57] Info: Exiting application
-[14-02-2017 22:44:11] Info: Initialized video subsystem
-[14-02-2017 22:44:11] Info: Initialized SDL_Image
-[14-02-2017 22:44:11] Info: Created window
-[14-02-2017 22:44:11] Info: Created renderer
-[14-02-2017 22:44:11] Info: Loaded "Images/tile.bmp"
-[14-02-2017 22:44:11] Info: Loaded "Images/Icon/bengine.fw.png"
-[14-02-2017 22:44:11] Info: Loaded "Images/thing.png"
-[14-02-2017 22:44:12] Info: Loaded "Images/mouse.png"
-[14-02-2017 22:44:19] Info: Destroying window
-[14-02-2017 22:44:19] Info: Destroying renderer and freeing associated textures
-[14-02-2017 22:44:19] Info: Unloading Mix_Init
-[14-02-2017 22:44:19] Info: Unloading IMG_Init
-[14-02-2017 22:44:19] Info: Cleaning up SDL subsystems
-[14-02-2017 22:44:19] Info: Exiting application
-[14-02-2017 23:56:20] Info: Initialized video subsystem
-[14-02-2017 23:56:20] Info: Initialized SDL_Image
-[14-02-2017 23:56:20] Info: Created window
-[14-02-2017 23:56:20] Info: Created renderer
-[14-02-2017 23:56:20] Info: Loaded "Images/tile.bmp"
-[14-02-2017 23:56:20] Info: Loaded "Images/Icon/bengine.fw.png"
-[14-02-2017 23:56:20] Info: Loaded "Images/thing.png"
-[14-02-2017 23:56:21] Info: Loaded "Images/mouse.png"
-[14-02-2017 23:56:54] Info: Destroying window
-[14-02-2017 23:56:54] Info: Destroying renderer and freeing associated textures
-[14-02-2017 23:56:54] Info: Unloading Mix_Init
-[14-02-2017 23:56:54] Info: Unloading IMG_Init
-[14-02-2017 23:56:54] Info: Cleaning up SDL subsystems
-[14-02-2017 23:56:54] Info: Exiting application
-[15-02-2017 00:31:34] Info: Initialized video subsystem
-[15-02-2017 00:31:34] Info: Initialized SDL_Image
-[15-02-2017 00:31:34] Info: Created window
-[15-02-2017 00:31:34] Info: Created renderer
-[15-02-2017 00:31:34] Info: Loaded "Images/Icon/bengine.fw.png"
-[15-02-2017 00:31:34] Info: Loaded "Images/thing.png"
-[15-02-2017 00:31:34] Info: Loaded "Images/mouse.png"
-[15-02-2017 00:31:34] Info: Loaded "Images/tile.bmp"
-[15-02-2017 00:31:42] Info: Destroying window
-[15-02-2017 00:31:42] Info: Destroying renderer and freeing associated textures
-[15-02-2017 00:31:42] Info: Unloading Mix_Init
-[15-02-2017 00:31:42] Info: Unloading IMG_Init
-[15-02-2017 00:31:42] Info: Cleaning up SDL subsystems
-[15-02-2017 00:31:42] Info: Exiting application
+[15-02-2017 14:31:40] Info: Initialized video subsystem
+[15-02-2017 14:31:40] Info: Initialized SDL_Image
+[15-02-2017 14:31:40] Info: Initialized Mix_Init
+[15-02-2017 14:35:59] Info: Initialized video subsystem
+[15-02-2017 14:35:59] Info: Initialized SDL_Image
+[15-02-2017 14:35:59] Info: Initialized Mix_Init
+[15-02-2017 14:35:59] Info: Initialized video subsystem
+[15-02-2017 14:35:59] Info: Initialized SDL_Image
+[15-02-2017 14:35:59] Info: Created window
+[15-02-2017 14:35:59] Info: Created renderer
+[15-02-2017 14:35:59] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 14:35:59] Info: Loaded "Images/thing.png"
+[15-02-2017 14:36:00] Info: Loaded "Images/mouse.png"
+[15-02-2017 14:36:00] Info: Loaded "Images/tile.bmp"
+[15-02-2017 14:36:12] Info: Destroying window
+[15-02-2017 14:36:12] Info: Destroying renderer and freeing associated textures
+[15-02-2017 14:36:12] Info: Unloading Mix_Init
+[15-02-2017 14:36:12] Info: Unloading IMG_Init
+[15-02-2017 14:36:12] Info: Cleaning up SDL subsystems
+[15-02-2017 14:36:12] Info: Exiting application
+[15-02-2017 14:39:46] Info: Initialized video subsystem
+[15-02-2017 14:39:46] Info: Initialized SDL_Image
+[15-02-2017 14:39:46] Info: Initialized Mix_Init
+[15-02-2017 14:39:46] Info: Created window
+[15-02-2017 14:39:46] Info: Created renderer
+[15-02-2017 14:39:46] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 14:39:46] Info: Loaded "Images/thing.png"
+[15-02-2017 14:39:46] Info: Loaded "Images/mouse.png"
+[15-02-2017 14:39:47] Info: Loaded "Images/tile.bmp"
+[15-02-2017 14:40:43] Info: Initialized video subsystem
+[15-02-2017 14:40:43] Info: Initialized SDL_Image
+[15-02-2017 14:40:43] Info: Initialized Mix_Init
+[15-02-2017 14:40:43] Info: Created window
+[15-02-2017 14:40:43] Info: Created renderer
+[15-02-2017 14:40:43] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 14:40:43] Info: Loaded "Images/thing.png"
+[15-02-2017 14:40:43] Info: Loaded "Images/mouse.png"
+[15-02-2017 14:40:43] Info: Loaded "Images/tile.bmp"
+[15-02-2017 14:48:42] Info: Initialized video subsystem
+[15-02-2017 14:48:42] Info: Initialized SDL_Image
+[15-02-2017 14:48:42] Info: Initialized Mix_Init
+[15-02-2017 14:48:42] Info: Created window
+[15-02-2017 14:48:42] Info: Created renderer
+[15-02-2017 14:48:42] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 14:48:42] Info: Loaded "Images/thing.png"
+[15-02-2017 14:48:43] Info: Loaded "Images/mouse.png"
+[15-02-2017 14:48:43] Info: Loaded "Images/tile.bmp"
+[15-02-2017 14:51:57] Info: Initialized video subsystem
+[15-02-2017 14:51:57] Info: Initialized SDL_Image
+[15-02-2017 14:51:57] Info: Initialized Mix_Init
+[15-02-2017 14:51:57] Info: Created window
+[15-02-2017 14:51:57] Info: Created renderer
+[15-02-2017 14:52:28] Info: Initialized video subsystem
+[15-02-2017 14:52:28] Info: Initialized SDL_Image
+[15-02-2017 14:52:28] Info: Initialized Mix_Init
+[15-02-2017 14:52:29] Info: Created window
+[15-02-2017 14:52:29] Info: Created renderer
+[15-02-2017 14:53:38] Info: Initialized video subsystem
+[15-02-2017 14:53:38] Info: Initialized SDL_Image
+[15-02-2017 14:53:38] Info: Initialized Mix_Init
+[15-02-2017 14:53:38] Info: Created window
+[15-02-2017 14:53:38] Info: Created renderer
+[15-02-2017 14:55:04] Info: Initialized video subsystem
+[15-02-2017 14:55:05] Info: Initialized SDL_Image
+[15-02-2017 14:55:05] Info: Initialized Mix_Init
+[15-02-2017 14:55:05] Info: Created window
+[15-02-2017 14:55:05] Info: Created renderer
+[15-02-2017 14:57:29] Info: Initialized video subsystem
+[15-02-2017 14:57:29] Info: Initialized SDL_Image
+[15-02-2017 14:57:29] Info: Initialized Mix_Init
+[15-02-2017 14:57:29] Info: Created window
+[15-02-2017 14:57:29] Info: Created renderer
+[15-02-2017 14:58:17] Info: Initialized video subsystem
+[15-02-2017 14:58:17] Info: Initialized SDL_Image
+[15-02-2017 14:58:17] Info: Initialized Mix_Init
+[15-02-2017 14:58:17] Info: Created window
+[15-02-2017 14:58:17] Info: Created renderer
+[15-02-2017 15:11:33] Info: Initialized video subsystem
+[15-02-2017 15:11:33] Info: Initialized SDL_Image
+[15-02-2017 15:11:33] Info: Initialized Mix_Init
+[15-02-2017 15:11:34] Info: Created window
+[15-02-2017 15:11:34] Info: Created renderer
+[15-02-2017 15:11:45] Info: Initialized video subsystem
+[15-02-2017 15:11:45] Info: Initialized SDL_Image
+[15-02-2017 15:11:45] Info: Initialized Mix_Init
+[15-02-2017 15:11:45] Info: Created window
+[15-02-2017 15:11:45] Info: Created renderer
+[15-02-2017 15:12:00] Info: Initialized video subsystem
+[15-02-2017 15:12:00] Info: Initialized SDL_Image
+[15-02-2017 15:12:00] Info: Initialized Mix_Init
+[15-02-2017 15:12:00] Info: Created window
+[15-02-2017 15:12:01] Info: Created renderer
+[15-02-2017 15:12:46] Info: Initialized video subsystem
+[15-02-2017 15:12:46] Info: Initialized SDL_Image
+[15-02-2017 15:12:46] Info: Initialized Mix_Init
+[15-02-2017 15:12:46] Info: Created window
+[15-02-2017 15:12:46] Info: Created renderer
+[15-02-2017 15:13:16] Info: Initialized video subsystem
+[15-02-2017 15:13:16] Info: Initialized SDL_Image
+[15-02-2017 15:13:16] Info: Initialized Mix_Init
+[15-02-2017 15:13:16] Info: Created window
+[15-02-2017 15:13:16] Info: Created renderer
+[15-02-2017 15:14:29] Info: Initialized video subsystem
+[15-02-2017 15:14:29] Info: Initialized SDL_Image
+[15-02-2017 15:14:29] Info: Initialized Mix_Init
+[15-02-2017 15:14:29] Info: Created window
+[15-02-2017 15:14:29] Info: Created renderer
+[15-02-2017 15:15:03] Info: Initialized video subsystem
+[15-02-2017 15:15:03] Info: Initialized SDL_Image
+[15-02-2017 15:15:03] Info: Initialized Mix_Init
+[15-02-2017 15:15:03] Info: Created window
+[15-02-2017 15:15:03] Info: Created renderer
+[15-02-2017 15:15:04] Info: Destroying window
+[15-02-2017 15:15:04] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:15:04] Info: Unloading Mix_Init
+[15-02-2017 15:15:04] Info: Unloading IMG_Init
+[15-02-2017 15:15:04] Info: Cleaning up SDL subsystems
+[15-02-2017 15:15:04] Info: Exiting application
+[15-02-2017 15:21:55] Info: Initialized video subsystem
+[15-02-2017 15:21:55] Info: Initialized SDL_Image
+[15-02-2017 15:21:55] Info: Initialized Mix_Init
+[15-02-2017 15:21:55] Info: Created window
+[15-02-2017 15:21:55] Info: Created renderer
+[15-02-2017 15:22:41] Info: Initialized video subsystem
+[15-02-2017 15:22:41] Info: Initialized SDL_Image
+[15-02-2017 15:22:41] Info: Initialized Mix_Init
+[15-02-2017 15:22:41] Info: Created window
+[15-02-2017 15:22:41] Info: Created renderer
+[15-02-2017 15:23:18] Info: Initialized video subsystem
+[15-02-2017 15:23:18] Info: Initialized SDL_Image
+[15-02-2017 15:23:18] Info: Initialized Mix_Init
+[15-02-2017 15:23:18] Info: Created window
+[15-02-2017 15:23:18] Info: Created renderer
+[15-02-2017 15:23:30] Info: Initialized video subsystem
+[15-02-2017 15:23:30] Info: Initialized SDL_Image
+[15-02-2017 15:23:30] Info: Initialized Mix_Init
+[15-02-2017 15:23:30] Info: Created window
+[15-02-2017 15:23:30] Info: Created renderer
+[15-02-2017 15:26:01] Info: Initialized video subsystem
+[15-02-2017 15:26:01] Info: Initialized SDL_Image
+[15-02-2017 15:26:01] Info: Initialized Mix_Init
+[15-02-2017 15:26:01] Info: Created window
+[15-02-2017 15:26:01] Info: Created renderer
+[15-02-2017 15:26:06] Info: Destroying window
+[15-02-2017 15:26:06] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:26:06] Info: Unloading Mix_Init
+[15-02-2017 15:26:06] Info: Unloading IMG_Init
+[15-02-2017 15:26:07] Info: Cleaning up SDL subsystems
+[15-02-2017 15:26:07] Info: Exiting application
+[15-02-2017 15:28:33] Info: Initialized video subsystem
+[15-02-2017 15:28:33] Info: Initialized SDL_Image
+[15-02-2017 15:28:33] Info: Initialized Mix_Init
+[15-02-2017 15:28:33] Info: Created window
+[15-02-2017 15:28:33] Info: Created renderer
+[15-02-2017 15:28:33] Info: Destroying window
+[15-02-2017 15:28:33] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:28:33] Info: Unloading Mix_Init
+[15-02-2017 15:28:33] Info: Unloading IMG_Init
+[15-02-2017 15:28:33] Info: Cleaning up SDL subsystems
+[15-02-2017 15:28:33] Info: Exiting application
+[15-02-2017 15:28:39] Info: Initialized video subsystem
+[15-02-2017 15:28:39] Info: Initialized SDL_Image
+[15-02-2017 15:28:39] Info: Initialized Mix_Init
+[15-02-2017 15:28:39] Info: Created window
+[15-02-2017 15:28:39] Info: Created renderer
+[15-02-2017 15:28:39] Info: Destroying window
+[15-02-2017 15:28:39] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:28:39] Info: Unloading Mix_Init
+[15-02-2017 15:28:39] Info: Unloading IMG_Init
+[15-02-2017 15:28:39] Info: Cleaning up SDL subsystems
+[15-02-2017 15:28:39] Info: Exiting application
+[15-02-2017 15:28:54] Info: Initialized video subsystem
+[15-02-2017 15:28:54] Info: Initialized SDL_Image
+[15-02-2017 15:28:54] Info: Initialized Mix_Init
+[15-02-2017 15:28:54] Info: Created window
+[15-02-2017 15:28:54] Info: Created renderer
+[15-02-2017 15:28:54] Info: Destroying window
+[15-02-2017 15:28:54] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:28:54] Info: Unloading Mix_Init
+[15-02-2017 15:28:54] Info: Unloading IMG_Init
+[15-02-2017 15:28:54] Info: Cleaning up SDL subsystems
+[15-02-2017 15:28:54] Info: Exiting application
+[15-02-2017 15:29:16] Info: Initialized video subsystem
+[15-02-2017 15:29:16] Info: Initialized SDL_Image
+[15-02-2017 15:29:16] Info: Initialized Mix_Init
+[15-02-2017 15:29:16] Info: Created window
+[15-02-2017 15:29:16] Info: Created renderer
+[15-02-2017 15:29:18] Info: Destroying window
+[15-02-2017 15:29:18] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:29:18] Info: Unloading Mix_Init
+[15-02-2017 15:29:18] Info: Unloading IMG_Init
+[15-02-2017 15:29:18] Info: Cleaning up SDL subsystems
+[15-02-2017 15:29:18] Info: Exiting application
+[15-02-2017 15:30:48] Info: Initialized video subsystem
+[15-02-2017 15:30:48] Info: Initialized SDL_Image
+[15-02-2017 15:30:48] Info: Initialized Mix_Init
+[15-02-2017 15:30:48] Info: Created window
+[15-02-2017 15:30:48] Info: Created renderer
+[15-02-2017 15:30:50] Info: Destroying window
+[15-02-2017 15:30:50] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:30:50] Info: Unloading Mix_Init
+[15-02-2017 15:30:50] Info: Unloading IMG_Init
+[15-02-2017 15:30:50] Info: Cleaning up SDL subsystems
+[15-02-2017 15:30:50] Info: Exiting application
+[15-02-2017 15:32:34] Info: Initialized video subsystem
+[15-02-2017 15:32:34] Info: Initialized SDL_Image
+[15-02-2017 15:32:34] Info: Initialized Mix_Init
+[15-02-2017 15:32:34] Info: Created window
+[15-02-2017 15:32:34] Info: Created renderer
+[15-02-2017 15:34:39] Info: Initialized video subsystem
+[15-02-2017 15:34:39] Info: Initialized SDL_Image
+[15-02-2017 15:34:39] Info: Initialized Mix_Init
+[15-02-2017 15:34:39] Info: Created window
+[15-02-2017 15:34:40] Info: Created renderer
+[15-02-2017 15:34:41] Info: Destroying window
+[15-02-2017 15:34:41] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:34:41] Info: Unloading Mix_Init
+[15-02-2017 15:34:41] Info: Unloading IMG_Init
+[15-02-2017 15:34:41] Info: Cleaning up SDL subsystems
+[15-02-2017 15:34:41] Info: Exiting application
+[15-02-2017 15:35:06] Info: Initialized video subsystem
+[15-02-2017 15:35:06] Info: Initialized SDL_Image
+[15-02-2017 15:35:06] Info: Initialized Mix_Init
+[15-02-2017 15:35:06] Info: Created window
+[15-02-2017 15:35:06] Info: Created renderer
+[15-02-2017 15:35:12] Info: Destroying window
+[15-02-2017 15:35:12] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:35:12] Info: Unloading Mix_Init
+[15-02-2017 15:35:12] Info: Unloading IMG_Init
+[15-02-2017 15:35:12] Info: Cleaning up SDL subsystems
+[15-02-2017 15:35:12] Info: Exiting application
+[15-02-2017 15:35:46] Info: Initialized video subsystem
+[15-02-2017 15:35:46] Info: Initialized SDL_Image
+[15-02-2017 15:35:46] Info: Initialized Mix_Init
+[15-02-2017 15:35:46] Info: Created window
+[15-02-2017 15:35:46] Info: Created renderer
+[15-02-2017 15:35:47] Debug: Mouse Position: 235, 17
+[15-02-2017 15:35:47] Debug: Mouse Position: 269, 122
+[15-02-2017 15:35:47] Debug: Mouse Position: 269, 126
+[15-02-2017 15:35:48] Debug: Mouse Position: 287, 151
+[15-02-2017 15:35:48] Debug: Mouse Position: 354, 230
+[15-02-2017 15:35:48] Debug: Mouse Position: 413, 271
+[15-02-2017 15:35:48] Debug: Mouse Position: 438, 283
+[15-02-2017 15:35:48] Debug: Mouse Position: 458, 289
+[15-02-2017 15:35:48] Debug: Mouse Position: 464, 291
+[15-02-2017 15:35:48] Debug: Mouse Position: 466, 292
+[15-02-2017 15:35:48] Debug: Mouse Position: 471, 296
+[15-02-2017 15:35:48] Debug: Mouse Position: 472, 300
+[15-02-2017 15:35:48] Debug: Mouse Position: 472, 303
+[15-02-2017 15:35:48] Debug: Mouse Position: 472, 306
+[15-02-2017 15:35:48] Debug: Mouse Position: 472, 308
+[15-02-2017 15:35:48] Debug: Mouse Position: 472, 310
+[15-02-2017 15:35:48] Debug: Mouse Position: 469, 316
+[15-02-2017 15:35:48] Debug: Mouse Position: 469, 318
+[15-02-2017 15:35:48] Debug: Mouse Position: 466, 322
+[15-02-2017 15:35:48] Debug: Mouse Position: 465, 324
+[15-02-2017 15:35:48] Debug: Mouse Position: 463, 325
+[15-02-2017 15:35:48] Debug: Mouse Position: 461, 325
+[15-02-2017 15:35:48] Debug: Mouse Position: 460, 326
+[15-02-2017 15:35:48] Debug: Mouse Position: 453, 328
+[15-02-2017 15:35:48] Debug: Mouse Position: 448, 329
+[15-02-2017 15:35:48] Debug: Mouse Position: 433, 322
+[15-02-2017 15:35:49] Debug: Key (111/o) State: Down
+[15-02-2017 15:35:49] Debug: Key (106/j) State: Down
+[15-02-2017 15:35:49] Debug: Key (111/o) State: Up
+[15-02-2017 15:35:49] Debug: Key (106/j) State: Up
+[15-02-2017 15:35:49] Debug: Key (111/o) State: Down
+[15-02-2017 15:35:49] Debug: Key (106/j) State: Down
+[15-02-2017 15:35:49] Debug: Key (111/o) State: Up
+[15-02-2017 15:35:49] Debug: Key (105/i) State: Down
+[15-02-2017 15:35:49] Debug: Key (106/j) State: Up
+[15-02-2017 15:35:49] Debug: Key (106/j) State: Down
+[15-02-2017 15:35:49] Debug: Key (105/i) State: Up
+[15-02-2017 15:35:49] Debug: Key (106/j) State: Up
+[15-02-2017 15:35:49] Debug: Key (111/o) State: Down
+[15-02-2017 15:35:49] Debug: Key (105/i) State: Down
+[15-02-2017 15:35:50] Debug: Key (106/j) State: Down
+[15-02-2017 15:35:50] Debug: Key (111/o) State: Up
+[15-02-2017 15:35:50] Debug: Key (105/i) State: Up
+[15-02-2017 15:35:50] Debug: Key (106/j) State: Up
+[15-02-2017 15:35:50] Debug: Key (111/o) State: Down
+[15-02-2017 15:35:50] Debug: Key (106/j) State: Down
+[15-02-2017 15:35:50] Debug: Key (111/o) State: Up
+[15-02-2017 15:35:50] Debug: Key (106/j) State: Up
+[15-02-2017 15:35:50] Debug: Mouse Position: 435, 321
+[15-02-2017 15:35:50] Debug: Mouse Position: 454, 315
+[15-02-2017 15:35:51] Debug: Mouse Position: 467, 309
+[15-02-2017 15:35:51] Debug: Mouse Position: 473, 305
+[15-02-2017 15:35:51] Debug: Mouse Position: 487, 293
+[15-02-2017 15:35:51] Debug: Mouse Position: 495, 283
+[15-02-2017 15:35:51] Debug: Mouse Position: 514, 266
+[15-02-2017 15:35:51] Debug: Mouse Position: 525, 258
+[15-02-2017 15:35:51] Debug: Mouse Position: 549, 244
+[15-02-2017 15:35:51] Debug: Mouse Position: 578, 236
+[15-02-2017 15:35:51] Debug: Mouse Position: 593, 232
+[15-02-2017 15:35:51] Debug: Mouse Position: 620, 231
+[15-02-2017 15:35:51] Debug: Mouse Position: 643, 231
+[15-02-2017 15:35:51] Debug: Mouse Position: 657, 231
+[15-02-2017 15:35:51] Debug: Mouse Position: 681, 235
+[15-02-2017 15:35:51] Debug: Mouse Position: 708, 242
+[15-02-2017 15:35:51] Debug: Mouse Position: 721, 246
+[15-02-2017 15:35:51] Debug: Mouse Position: 742, 254
+[15-02-2017 15:35:51] Debug: Mouse Position: 759, 264
+[15-02-2017 15:35:51] Debug: Mouse Position: 768, 274
+[15-02-2017 15:35:51] Debug: Mouse Position: 772, 285
+[15-02-2017 15:35:51] Debug: Mouse Position: 772, 291
+[15-02-2017 15:35:51] Debug: Mouse Position: 765, 304
+[15-02-2017 15:35:51] Debug: Mouse Position: 750, 317
+[15-02-2017 15:35:51] Debug: Mouse Position: 739, 322
+[15-02-2017 15:35:51] Debug: Mouse Position: 708, 338
+[15-02-2017 15:35:51] Debug: Mouse Position: 658, 365
+[15-02-2017 15:35:51] Debug: Mouse Position: 632, 380
+[15-02-2017 15:35:51] Debug: Mouse Position: 573, 410
+[15-02-2017 15:35:51] Debug: Mouse Position: 519, 424
+[15-02-2017 15:35:51] Debug: Mouse Position: 477, 432
+[15-02-2017 15:35:51] Debug: Mouse Position: 459, 433
+[15-02-2017 15:35:51] Debug: Mouse Position: 427, 435
+[15-02-2017 15:35:51] Debug: Mouse Position: 413, 433
+[15-02-2017 15:35:51] Debug: Mouse Position: 392, 425
+[15-02-2017 15:35:51] Debug: Mouse Position: 383, 415
+[15-02-2017 15:35:51] Debug: Mouse Position: 378, 397
+[15-02-2017 15:35:51] Debug: Mouse Position: 377, 372
+[15-02-2017 15:35:51] Debug: Mouse Position: 378, 360
+[15-02-2017 15:35:51] Debug: Mouse Position: 389, 337
+[15-02-2017 15:35:51] Debug: Mouse Position: 417, 297
+[15-02-2017 15:35:51] Debug: Mouse Position: 444, 265
+[15-02-2017 15:35:51] Debug: Mouse Position: 526, 208
+[15-02-2017 15:35:51] Debug: Mouse Position: 629, 153
+[15-02-2017 15:35:51] Debug: Mouse Position: 713, 115
+[15-02-2017 15:35:51] Debug: Mouse Position: 741, 106
+[15-02-2017 15:35:51] Debug: Mouse Position: 768, 100
+[15-02-2017 15:35:51] Debug: Mouse Position: 778, 100
+[15-02-2017 15:35:52] Debug: Mouse Position: 778, 99
+[15-02-2017 15:35:52] Debug: Mouse Position: 777, 83
+[15-02-2017 15:35:52] Debug: Mouse Position: 775, 62
+[15-02-2017 15:35:52] Debug: Mouse Position: 774, 55
+[15-02-2017 15:35:52] Debug: Mouse Position: 773, 51
+[15-02-2017 15:35:52] Debug: Mouse Position: 772, 42
+[15-02-2017 15:35:52] Debug: Mouse Position: 772, 39
+[15-02-2017 15:35:52] Debug: Mouse Position: 772, 28
+[15-02-2017 15:35:52] Debug: Mouse Position: 772, 24
+[15-02-2017 15:35:52] Debug: Mouse Position: 772, 22
+[15-02-2017 15:35:52] Debug: Mouse Position: 774, 21
+[15-02-2017 15:35:52] Debug: Mouse Position: 775, 20
+[15-02-2017 15:35:52] Debug: Mouse Position: 776, 19
+[15-02-2017 15:35:52] Debug: Mouse Position: 778, 10
+[15-02-2017 15:35:52] Debug: Mouse Position: 781, 2
+[15-02-2017 15:35:52] Debug: Mouse Position: 782, 0
+[15-02-2017 15:35:52] Info: Destroying window
+[15-02-2017 15:35:52] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:35:52] Info: Unloading Mix_Init
+[15-02-2017 15:35:52] Info: Unloading IMG_Init
+[15-02-2017 15:35:52] Info: Cleaning up SDL subsystems
+[15-02-2017 15:35:52] Info: Exiting application
+[15-02-2017 15:39:57] Info: Initialized video subsystem
+[15-02-2017 15:39:57] Info: Initialized SDL_Image
+[15-02-2017 15:39:57] Info: Initialized Mix_Init
+[15-02-2017 15:39:57] Info: Created window
+[15-02-2017 15:39:58] Info: Created renderer
+[15-02-2017 15:39:58] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:39:58] Debug: Mouse Position: 351, 24
+[15-02-2017 15:39:58] Debug: Mouse Position: 496, 96
+[15-02-2017 15:39:58] Debug: Mouse Position: 577, 145
+[15-02-2017 15:39:58] Debug: Mouse Position: 611, 169
+[15-02-2017 15:39:58] Debug: Mouse Position: 657, 204
+[15-02-2017 15:39:58] Debug: Mouse Position: 676, 225
+[15-02-2017 15:39:58] Debug: Mouse Position: 679, 231
+[15-02-2017 15:39:58] Debug: Mouse Position: 679, 237
+[15-02-2017 15:39:59] Debug: Mouse Position: 674, 237
+[15-02-2017 15:39:59] Debug: Mouse Position: 643, 238
+[15-02-2017 15:39:59] Debug: Mouse Position: 601, 241
+[15-02-2017 15:39:59] Debug: Mouse Position: 549, 250
+[15-02-2017 15:39:59] Debug: Mouse Position: 509, 259
+[15-02-2017 15:39:59] Debug: Mouse Position: 483, 273
+[15-02-2017 15:39:59] Debug: Mouse Position: 468, 291
+[15-02-2017 15:39:59] Debug: Mouse Position: 462, 307
+[15-02-2017 15:39:59] Debug: Mouse Position: 462, 316
+[15-02-2017 15:39:59] Debug: Mouse Position: 464, 327
+[15-02-2017 15:39:59] Debug: Mouse Position: 478, 339
+[15-02-2017 15:39:59] Debug: Mouse Position: 498, 357
+[15-02-2017 15:39:59] Debug: Mouse Position: 523, 375
+[15-02-2017 15:39:59] Debug: Mouse Position: 534, 383
+[15-02-2017 15:39:59] Debug: Mouse Position: 560, 393
+[15-02-2017 15:39:59] Debug: Mouse Position: 583, 394
+[15-02-2017 15:39:59] Debug: Mouse Position: 595, 391
+[15-02-2017 15:39:59] Debug: Mouse Position: 614, 376
+[15-02-2017 15:40:00] Debug: Key (119/w) State: Down
+[15-02-2017 15:40:00] Debug: Key (119/w) State: Up
+[15-02-2017 15:40:00] Debug: Key (97/a) State: Down
+[15-02-2017 15:40:00] Debug: Key (115/s) State: Down
+[15-02-2017 15:40:00] Debug: Key (97/a) State: Up
+[15-02-2017 15:40:00] Debug: Key (100/d) State: Down
+[15-02-2017 15:40:00] Debug: Key (115/s) State: Up
+[15-02-2017 15:40:00] Debug: Mouse Position: 614, 375
+[15-02-2017 15:40:00] Debug: Key (100/d) State: Up
+[15-02-2017 15:40:00] Debug: Mouse Position: 614, 374
+[15-02-2017 15:40:00] Debug: Mouse Position: 617, 362
+[15-02-2017 15:40:00] Debug: Mouse Position: 625, 339
+[15-02-2017 15:40:00] Debug: Mouse Position: 641, 283
+[15-02-2017 15:40:00] Debug: Mouse Position: 660, 228
+[15-02-2017 15:40:00] Debug: Mouse Position: 694, 124
+[15-02-2017 15:40:00] Debug: Mouse Position: 704, 93
+[15-02-2017 15:40:00] Debug: Mouse Position: 721, 47
+[15-02-2017 15:40:00] Debug: Mouse Position: 731, 29
+[15-02-2017 15:40:01] Debug: Mouse Position: 735, 27
+[15-02-2017 15:40:01] Debug: Mouse Position: 736, 27
+[15-02-2017 15:40:01] Debug: Mouse Position: 737, 28
+[15-02-2017 15:40:01] Debug: Mouse Position: 739, 25
+[15-02-2017 15:40:01] Debug: Mouse Position: 747, 13
+[15-02-2017 15:40:01] Debug: Mouse Position: 752, 7
+[15-02-2017 15:40:01] Debug: Mouse Position: 761, 0
+[15-02-2017 15:40:03] Info: Destroying window
+[15-02-2017 15:40:03] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:40:03] Info: Unloading Mix_Init
+[15-02-2017 15:40:03] Info: Unloading IMG_Init
+[15-02-2017 15:40:03] Info: Cleaning up SDL subsystems
+[15-02-2017 15:40:03] Info: Exiting application
+[15-02-2017 15:41:07] Info: Initialized video subsystem
+[15-02-2017 15:41:07] Info: Initialized SDL_Image
+[15-02-2017 15:41:07] Info: Initialized Mix_Init
+[15-02-2017 15:41:07] Info: Created window
+[15-02-2017 15:41:07] Info: Created renderer
+[15-02-2017 15:41:07] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:41:17] Info: Destroying window
+[15-02-2017 15:41:17] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:41:17] Info: Unloading Mix_Init
+[15-02-2017 15:41:17] Info: Unloading IMG_Init
+[15-02-2017 15:41:17] Info: Cleaning up SDL subsystems
+[15-02-2017 15:41:17] Info: Exiting application
+[15-02-2017 15:50:42] Info: Initialized video subsystem
+[15-02-2017 15:50:42] Info: Initialized SDL_Image
+[15-02-2017 15:50:42] Info: Initialized Mix_Init
+[15-02-2017 15:50:42] Info: Created window
+[15-02-2017 15:50:42] Info: Created renderer
+[15-02-2017 15:50:42] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:50:46] Debug: Mouse Position: 642, 10
+[15-02-2017 15:50:46] Debug: Mouse Position: 634, 27
+[15-02-2017 15:50:46] Debug: Mouse Position: 634, 28
+[15-02-2017 15:50:46] Debug: Mouse Position: 635, 27
+[15-02-2017 15:50:46] Debug: Mouse Position: 645, 22
+[15-02-2017 15:50:46] Debug: Mouse Position: 663, 11
+[15-02-2017 15:50:46] Debug: Mouse Position: 675, 5
+[15-02-2017 15:50:46] Debug: Mouse Position: 687, 0
+[15-02-2017 15:50:47] Debug: Mouse Position: 730, 2
+[15-02-2017 15:50:47] Debug: Mouse Position: 685, 75
+[15-02-2017 15:50:47] Debug: Mouse Position: 656, 122
+[15-02-2017 15:50:47] Debug: Mouse Position: 634, 152
+[15-02-2017 15:50:47] Debug: Mouse Position: 617, 175
+[15-02-2017 15:50:47] Debug: Mouse Position: 602, 198
+[15-02-2017 15:50:47] Debug: Mouse Position: 593, 216
+[15-02-2017 15:50:47] Debug: Mouse Position: 592, 220
+[15-02-2017 15:50:47] Debug: Mouse Position: 589, 226
+[15-02-2017 15:50:47] Debug: Mouse Position: 588, 226
+[15-02-2017 15:50:47] Debug: Mouse Position: 588, 227
+[15-02-2017 15:50:47] Debug: Mouse Position: 588, 228
+[15-02-2017 15:50:48] Debug: Mouse Position: 597, 228
+[15-02-2017 15:50:48] Debug: Mouse Position: 637, 261
+[15-02-2017 15:50:48] Debug: Mouse Position: 669, 298
+[15-02-2017 15:50:48] Debug: Mouse Position: 690, 332
+[15-02-2017 15:50:48] Debug: Mouse Position: 681, 344
+[15-02-2017 15:50:48] Debug: Mouse Position: 654, 353
+[15-02-2017 15:50:48] Debug: Mouse Position: 583, 357
+[15-02-2017 15:50:48] Debug: Mouse Position: 493, 359
+[15-02-2017 15:50:48] Debug: Mouse Position: 466, 359
+[15-02-2017 15:50:48] Debug: Mouse Position: 416, 357
+[15-02-2017 15:50:48] Debug: Mouse Position: 394, 353
+[15-02-2017 15:50:48] Debug: Mouse Position: 374, 349
+[15-02-2017 15:50:48] Debug: Mouse Position: 345, 339
+[15-02-2017 15:50:48] Debug: Mouse Position: 334, 332
+[15-02-2017 15:50:48] Debug: Mouse Position: 321, 314
+[15-02-2017 15:50:48] Debug: Mouse Position: 315, 295
+[15-02-2017 15:50:48] Debug: Mouse Position: 315, 286
+[15-02-2017 15:50:48] Debug: Mouse Position: 315, 265
+[15-02-2017 15:50:48] Debug: Mouse Position: 323, 225
+[15-02-2017 15:50:48] Debug: Mouse Position: 331, 207
+[15-02-2017 15:50:48] Debug: Mouse Position: 344, 179
+[15-02-2017 15:50:48] Debug: Mouse Position: 363, 151
+[15-02-2017 15:50:48] Debug: Mouse Position: 383, 129
+[15-02-2017 15:50:48] Debug: Mouse Position: 394, 122
+[15-02-2017 15:50:48] Debug: Mouse Position: 419, 117
+[15-02-2017 15:50:48] Debug: Mouse Position: 450, 120
+[15-02-2017 15:50:48] Debug: Mouse Position: 467, 126
+[15-02-2017 15:50:48] Debug: Mouse Position: 509, 158
+[15-02-2017 15:50:48] Debug: Mouse Position: 543, 200
+[15-02-2017 15:50:48] Debug: Mouse Position: 551, 214
+[15-02-2017 15:50:48] Debug: Mouse Position: 564, 247
+[15-02-2017 15:50:48] Debug: Mouse Position: 566, 280
+[15-02-2017 15:50:48] Debug: Mouse Position: 556, 306
+[15-02-2017 15:50:48] Debug: Mouse Position: 548, 317
+[15-02-2017 15:50:49] Debug: Mouse Position: 523, 341
+[15-02-2017 15:50:49] Debug: Mouse Position: 490, 362
+[15-02-2017 15:50:49] Debug: Mouse Position: 445, 377
+[15-02-2017 15:50:49] Debug: Mouse Position: 419, 381
+[15-02-2017 15:50:49] Debug: Mouse Position: 376, 382
+[15-02-2017 15:50:49] Debug: Mouse Position: 346, 379
+[15-02-2017 15:50:49] Debug: Mouse Position: 337, 375
+[15-02-2017 15:50:49] Debug: Mouse Position: 327, 363
+[15-02-2017 15:50:49] Debug: Mouse Position: 326, 345
+[15-02-2017 15:50:49] Debug: Mouse Position: 326, 333
+[15-02-2017 15:50:49] Debug: Mouse Position: 333, 314
+[15-02-2017 15:50:49] Debug: Mouse Position: 343, 292
+[15-02-2017 15:50:49] Debug: Mouse Position: 350, 278
+[15-02-2017 15:50:49] Debug: Mouse Position: 361, 262
+[15-02-2017 15:50:49] Debug: Mouse Position: 356, 263
+[15-02-2017 15:50:49] Debug: Mouse Position: 320, 268
+[15-02-2017 15:50:49] Debug: Mouse Position: 292, 269
+[15-02-2017 15:50:49] Debug: Mouse Position: 268, 268
+[15-02-2017 15:50:49] Debug: Mouse Position: 252, 264
+[15-02-2017 15:50:49] Debug: Mouse Position: 250, 263
+[15-02-2017 15:50:49] Debug: Mouse Position: 249, 263
+[15-02-2017 15:50:49] Debug: Mouse Position: 249, 262
+[15-02-2017 15:50:50] Debug: Mouse Position: 250, 261
+[15-02-2017 15:50:50] Debug: Mouse Position: 254, 260
+[15-02-2017 15:50:50] Debug: Mouse Position: 256, 259
+[15-02-2017 15:50:50] Debug: Mouse Position: 260, 254
+[15-02-2017 15:50:50] Debug: Mouse Position: 267, 242
+[15-02-2017 15:50:50] Debug: Mouse Position: 276, 230
+[15-02-2017 15:50:50] Debug: Mouse Position: 279, 226
+[15-02-2017 15:50:50] Debug: Mouse Position: 288, 224
+[15-02-2017 15:50:50] Debug: Mouse Position: 293, 224
+[15-02-2017 15:50:50] Debug: Mouse Position: 306, 229
+[15-02-2017 15:50:50] Debug: Mouse Position: 320, 242
+[15-02-2017 15:50:50] Debug: Mouse Position: 336, 257
+[15-02-2017 15:50:50] Debug: Mouse Position: 344, 270
+[15-02-2017 15:50:50] Debug: Mouse Position: 348, 278
+[15-02-2017 15:50:50] Debug: Mouse Position: 349, 290
+[15-02-2017 15:50:50] Debug: Mouse Position: 349, 298
+[15-02-2017 15:50:50] Debug: Mouse Position: 344, 311
+[15-02-2017 15:50:50] Debug: Mouse Position: 332, 325
+[15-02-2017 15:50:50] Debug: Mouse Position: 312, 340
+[15-02-2017 15:50:50] Debug: Mouse Position: 298, 345
+[15-02-2017 15:50:50] Debug: Mouse Position: 254, 352
+[15-02-2017 15:50:50] Debug: Mouse Position: 186, 352
+[15-02-2017 15:50:50] Debug: Mouse Position: 144, 348
+[15-02-2017 15:50:50] Debug: Mouse Position: 52, 338
+[15-02-2017 15:50:50] Debug: Mouse Position: 0, 314
+[15-02-2017 15:50:52] Debug: Mouse Position: 696, 221
+[15-02-2017 15:50:52] Debug: Mouse Position: 741, 225
+[15-02-2017 15:50:52] Debug: Key (98/b) State: Down
+[15-02-2017 15:50:52] Debug: Mouse Position: 741, 226
+[15-02-2017 15:50:52] Debug: Key (98/b) State: Up
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Down
+[15-02-2017 15:50:53] Debug: Key (110/n) State: Down
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Up
+[15-02-2017 15:50:53] Debug: Key (114/r) State: Down
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Down
+[15-02-2017 15:50:53] Debug: Key (114/r) State: Up
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Up
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Down
+[15-02-2017 15:50:53] Debug: Key (114/r) State: Down
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Up
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Down
+[15-02-2017 15:50:53] Debug: Key (114/r) State: Up
+[15-02-2017 15:50:53] Debug: Key (114/r) State: Down
+[15-02-2017 15:50:53] Debug: Mouse Position: 741, 225
+[15-02-2017 15:50:53] Debug: Key (101/e) State: Up
+[15-02-2017 15:50:53] Debug: Key (114/r) State: Up
+[15-02-2017 15:50:53] Debug: Mouse Position: 742, 128
+[15-02-2017 15:50:53] Debug: Mouse Position: 749, 49
+[15-02-2017 15:50:53] Debug: Mouse Position: 758, 7
+[15-02-2017 15:50:53] Debug: Mouse Position: 764, 0
+[15-02-2017 15:50:54] Info: Destroying window
+[15-02-2017 15:50:54] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:50:54] Info: Unloading Mix_Init
+[15-02-2017 15:50:54] Info: Unloading IMG_Init
+[15-02-2017 15:50:54] Info: Cleaning up SDL subsystems
+[15-02-2017 15:50:54] Info: Exiting application
+[15-02-2017 15:51:11] Info: Initialized video subsystem
+[15-02-2017 15:51:11] Info: Initialized SDL_Image
+[15-02-2017 15:51:11] Info: Initialized Mix_Init
+[15-02-2017 15:51:11] Info: Created window
+[15-02-2017 15:51:11] Info: Created renderer
+[15-02-2017 15:51:11] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:51:14] Debug: Mouse Position: 180, 0
+[15-02-2017 15:51:14] Debug: Mouse Position: 218, 21
+[15-02-2017 15:51:14] Debug: Mouse Position: 238, 40
+[15-02-2017 15:51:14] Debug: Mouse Position: 254, 59
+[15-02-2017 15:51:14] Debug: Mouse Position: 265, 71
+[15-02-2017 15:51:14] Debug: Mouse Position: 270, 79
+[15-02-2017 15:51:15] Debug: Mouse Position: 272, 79
+[15-02-2017 15:51:15] Debug: Mouse Position: 312, 71
+[15-02-2017 15:51:15] Debug: Mouse Position: 371, 62
+[15-02-2017 15:51:15] Debug: Mouse Position: 449, 50
+[15-02-2017 15:51:15] Debug: Mouse Position: 511, 40
+[15-02-2017 15:51:15] Debug: Mouse Position: 545, 35
+[15-02-2017 15:51:15] Debug: Mouse Position: 566, 33
+[15-02-2017 15:51:15] Debug: Mouse Position: 575, 34
+[15-02-2017 15:51:15] Debug: Mouse Position: 578, 36
+[15-02-2017 15:51:15] Debug: Mouse Position: 580, 42
+[15-02-2017 15:51:15] Debug: Mouse Position: 581, 44
+[15-02-2017 15:51:15] Debug: Mouse Position: 581, 51
+[15-02-2017 15:51:15] Debug: Mouse Position: 590, 47
+[15-02-2017 15:51:15] Debug: Mouse Position: 650, 14
+[15-02-2017 15:51:15] Debug: Mouse Position: 701, 0
+[15-02-2017 15:51:16] Info: Destroying window
+[15-02-2017 15:51:16] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:51:16] Info: Unloading Mix_Init
+[15-02-2017 15:51:16] Info: Unloading IMG_Init
+[15-02-2017 15:51:16] Info: Cleaning up SDL subsystems
+[15-02-2017 15:51:16] Info: Exiting application
+[15-02-2017 15:55:07] Info: Initialized video subsystem
+[15-02-2017 15:55:07] Info: Initialized SDL_Image
+[15-02-2017 15:55:07] Info: Initialized Mix_Init
+[15-02-2017 15:55:07] Info: Created window
+[15-02-2017 15:55:07] Info: Created renderer
+[15-02-2017 15:55:07] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:55:07] Debug: Key (122/z) State: Down
+[15-02-2017 15:55:07] Debug: Key (122/z) State: Up
+[15-02-2017 15:55:07] Debug: Key (120/x) State: Down
+[15-02-2017 15:55:07] Debug: Key (120/x) State: Up
+[15-02-2017 15:55:08] Debug: Mouse Position: 316, 92
+[15-02-2017 15:55:08] Debug: Mouse Position: 377, 204
+[15-02-2017 15:55:08] Debug: Mouse Position: 390, 231
+[15-02-2017 15:55:08] Debug: Mouse Button (1) State: Down
+[15-02-2017 15:55:08] Debug: Mouse Button (1) State: Up
+[15-02-2017 15:55:09] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:09] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:09] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:09] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:09] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:09] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:09] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:10] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:10] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:10] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:10] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:10] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:10] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:10] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:11] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:11] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:11] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:11] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:12] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:12] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:12] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:12] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:12] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:12] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:12] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:12] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:12] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:13] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:13] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:13] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:13] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:13] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:13] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:13] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:13] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:13] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:13] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:14] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:14] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:14] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:14] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:14] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:14] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:14] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:14] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:15] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:15] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:15] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:15] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:15] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:15] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:15] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:16] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:16] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:16] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:16] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:16] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:16] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:16] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:17] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:18] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:18] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:19] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:20] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:20] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:21] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:21] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:22] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:22] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:22] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:22] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:22] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:22] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:22] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:22] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:23] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:23] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:23] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:23] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:24] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:24] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:24] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:24] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:24] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:24] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:24] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:25] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:25] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:25] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:25] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:25] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:25] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:25] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:25] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:26] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:26] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:26] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:26] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:26] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:26] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:26] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:26] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:26] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:27] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:27] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:28] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:28] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:28] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:29] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:29] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:29] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:29] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:29] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:30] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:30] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:30] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:30] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:31] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:31] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:32] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:32] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:32] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:32] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:32] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:32] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:34] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:34] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:34] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:34] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:35] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:37] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:37] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:37] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:37] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:38] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:40] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:40] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:40] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:40] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:40] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:41] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:41] Debug: Mouse Position: 401, 193
+[15-02-2017 15:55:41] Debug: Mouse Position: 460, 0
+[15-02-2017 15:55:41] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:42] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:42] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:42] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:42] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:42] Debug: Key (115/s) State: Down
+[15-02-2017 15:55:42] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:43] Debug: Key (97/a) State: Down
+[15-02-2017 15:55:43] Debug: Key (100/d) State: Down
+[15-02-2017 15:55:43] Debug: Key (97/a) State: Up
+[15-02-2017 15:55:43] Debug: Key (115/s) State: Up
+[15-02-2017 15:55:43] Debug: Key (119/w) State: Down
+[15-02-2017 15:55:43] Debug: Key (100/d) State: Up
+[15-02-2017 15:55:43] Debug: Mouse Position: 450, 51
+[15-02-2017 15:55:43] Debug: Mouse Position: 433, 147
+[15-02-2017 15:55:43] Debug: Mouse Position: 433, 210
+[15-02-2017 15:55:43] Debug: Mouse Position: 433, 245
+[15-02-2017 15:55:43] Debug: Mouse Position: 433, 259
+[15-02-2017 15:55:43] Debug: Mouse Position: 447, 251
+[15-02-2017 15:55:43] Debug: Mouse Position: 471, 220
+[15-02-2017 15:55:44] Debug: Mouse Position: 499, 164
+[15-02-2017 15:55:44] Debug: Mouse Position: 514, 129
+[15-02-2017 15:55:44] Debug: Mouse Position: 534, 42
+[15-02-2017 15:55:44] Debug: Mouse Position: 540, 0
+[15-02-2017 15:55:44] Debug: Mouse Position: 549, 8
+[15-02-2017 15:55:44] Debug: Mouse Position: 544, 42
+[15-02-2017 15:55:44] Debug: Mouse Position: 538, 51
+[15-02-2017 15:55:44] Debug: Mouse Position: 534, 47
+[15-02-2017 15:55:44] Debug: Mouse Position: 532, 41
+[15-02-2017 15:55:44] Debug: Mouse Position: 531, 37
+[15-02-2017 15:55:44] Debug: Key (119/w) State: Up
+[15-02-2017 15:55:44] Debug: Mouse Position: 521, 27
+[15-02-2017 15:55:44] Debug: Mouse Position: 518, 24
+[15-02-2017 15:55:44] Debug: Mouse Position: 519, 19
+[15-02-2017 15:55:44] Debug: Mouse Position: 541, 13
+[15-02-2017 15:55:44] Debug: Mouse Position: 587, 0
+[15-02-2017 15:55:46] Info: Destroying window
+[15-02-2017 15:55:46] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:55:46] Info: Unloading Mix_Init
+[15-02-2017 15:55:46] Info: Unloading IMG_Init
+[15-02-2017 15:55:46] Info: Cleaning up SDL subsystems
+[15-02-2017 15:55:46] Info: Exiting application
+[15-02-2017 15:56:12] Info: Initialized video subsystem
+[15-02-2017 15:56:12] Info: Initialized SDL_Image
+[15-02-2017 15:56:12] Info: Initialized Mix_Init
+[15-02-2017 15:56:12] Info: Created window
+[15-02-2017 15:56:12] Info: Created renderer
+[15-02-2017 15:56:12] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:58:28] Info: Initialized video subsystem
+[15-02-2017 15:58:28] Info: Initialized SDL_Image
+[15-02-2017 15:58:28] Info: Initialized Mix_Init
+[15-02-2017 15:58:28] Info: Created window
+[15-02-2017 15:58:28] Info: Created renderer
+[15-02-2017 15:58:28] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:58:29] Debug: Key (107/k) State: Down
+[15-02-2017 15:58:29] Debug: Key (107/k) State: Up
+[15-02-2017 15:58:30] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:30] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:30] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:30] Info: Freed resource "Images/Icon/bengine.fw.png"
+[15-02-2017 15:58:31] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:31] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:31] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:31] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:31] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:31] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:32] Debug: Mouse Position: 410, 0
+[15-02-2017 15:58:32] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:32] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:32] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:32] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:32] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:32] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:32] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:32] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:33] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:33] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:33] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:33] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:33] Debug: Mouse Position: 412, 0
+[15-02-2017 15:58:33] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:33] Debug: Mouse Position: 440, 0
+[15-02-2017 15:58:33] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:34] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:34] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:34] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:34] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:34] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:34] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:35] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:35] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:35] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:35] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:35] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:35] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:35] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:36] Info: Destroying window
+[15-02-2017 15:58:36] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:58:36] Info: Unloading Mix_Init
+[15-02-2017 15:58:36] Info: Unloading IMG_Init
+[15-02-2017 15:58:36] Info: Cleaning up SDL subsystems
+[15-02-2017 15:58:36] Info: Exiting application
+[15-02-2017 15:58:50] Info: Initialized video subsystem
+[15-02-2017 15:58:50] Info: Initialized SDL_Image
+[15-02-2017 15:58:50] Info: Initialized Mix_Init
+[15-02-2017 15:58:50] Info: Created window
+[15-02-2017 15:58:50] Info: Created renderer
+[15-02-2017 15:58:50] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:58:50] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:51] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:51] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:51] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:51] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:51] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:51] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:51] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:51] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:51] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:51] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:51] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:52] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:52] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:52] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:52] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:52] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:52] Debug: Key (115/s) State: Down
+[15-02-2017 15:58:52] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:52] Debug: Key (97/a) State: Down
+[15-02-2017 15:58:52] Debug: Key (115/s) State: Up
+[15-02-2017 15:58:52] Debug: Key (119/w) State: Down
+[15-02-2017 15:58:52] Debug: Key (97/a) State: Up
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:53] Debug: Key (119/w) State: Up
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Down
+[15-02-2017 15:58:53] Debug: Key (100/d) State: Up
+[15-02-2017 15:58:54] Info: Destroying window
+[15-02-2017 15:58:54] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:58:54] Info: Unloading Mix_Init
+[15-02-2017 15:58:54] Info: Unloading IMG_Init
+[15-02-2017 15:58:54] Info: Cleaning up SDL subsystems
+[15-02-2017 15:58:54] Info: Exiting application
+[15-02-2017 15:59:03] Info: Initialized video subsystem
+[15-02-2017 15:59:03] Info: Initialized SDL_Image
+[15-02-2017 15:59:03] Info: Initialized Mix_Init
+[15-02-2017 15:59:03] Info: Created window
+[15-02-2017 15:59:03] Info: Created renderer
+[15-02-2017 15:59:03] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:59:04] Debug: Key (100/d) State: Down
+[15-02-2017 15:59:04] Info: Freed resource "Images/Icon/bengine.fw.png"
+[15-02-2017 15:59:04] Debug: Key (100/d) State: Up
+[15-02-2017 15:59:05] Debug: Mouse Position: 343, 0
+[15-02-2017 15:59:05] Debug: Mouse Position: 341, 1
+[15-02-2017 15:59:05] Debug: Mouse Position: 340, 0
+[15-02-2017 15:59:08] Info: Destroying window
+[15-02-2017 15:59:08] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:59:08] Info: Unloading Mix_Init
+[15-02-2017 15:59:08] Info: Unloading IMG_Init
+[15-02-2017 15:59:08] Info: Cleaning up SDL subsystems
+[15-02-2017 15:59:08] Info: Exiting application
+[15-02-2017 15:59:11] Info: Initialized video subsystem
+[15-02-2017 15:59:11] Info: Initialized SDL_Image
+[15-02-2017 15:59:11] Info: Initialized Mix_Init
+[15-02-2017 15:59:11] Info: Created window
+[15-02-2017 15:59:11] Info: Created renderer
+[15-02-2017 15:59:11] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 15:59:12] Debug: Mouse Position: 394, 0
+[15-02-2017 15:59:12] Debug: Mouse Position: 499, 5
+[15-02-2017 15:59:12] Debug: Mouse Position: 587, 0
+[15-02-2017 15:59:13] Debug: Mouse Position: 781, 2
+[15-02-2017 15:59:13] Debug: Mouse Position: 707, 7
+[15-02-2017 15:59:13] Debug: Mouse Position: 685, 9
+[15-02-2017 15:59:13] Debug: Mouse Position: 649, 14
+[15-02-2017 15:59:13] Debug: Mouse Position: 625, 20
+[15-02-2017 15:59:13] Debug: Mouse Position: 617, 20
+[15-02-2017 15:59:13] Debug: Mouse Position: 609, 20
+[15-02-2017 15:59:13] Debug: Mouse Position: 575, 10
+[15-02-2017 15:59:13] Debug: Mouse Position: 561, 6
+[15-02-2017 15:59:13] Debug: Mouse Position: 542, 0
+[15-02-2017 15:59:14] Debug: Mouse Position: 640, 2
+[15-02-2017 15:59:14] Debug: Mouse Position: 747, 9
+[15-02-2017 15:59:14] Debug: Mouse Position: 799, 0
+[15-02-2017 15:59:19] Debug: Mouse Position: 797, 125
+[15-02-2017 15:59:19] Debug: Mouse Position: 562, 117
+[15-02-2017 15:59:19] Debug: Mouse Position: 540, 126
+[15-02-2017 15:59:19] Debug: Mouse Button (1) State: Down
+[15-02-2017 15:59:20] Debug: Mouse Button (1) State: Up
+[15-02-2017 15:59:21] Debug: Key (100/d) State: Down
+[15-02-2017 15:59:21] Info: Freed resource "Images/Icon/bengine.fw.png"
+[15-02-2017 15:59:21] Debug: Key (100/d) State: Up
+[15-02-2017 15:59:26] Debug: Mouse Position: 542, 126
+[15-02-2017 15:59:26] Debug: Mouse Position: 571, 130
+[15-02-2017 15:59:26] Debug: Mouse Position: 643, 138
+[15-02-2017 15:59:26] Debug: Mouse Position: 753, 150
+[15-02-2017 15:59:26] Debug: Mouse Position: 799, 158
+[15-02-2017 15:59:32] Info: Destroying window
+[15-02-2017 15:59:32] Info: Destroying renderer and freeing associated textures
+[15-02-2017 15:59:32] Info: Unloading Mix_Init
+[15-02-2017 15:59:32] Info: Unloading IMG_Init
+[15-02-2017 15:59:32] Info: Cleaning up SDL subsystems
+[15-02-2017 15:59:32] Info: Exiting application
+[15-02-2017 19:54:21] Info: Initialized video subsystem
+[15-02-2017 19:54:21] Info: Initialized SDL_Image
+[15-02-2017 19:54:21] Info: Initialized Mix_Init
+[15-02-2017 19:54:21] Info: Created window
+[15-02-2017 19:54:21] Info: Created renderer
+[15-02-2017 19:54:21] Info: Created window
+[15-02-2017 19:54:21] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 19:54:21] Debug: Mouse Position: 488, 21
+[15-02-2017 19:54:21] Debug: Mouse Position: 507, 43
+[15-02-2017 19:54:21] Debug: Mouse Position: 509, 47
+[15-02-2017 19:54:22] Debug: Mouse Position: 510, 47
+[15-02-2017 19:54:22] Debug: Mouse Position: 523, 43
+[15-02-2017 19:54:22] Debug: Mouse Position: 556, 32
+[15-02-2017 19:54:22] Debug: Mouse Position: 621, 22
+[15-02-2017 19:54:22] Debug: Mouse Position: 645, 22
+[15-02-2017 19:54:22] Debug: Mouse Position: 679, 22
+[15-02-2017 19:54:22] Debug: Mouse Position: 699, 25
+[15-02-2017 19:54:22] Debug: Mouse Position: 712, 30
+[15-02-2017 19:54:22] Debug: Mouse Position: 716, 31
+[15-02-2017 19:54:22] Debug: Mouse Position: 717, 31
+[15-02-2017 19:54:22] Debug: Mouse Position: 717, 30
+[15-02-2017 19:54:23] Debug: Mouse Position: 717, 29
+[15-02-2017 19:54:23] Debug: Mouse Position: 716, 27
+[15-02-2017 19:54:23] Debug: Mouse Position: 705, 18
+[15-02-2017 19:54:23] Debug: Mouse Position: 689, 7
+[15-02-2017 19:54:23] Debug: Mouse Position: 680, 3
+[15-02-2017 19:54:23] Debug: Mouse Position: 662, 0
+[15-02-2017 19:54:27] Debug: Mouse Position: 709, 0
+[15-02-2017 19:54:27] Debug: Mouse Position: 710, 0
+[15-02-2017 19:54:27] Debug: Mouse Position: 713, 0
+[15-02-2017 19:54:27] Debug: Mouse Position: 719, 0
+[15-02-2017 19:54:27] Debug: Mouse Position: 724, 0
+[15-02-2017 19:54:27] Debug: Mouse Position: 728, 0
+[15-02-2017 19:54:27] Info: Destroying window
+[15-02-2017 19:54:27] Info: Destroying renderer and freeing associated textures
+[15-02-2017 19:54:27] Info: Unloading Mix_Init
+[15-02-2017 19:54:27] Info: Unloading IMG_Init
+[15-02-2017 19:54:27] Info: Cleaning up SDL subsystems
+[15-02-2017 19:54:27] Info: Exiting application
+[15-02-2017 20:01:17] Info: Initialized video subsystem
+[15-02-2017 20:01:17] Info: Initialized SDL_Image
+[15-02-2017 20:01:17] Info: Initialized Mix_Init
+[15-02-2017 20:01:18] Info: Created window
+[15-02-2017 20:01:18] Info: Created renderer
+[15-02-2017 20:01:18] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:01:18] Debug: Mouse Position: 618, 2
+[15-02-2017 20:01:18] Debug: Mouse Position: 688, 32
+[15-02-2017 20:01:18] Debug: Mouse Position: 693, 32
+[15-02-2017 20:01:19] Debug: Mouse Position: 722, 20
+[15-02-2017 20:01:19] Debug: Mouse Position: 749, 7
+[15-02-2017 20:01:19] Debug: Mouse Position: 764, 0
+[15-02-2017 20:01:19] Info: Destroying window
+[15-02-2017 20:01:19] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:01:19] Info: Unloading Mix_Init
+[15-02-2017 20:01:19] Info: Unloading IMG_Init
+[15-02-2017 20:01:19] Info: Cleaning up SDL subsystems
+[15-02-2017 20:01:19] Info: Exiting application
+[15-02-2017 20:20:09] Info: Initialized video subsystem
+[15-02-2017 20:20:09] Info: Initialized SDL_Image
+[15-02-2017 20:20:09] Info: Initialized Mix_Init
+[15-02-2017 20:20:09] Info: Created window
+[15-02-2017 20:20:10] Info: Created renderer
+[15-02-2017 20:20:10] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:20:13] Debug: Mouse Position: 32, 599
+[15-02-2017 20:20:13] Debug: Mouse Position: 333, 526
+[15-02-2017 20:20:13] Debug: Mouse Position: 349, 513
+[15-02-2017 20:20:13] Debug: Mouse Button (1) State: Down
+[15-02-2017 20:20:13] Debug: Mouse Button (1) State: Up
+[15-02-2017 20:20:13] Debug: Key (119/w) State: Down
+[15-02-2017 20:20:13] Debug: Key (97/a) State: Down
+[15-02-2017 20:20:13] Debug: Key (119/w) State: Up
+[15-02-2017 20:20:13] Debug: Key (115/s) State: Down
+[15-02-2017 20:20:13] Debug: Key (97/a) State: Up
+[15-02-2017 20:20:14] Debug: Key (100/d) State: Down
+[15-02-2017 20:20:14] Info: Freed resource "Images/Icon/bengine.fw.png"
+[15-02-2017 20:20:14] Debug: Key (100/d) State: Up
+[15-02-2017 20:20:14] Debug: Key (97/a) State: Down
+[15-02-2017 20:20:14] Debug: Mouse Position: 350, 512
+[15-02-2017 20:20:14] Debug: Mouse Position: 351, 511
+[15-02-2017 20:20:14] Debug: Mouse Position: 352, 510
+[15-02-2017 20:20:14] Debug: Mouse Position: 353, 507
+[15-02-2017 20:20:14] Debug: Mouse Position: 358, 499
+[15-02-2017 20:20:14] Debug: Mouse Position: 359, 497
+[15-02-2017 20:20:14] Debug: Mouse Position: 363, 492
+[15-02-2017 20:20:14] Debug: Mouse Position: 366, 489
+[15-02-2017 20:20:14] Debug: Mouse Position: 372, 483
+[15-02-2017 20:20:14] Debug: Mouse Position: 374, 480
+[15-02-2017 20:20:14] Debug: Mouse Position: 376, 480
+[15-02-2017 20:20:14] Debug: Mouse Position: 382, 472
+[15-02-2017 20:20:14] Debug: Key (115/s) State: Up
+[15-02-2017 20:20:14] Debug: Mouse Position: 390, 461
+[15-02-2017 20:20:14] Debug: Mouse Position: 395, 457
+[15-02-2017 20:20:14] Debug: Mouse Position: 404, 447
+[15-02-2017 20:20:14] Debug: Mouse Position: 412, 439
+[15-02-2017 20:20:14] Debug: Mouse Position: 415, 435
+[15-02-2017 20:20:14] Debug: Mouse Position: 425, 422
+[15-02-2017 20:20:15] Debug: Mouse Position: 430, 415
+[15-02-2017 20:20:15] Debug: Mouse Position: 431, 414
+[15-02-2017 20:20:15] Debug: Key (119/w) State: Down
+[15-02-2017 20:20:15] Debug: Key (97/a) State: Up
+[15-02-2017 20:20:15] Debug: Key (100/d) State: Down
+[15-02-2017 20:20:15] Debug: Mouse Position: 432, 412
+[15-02-2017 20:20:15] Debug: Mouse Position: 454, 374
+[15-02-2017 20:20:15] Debug: Mouse Position: 529, 244
+[15-02-2017 20:20:15] Debug: Key (100/d) State: Up
+[15-02-2017 20:20:15] Debug: Mouse Position: 561, 203
+[15-02-2017 20:20:15] Debug: Mouse Position: 640, 100
+[15-02-2017 20:20:15] Debug: Mouse Position: 655, 90
+[15-02-2017 20:20:15] Debug: Key (97/a) State: Down
+[15-02-2017 20:20:15] Debug: Mouse Position: 658, 88
+[15-02-2017 20:20:15] Debug: Key (119/w) State: Up
+[15-02-2017 20:20:15] Debug: Key (115/s) State: Down
+[15-02-2017 20:20:15] Debug: Key (97/a) State: Up
+[15-02-2017 20:20:16] Debug: Mouse Position: 722, 16
+[15-02-2017 20:20:16] Debug: Mouse Position: 748, 0
+[15-02-2017 20:20:16] Debug: Key (100/d) State: Down
+[15-02-2017 20:20:16] Debug: Key (100/d) State: Up
+[15-02-2017 20:20:16] Debug: Key (115/s) State: Up
+[15-02-2017 20:20:16] Info: Destroying window
+[15-02-2017 20:20:16] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:20:16] Info: Unloading Mix_Init
+[15-02-2017 20:20:16] Info: Unloading IMG_Init
+[15-02-2017 20:20:16] Info: Cleaning up SDL subsystems
+[15-02-2017 20:20:16] Info: Exiting application
+[15-02-2017 20:25:21] Info: Initialized video subsystem
+[15-02-2017 20:25:21] Info: Initialized SDL_Image
+[15-02-2017 20:25:21] Info: Initialized Mix_Init
+[15-02-2017 20:25:21] Info: Created window
+[15-02-2017 20:25:21] Info: Created renderer
+[15-02-2017 20:25:21] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:25:22] Debug: Mouse Position: 261, 1
+[15-02-2017 20:25:22] Debug: Mouse Position: 472, 78
+[15-02-2017 20:25:22] Debug: Mouse Position: 493, 86
+[15-02-2017 20:25:22] Debug: Mouse Position: 498, 90
+[15-02-2017 20:25:22] Debug: Mouse Position: 498, 92
+[15-02-2017 20:25:22] Debug: Mouse Position: 500, 92
+[15-02-2017 20:25:22] Debug: Mouse Position: 604, 35
+[15-02-2017 20:25:22] Debug: Mouse Position: 732, 0
+[15-02-2017 20:25:23] Info: Destroying window
+[15-02-2017 20:25:23] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:25:23] Info: Unloading Mix_Init
+[15-02-2017 20:25:23] Info: Unloading IMG_Init
+[15-02-2017 20:25:23] Info: Cleaning up SDL subsystems
+[15-02-2017 20:25:23] Info: Exiting application
+[15-02-2017 20:25:37] Info: Initialized video subsystem
+[15-02-2017 20:25:37] Info: Initialized SDL_Image
+[15-02-2017 20:25:37] Info: Initialized Mix_Init
+[15-02-2017 20:25:37] Info: Created window
+[15-02-2017 20:25:37] Info: Created renderer
+[15-02-2017 20:25:37] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:25:37] Debug: Mouse Position: 191, 5
+[15-02-2017 20:25:37] Debug: Mouse Position: 194, 5
+[15-02-2017 20:25:38] Debug: Mouse Position: 376, 5
+[15-02-2017 20:25:38] Debug: Mouse Position: 617, 9
+[15-02-2017 20:25:38] Debug: Mouse Position: 618, 9
+[15-02-2017 20:25:38] Debug: Mouse Position: 710, 0
+[15-02-2017 20:25:39] Info: Destroying window
+[15-02-2017 20:25:39] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:25:39] Info: Unloading Mix_Init
+[15-02-2017 20:25:39] Info: Unloading IMG_Init
+[15-02-2017 20:25:39] Info: Cleaning up SDL subsystems
+[15-02-2017 20:25:39] Info: Exiting application
+[15-02-2017 20:27:57] Info: Initialized video subsystem
+[15-02-2017 20:27:57] Info: Initialized SDL_Image
+[15-02-2017 20:27:57] Info: Initialized Mix_Init
+[15-02-2017 20:27:57] Info: Created window
+[15-02-2017 20:27:57] Info: Created renderer
+[15-02-2017 20:27:57] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:27:58] Debug: Mouse Position: 229, 33
+[15-02-2017 20:27:58] Debug: Mouse Position: 246, 60
+[15-02-2017 20:27:58] Debug: Mouse Position: 253, 60
+[15-02-2017 20:27:58] Debug: Mouse Position: 297, 57
+[15-02-2017 20:27:58] Debug: Mouse Position: 373, 55
+[15-02-2017 20:27:58] Debug: Mouse Position: 452, 59
+[15-02-2017 20:27:58] Debug: Mouse Position: 521, 70
+[15-02-2017 20:27:58] Debug: Mouse Position: 560, 81
+[15-02-2017 20:27:58] Debug: Mouse Position: 578, 87
+[15-02-2017 20:27:58] Debug: Mouse Position: 580, 90
+[15-02-2017 20:27:58] Debug: Mouse Position: 582, 89
+[15-02-2017 20:27:58] Debug: Mouse Position: 627, 67
+[15-02-2017 20:27:58] Debug: Mouse Position: 662, 50
+[15-02-2017 20:27:58] Debug: Mouse Position: 737, 16
+[15-02-2017 20:27:58] Debug: Mouse Position: 799, 0
+[15-02-2017 20:28:06] Info: Destroying window
+[15-02-2017 20:28:06] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:28:06] Info: Unloading Mix_Init
+[15-02-2017 20:28:06] Info: Unloading IMG_Init
+[15-02-2017 20:28:06] Info: Cleaning up SDL subsystems
+[15-02-2017 20:28:06] Info: Exiting application
+[15-02-2017 20:32:25] Info: Initialized video subsystem
+[15-02-2017 20:32:25] Info: Initialized SDL_Image
+[15-02-2017 20:32:25] Info: Initialized Mix_Init
+[15-02-2017 20:32:25] Info: Created window
+[15-02-2017 20:32:25] Info: Created renderer
+[15-02-2017 20:32:25] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:32:25] Debug: Mouse Position: 489, 0
+[15-02-2017 20:32:25] Debug: Mouse Position: 569, 35
+[15-02-2017 20:32:25] Debug: Mouse Position: 579, 43
+[15-02-2017 20:32:26] Debug: Mouse Position: 585, 42
+[15-02-2017 20:32:26] Debug: Mouse Position: 663, 8
+[15-02-2017 20:32:26] Debug: Mouse Position: 727, 0
+[15-02-2017 20:32:27] Info: Destroying window
+[15-02-2017 20:32:27] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:32:27] Info: Unloading Mix_Init
+[15-02-2017 20:32:27] Info: Unloading IMG_Init
+[15-02-2017 20:32:27] Info: Cleaning up SDL subsystems
+[15-02-2017 20:32:27] Info: Exiting application
+[15-02-2017 20:32:36] Info: Initialized video subsystem
+[15-02-2017 20:32:36] Info: Initialized SDL_Image
+[15-02-2017 20:32:36] Info: Initialized Mix_Init
+[15-02-2017 20:32:36] Info: Created window
+[15-02-2017 20:32:36] Info: Created renderer
+[15-02-2017 20:32:36] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:32:45] Info: Destroying window
+[15-02-2017 20:32:45] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:32:45] Info: Unloading Mix_Init
+[15-02-2017 20:32:45] Info: Unloading IMG_Init
+[15-02-2017 20:32:45] Info: Cleaning up SDL subsystems
+[15-02-2017 20:32:45] Info: Exiting application
+[15-02-2017 20:32:57] Info: Initialized video subsystem
+[15-02-2017 20:32:57] Info: Initialized SDL_Image
+[15-02-2017 20:32:57] Info: Initialized Mix_Init
+[15-02-2017 20:32:57] Info: Created window
+[15-02-2017 20:32:57] Info: Created renderer
+[15-02-2017 20:32:58] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:32:58] Debug: Mouse Position: 574, 18
+[15-02-2017 20:32:58] Debug: Mouse Position: 692, 111
+[15-02-2017 20:32:58] Debug: Mouse Position: 693, 108
+[15-02-2017 20:32:58] Debug: Mouse Position: 717, 60
+[15-02-2017 20:32:58] Debug: Mouse Position: 731, 36
+[15-02-2017 20:32:58] Debug: Mouse Position: 745, 16
+[15-02-2017 20:32:58] Debug: Mouse Position: 767, 0
+[15-02-2017 20:32:59] Info: Destroying window
+[15-02-2017 20:32:59] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:32:59] Info: Unloading Mix_Init
+[15-02-2017 20:32:59] Info: Unloading IMG_Init
+[15-02-2017 20:32:59] Info: Cleaning up SDL subsystems
+[15-02-2017 20:32:59] Info: Exiting application
+[15-02-2017 20:33:05] Info: Initialized video subsystem
+[15-02-2017 20:33:05] Info: Initialized SDL_Image
+[15-02-2017 20:33:05] Info: Initialized Mix_Init
+[15-02-2017 20:33:05] Info: Created window
+[15-02-2017 20:33:05] Info: Created renderer
+[15-02-2017 20:33:05] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:33:06] Debug: Mouse Position: 357, 11
+[15-02-2017 20:33:06] Debug: Mouse Position: 359, 17
+[15-02-2017 20:33:06] Debug: Mouse Position: 368, 17
+[15-02-2017 20:33:06] Debug: Mouse Position: 409, 20
+[15-02-2017 20:33:06] Debug: Mouse Position: 432, 21
+[15-02-2017 20:33:06] Debug: Mouse Position: 477, 27
+[15-02-2017 20:33:06] Debug: Mouse Position: 507, 32
+[15-02-2017 20:33:06] Debug: Mouse Position: 518, 34
+[15-02-2017 20:33:06] Debug: Mouse Position: 529, 35
+[15-02-2017 20:33:06] Debug: Mouse Position: 530, 36
+[15-02-2017 20:33:07] Debug: Mouse Position: 535, 36
+[15-02-2017 20:33:07] Debug: Mouse Position: 556, 34
+[15-02-2017 20:33:07] Debug: Mouse Position: 588, 29
+[15-02-2017 20:33:07] Debug: Mouse Position: 657, 28
+[15-02-2017 20:33:07] Debug: Mouse Position: 675, 28
+[15-02-2017 20:33:07] Debug: Mouse Position: 680, 28
+[15-02-2017 20:33:07] Debug: Mouse Position: 684, 28
+[15-02-2017 20:33:07] Debug: Mouse Position: 686, 27
+[15-02-2017 20:33:07] Debug: Mouse Position: 709, 16
+[15-02-2017 20:33:07] Debug: Mouse Position: 728, 11
+[15-02-2017 20:33:07] Debug: Mouse Position: 749, 8
+[15-02-2017 20:33:07] Debug: Mouse Position: 762, 8
+[15-02-2017 20:33:07] Debug: Mouse Position: 770, 8
+[15-02-2017 20:33:07] Debug: Mouse Position: 773, 8
+[15-02-2017 20:33:08] Debug: Mouse Position: 773, 7
+[15-02-2017 20:33:08] Debug: Mouse Position: 775, 1
+[15-02-2017 20:33:08] Debug: Mouse Position: 775, 0
+[15-02-2017 20:33:12] Info: Destroying window
+[15-02-2017 20:33:12] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:33:12] Info: Unloading Mix_Init
+[15-02-2017 20:33:12] Info: Unloading IMG_Init
+[15-02-2017 20:33:12] Info: Cleaning up SDL subsystems
+[15-02-2017 20:33:12] Info: Exiting application
+[15-02-2017 20:33:32] Info: Initialized video subsystem
+[15-02-2017 20:33:32] Info: Initialized SDL_Image
+[15-02-2017 20:33:32] Info: Initialized Mix_Init
+[15-02-2017 20:33:32] Info: Created window
+[15-02-2017 20:33:32] Info: Created renderer
+[15-02-2017 20:33:32] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:33:33] Debug: Mouse Position: 485, 27
+[15-02-2017 20:33:33] Debug: Mouse Position: 534, 55
+[15-02-2017 20:33:33] Debug: Mouse Position: 539, 61
+[15-02-2017 20:33:33] Debug: Mouse Position: 540, 64
+[15-02-2017 20:33:33] Debug: Mouse Position: 547, 63
+[15-02-2017 20:33:33] Debug: Mouse Position: 721, 13
+[15-02-2017 20:33:33] Debug: Mouse Position: 759, 3
+[15-02-2017 20:33:33] Debug: Mouse Position: 799, 0
+[15-02-2017 20:33:35] Info: Destroying window
+[15-02-2017 20:33:35] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:33:35] Info: Unloading Mix_Init
+[15-02-2017 20:33:35] Info: Unloading IMG_Init
+[15-02-2017 20:33:35] Info: Cleaning up SDL subsystems
+[15-02-2017 20:33:35] Info: Exiting application
+[15-02-2017 20:33:46] Info: Initialized video subsystem
+[15-02-2017 20:33:46] Info: Initialized SDL_Image
+[15-02-2017 20:33:46] Info: Initialized Mix_Init
+[15-02-2017 20:33:47] Info: Created window
+[15-02-2017 20:33:47] Info: Created renderer
+[15-02-2017 20:33:47] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:33:47] Debug: Mouse Position: 584, 0
+[15-02-2017 20:33:47] Debug: Mouse Position: 708, 58
+[15-02-2017 20:33:47] Debug: Mouse Position: 709, 55
+[15-02-2017 20:33:47] Debug: Mouse Position: 712, 40
+[15-02-2017 20:33:47] Debug: Mouse Position: 714, 35
+[15-02-2017 20:33:47] Debug: Mouse Position: 718, 28
+[15-02-2017 20:33:48] Debug: Mouse Position: 738, 27
+[15-02-2017 20:33:48] Debug: Mouse Position: 748, 26
+[15-02-2017 20:33:48] Debug: Mouse Position: 765, 26
+[15-02-2017 20:33:48] Debug: Mouse Position: 773, 26
+[15-02-2017 20:33:48] Debug: Mouse Position: 775, 26
+[15-02-2017 20:33:48] Debug: Mouse Position: 778, 26
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 26
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 22
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 16
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 11
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 9
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 7
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 6
+[15-02-2017 20:33:48] Debug: Mouse Position: 779, 5
+[15-02-2017 20:33:48] Debug: Mouse Position: 777, 0
+[15-02-2017 20:33:48] Info: Destroying window
+[15-02-2017 20:33:48] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:33:48] Info: Unloading Mix_Init
+[15-02-2017 20:33:48] Info: Unloading IMG_Init
+[15-02-2017 20:33:48] Info: Cleaning up SDL subsystems
+[15-02-2017 20:33:48] Info: Exiting application
+[15-02-2017 20:33:56] Info: Initialized video subsystem
+[15-02-2017 20:33:56] Info: Initialized SDL_Image
+[15-02-2017 20:33:56] Info: Initialized Mix_Init
+[15-02-2017 20:33:56] Info: Created window
+[15-02-2017 20:33:56] Info: Created renderer
+[15-02-2017 20:33:56] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:33:57] Debug: Mouse Position: 591, 18
+[15-02-2017 20:33:57] Debug: Mouse Position: 699, 66
+[15-02-2017 20:33:57] Debug: Mouse Position: 699, 71
+[15-02-2017 20:33:57] Debug: Mouse Position: 702, 69
+[15-02-2017 20:33:57] Debug: Mouse Position: 741, 36
+[15-02-2017 20:33:57] Debug: Mouse Position: 775, 15
+[15-02-2017 20:33:57] Debug: Mouse Position: 799, 0
+[15-02-2017 20:34:01] Debug: Mouse Position: 716, 14
+[15-02-2017 20:34:01] Debug: Mouse Position: 776, 29
+[15-02-2017 20:34:01] Debug: Mouse Position: 788, 29
+[15-02-2017 20:34:01] Debug: Mouse Position: 792, 27
+[15-02-2017 20:34:01] Debug: Mouse Position: 791, 24
+[15-02-2017 20:34:01] Debug: Mouse Position: 788, 19
+[15-02-2017 20:34:01] Debug: Mouse Position: 787, 17
+[15-02-2017 20:34:01] Debug: Mouse Position: 783, 11
+[15-02-2017 20:34:01] Debug: Mouse Position: 781, 5
+[15-02-2017 20:34:01] Debug: Mouse Position: 780, 0
+[15-02-2017 20:34:01] Debug: Mouse Position: 779, 0
+[15-02-2017 20:34:02] Info: Destroying window
+[15-02-2017 20:34:02] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:34:02] Info: Unloading Mix_Init
+[15-02-2017 20:34:02] Info: Unloading IMG_Init
+[15-02-2017 20:34:02] Info: Cleaning up SDL subsystems
+[15-02-2017 20:34:02] Info: Exiting application
+[15-02-2017 20:37:04] Info: Initialized video subsystem
+[15-02-2017 20:37:04] Info: Initialized SDL_Image
+[15-02-2017 20:37:04] Info: Initialized Mix_Init
+[15-02-2017 20:37:04] Info: Created window
+[15-02-2017 20:37:04] Info: Created renderer
+[15-02-2017 20:37:04] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:37:06] Debug: Mouse Position: 206, 1
+[15-02-2017 20:37:06] Debug: Mouse Position: 284, 87
+[15-02-2017 20:37:06] Debug: Mouse Position: 305, 110
+[15-02-2017 20:37:06] Debug: Mouse Position: 328, 149
+[15-02-2017 20:37:06] Debug: Mouse Position: 338, 178
+[15-02-2017 20:37:06] Debug: Mouse Position: 340, 194
+[15-02-2017 20:37:06] Debug: Mouse Position: 340, 201
+[15-02-2017 20:37:07] Debug: Mouse Position: 341, 201
+[15-02-2017 20:37:07] Debug: Mouse Position: 343, 204
+[15-02-2017 20:37:07] Debug: Mouse Position: 345, 206
+[15-02-2017 20:37:07] Debug: Mouse Position: 346, 207
+[15-02-2017 20:37:07] Debug: Mouse Position: 347, 208
+[15-02-2017 20:37:07] Debug: Mouse Position: 351, 209
+[15-02-2017 20:37:07] Debug: Mouse Position: 358, 210
+[15-02-2017 20:37:07] Debug: Mouse Position: 365, 211
+[15-02-2017 20:37:07] Debug: Mouse Position: 389, 215
+[15-02-2017 20:37:07] Debug: Mouse Position: 418, 218
+[15-02-2017 20:37:07] Debug: Mouse Position: 470, 215
+[15-02-2017 20:37:07] Debug: Mouse Position: 517, 204
+[15-02-2017 20:37:07] Debug: Mouse Position: 631, 178
+[15-02-2017 20:37:07] Debug: Mouse Position: 724, 158
+[15-02-2017 20:37:07] Debug: Mouse Position: 760, 152
+[15-02-2017 20:37:07] Debug: Mouse Position: 774, 150
+[15-02-2017 20:37:07] Debug: Mouse Position: 774, 141
+[15-02-2017 20:37:07] Debug: Mouse Position: 774, 98
+[15-02-2017 20:37:07] Debug: Mouse Position: 775, 68
+[15-02-2017 20:37:08] Debug: Mouse Position: 776, 37
+[15-02-2017 20:37:08] Debug: Mouse Position: 776, 34
+[15-02-2017 20:37:08] Debug: Mouse Position: 776, 33
+[15-02-2017 20:37:08] Debug: Mouse Position: 776, 26
+[15-02-2017 20:37:08] Debug: Mouse Position: 774, 19
+[15-02-2017 20:37:08] Debug: Mouse Position: 774, 18
+[15-02-2017 20:37:08] Debug: Mouse Position: 773, 16
+[15-02-2017 20:37:08] Debug: Mouse Position: 772, 13
+[15-02-2017 20:37:08] Debug: Mouse Position: 772, 11
+[15-02-2017 20:37:08] Debug: Mouse Position: 772, 8
+[15-02-2017 20:37:08] Debug: Mouse Position: 772, 1
+[15-02-2017 20:37:08] Debug: Mouse Button (1) State: Down
+[15-02-2017 20:37:08] Debug: Mouse Button (1) State: Up
+[15-02-2017 20:37:08] Debug: Mouse Position: 772, 0
+[15-02-2017 20:37:09] Info: Destroying window
+[15-02-2017 20:37:09] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:37:09] Info: Unloading Mix_Init
+[15-02-2017 20:37:09] Info: Unloading IMG_Init
+[15-02-2017 20:37:09] Info: Cleaning up SDL subsystems
+[15-02-2017 20:37:09] Info: Exiting application
+[15-02-2017 20:37:27] Info: Initialized video subsystem
+[15-02-2017 20:37:27] Info: Initialized SDL_Image
+[15-02-2017 20:37:27] Info: Initialized Mix_Init
+[15-02-2017 20:37:27] Info: Created window
+[15-02-2017 20:37:27] Info: Created renderer
+[15-02-2017 20:37:27] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:37:28] Debug: Mouse Position: 607, 10
+[15-02-2017 20:37:28] Debug: Mouse Position: 676, 22
+[15-02-2017 20:37:28] Debug: Mouse Position: 713, 27
+[15-02-2017 20:37:28] Debug: Mouse Position: 731, 30
+[15-02-2017 20:37:28] Debug: Mouse Position: 733, 31
+[15-02-2017 20:37:29] Debug: Mouse Position: 735, 29
+[15-02-2017 20:37:29] Debug: Mouse Position: 746, 13
+[15-02-2017 20:37:29] Debug: Mouse Position: 793, 0
+[15-02-2017 20:37:30] Info: Destroying window
+[15-02-2017 20:37:30] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:37:30] Info: Unloading Mix_Init
+[15-02-2017 20:37:30] Info: Unloading IMG_Init
+[15-02-2017 20:37:30] Info: Cleaning up SDL subsystems
+[15-02-2017 20:37:30] Info: Exiting application
+[15-02-2017 20:37:39] Info: Initialized video subsystem
+[15-02-2017 20:37:39] Info: Initialized SDL_Image
+[15-02-2017 20:37:39] Info: Initialized Mix_Init
+[15-02-2017 20:37:39] Info: Created window
+[15-02-2017 20:37:39] Info: Created renderer
+[15-02-2017 20:37:39] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:37:40] Debug: Mouse Position: 497, 1
+[15-02-2017 20:37:40] Debug: Mouse Position: 521, 9
+[15-02-2017 20:37:40] Debug: Mouse Position: 540, 16
+[15-02-2017 20:37:40] Debug: Mouse Position: 546, 18
+[15-02-2017 20:37:40] Debug: Mouse Position: 550, 19
+[15-02-2017 20:37:40] Debug: Mouse Position: 555, 19
+[15-02-2017 20:37:40] Debug: Mouse Position: 564, 18
+[15-02-2017 20:37:40] Debug: Mouse Position: 587, 17
+[15-02-2017 20:37:40] Debug: Mouse Position: 627, 17
+[15-02-2017 20:37:40] Debug: Mouse Position: 688, 34
+[15-02-2017 20:37:40] Debug: Mouse Position: 717, 46
+[15-02-2017 20:37:40] Debug: Mouse Position: 758, 58
+[15-02-2017 20:37:40] Debug: Mouse Position: 787, 67
+[15-02-2017 20:37:40] Debug: Mouse Position: 799, 68
+[15-02-2017 20:37:40] Debug: Mouse Position: 799, 38
+[15-02-2017 20:37:40] Debug: Mouse Position: 781, 17
+[15-02-2017 20:37:40] Debug: Mouse Position: 773, 5
+[15-02-2017 20:37:40] Debug: Mouse Position: 756, 0
+[15-02-2017 20:37:41] Info: Destroying window
+[15-02-2017 20:37:41] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:37:41] Info: Unloading Mix_Init
+[15-02-2017 20:37:41] Info: Unloading IMG_Init
+[15-02-2017 20:37:41] Info: Cleaning up SDL subsystems
+[15-02-2017 20:37:42] Info: Exiting application
+[15-02-2017 20:38:07] Info: Initialized video subsystem
+[15-02-2017 20:38:07] Info: Initialized SDL_Image
+[15-02-2017 20:38:07] Info: Initialized Mix_Init
+[15-02-2017 20:38:07] Info: Created window
+[15-02-2017 20:38:07] Info: Created renderer
+[15-02-2017 20:38:07] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:38:08] Debug: Mouse Position: 752, 0
+[15-02-2017 20:38:08] Debug: Mouse Position: 754, 0
+[15-02-2017 20:38:08] Debug: Mouse Position: 759, 0
+[15-02-2017 20:38:09] Info: Destroying window
+[15-02-2017 20:38:09] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:38:09] Info: Unloading Mix_Init
+[15-02-2017 20:38:09] Info: Unloading IMG_Init
+[15-02-2017 20:38:09] Info: Cleaning up SDL subsystems
+[15-02-2017 20:38:09] Info: Exiting application
+[15-02-2017 20:38:15] Info: Initialized video subsystem
+[15-02-2017 20:38:15] Info: Initialized SDL_Image
+[15-02-2017 20:38:15] Info: Initialized Mix_Init
+[15-02-2017 20:38:15] Info: Created window
+[15-02-2017 20:38:15] Info: Created renderer
+[15-02-2017 20:38:15] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:38:19] Info: Destroying window
+[15-02-2017 20:38:19] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:38:19] Info: Unloading Mix_Init
+[15-02-2017 20:38:19] Info: Unloading IMG_Init
+[15-02-2017 20:38:19] Info: Cleaning up SDL subsystems
+[15-02-2017 20:38:19] Info: Exiting application
+[15-02-2017 20:38:37] Info: Initialized video subsystem
+[15-02-2017 20:38:37] Info: Initialized SDL_Image
+[15-02-2017 20:38:37] Info: Initialized Mix_Init
+[15-02-2017 20:38:38] Info: Created window
+[15-02-2017 20:38:38] Info: Created renderer
+[15-02-2017 20:38:38] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:38:38] Debug: Mouse Position: 499, 12
+[15-02-2017 20:38:38] Debug: Mouse Position: 519, 31
+[15-02-2017 20:38:38] Debug: Mouse Position: 525, 40
+[15-02-2017 20:38:38] Debug: Mouse Position: 531, 40
+[15-02-2017 20:38:38] Debug: Mouse Position: 556, 40
+[15-02-2017 20:38:38] Debug: Mouse Position: 630, 34
+[15-02-2017 20:38:38] Debug: Mouse Position: 712, 30
+[15-02-2017 20:38:38] Debug: Mouse Position: 768, 28
+[15-02-2017 20:38:39] Debug: Mouse Position: 796, 28
+[15-02-2017 20:38:39] Debug: Mouse Position: 798, 28
+[15-02-2017 20:38:39] Debug: Mouse Position: 791, 24
+[15-02-2017 20:38:39] Debug: Mouse Position: 783, 15
+[15-02-2017 20:38:39] Debug: Mouse Position: 781, 13
+[15-02-2017 20:38:39] Debug: Mouse Position: 780, 11
+[15-02-2017 20:38:39] Debug: Mouse Position: 780, 9
+[15-02-2017 20:38:39] Debug: Mouse Position: 781, 5
+[15-02-2017 20:38:39] Debug: Mouse Position: 783, 0
+[15-02-2017 20:38:40] Info: Destroying window
+[15-02-2017 20:38:40] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:38:40] Info: Unloading Mix_Init
+[15-02-2017 20:38:40] Info: Unloading IMG_Init
+[15-02-2017 20:38:40] Info: Cleaning up SDL subsystems
+[15-02-2017 20:38:40] Info: Exiting application
+[15-02-2017 20:39:26] Info: Initialized video subsystem
+[15-02-2017 20:39:26] Info: Initialized SDL_Image
+[15-02-2017 20:39:26] Info: Initialized Mix_Init
+[15-02-2017 20:39:26] Info: Created window
+[15-02-2017 20:39:26] Info: Created renderer
+[15-02-2017 20:39:26] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:39:26] Debug: Mouse Position: 242, 0
+[15-02-2017 20:39:33] Debug: Mouse Position: 243, 0
+[15-02-2017 20:39:33] Debug: Mouse Position: 246, 0
+[15-02-2017 20:39:33] Debug: Mouse Position: 262, 0
+[15-02-2017 20:39:35] Debug: Mouse Position: 637, 6
+[15-02-2017 20:39:35] Debug: Mouse Position: 687, 38
+[15-02-2017 20:39:35] Debug: Mouse Position: 700, 49
+[15-02-2017 20:39:35] Debug: Mouse Position: 718, 68
+[15-02-2017 20:39:35] Debug: Mouse Position: 728, 75
+[15-02-2017 20:39:35] Debug: Mouse Position: 730, 75
+[15-02-2017 20:39:35] Debug: Mouse Position: 729, 75
+[15-02-2017 20:39:35] Debug: Mouse Position: 729, 74
+[15-02-2017 20:39:35] Debug: Mouse Position: 728, 73
+[15-02-2017 20:39:35] Debug: Mouse Position: 726, 69
+[15-02-2017 20:39:35] Debug: Mouse Position: 723, 64
+[15-02-2017 20:39:35] Debug: Mouse Position: 720, 51
+[15-02-2017 20:39:35] Debug: Mouse Position: 718, 41
+[15-02-2017 20:39:35] Debug: Mouse Position: 718, 38
+[15-02-2017 20:39:35] Debug: Mouse Position: 718, 34
+[15-02-2017 20:39:35] Debug: Mouse Position: 724, 30
+[15-02-2017 20:39:35] Debug: Mouse Position: 730, 26
+[15-02-2017 20:39:35] Debug: Mouse Position: 741, 19
+[15-02-2017 20:39:35] Debug: Mouse Position: 755, 9
+[15-02-2017 20:39:35] Debug: Mouse Position: 761, 4
+[15-02-2017 20:39:35] Debug: Mouse Position: 764, 1
+[15-02-2017 20:39:35] Debug: Mouse Position: 769, 0
+[15-02-2017 20:39:36] Info: Destroying window
+[15-02-2017 20:39:36] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:39:36] Info: Unloading Mix_Init
+[15-02-2017 20:39:36] Info: Unloading IMG_Init
+[15-02-2017 20:39:36] Info: Cleaning up SDL subsystems
+[15-02-2017 20:39:36] Info: Exiting application
+[15-02-2017 20:39:47] Info: Initialized video subsystem
+[15-02-2017 20:39:47] Info: Initialized SDL_Image
+[15-02-2017 20:39:47] Info: Initialized Mix_Init
+[15-02-2017 20:39:47] Info: Created window
+[15-02-2017 20:39:47] Info: Created renderer
+[15-02-2017 20:39:47] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:39:49] Debug: Mouse Position: 626, 12
+[15-02-2017 20:39:49] Debug: Mouse Position: 672, 29
+[15-02-2017 20:39:49] Debug: Mouse Position: 693, 38
+[15-02-2017 20:39:49] Debug: Mouse Position: 700, 42
+[15-02-2017 20:39:49] Debug: Mouse Position: 697, 43
+[15-02-2017 20:39:49] Debug: Mouse Position: 697, 42
+[15-02-2017 20:39:50] Debug: Mouse Position: 701, 36
+[15-02-2017 20:39:50] Debug: Mouse Position: 703, 34
+[15-02-2017 20:39:50] Debug: Mouse Position: 706, 31
+[15-02-2017 20:39:50] Debug: Mouse Position: 706, 30
+[15-02-2017 20:39:50] Debug: Mouse Position: 708, 28
+[15-02-2017 20:39:50] Debug: Mouse Position: 740, 6
+[15-02-2017 20:39:50] Debug: Mouse Position: 765, 0
+[15-02-2017 20:39:51] Info: Destroying window
+[15-02-2017 20:39:51] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:39:52] Info: Unloading Mix_Init
+[15-02-2017 20:39:52] Info: Unloading IMG_Init
+[15-02-2017 20:39:52] Info: Cleaning up SDL subsystems
+[15-02-2017 20:39:52] Info: Exiting application
+[15-02-2017 20:40:05] Info: Initialized video subsystem
+[15-02-2017 20:40:05] Info: Initialized SDL_Image
+[15-02-2017 20:40:05] Info: Initialized Mix_Init
+[15-02-2017 20:40:05] Info: Created window
+[15-02-2017 20:40:05] Info: Created renderer
+[15-02-2017 20:40:05] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:40:06] Debug: Key (100/d) State: Down
+[15-02-2017 20:40:06] Debug: Key (102/f) State: Down
+[15-02-2017 20:40:06] Info: Freed resource "Images/Icon/bengine.fw.png"
+[15-02-2017 20:40:06] Debug: Key (102/f) State: Up
+[15-02-2017 20:40:06] Debug: Key (100/d) State: Up
+[15-02-2017 20:40:06] Debug: Key (100/d) State: Down
+[15-02-2017 20:40:07] Debug: Key (100/d) State: Up
+[15-02-2017 20:40:07] Debug: Mouse Position: 381, 1
+[15-02-2017 20:40:07] Debug: Mouse Position: 422, 39
+[15-02-2017 20:40:07] Debug: Mouse Position: 453, 75
+[15-02-2017 20:40:07] Debug: Mouse Position: 458, 82
+[15-02-2017 20:40:07] Debug: Mouse Position: 460, 96
+[15-02-2017 20:40:07] Debug: Mouse Position: 460, 99
+[15-02-2017 20:40:07] Debug: Mouse Position: 453, 103
+[15-02-2017 20:40:07] Debug: Mouse Position: 445, 103
+[15-02-2017 20:40:07] Debug: Mouse Button (1) State: Down
+[15-02-2017 20:40:07] Debug: Mouse Button (1) State: Up
+[15-02-2017 20:40:07] Debug: Mouse Position: 446, 103
+[15-02-2017 20:40:08] Debug: Mouse Position: 465, 100
+[15-02-2017 20:40:08] Debug: Key (119/w) State: Down
+[15-02-2017 20:40:08] Debug: Mouse Position: 528, 87
+[15-02-2017 20:40:08] Debug: Mouse Position: 558, 82
+[15-02-2017 20:40:08] Debug: Mouse Position: 610, 71
+[15-02-2017 20:40:08] Debug: Mouse Position: 642, 67
+[15-02-2017 20:40:08] Debug: Mouse Position: 663, 63
+[15-02-2017 20:40:08] Debug: Mouse Position: 670, 61
+[15-02-2017 20:40:08] Debug: Mouse Position: 680, 54
+[15-02-2017 20:40:08] Debug: Mouse Position: 686, 47
+[15-02-2017 20:40:08] Debug: Mouse Position: 687, 41
+[15-02-2017 20:40:08] Debug: Mouse Position: 687, 40
+[15-02-2017 20:40:08] Debug: Mouse Position: 692, 40
+[15-02-2017 20:40:08] Debug: Mouse Position: 711, 39
+[15-02-2017 20:40:08] Debug: Mouse Position: 718, 38
+[15-02-2017 20:40:08] Debug: Mouse Position: 731, 34
+[15-02-2017 20:40:08] Debug: Key (119/w) State: Up
+[15-02-2017 20:40:08] Debug: Mouse Position: 746, 26
+[15-02-2017 20:40:08] Debug: Mouse Position: 750, 24
+[15-02-2017 20:40:08] Debug: Mouse Position: 754, 20
+[15-02-2017 20:40:08] Debug: Mouse Position: 756, 13
+[15-02-2017 20:40:08] Debug: Mouse Position: 758, 7
+[15-02-2017 20:40:08] Debug: Mouse Position: 758, 4
+[15-02-2017 20:40:08] Debug: Mouse Position: 758, 3
+[15-02-2017 20:40:08] Debug: Mouse Position: 758, 2
+[15-02-2017 20:40:08] Debug: Mouse Position: 761, 0
+[15-02-2017 20:40:08] Debug: Mouse Position: 765, 0
+[15-02-2017 20:40:08] Info: Destroying window
+[15-02-2017 20:40:08] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:40:08] Info: Unloading Mix_Init
+[15-02-2017 20:40:08] Info: Unloading IMG_Init
+[15-02-2017 20:40:08] Info: Cleaning up SDL subsystems
+[15-02-2017 20:40:08] Info: Exiting application
+[15-02-2017 20:40:11] Info: Initialized video subsystem
+[15-02-2017 20:40:11] Info: Initialized SDL_Image
+[15-02-2017 20:40:11] Info: Initialized Mix_Init
+[15-02-2017 20:40:11] Info: Created window
+[15-02-2017 20:40:11] Info: Created renderer
+[15-02-2017 20:40:11] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:40:12] Debug: Mouse Position: 335, 1
+[15-02-2017 20:40:12] Debug: Mouse Position: 361, 32
+[15-02-2017 20:40:12] Debug: Mouse Position: 366, 41
+[15-02-2017 20:40:12] Debug: Mouse Position: 366, 53
+[15-02-2017 20:40:12] Debug: Mouse Position: 368, 56
+[15-02-2017 20:40:12] Debug: Mouse Position: 390, 80
+[15-02-2017 20:40:12] Debug: Mouse Position: 397, 88
+[15-02-2017 20:40:12] Debug: Mouse Position: 399, 90
+[15-02-2017 20:40:12] Debug: Mouse Position: 400, 92
+[15-02-2017 20:40:13] Debug: Mouse Position: 400, 91
+[15-02-2017 20:40:14] Debug: Key (119/w) State: Down
+[15-02-2017 20:40:14] Debug: Key (119/w) State: Up
+[15-02-2017 20:40:14] Debug: Key (97/a) State: Down
+[15-02-2017 20:40:14] Debug: Key (115/s) State: Down
+[15-02-2017 20:40:14] Debug: Key (97/a) State: Up
+[15-02-2017 20:40:14] Debug: Key (97/a) State: Down
+[15-02-2017 20:40:14] Debug: Mouse Position: 407, 87
+[15-02-2017 20:40:15] Debug: Mouse Position: 414, 86
+[15-02-2017 20:40:15] Debug: Mouse Position: 419, 85
+[15-02-2017 20:40:15] Debug: Mouse Position: 424, 85
+[15-02-2017 20:40:15] Debug: Mouse Position: 429, 85
+[15-02-2017 20:40:15] Debug: Mouse Position: 430, 84
+[15-02-2017 20:40:15] Debug: Mouse Position: 437, 80
+[15-02-2017 20:40:15] Debug: Mouse Position: 441, 78
+[15-02-2017 20:40:15] Debug: Mouse Position: 451, 75
+[15-02-2017 20:40:15] Debug: Mouse Position: 468, 71
+[15-02-2017 20:40:15] Debug: Mouse Position: 482, 68
+[15-02-2017 20:40:15] Debug: Mouse Position: 518, 59
+[15-02-2017 20:40:15] Debug: Mouse Position: 542, 53
+[15-02-2017 20:40:15] Debug: Mouse Position: 559, 48
+[15-02-2017 20:40:15] Debug: Mouse Position: 571, 46
+[15-02-2017 20:40:16] Debug: Mouse Position: 587, 42
+[15-02-2017 20:40:16] Debug: Mouse Position: 592, 42
+[15-02-2017 20:40:16] Debug: Key (115/s) State: Up
+[15-02-2017 20:40:16] Debug: Key (97/a) State: Up
+[15-02-2017 20:40:16] Debug: Mouse Position: 594, 41
+[15-02-2017 20:40:16] Debug: Mouse Position: 610, 36
+[15-02-2017 20:40:16] Debug: Mouse Position: 619, 33
+[15-02-2017 20:40:16] Debug: Mouse Position: 642, 25
+[15-02-2017 20:40:16] Debug: Mouse Position: 666, 20
+[15-02-2017 20:40:16] Debug: Mouse Position: 676, 16
+[15-02-2017 20:40:16] Debug: Mouse Position: 694, 14
+[15-02-2017 20:40:16] Debug: Mouse Position: 698, 14
+[15-02-2017 20:40:16] Debug: Mouse Position: 699, 14
+[15-02-2017 20:40:16] Debug: Mouse Position: 706, 14
+[15-02-2017 20:40:16] Debug: Mouse Position: 749, 0
+[15-02-2017 20:40:16] Debug: Mouse Position: 764, 0
+[15-02-2017 20:40:17] Info: Destroying window
+[15-02-2017 20:40:17] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:40:17] Info: Unloading Mix_Init
+[15-02-2017 20:40:17] Info: Unloading IMG_Init
+[15-02-2017 20:40:17] Info: Cleaning up SDL subsystems
+[15-02-2017 20:40:17] Info: Exiting application
+[15-02-2017 20:40:26] Info: Initialized video subsystem
+[15-02-2017 20:40:26] Info: Initialized SDL_Image
+[15-02-2017 20:40:26] Info: Initialized Mix_Init
+[15-02-2017 20:40:26] Info: Created window
+[15-02-2017 20:40:26] Info: Created renderer
+[15-02-2017 20:40:26] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:40:30] Info: Destroying window
+[15-02-2017 20:40:31] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:40:31] Info: Unloading Mix_Init
+[15-02-2017 20:40:31] Info: Unloading IMG_Init
+[15-02-2017 20:40:31] Info: Cleaning up SDL subsystems
+[15-02-2017 20:40:31] Info: Exiting application
+[15-02-2017 20:41:22] Info: Initialized video subsystem
+[15-02-2017 20:41:22] Info: Initialized SDL_Image
+[15-02-2017 20:41:22] Info: Initialized Mix_Init
+[15-02-2017 20:41:22] Info: Created window
+[15-02-2017 20:41:22] Info: Created renderer
+[15-02-2017 20:41:22] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:41:29] Info: Destroying window
+[15-02-2017 20:41:29] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:41:29] Info: Unloading Mix_Init
+[15-02-2017 20:41:29] Info: Unloading IMG_Init
+[15-02-2017 20:41:29] Info: Cleaning up SDL subsystems
+[15-02-2017 20:41:29] Info: Exiting application
+[15-02-2017 20:41:35] Info: Initialized video subsystem
+[15-02-2017 20:41:35] Info: Initialized SDL_Image
+[15-02-2017 20:41:35] Info: Initialized Mix_Init
+[15-02-2017 20:41:35] Info: Created window
+[15-02-2017 20:41:35] Info: Created renderer
+[15-02-2017 20:41:35] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:41:53] Debug: Mouse Position: 48, 57
+[15-02-2017 20:41:53] Debug: Mouse Position: 246, 45
+[15-02-2017 20:41:53] Debug: Mouse Position: 372, 43
+[15-02-2017 20:41:53] Debug: Mouse Position: 426, 43
+[15-02-2017 20:41:53] Debug: Mouse Position: 511, 52
+[15-02-2017 20:41:53] Debug: Mouse Position: 567, 63
+[15-02-2017 20:41:53] Debug: Mouse Position: 582, 66
+[15-02-2017 20:41:53] Debug: Mouse Position: 598, 70
+[15-02-2017 20:41:54] Debug: Mouse Position: 602, 70
+[15-02-2017 20:41:54] Debug: Mouse Position: 600, 65
+[15-02-2017 20:41:54] Debug: Mouse Position: 593, 54
+[15-02-2017 20:41:54] Debug: Mouse Position: 563, 15
+[15-02-2017 20:41:54] Debug: Mouse Position: 582, 0
+[15-02-2017 20:41:54] Debug: Mouse Position: 631, 0
+[15-02-2017 20:41:55] Info: Destroying window
+[15-02-2017 20:41:55] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:41:55] Info: Unloading Mix_Init
+[15-02-2017 20:41:55] Info: Unloading IMG_Init
+[15-02-2017 20:41:55] Info: Cleaning up SDL subsystems
+[15-02-2017 20:41:55] Info: Exiting application
+[15-02-2017 20:43:47] Info: Initialized video subsystem
+[15-02-2017 20:43:47] Info: Initialized SDL_Image
+[15-02-2017 20:43:47] Info: Initialized Mix_Init
+[15-02-2017 20:43:47] Info: Created window
+[15-02-2017 20:43:47] Info: Created renderer
+[15-02-2017 20:43:47] Info: Loaded "Images/Icon/bengine.fw.png"
+[15-02-2017 20:44:24] Debug: Mouse Position: 347, 34
+[15-02-2017 20:44:24] Debug: Mouse Position: 410, 120
+[15-02-2017 20:44:24] Debug: Mouse Position: 429, 147
+[15-02-2017 20:44:24] Debug: Mouse Position: 464, 193
+[15-02-2017 20:44:24] Debug: Mouse Position: 478, 209
+[15-02-2017 20:44:24] Debug: Mouse Position: 501, 231
+[15-02-2017 20:44:24] Debug: Mouse Position: 521, 246
+[15-02-2017 20:44:24] Debug: Mouse Position: 534, 250
+[15-02-2017 20:44:24] Debug: Mouse Position: 538, 250
+[15-02-2017 20:44:24] Debug: Mouse Position: 539, 250
+[15-02-2017 20:44:24] Debug: Mouse Position: 535, 250
+[15-02-2017 20:44:24] Debug: Mouse Position: 527, 248
+[15-02-2017 20:44:24] Debug: Mouse Position: 521, 247
+[15-02-2017 20:44:24] Debug: Mouse Position: 515, 246
+[15-02-2017 20:44:24] Debug: Mouse Position: 514, 246
+[15-02-2017 20:44:24] Debug: Mouse Position: 512, 245
+[15-02-2017 20:44:25] Debug: Mouse Position: 509, 245
+[15-02-2017 20:44:25] Debug: Mouse Position: 504, 245
+[15-02-2017 20:44:25] Debug: Mouse Position: 501, 244
+[15-02-2017 20:44:25] Debug: Mouse Position: 500, 244
+[15-02-2017 20:44:25] Debug: Mouse Position: 500, 243
+[15-02-2017 20:44:25] Debug: Mouse Position: 499, 243
+[15-02-2017 20:44:25] Debug: Mouse Position: 497, 242
+[15-02-2017 20:44:25] Debug: Mouse Position: 494, 240
+[15-02-2017 20:44:25] Debug: Mouse Position: 493, 238
+[15-02-2017 20:44:25] Debug: Mouse Position: 489, 235
+[15-02-2017 20:44:25] Debug: Mouse Position: 488, 233
+[15-02-2017 20:44:25] Debug: Mouse Position: 484, 229
+[15-02-2017 20:44:25] Debug: Mouse Position: 482, 227
+[15-02-2017 20:44:25] Debug: Mouse Position: 480, 225
+[15-02-2017 20:44:25] Debug: Mouse Position: 479, 224
+[15-02-2017 20:44:25] Debug: Mouse Position: 476, 221
+[15-02-2017 20:44:25] Debug: Mouse Position: 473, 218
+[15-02-2017 20:44:25] Debug: Mouse Position: 470, 213
+[15-02-2017 20:44:25] Debug: Mouse Position: 469, 210
+[15-02-2017 20:44:25] Debug: Mouse Position: 469, 209
+[15-02-2017 20:44:25] Debug: Mouse Position: 469, 208
+[15-02-2017 20:44:25] Debug: Mouse Position: 469, 205
+[15-02-2017 20:44:25] Debug: Mouse Position: 468, 203
+[15-02-2017 20:44:25] Debug: Mouse Position: 468, 202
+[15-02-2017 20:44:25] Debug: Mouse Position: 467, 202
+[15-02-2017 20:44:33] Debug: Mouse Position: 472, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 473, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 474, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 476, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 477, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 478, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 479, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 481, 197
+[15-02-2017 20:44:34] Debug: Mouse Position: 481, 196
+[15-02-2017 20:44:34] Debug: Mouse Position: 484, 194
+[15-02-2017 20:44:34] Debug: Mouse Position: 490, 184
+[15-02-2017 20:44:34] Debug: Mouse Position: 499, 166
+[15-02-2017 20:44:34] Debug: Mouse Position: 504, 155
+[15-02-2017 20:44:34] Debug: Mouse Position: 512, 139
+[15-02-2017 20:44:34] Debug: Mouse Position: 515, 126
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 121
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 113
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 108
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 105
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 104
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 102
+[15-02-2017 20:44:34] Debug: Mouse Position: 517, 100
+[15-02-2017 20:44:44] Debug: Mouse Position: 516, 97
+[15-02-2017 20:44:56] Debug: Mouse Position: 531, 91
+[15-02-2017 20:44:56] Debug: Mouse Position: 576, 64
+[15-02-2017 20:44:56] Debug: Mouse Position: 647, 17
+[15-02-2017 20:44:56] Debug: Mouse Position: 722, 0
+[15-02-2017 20:44:58] Info: Destroying window
+[15-02-2017 20:44:58] Info: Destroying renderer and freeing associated textures
+[15-02-2017 20:44:58] Info: Unloading Mix_Init
+[15-02-2017 20:44:58] Info: Unloading IMG_Init
+[15-02-2017 20:44:58] Info: Cleaning up SDL subsystems
+[15-02-2017 20:44:58] Info: Exiting application

@@ -3,7 +3,7 @@
 namespace BG
 {
 	/*
-	 * \brief Vector2 template class with operator overloading
+	 * \brief Vector2 template Class with operator overloading
 	 */
 	template<class T>
 	struct Vector2
@@ -27,6 +27,7 @@ namespace BG
 
 		Vector2& operator/(const Vector2 &v) { x /= v.x; y /= v.y; return *this; }
 		Vector2& operator/=(const Vector2 &v) { x /= v.x; y /= v.y; return *this; }
+		Vector2 operator/(const T &scalar) { x /= scalar; y /= scalar; return *this; }
 
 		bool operator==(const Vector2 &v) { return x == v.x && y == v.y; }
 		bool operator!=(const Vector2 &v) { return !(*this == v); }

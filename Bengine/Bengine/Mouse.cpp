@@ -1,6 +1,7 @@
 #include "Mouse.h"
 #include "Logger.h"
 #include <SDL.h>
+#include <string>
 
 // Initialize static member
 BG::Mouse* BG::Mouse::instance = nullptr;

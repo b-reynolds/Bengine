@@ -1,7 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Logger.h"
 #include <iostream>
-#include <fstream>
 #include <ctime>
 #include <iomanip>
 #include <sstream>
@@ -15,7 +14,7 @@ BG::Logger::Logger()
 {
 	severity = SEVERITY_DEFAULT;
 	logMode = LOG_MODE_DEFAULT;
-	logFile = LOG_FILE_DEFAULT;
+	logFileName = LOG_FILE_DEFAULT;
 	logDirectory = LOG_DIRECTORY_DEFAULT;
 }
 
@@ -52,7 +51,7 @@ void BG::Logger::setSeverity(const Severity& severity)
 */
 void BG::Logger::setLogFile(const std::string& fileName)
 {
-	logFile = fileName;
+	logFileName = fileName;
 }
 
 /**
@@ -79,24 +78,25 @@ void BG::Logger::log(const Severity& severity, const std::string& message)
 
 	// Format the destination path and output message
 	std::string output = getDateTime("[%d-%m-%Y %H:%M:%S] ") + toString(severity) + ": " + message;
-	std::string destination = logDirectory + "/" + logFile;
-
-	// If the log file directory does not exist then create it
-	if (CreateDirectory(logDirectory.c_str(), nullptr) || GetLastError() == ERROR_ALREADY_EXISTS)
+	std::string destination = logDirectory + "/" + logFileName;
+	
+	if(CreateDirectory(logDirectory.c_str(), nullptr) || GetLastError() == ERROR_ALREADY_EXISTS)
 	{
+		std::fstream file(logDirectory + "/" + logFileName, std::ios::out | std::ios::app);
 		switch (logMode)
 		{
 			case CONSOLE:
 				std::cout << output << std::endl;
 				break;
 			case FILE:
-				writeToFile(destination, output);
+				file << output << std::endl;
 				break;
 			default:
 				std::cout << output << std::endl;
-				writeToFile(destination, output);
+				file << output << std::endl;
 				break;
 		}
+		file.close();
 	}
 }
 
@@ -128,18 +128,4 @@ std::string BG::Logger::getDateTime(const std::string &format) const
 	std::stringstream stringStream;
 	stringStream << std::put_time(&time, format.c_str());
 	return stringStream.str();
-}
-
-/**
- * \brief Opens a file and appends the specified string to it
- * \param filePath path of the file to open
- * \param data data to be written
- */
-void BG::Logger::writeToFile(const std::string& filePath, const std::string& data)
-{
-	std::ofstream logFile(filePath.c_str(), std::ios_base::out | std::ios_base::app);
-	if (logFile.is_open())
-	{
-		logFile << data << std::endl;
-	}
 }
