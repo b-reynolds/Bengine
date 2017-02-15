@@ -2,6 +2,7 @@
 #include "Logger.h"
 #include "GameObject.h"
 #include "Colour.h"
+#include "Text.h"
 
 /*
  * \brief Creates and initializes a Window with the specified title and of the specified size
@@ -108,6 +109,16 @@ void BG::Window::draw(const FloatRect& rect, const Colour& colour) const
 	SDL_SetRenderDrawColor(renderer, colour.r, colour.g, colour.b, 255);
 	SDL_RenderDrawRect(renderer, &bounds);
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+}
+
+void BG::Window::draw(Text& text) const
+{
+	SDL_Rect destination;
+	destination.x = 250;
+	destination.y = 250;
+	Texture* texture = text.getTexture();
+	SDL_QueryTexture(texture, nullptr, nullptr, &destination.w, &destination.h);
+	SDL_RenderCopy(renderer, texture, nullptr, &destination);
 }
 
 /*

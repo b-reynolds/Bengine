@@ -41,13 +41,24 @@ bool BG::Bengine::initialize()
 	int flags = MIX_INIT_OGG;
 	if(Mix_Init(flags != flags))
 	{
-		logger.log(Logger::ERROR, std::string("Failed to initialize Mix_Init (") + Mix_GetError() + ")");
+		logger.log(Logger::ERROR, std::string("Failed to initialize SDL_Mix (") + Mix_GetError() + ")");
 		SDL_Quit();
 		IMG_Quit();
 		Mix_Quit();
 		return false;
 	}
-	logger.log(Logger::INFO, "Initialized Mix_Init");
+	logger.log(Logger::INFO, "Initialized SDL_Mix");
+
+	if (TTF_Init() != 0)
+	{
+		logger.log(Logger::ERROR, std::string("Failed to initialize SDL_TTF (") + TTF_GetError() + ")");
+		SDL_Quit();
+		IMG_Quit();
+		Mix_Quit();
+		return false;
+	}
+	logger.log(Logger::INFO, "Initialized SDL_TTF");
+
 
 	window = new Window(WIN_TITLE, Vector2u(WIN_WIDTH, WIN_HEIGHT));
 

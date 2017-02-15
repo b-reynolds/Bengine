@@ -33,6 +33,8 @@ bool Game::initialize()
 	objLogo = BG::GameObject(&sprLogo, BG::Vector2f(windowSize.x / 2 - logoSize.x / 2,
 		windowSize.y / 2 - logoSize.y / 2));
 
+	myText = BG::Text(BG::ResourceManager::getInstance()->getFont("Fonts/Horta.ttf", 32), "Hello There", BG::CLR_WHITE, window);
+
 	return true;
 }
 
@@ -74,6 +76,8 @@ void Game::draw()
 	window->clear();
 
 	window->draw(objLogo);
+
+	window->draw(myText);
 
 	// Update the screen
 	window->display();

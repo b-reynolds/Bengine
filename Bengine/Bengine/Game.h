@@ -3,6 +3,7 @@
 #include "ResourceManager.h"
 #include "Sprite.h"
 #include "GameObject.h"
+#include "Text.h"
 
 class Game
 {
@@ -16,6 +17,8 @@ public:
 private:
 
 	const int SPEED = 250;
+
+	BG::Text myText;
 
 	BG::Sprite sprLogo;
 	BG::GameObject objLogo;

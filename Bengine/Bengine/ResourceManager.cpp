@@ -69,6 +69,32 @@ BG::Texture* BG::ResourceManager::getTexture(const std::string& filePath, Window
 	return texture;
 }
 
+/** \brief Loads a font resource into a Font and returns it.
+* Searches the ResourceManager's map of fonts for the specified font and returns a reference to it.
+* If the font does not exist, loads it into memory and stores it in the map.
+* \param filePath file path of the desired font resource (TTF)
+* \param size desired font size 
+*/
+BG::Font* BG::ResourceManager::getFont(const std::string& filePath, const int& size)
+{
+	// Search the map of existing fonts for the requested font
+	auto result = mpFonts.find(filePath);
+
+	if(result != mpFonts.end())
+	{
+		// The font already exists and is already loaded into memory, return a reference to it
+		return result->second;
+	}
+
+	// Attempt to load the font resource into memory
+	Font* font = loadFont(filePath, size);
+
+	// Insert the font into the fonts map
+	mpFonts.insert(std::pair<std::string, Font*>(filePath, font));
+
+	return font;
+}
+
 /**
 * \brief Free the memory associated with an image resource and remove it from the textures map.
 * Iterates through the textures map, if a resource with the same file path is found, frees all associated memory and nullifies the pointer.
@@ -81,7 +107,7 @@ void BG::ResourceManager::freeTexture(const std::string &filePath)
 	{
 		if (iterator->first == filePath)
 		{
-			auto texture = iterator->second;
+			Texture* texture = iterator->second;
 			SDL_DestroyTexture(texture);
 			texture = nullptr;
 			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
@@ -129,7 +155,7 @@ void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 	{
 		if (iterator->first == filePath)
 		{
-			auto soundEffect = iterator->second;
+			SoundEffect* soundEffect = iterator->second;
 			Mix_FreeChunk(soundEffect);
 			soundEffect = nullptr;
 			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
@@ -177,7 +203,7 @@ void BG::ResourceManager::freeMusic(const std::string &filePath)
 	{
 		if (iterator->first == filePath)
 		{
-			auto music = iterator->second;
+			Music* music = iterator->second;
 			Mix_FreeMusic(music);
 			music = nullptr;
 			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
@@ -239,10 +265,10 @@ void BG::ResourceManager::free()
  * \param colour colour of the texture
  * \param window window the sprite will be rendered to
  */
-BG::Texture* BG::ResourceManager::createTexture(const int& size, const Colour& colour, Window* window)
+BG::Texture* BG::ResourceManager::createTexture(const int& size, const Colour& colour, Window* window) const
 {
 	// Create a texture of the specified size in streaming access mode so that we can edit its pixels
-	SDL_Texture* texture = SDL_CreateTexture(window->getRenderer(), SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, size, size);
+	Texture* texture = SDL_CreateTexture(window->getRenderer(), SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_STREAMING, size, size);
 
 	unsigned char* bytes = nullptr;
 	int pitch = 0;
@@ -267,13 +293,13 @@ BG::Texture* BG::ResourceManager::createTexture(const int& size, const Colour& c
 }
 
 /**
- * \brief Load a texture from an image resource (BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV).
+ * \brief Loads a texture from an image resource (BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV).
  * \param filePath file path of the image resource
  * \param window window the texture will be rendered to
  */
-BG::Texture* BG::ResourceManager::loadTexture(const std::string &filePath, Window* window)
+BG::Texture* BG::ResourceManager::loadTexture(const std::string &filePath, Window* window) const
 {
-	SDL_Texture* texture = IMG_LoadTexture(window->getRenderer(), filePath.c_str());
+	Texture* texture = IMG_LoadTexture(window->getRenderer(), filePath.c_str());
 	if(texture != nullptr)
 	{
 		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
@@ -286,12 +312,12 @@ BG::Texture* BG::ResourceManager::loadTexture(const std::string &filePath, Windo
 }
 
 /**
- * \brief Load a sound effect from a sound resource (WAVE, MOD, MIDI, OGG, MP3).
+ * \brief Loads a sound effect from a sound resource (WAVE, MOD, MIDI, OGG, MP3).
  * \param filePath file path of the sound resource
  */
-BG::SoundEffect* BG::ResourceManager::loadSoundEffect(const std::string &filePath)
+BG::SoundEffect* BG::ResourceManager::loadSoundEffect(const std::string &filePath) const
 {
-	auto soundEffect = Mix_LoadWAV(filePath.c_str());
+	SoundEffect* soundEffect = Mix_LoadWAV(filePath.c_str());
 	if (soundEffect != nullptr)
 	{
 		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
@@ -304,12 +330,12 @@ BG::SoundEffect* BG::ResourceManager::loadSoundEffect(const std::string &filePat
 }
 
 /**
- * \brief Load music from a sound resource (WAVE, MOD, MIDI, OGG, MP3).
+ * \brief Loads music from a sound resource (WAVE, MOD, MIDI, OGG, MP3).
  * \param filePath file path of the sound resource
  */
-BG::Music* BG::ResourceManager::loadMusic(const std::string &filePath)
+BG::Music* BG::ResourceManager::loadMusic(const std::string &filePath) const
 {
-	auto music = Mix_LoadMUS(filePath.c_str());
+	Music* music = Mix_LoadMUS(filePath.c_str());
 	if(music != nullptr)
 	{
 		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
@@ -319,4 +345,23 @@ BG::Music* BG::ResourceManager::loadMusic(const std::string &filePath)
 		Logger::getInstance().log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + Mix_GetError() + ")");
 	}
 	return music;
+}
+
+/*
+ * \brief Loads a font from a TTF file
+ * \param filePath file path of font resource
+ * \param size desired font size
+ */
+BG::Font* BG::ResourceManager::loadFont(const std::string& filePath, const int& size) const
+{
+	Font* font = TTF_OpenFont(filePath.c_str(), size);
+	if(font != nullptr)
+	{
+		Logger::getInstance().log(Logger::INFO, "Loaded \"" + filePath + "\"");
+	}
+	else
+	{
+		Logger::getInstance().log(Logger::ERROR, "Failed to load \"" + filePath + "\" (" + TTF_GetError() + ")");
+	}
+	return font;
 }

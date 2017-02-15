@@ -27,6 +27,9 @@ namespace BG
 		/* Loads an image resource into a Texture and returns it */
 		Texture* getTexture(const std::string &filePath, Window* window);
 
+		/* Loads a font resource into a Font and returns it */
+		Font* getFont(const std::string &filePath, const int &size);
+
 		/* Free the memory associated with an image resource and remove it from the textures map */
 		void freeTexture(const std::string &filePath);
 
@@ -53,14 +56,17 @@ namespace BG
 		/* Default size of placeholder textures */
 		const int TEXTURE_SIZE_DEFAULT = 32;
 
-		/* Map used that stores Texture resources */
+		/* Map that stores Texture resources */
 		std::map<std::string, Texture*> mpTextures;
 
-		/* Map used that stores SoundEffect resources */
+		/* Map that stores SoundEffect resources */
 		std::map<std::string, SoundEffect*> mpSoundEffects;
 
-		/* Map used that stores Music resources */
+		/* Map that stores Music resources */
 		std::map <std::string, Music*> mpMusic;
+
+		/* Map that stores Font resources */
+		std::map<std::string, Font*> mpFonts;
 
 		/* The singleton instance of ResourceManager */
 		static ResourceManager* instance;
@@ -69,16 +75,19 @@ namespace BG
 		ResourceManager();
 
 		/* Creates and returns a Texture of the specified size and colour */
-		Texture* createTexture(const int &size, const Colour &colour, Window *window);	
+		Texture* createTexture(const int &size, const Colour &colour, Window *window) const;	
 
 		/* Loads an image resource into a Texture and returns it */
-		Texture* loadTexture(const std::string &filePath, Window* window);
+		Texture* loadTexture(const std::string &filePath, Window* window) const;
 
 		/* Loads a sound resource into a SoundEffect and returns it */
-		SoundEffect* loadSoundEffect(const std::string &filePath);
+		SoundEffect* loadSoundEffect(const std::string &filePath) const;
 		
 		/* Loads a sound resource into a Music and returns it */
-		Music* loadMusic(const std::string &filePath);
+		Music* loadMusic(const std::string &filePath) const;
+
+		/* Loads a font resource from a TTF file into a Font and returns it */
+		Font* loadFont(const std::string &filePath, const int &size) const;
 
 	};
 
