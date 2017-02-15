@@ -43,7 +43,7 @@ bool BG::Keyboard::isKeyDown(const SDL_Keycode &key)
 }
 
 /**
-* \brief Returns true if the specified key is currently down and was up in the previous frame
+* \brief Returns true if the specified key is currently down and it was up in the previous frame
 * \param key The keycode to poll
 */
 bool BG::Keyboard::isKeyPressed(const SDL_Keycode &key)
@@ -53,7 +53,7 @@ bool BG::Keyboard::isKeyPressed(const SDL_Keycode &key)
 }
 
 /**
-* \brief Returns true if the specified key is currently up and was down in the previous frame
+* \brief Returns true if the specified key is currently up and it was down in the previous frame
 * \param key keycode to poll
 */
 bool BG::Keyboard::isKeyReleased(const SDL_Keycode &key)
@@ -73,7 +73,7 @@ bool BG::Keyboard::isKeyUp(const SDL_Keycode &key)
 }
 
 /**
- * \brief Copies the current key state values into the previous key state values
+ * \brief Copies the current key state array into the previous key state array
  * Allows for comparisons against the last frames key states.
 */
 void BG::Keyboard::swapStates()

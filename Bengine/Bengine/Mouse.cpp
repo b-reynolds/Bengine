@@ -2,12 +2,11 @@
 #include "Logger.h"
 #include <SDL.h>
 
+// Initialize static member
 BG::Mouse* BG::Mouse::instance = nullptr;
 
-BG::Mouse::Mouse() { }
-
 /**
-* Returns a pointer to a singleton instance of the Mouse class
+ * \brief Returns a pointer to a singleton instance of the Mouse class
 */
 BG::Mouse* BG::Mouse::getInstance()
 {
@@ -18,25 +17,20 @@ BG::Mouse* BG::Mouse::getInstance()
 	return instance;
 }
 
-BG::Mouse::~Mouse()
-{
-	printf("Mouse deconstructing..\n");
-}
-
 /**
- * Returns the x and y coordinates of the mouse
- */
-BG::Vector2i BG::Mouse::getPosition()
+ * \brief Returns the currentcoordinate position of the mouse
+*/
+BG::Vector2i BG::Mouse::getPosition() const
 {
-	auto mousePosition = Vector2i(0, 0);
+	Vector2i mousePosition = Vector2i(0, 0);
 	SDL_GetMouseState(&mousePosition.x, &mousePosition.y);
 	return mousePosition;
 }
 
 /**
-* Set the current state of the mouse
-* @param button The mouse button to be set (1 = Left, 2 = Middle, 3 = Right)
-* @param state The state of the button (True = Down, False = Up)
+ * \brief Set the current state of a mouse button
+ * \param button mouse button to be set (1 = Left, 2 = Middle, 3 = Right)
+ * \param state state of the button (True = Down, False = Up)
 */
 void BG::Mouse::setMouseState(const unsigned int& button, const bool& state)
 {
@@ -47,7 +41,48 @@ void BG::Mouse::setMouseState(const unsigned int& button, const bool& state)
 }
 
 /**
-* Copies the current mouse state values into the previous mouse state values in preperation for a new frame
+* \brief Returns true if the specified button is currently down
+* \param button mouse button to poll
+*/
+bool BG::Mouse::isButtonDown(const unsigned int& button)
+{
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
+	return mouseState[button];
+}
+
+/**
+* \brief Returns true if the specified button is currently down and it was up in the previous frame
+* \param button mouse button to poll
+*/
+bool BG::Mouse::isButtonPressed(const unsigned int& button)
+{
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
+	return mouseState[button] && !prevMouseState[button];
+}
+
+/**
+* \brief Returns true if the specified button is currently up and it was down in the previous frame
+* \param button mouse button to poll
+*/
+bool BG::Mouse::isButtonReleased(const unsigned int& button)
+{
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
+	return !mouseState[button] && prevMouseState[button];
+}
+
+/**
+* \brief Returns true if the specified button is up
+* \param button mouse button to poll
+*/
+bool BG::Mouse::isButtonUp(const unsigned int& button)
+{
+	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
+	return !mouseState[button];
+}
+
+/**
+ * \brief Copies the current mouse state array into the previous mouse state array
+ * Allows for comparisons against the last frames mouse states.
 */
 void BG::Mouse::swapStates()
 {
@@ -62,44 +97,4 @@ void BG::Mouse::swapStates()
 		Logger::getInstance().log(Logger::DEBUG, "Mouse Position: " + std::to_string(currentPosition.x) +
 			", " + std::to_string(currentPosition.y));
 	}
-}
-
-/**
-* Returns true if the specified button is currently down
-* @param button The mouse button to poll
-*/
-bool BG::Mouse::isButtonDown(const unsigned int& button)
-{
-	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
-	return mouseState[button];
-}
-
-/**
-* Returns true if the specified button is currently down and was up in the previous frame
-* @param button The mouse button to poll
-*/
-bool BG::Mouse::isButtonPressed(const unsigned int& button)
-{
-	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
-	return mouseState[button] && !prevMouseState[button];
-}
-
-/**
-* Returns true if the specified button is currently up and was down in the previous frame
-* @param button The mouse button to poll
-*/
-bool BG::Mouse::isButtonReleased(const unsigned int& button)
-{
-	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
-	return !mouseState[button] && prevMouseState[button];
-}
-
-/**
-* Returns true if the specified button is up
-* @param button The mouse button to poll
-*/
-bool BG::Mouse::isButtonUp(const unsigned int& button)
-{
-	if (button < BUTTONS_MIN || button > BUTTONS_MAX) return false;
-	return !mouseState[button];
 }

@@ -24,29 +24,28 @@ namespace BG
 		/* Returns true if the specified key is currently down */
 		bool isKeyDown(const SDL_Keycode &key);
 
-		/* Returns true if the specified key is currently down and was up in the previous frame */
+		/* Returns true if the specified key is currently down and it was up in the previous frame */
 		bool isKeyPressed(const SDL_Keycode &key);
 
-		/* Returns true if the specified key is currently up and was down in the previous frame */
+		/* Returns true if the specified key is currently up and it was down in the previous frame */
 		bool isKeyReleased(const SDL_Keycode &key);
 
 		/* Returns true if the specified key is up */
 		bool isKeyUp(const SDL_Keycode &key);
 
-		/* Copies the current key state values into the previous key state values */
+		/* Copies the current key state array into the previous key state array */
 		void swapStates();
 
 	private:
 
-		/* Stores the current state of the keyboard */
+		/* Contains the current state of the keyboard */
 		bool keyStates[KEYCODES_MAX] = { false };
 
 		/* Stores the state of the keyvoard in the previous frame */
 		bool prevKeyStates[KEYCODES_MAX] = { false };
 
-		/* Static instance of the Keyboard class */
+		/* The singleton class instance */
 		static Keyboard* instance;
 
 	};
 }
-
