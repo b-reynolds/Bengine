@@ -20,11 +20,17 @@ namespace BG
 		/* Set the Transform's position */
 		void setPosition(const Vector2f &position);
 
+		/* Set the Transform's position */
+		void setPosition(const float &x, const float &y);
+
 		/* Returns the Transform's current position */
 		Vector2f getPosition() const;
 
 		/* Move the Transform by the specified velocity */
 		void move(const Vector2f &velocity);
+
+		/* Move the Transform by the specified velocity */
+		void move(const float &x, const float &y);
 
 		/* Set the Transform's rotation (degrees) */
 		void setRotation(const float &angle);

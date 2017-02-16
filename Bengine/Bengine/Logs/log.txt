@@ -1982,3 +1982,614 @@
 [15-02-2017 22:11:05] Info: Unloading IMG_Init
 [15-02-2017 22:11:05] Info: Cleaning up SDL subsystems
 [15-02-2017 22:11:05] Info: Exiting application
+[16-02-2017 00:33:08] Info: Initialized video subsystem
+[16-02-2017 00:33:08] Info: Initialized SDL_Image
+[16-02-2017 00:33:08] Info: Initialized SDL_Mix
+[16-02-2017 00:33:08] Info: Initialized SDL_TTF
+[16-02-2017 00:33:08] Info: Created window
+[16-02-2017 00:33:08] Info: Created renderer
+[16-02-2017 00:33:08] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 00:33:08] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 00:33:08] Debug: Mouse Position: 420, 4
+[16-02-2017 00:33:08] Debug: Mouse Position: 424, 7
+[16-02-2017 00:33:08] Debug: Mouse Position: 425, 7
+[16-02-2017 00:33:08] Debug: Mouse Position: 429, 7
+[16-02-2017 00:33:09] Debug: Mouse Position: 458, 7
+[16-02-2017 00:33:09] Debug: Mouse Position: 491, 7
+[16-02-2017 00:33:09] Debug: Mouse Position: 544, 7
+[16-02-2017 00:33:09] Debug: Mouse Position: 614, 12
+[16-02-2017 00:33:09] Debug: Mouse Position: 652, 20
+[16-02-2017 00:33:09] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:09] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:10] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:10] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:10] Info: Freed resource "Images/Icon/bengine.fw.png"
+[16-02-2017 00:33:10] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:10] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:10] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:10] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:10] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:11] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:11] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:11] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:12] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:12] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:12] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:12] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:12] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:13] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:13] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:13] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:14] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:14] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:14] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:14] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:15] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:15] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:15] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:16] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:16] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:16] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:17] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:17] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:17] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:17] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:18] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:18] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:18] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:19] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:19] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:19] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:19] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:20] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:20] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:20] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:21] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:21] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:26] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:26] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:26] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:27] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:27] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:27] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:27] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:28] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:28] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:29] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:29] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:29] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:29] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:29] Debug: Key (97/a) State: Down
+[16-02-2017 00:33:29] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:29] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:30] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:30] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:30] Debug: Key (97/a) State: Up
+[16-02-2017 00:33:30] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:30] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:31] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:31] Debug: Mouse Position: 657, 20
+[16-02-2017 00:33:31] Debug: Mouse Position: 660, 20
+[16-02-2017 00:33:31] Debug: Mouse Position: 661, 20
+[16-02-2017 00:33:31] Debug: Mouse Position: 666, 17
+[16-02-2017 00:33:31] Debug: Mouse Position: 673, 14
+[16-02-2017 00:33:31] Debug: Mouse Position: 682, 11
+[16-02-2017 00:33:31] Debug: Mouse Position: 686, 9
+[16-02-2017 00:33:31] Debug: Mouse Position: 697, 5
+[16-02-2017 00:33:31] Debug: Mouse Position: 708, 3
+[16-02-2017 00:33:31] Debug: Mouse Position: 715, 2
+[16-02-2017 00:33:31] Debug: Mouse Position: 724, 1
+[16-02-2017 00:33:31] Debug: Mouse Position: 731, 0
+[16-02-2017 00:33:31] Debug: Mouse Position: 734, 0
+[16-02-2017 00:33:31] Debug: Mouse Position: 735, 0
+[16-02-2017 00:33:31] Debug: Key (115/s) State: Down
+[16-02-2017 00:33:31] Debug: Key (115/s) State: Up
+[16-02-2017 00:33:31] Debug: Key (100/d) State: Down
+[16-02-2017 00:33:31] Debug: Key (100/d) State: Up
+[16-02-2017 00:33:32] Debug: Key (119/w) State: Down
+[16-02-2017 00:33:32] Debug: Key (119/w) State: Up
+[16-02-2017 00:33:32] Debug: Mouse Position: 736, 0
+[16-02-2017 00:33:33] Info: Destroying window
+[16-02-2017 00:33:33] Info: Destroying renderer and freeing associated textures
+[16-02-2017 00:33:33] Info: Unloading Mix_Init
+[16-02-2017 00:33:33] Info: Unloading IMG_Init
+[16-02-2017 00:33:33] Info: Cleaning up SDL subsystems
+[16-02-2017 00:33:33] Info: Exiting application
+[16-02-2017 00:51:08] Info: Initialized video subsystem
+[16-02-2017 00:51:08] Info: Initialized SDL_Image
+[16-02-2017 00:51:08] Info: Initialized SDL_Mix
+[16-02-2017 00:51:08] Info: Initialized SDL_TTF
+[16-02-2017 00:51:08] Info: Created window
+[16-02-2017 00:51:08] Info: Created renderer
+[16-02-2017 00:51:08] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 00:51:08] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 00:51:08] Debug: Mouse Position: 74, 45
+[16-02-2017 00:51:09] Debug: Mouse Position: 81, 44
+[16-02-2017 00:51:09] Debug: Mouse Position: 120, 43
+[16-02-2017 00:51:09] Debug: Mouse Position: 237, 52
+[16-02-2017 00:51:09] Debug: Mouse Position: 367, 76
+[16-02-2017 00:51:09] Debug: Mouse Position: 462, 92
+[16-02-2017 00:51:09] Debug: Mouse Position: 491, 96
+[16-02-2017 00:51:09] Debug: Mouse Position: 521, 101
+[16-02-2017 00:51:09] Debug: Mouse Position: 521, 100
+[16-02-2017 00:51:09] Debug: Mouse Position: 576, 59
+[16-02-2017 00:51:09] Debug: Mouse Position: 601, 40
+[16-02-2017 00:51:09] Debug: Mouse Position: 645, 12
+[16-02-2017 00:51:09] Debug: Mouse Position: 673, 0
+[16-02-2017 00:51:11] Info: Destroying window
+[16-02-2017 00:51:11] Info: Destroying renderer and freeing associated textures
+[16-02-2017 00:51:11] Info: Unloading Mix_Init
+[16-02-2017 00:51:11] Info: Unloading IMG_Init
+[16-02-2017 00:51:11] Info: Cleaning up SDL subsystems
+[16-02-2017 00:51:11] Info: Exiting application
+[16-02-2017 00:51:28] Info: Initialized video subsystem
+[16-02-2017 00:51:28] Info: Initialized SDL_Image
+[16-02-2017 00:51:28] Info: Initialized SDL_Mix
+[16-02-2017 00:51:28] Info: Initialized SDL_TTF
+[16-02-2017 00:51:28] Info: Created window
+[16-02-2017 00:51:28] Info: Created renderer
+[16-02-2017 00:51:28] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 00:51:28] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 00:51:30] Info: Destroying window
+[16-02-2017 00:51:30] Info: Destroying renderer and freeing associated textures
+[16-02-2017 00:51:30] Info: Unloading Mix_Init
+[16-02-2017 00:51:30] Info: Unloading IMG_Init
+[16-02-2017 00:51:30] Info: Cleaning up SDL subsystems
+[16-02-2017 00:51:30] Info: Exiting application
+[16-02-2017 00:51:48] Info: Initialized video subsystem
+[16-02-2017 00:51:48] Info: Initialized SDL_Image
+[16-02-2017 00:51:48] Info: Initialized SDL_Mix
+[16-02-2017 00:51:48] Info: Initialized SDL_TTF
+[16-02-2017 00:51:48] Info: Created window
+[16-02-2017 00:51:48] Info: Created renderer
+[16-02-2017 00:51:48] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 00:51:48] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 00:52:11] Debug: Mouse Position: 798, 33
+[16-02-2017 00:52:11] Debug: Mouse Position: 796, 33
+[16-02-2017 00:52:11] Debug: Mouse Position: 797, 33
+[16-02-2017 00:52:11] Debug: Mouse Position: 799, 33
+[16-02-2017 00:52:11] Debug: Mouse Position: 797, 32
+[16-02-2017 00:52:11] Debug: Mouse Position: 790, 28
+[16-02-2017 00:52:11] Debug: Mouse Position: 785, 26
+[16-02-2017 00:52:11] Debug: Mouse Position: 780, 24
+[16-02-2017 00:52:11] Debug: Mouse Position: 776, 23
+[16-02-2017 00:52:11] Debug: Mouse Position: 775, 22
+[16-02-2017 00:52:11] Debug: Mouse Position: 772, 22
+[16-02-2017 00:52:11] Debug: Mouse Position: 771, 21
+[16-02-2017 00:52:12] Debug: Mouse Position: 771, 20
+[16-02-2017 00:52:12] Debug: Mouse Position: 771, 19
+[16-02-2017 00:52:12] Debug: Mouse Position: 771, 18
+[16-02-2017 00:52:12] Debug: Mouse Position: 771, 16
+[16-02-2017 00:52:12] Debug: Mouse Position: 771, 13
+[16-02-2017 00:52:12] Debug: Mouse Position: 772, 12
+[16-02-2017 00:52:13] Debug: Mouse Position: 772, 11
+[16-02-2017 00:52:13] Debug: Mouse Position: 773, 11
+[16-02-2017 00:52:13] Debug: Mouse Button (1) State: Down
+[16-02-2017 00:52:13] Debug: Mouse Position: 773, 6
+[16-02-2017 00:52:13] Debug: Mouse Position: 772, 0
+[16-02-2017 00:52:13] Debug: Mouse Position: 770, 0
+[16-02-2017 00:52:14] Debug: Mouse Button (1) State: Up
+[16-02-2017 00:52:14] Info: Destroying window
+[16-02-2017 00:52:14] Info: Destroying renderer and freeing associated textures
+[16-02-2017 00:52:14] Info: Unloading Mix_Init
+[16-02-2017 00:52:14] Info: Unloading IMG_Init
+[16-02-2017 00:52:14] Info: Cleaning up SDL subsystems
+[16-02-2017 00:52:14] Info: Exiting application
+[16-02-2017 01:02:13] Info: Initialized video subsystem
+[16-02-2017 01:02:13] Info: Initialized SDL_Image
+[16-02-2017 01:02:13] Info: Initialized SDL_Mix
+[16-02-2017 01:02:13] Info: Initialized SDL_TTF
+[16-02-2017 01:02:13] Info: Created window
+[16-02-2017 01:02:13] Info: Created renderer
+[16-02-2017 01:02:13] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:02:13] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:02:19] Debug: Mouse Position: 334, 19
+[16-02-2017 01:02:19] Debug: Mouse Position: 297, 80
+[16-02-2017 01:02:19] Debug: Mouse Position: 284, 102
+[16-02-2017 01:02:19] Debug: Mouse Position: 268, 127
+[16-02-2017 01:02:19] Debug: Mouse Position: 258, 142
+[16-02-2017 01:02:19] Debug: Mouse Position: 255, 149
+[16-02-2017 01:02:19] Debug: Mouse Position: 254, 159
+[16-02-2017 01:02:19] Debug: Mouse Position: 254, 165
+[16-02-2017 01:02:19] Debug: Mouse Position: 254, 169
+[16-02-2017 01:02:19] Debug: Mouse Position: 254, 173
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 174
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 179
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 193
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 211
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 219
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 230
+[16-02-2017 01:02:19] Debug: Mouse Position: 252, 233
+[16-02-2017 01:02:22] Debug: Mouse Position: 252, 231
+[16-02-2017 01:02:22] Debug: Mouse Position: 252, 230
+[16-02-2017 01:02:27] Debug: Mouse Position: 255, 218
+[16-02-2017 01:02:27] Debug: Mouse Position: 274, 170
+[16-02-2017 01:02:27] Debug: Mouse Position: 288, 141
+[16-02-2017 01:02:27] Debug: Mouse Position: 300, 106
+[16-02-2017 01:02:27] Debug: Mouse Position: 305, 95
+[16-02-2017 01:02:27] Debug: Mouse Position: 309, 90
+[16-02-2017 01:02:27] Debug: Mouse Position: 312, 88
+[16-02-2017 01:02:27] Debug: Mouse Position: 315, 85
+[16-02-2017 01:02:27] Debug: Mouse Position: 320, 79
+[16-02-2017 01:02:27] Debug: Mouse Position: 326, 73
+[16-02-2017 01:02:27] Debug: Mouse Position: 329, 72
+[16-02-2017 01:02:27] Debug: Mouse Position: 331, 72
+[16-02-2017 01:02:28] Debug: Mouse Position: 334, 67
+[16-02-2017 01:02:28] Debug: Mouse Position: 344, 52
+[16-02-2017 01:02:28] Debug: Mouse Position: 359, 22
+[16-02-2017 01:02:28] Debug: Mouse Position: 363, 14
+[16-02-2017 01:02:28] Debug: Mouse Position: 368, 5
+[16-02-2017 01:02:28] Debug: Mouse Position: 368, 1
+[16-02-2017 01:02:28] Debug: Mouse Position: 368, 0
+[16-02-2017 01:02:28] Debug: Mouse Position: 369, 0
+[16-02-2017 01:02:30] Debug: Mouse Position: 404, 18
+[16-02-2017 01:02:31] Debug: Mouse Position: 531, 50
+[16-02-2017 01:02:31] Debug: Mouse Position: 639, 75
+[16-02-2017 01:02:31] Debug: Mouse Position: 704, 95
+[16-02-2017 01:02:31] Debug: Mouse Position: 718, 102
+[16-02-2017 01:02:31] Debug: Mouse Position: 733, 113
+[16-02-2017 01:02:32] Debug: Mouse Position: 738, 113
+[16-02-2017 01:02:32] Debug: Mouse Position: 794, 113
+[16-02-2017 01:02:32] Debug: Mouse Position: 799, 113
+[16-02-2017 01:02:46] Info: Destroying window
+[16-02-2017 01:02:46] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:02:46] Info: Unloading Mix_Init
+[16-02-2017 01:02:46] Info: Unloading IMG_Init
+[16-02-2017 01:02:46] Info: Cleaning up SDL subsystems
+[16-02-2017 01:02:46] Info: Exiting application
+[16-02-2017 01:02:59] Info: Initialized video subsystem
+[16-02-2017 01:02:59] Info: Initialized SDL_Image
+[16-02-2017 01:02:59] Info: Initialized SDL_Mix
+[16-02-2017 01:02:59] Info: Initialized SDL_TTF
+[16-02-2017 01:02:59] Info: Created window
+[16-02-2017 01:02:59] Info: Created renderer
+[16-02-2017 01:02:59] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:02:59] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:03:00] Debug: Mouse Position: 382, 4
+[16-02-2017 01:03:00] Debug: Mouse Position: 427, 37
+[16-02-2017 01:03:00] Debug: Mouse Position: 452, 56
+[16-02-2017 01:03:00] Debug: Mouse Position: 467, 69
+[16-02-2017 01:03:00] Debug: Mouse Position: 471, 75
+[16-02-2017 01:03:01] Debug: Mouse Position: 472, 75
+[16-02-2017 01:03:01] Debug: Mouse Position: 481, 69
+[16-02-2017 01:03:01] Debug: Mouse Position: 484, 67
+[16-02-2017 01:03:01] Debug: Mouse Position: 502, 56
+[16-02-2017 01:03:01] Debug: Mouse Position: 506, 54
+[16-02-2017 01:03:01] Debug: Mouse Position: 509, 51
+[16-02-2017 01:03:01] Debug: Mouse Position: 512, 47
+[16-02-2017 01:03:01] Debug: Mouse Position: 514, 43
+[16-02-2017 01:03:01] Debug: Mouse Position: 516, 42
+[16-02-2017 01:03:01] Debug: Mouse Position: 516, 40
+[16-02-2017 01:03:01] Debug: Mouse Position: 516, 38
+[16-02-2017 01:03:01] Debug: Mouse Position: 517, 34
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 32
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 31
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 29
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 28
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 25
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 20
+[16-02-2017 01:03:01] Debug: Mouse Position: 518, 13
+[16-02-2017 01:03:02] Debug: Mouse Position: 518, 11
+[16-02-2017 01:03:02] Debug: Mouse Position: 518, 6
+[16-02-2017 01:03:02] Debug: Mouse Position: 518, 2
+[16-02-2017 01:03:02] Debug: Mouse Position: 516, 0
+[16-02-2017 01:03:04] Debug: Mouse Position: 599, 13
+[16-02-2017 01:03:04] Debug: Mouse Position: 699, 60
+[16-02-2017 01:03:04] Debug: Mouse Position: 741, 78
+[16-02-2017 01:03:04] Debug: Mouse Position: 799, 143
+[16-02-2017 01:03:09] Info: Destroying window
+[16-02-2017 01:03:09] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:03:09] Info: Unloading Mix_Init
+[16-02-2017 01:03:09] Info: Unloading IMG_Init
+[16-02-2017 01:03:09] Info: Cleaning up SDL subsystems
+[16-02-2017 01:03:09] Info: Exiting application
+[16-02-2017 01:05:00] Info: Initialized video subsystem
+[16-02-2017 01:05:00] Info: Initialized SDL_Image
+[16-02-2017 01:05:00] Info: Initialized SDL_Mix
+[16-02-2017 01:05:00] Info: Initialized SDL_TTF
+[16-02-2017 01:05:00] Info: Created window
+[16-02-2017 01:05:00] Info: Created renderer
+[16-02-2017 01:05:00] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:05:00] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:05:18] Debug: Mouse Position: 756, 128
+[16-02-2017 01:05:18] Debug: Mouse Position: 707, 144
+[16-02-2017 01:05:18] Debug: Mouse Position: 676, 160
+[16-02-2017 01:05:18] Debug: Mouse Position: 659, 170
+[16-02-2017 01:05:18] Debug: Mouse Position: 655, 174
+[16-02-2017 01:05:18] Debug: Mouse Position: 653, 174
+[16-02-2017 01:05:20] Debug: Mouse Position: 656, 174
+[16-02-2017 01:05:20] Debug: Mouse Position: 661, 177
+[16-02-2017 01:05:20] Debug: Mouse Position: 663, 177
+[16-02-2017 01:05:20] Debug: Mouse Position: 666, 179
+[16-02-2017 01:05:20] Debug: Mouse Position: 670, 179
+[16-02-2017 01:05:20] Debug: Mouse Position: 671, 180
+[16-02-2017 01:05:20] Debug: Mouse Position: 674, 181
+[16-02-2017 01:05:20] Debug: Mouse Position: 675, 181
+[16-02-2017 01:05:20] Debug: Mouse Position: 675, 182
+[16-02-2017 01:05:22] Debug: Mouse Position: 668, 194
+[16-02-2017 01:05:22] Debug: Mouse Position: 605, 236
+[16-02-2017 01:05:22] Debug: Mouse Position: 470, 321
+[16-02-2017 01:05:22] Debug: Mouse Position: 341, 384
+[16-02-2017 01:05:22] Debug: Mouse Position: 262, 413
+[16-02-2017 01:05:22] Debug: Mouse Position: 244, 413
+[16-02-2017 01:05:22] Debug: Mouse Position: 227, 397
+[16-02-2017 01:05:22] Debug: Mouse Position: 225, 331
+[16-02-2017 01:05:22] Debug: Mouse Position: 233, 278
+[16-02-2017 01:05:22] Debug: Mouse Position: 280, 161
+[16-02-2017 01:05:22] Debug: Mouse Position: 351, 53
+[16-02-2017 01:05:22] Debug: Mouse Position: 449, 0
+[16-02-2017 01:05:22] Debug: Mouse Position: 506, 16
+[16-02-2017 01:05:22] Debug: Mouse Position: 511, 107
+[16-02-2017 01:05:22] Debug: Mouse Position: 491, 188
+[16-02-2017 01:05:22] Debug: Mouse Position: 449, 267
+[16-02-2017 01:05:22] Debug: Mouse Position: 419, 308
+[16-02-2017 01:05:22] Debug: Mouse Position: 369, 361
+[16-02-2017 01:05:22] Debug: Mouse Position: 340, 376
+[16-02-2017 01:05:22] Debug: Mouse Position: 332, 376
+[16-02-2017 01:05:22] Debug: Mouse Position: 322, 348
+[16-02-2017 01:05:22] Debug: Mouse Position: 328, 248
+[16-02-2017 01:05:22] Debug: Mouse Position: 368, 112
+[16-02-2017 01:05:22] Debug: Mouse Position: 421, 0
+[16-02-2017 01:05:22] Debug: Mouse Position: 478, 12
+[16-02-2017 01:05:22] Debug: Mouse Position: 446, 137
+[16-02-2017 01:05:22] Debug: Mouse Position: 428, 208
+[16-02-2017 01:05:22] Debug: Mouse Position: 420, 241
+[16-02-2017 01:05:22] Debug: Mouse Position: 411, 272
+[16-02-2017 01:05:22] Debug: Mouse Position: 409, 278
+[16-02-2017 01:05:22] Debug: Mouse Position: 409, 275
+[16-02-2017 01:05:22] Debug: Mouse Position: 409, 270
+[16-02-2017 01:05:22] Debug: Mouse Position: 409, 269
+[16-02-2017 01:05:22] Debug: Mouse Position: 409, 268
+[16-02-2017 01:05:22] Debug: Mouse Position: 409, 267
+[16-02-2017 01:05:25] Debug: Mouse Position: 416, 260
+[16-02-2017 01:05:25] Debug: Mouse Position: 418, 258
+[16-02-2017 01:05:25] Debug: Mouse Position: 425, 252
+[16-02-2017 01:05:25] Debug: Mouse Position: 442, 241
+[16-02-2017 01:05:25] Debug: Mouse Position: 456, 235
+[16-02-2017 01:05:25] Debug: Mouse Position: 491, 222
+[16-02-2017 01:05:25] Debug: Mouse Position: 523, 213
+[16-02-2017 01:05:25] Debug: Mouse Position: 558, 206
+[16-02-2017 01:05:25] Debug: Mouse Position: 575, 200
+[16-02-2017 01:05:25] Debug: Mouse Position: 608, 190
+[16-02-2017 01:05:25] Debug: Mouse Position: 635, 182
+[16-02-2017 01:05:25] Debug: Mouse Position: 651, 177
+[16-02-2017 01:05:25] Debug: Mouse Position: 655, 177
+[16-02-2017 01:05:26] Debug: Mouse Position: 656, 176
+[16-02-2017 01:05:26] Debug: Mouse Position: 659, 170
+[16-02-2017 01:05:26] Debug: Mouse Position: 663, 166
+[16-02-2017 01:05:26] Debug: Mouse Position: 666, 163
+[16-02-2017 01:05:26] Debug: Mouse Position: 675, 157
+[16-02-2017 01:05:26] Debug: Mouse Position: 689, 149
+[16-02-2017 01:05:26] Debug: Mouse Position: 707, 144
+[16-02-2017 01:05:26] Debug: Mouse Position: 720, 140
+[16-02-2017 01:05:26] Debug: Mouse Position: 751, 136
+[16-02-2017 01:05:26] Debug: Mouse Position: 781, 130
+[16-02-2017 01:05:26] Debug: Mouse Position: 798, 128
+[16-02-2017 01:05:26] Debug: Mouse Position: 799, 126
+[16-02-2017 01:06:14] Info: Initialized video subsystem
+[16-02-2017 01:06:14] Info: Initialized SDL_Image
+[16-02-2017 01:06:14] Info: Initialized SDL_Mix
+[16-02-2017 01:06:14] Info: Initialized SDL_TTF
+[16-02-2017 01:06:14] Info: Created window
+[16-02-2017 01:06:14] Info: Created renderer
+[16-02-2017 01:06:14] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:06:14] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:06:15] Debug: Mouse Position: 442, 12
+[16-02-2017 01:06:15] Debug: Mouse Position: 570, 59
+[16-02-2017 01:06:15] Debug: Mouse Position: 623, 79
+[16-02-2017 01:06:15] Debug: Mouse Position: 637, 84
+[16-02-2017 01:06:15] Debug: Mouse Position: 652, 94
+[16-02-2017 01:06:15] Debug: Mouse Position: 688, 83
+[16-02-2017 01:06:15] Debug: Mouse Position: 799, 38
+[16-02-2017 01:06:42] Info: Destroying window
+[16-02-2017 01:06:42] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:06:42] Info: Unloading Mix_Init
+[16-02-2017 01:06:42] Info: Unloading IMG_Init
+[16-02-2017 01:06:42] Info: Cleaning up SDL subsystems
+[16-02-2017 01:06:42] Info: Exiting application
+[16-02-2017 01:10:46] Info: Initialized video subsystem
+[16-02-2017 01:10:46] Info: Initialized SDL_Image
+[16-02-2017 01:10:46] Info: Initialized SDL_Mix
+[16-02-2017 01:10:46] Info: Initialized SDL_TTF
+[16-02-2017 01:10:46] Info: Created window
+[16-02-2017 01:10:46] Info: Created renderer
+[16-02-2017 01:10:46] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:10:46] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:10:55] Info: Destroying window
+[16-02-2017 01:10:55] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:10:55] Info: Unloading Mix_Init
+[16-02-2017 01:10:55] Info: Unloading IMG_Init
+[16-02-2017 01:10:55] Info: Cleaning up SDL subsystems
+[16-02-2017 01:10:55] Info: Exiting application
+[16-02-2017 01:14:57] Info: Initialized video subsystem
+[16-02-2017 01:14:57] Info: Initialized SDL_Image
+[16-02-2017 01:14:57] Info: Initialized SDL_Mix
+[16-02-2017 01:14:57] Info: Initialized SDL_TTF
+[16-02-2017 01:14:57] Info: Created window
+[16-02-2017 01:14:57] Info: Created renderer
+[16-02-2017 01:14:57] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:14:57] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:15:00] Info: Destroying window
+[16-02-2017 01:15:00] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:15:00] Info: Unloading Mix_Init
+[16-02-2017 01:15:00] Info: Unloading IMG_Init
+[16-02-2017 01:15:00] Info: Cleaning up SDL subsystems
+[16-02-2017 01:15:00] Info: Exiting application
+[16-02-2017 01:15:10] Info: Initialized video subsystem
+[16-02-2017 01:15:10] Info: Initialized SDL_Image
+[16-02-2017 01:15:10] Info: Initialized SDL_Mix
+[16-02-2017 01:15:10] Info: Initialized SDL_TTF
+[16-02-2017 01:15:11] Info: Created window
+[16-02-2017 01:15:11] Info: Created renderer
+[16-02-2017 01:15:11] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:15:11] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:15:11] Debug: Mouse Position: 158, 12
+[16-02-2017 01:15:12] Debug: Mouse Position: 159, 12
+[16-02-2017 01:15:12] Debug: Mouse Position: 170, 13
+[16-02-2017 01:15:12] Debug: Mouse Position: 180, 14
+[16-02-2017 01:15:12] Debug: Mouse Position: 242, 30
+[16-02-2017 01:15:12] Debug: Mouse Position: 380, 66
+[16-02-2017 01:15:12] Debug: Mouse Position: 444, 81
+[16-02-2017 01:15:12] Debug: Mouse Position: 474, 91
+[16-02-2017 01:15:12] Debug: Mouse Position: 487, 98
+[16-02-2017 01:15:12] Debug: Mouse Position: 490, 101
+[16-02-2017 01:15:12] Debug: Mouse Position: 490, 105
+[16-02-2017 01:15:12] Debug: Mouse Position: 492, 105
+[16-02-2017 01:15:12] Debug: Mouse Position: 532, 93
+[16-02-2017 01:15:12] Debug: Mouse Position: 591, 85
+[16-02-2017 01:15:12] Debug: Mouse Position: 623, 81
+[16-02-2017 01:15:12] Debug: Mouse Position: 651, 79
+[16-02-2017 01:15:12] Debug: Mouse Position: 673, 77
+[16-02-2017 01:15:12] Debug: Mouse Position: 711, 76
+[16-02-2017 01:15:12] Debug: Mouse Position: 721, 76
+[16-02-2017 01:15:12] Debug: Mouse Position: 723, 76
+[16-02-2017 01:15:13] Debug: Mouse Position: 723, 75
+[16-02-2017 01:15:13] Debug: Mouse Position: 723, 74
+[16-02-2017 01:15:13] Debug: Mouse Position: 723, 73
+[16-02-2017 01:15:13] Debug: Mouse Position: 723, 72
+[16-02-2017 01:15:13] Debug: Mouse Position: 724, 70
+[16-02-2017 01:15:13] Debug: Mouse Position: 724, 69
+[16-02-2017 01:15:13] Debug: Mouse Position: 725, 67
+[16-02-2017 01:15:13] Debug: Mouse Position: 725, 64
+[16-02-2017 01:15:13] Debug: Mouse Position: 725, 61
+[16-02-2017 01:15:13] Debug: Mouse Position: 726, 60
+[16-02-2017 01:15:13] Debug: Mouse Position: 727, 57
+[16-02-2017 01:15:13] Debug: Mouse Position: 729, 52
+[16-02-2017 01:15:13] Debug: Mouse Position: 729, 50
+[16-02-2017 01:15:13] Debug: Mouse Position: 732, 45
+[16-02-2017 01:15:13] Debug: Mouse Position: 736, 42
+[16-02-2017 01:15:13] Debug: Mouse Position: 738, 40
+[16-02-2017 01:15:13] Debug: Mouse Position: 742, 37
+[16-02-2017 01:15:13] Debug: Mouse Position: 747, 32
+[16-02-2017 01:15:13] Debug: Mouse Position: 754, 27
+[16-02-2017 01:15:13] Debug: Mouse Position: 756, 25
+[16-02-2017 01:15:13] Debug: Mouse Position: 763, 19
+[16-02-2017 01:15:13] Debug: Mouse Position: 768, 15
+[16-02-2017 01:15:13] Debug: Mouse Position: 773, 13
+[16-02-2017 01:15:14] Debug: Mouse Position: 773, 12
+[16-02-2017 01:15:15] Debug: Mouse Position: 775, 10
+[16-02-2017 01:15:15] Debug: Mouse Position: 776, 9
+[16-02-2017 01:15:15] Debug: Mouse Position: 778, 8
+[16-02-2017 01:15:15] Debug: Mouse Position: 778, 7
+[16-02-2017 01:15:15] Debug: Mouse Position: 780, 5
+[16-02-2017 01:15:15] Debug: Mouse Position: 781, 4
+[16-02-2017 01:15:15] Debug: Mouse Position: 782, 3
+[16-02-2017 01:15:15] Debug: Mouse Position: 783, 3
+[16-02-2017 01:15:15] Debug: Mouse Position: 783, 2
+[16-02-2017 01:15:15] Debug: Mouse Position: 785, 1
+[16-02-2017 01:15:15] Debug: Mouse Position: 786, 0
+[16-02-2017 01:15:15] Debug: Mouse Position: 787, 0
+[16-02-2017 01:15:15] Debug: Mouse Position: 788, 0
+[16-02-2017 01:15:15] Debug: Mouse Position: 791, 0
+[16-02-2017 01:15:18] Info: Destroying window
+[16-02-2017 01:15:18] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:15:18] Info: Unloading Mix_Init
+[16-02-2017 01:15:18] Info: Unloading IMG_Init
+[16-02-2017 01:15:18] Info: Cleaning up SDL subsystems
+[16-02-2017 01:15:18] Info: Exiting application
+[16-02-2017 01:22:58] Info: Initialized video subsystem
+[16-02-2017 01:22:58] Info: Initialized SDL_Image
+[16-02-2017 01:22:58] Info: Initialized SDL_Mix
+[16-02-2017 01:22:58] Info: Initialized SDL_TTF
+[16-02-2017 01:22:58] Info: Created window
+[16-02-2017 01:22:58] Info: Created renderer
+[16-02-2017 01:22:58] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:22:58] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:22:58] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:23:12] Debug: Mouse Position: 721, 2
+[16-02-2017 01:23:12] Debug: Mouse Position: 724, 3
+[16-02-2017 01:23:12] Debug: Mouse Position: 727, 2
+[16-02-2017 01:23:12] Debug: Mouse Position: 737, 0
+[16-02-2017 01:23:13] Info: Destroying window
+[16-02-2017 01:23:13] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:23:13] Info: Unloading Mix_Init
+[16-02-2017 01:23:13] Info: Unloading IMG_Init
+[16-02-2017 01:23:13] Info: Cleaning up SDL subsystems
+[16-02-2017 01:23:13] Info: Exiting application
+[16-02-2017 01:32:05] Info: Initialized video subsystem
+[16-02-2017 01:32:05] Info: Initialized SDL_Image
+[16-02-2017 01:32:05] Info: Initialized SDL_Mix
+[16-02-2017 01:32:05] Info: Initialized SDL_TTF
+[16-02-2017 01:32:05] Info: Created window
+[16-02-2017 01:32:05] Info: Created renderer
+[16-02-2017 01:32:05] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:32:05] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:32:05] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:32:15] Debug: Mouse Position: 351, 23
+[16-02-2017 01:32:15] Debug: Mouse Position: 422, 56
+[16-02-2017 01:32:15] Debug: Mouse Position: 483, 73
+[16-02-2017 01:32:15] Debug: Mouse Position: 529, 82
+[16-02-2017 01:32:15] Debug: Mouse Position: 547, 82
+[16-02-2017 01:32:15] Debug: Mouse Position: 579, 81
+[16-02-2017 01:32:15] Debug: Mouse Position: 606, 75
+[16-02-2017 01:32:15] Debug: Mouse Position: 624, 66
+[16-02-2017 01:32:15] Debug: Mouse Position: 628, 62
+[16-02-2017 01:32:15] Debug: Mouse Position: 631, 58
+[16-02-2017 01:32:15] Debug: Mouse Position: 632, 55
+[16-02-2017 01:32:15] Debug: Mouse Position: 633, 55
+[16-02-2017 01:32:15] Debug: Mouse Position: 636, 54
+[16-02-2017 01:32:15] Debug: Mouse Position: 641, 54
+[16-02-2017 01:32:15] Debug: Mouse Position: 647, 54
+[16-02-2017 01:32:15] Debug: Mouse Position: 649, 54
+[16-02-2017 01:32:15] Debug: Mouse Position: 653, 55
+[16-02-2017 01:32:15] Debug: Mouse Position: 660, 61
+[16-02-2017 01:32:16] Debug: Mouse Position: 671, 71
+[16-02-2017 01:32:16] Debug: Mouse Position: 677, 78
+[16-02-2017 01:32:16] Debug: Mouse Position: 697, 88
+[16-02-2017 01:32:16] Debug: Mouse Position: 718, 96
+[16-02-2017 01:32:16] Debug: Mouse Position: 728, 99
+[16-02-2017 01:32:16] Debug: Mouse Position: 747, 101
+[16-02-2017 01:32:16] Debug: Mouse Position: 769, 104
+[16-02-2017 01:32:16] Debug: Mouse Position: 792, 110
+[16-02-2017 01:32:16] Debug: Mouse Position: 799, 112
+[16-02-2017 01:32:18] Debug: Mouse Position: 792, 0
+[16-02-2017 01:32:18] Debug: Mouse Position: 783, 1
+[16-02-2017 01:32:18] Debug: Mouse Position: 778, 1
+[16-02-2017 01:32:18] Debug: Mouse Position: 778, 0
+[16-02-2017 01:32:18] Debug: Mouse Position: 776, 0
+[16-02-2017 01:32:19] Info: Destroying window
+[16-02-2017 01:32:19] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:32:19] Info: Unloading Mix_Init
+[16-02-2017 01:32:19] Info: Unloading IMG_Init
+[16-02-2017 01:32:19] Info: Cleaning up SDL subsystems
+[16-02-2017 01:32:19] Info: Exiting application
+[16-02-2017 01:34:11] Info: Initialized video subsystem
+[16-02-2017 01:34:11] Info: Initialized SDL_Image
+[16-02-2017 01:34:11] Info: Initialized SDL_Mix
+[16-02-2017 01:34:11] Info: Initialized SDL_TTF
+[16-02-2017 01:34:11] Info: Created window
+[16-02-2017 01:34:11] Info: Created renderer
+[16-02-2017 01:34:11] Info: Loaded "Images/Icon/bengine.fw.png"
+[16-02-2017 01:34:11] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:34:11] Info: Loaded "Fonts/Horta.ttf"
+[16-02-2017 01:34:13] Debug: Mouse Position: 211, 3
+[16-02-2017 01:34:13] Debug: Mouse Position: 216, 9
+[16-02-2017 01:34:13] Debug: Mouse Position: 217, 9
+[16-02-2017 01:34:13] Debug: Mouse Position: 223, 9
+[16-02-2017 01:34:13] Debug: Mouse Position: 308, 0
+[16-02-2017 01:34:13] Debug: Mouse Position: 429, 0
+[16-02-2017 01:34:14] Debug: Mouse Position: 538, 48
+[16-02-2017 01:34:14] Debug: Mouse Position: 469, 124
+[16-02-2017 01:34:14] Debug: Mouse Position: 459, 138
+[16-02-2017 01:34:14] Debug: Mouse Position: 449, 156
+[16-02-2017 01:34:14] Debug: Mouse Position: 444, 169
+[16-02-2017 01:34:14] Debug: Mouse Position: 443, 175
+[16-02-2017 01:34:14] Debug: Mouse Position: 443, 176
+[16-02-2017 01:34:30] Debug: Mouse Position: 446, 173
+[16-02-2017 01:34:30] Debug: Mouse Position: 499, 116
+[16-02-2017 01:34:30] Debug: Mouse Position: 534, 91
+[16-02-2017 01:34:30] Debug: Mouse Position: 618, 38
+[16-02-2017 01:34:30] Debug: Mouse Position: 705, 3
+[16-02-2017 01:34:30] Debug: Mouse Position: 764, 0
+[16-02-2017 01:34:31] Info: Destroying window
+[16-02-2017 01:34:31] Info: Destroying renderer and freeing associated textures
+[16-02-2017 01:34:31] Info: Unloading Mix_Init
+[16-02-2017 01:34:31] Info: Unloading IMG_Init
+[16-02-2017 01:34:31] Info: Cleaning up SDL subsystems
+[16-02-2017 01:34:31] Info: Exiting application

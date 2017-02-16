@@ -28,6 +28,17 @@ void BG::Transform::setPosition(const Vector2f& position)
 }
 
 /*
+* \brief Set the Transform's position
+* \param x x position
+* \param y y position
+*/
+void BG::Transform::setPosition(const float& x, const float& y)
+{
+	position.x = x;
+	position.y = y;
+}
+
+/*
  * \brief Returns the Transform's current position
  */
 BG::Vector2f BG::Transform::getPosition() const
@@ -42,6 +53,17 @@ BG::Vector2f BG::Transform::getPosition() const
 void BG::Transform::move(const Vector2f& velocity)
 {
 	position += velocity;
+}
+
+/*
+* \brief Move the Transform by the specified velocity
+* \param x x velocity
+* \param y y velocity
+*/
+void BG::Transform::move(const float& x, const float& y)
+{
+	position.x += x;
+	position.y += y;
 }
 
 /*

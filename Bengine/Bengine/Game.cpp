@@ -33,7 +33,17 @@ bool Game::initialize()
 	objLogo = BG::GameObject(&sprLogo, BG::Vector2f(windowSize.x / 2 - logoSize.x / 2,
 		windowSize.y / 2 - logoSize.y / 2));
 
-	myText = BG::Text(BG::ResourceManager::getInstance()->getFont("Fonts/Horta.ttf", 32), "Hello There", BG::CLR_WHITE, window);
+	myOtherText = BG::Text(BG::ResourceManager::getInstance()->getFont("Fonts/Horta.ttf", 64), "Hey", window);
+
+	myText = BG::Text(BG::ResourceManager::getInstance()->getFont("Fonts/Horta.ttf", 32), "Hi", window);
+
+
+	myText.setColour(BG::CLR_WHITE);
+	myText.setText("Hello World");
+	myText.getTransform().setPosition(BG::Vector2f(250, 250));
+
+	myOtherText.setColour(BG::CLR_WHITE);
+	myOtherText.getTransform().setPosition(BG::Vector2f(450, 250));
 
 	return true;
 }
@@ -42,6 +52,9 @@ bool Game::update()
 {
 	objLogo.getSprite()->setOrigin(objLogo.getSprite()->getSize() / 2);
 	objLogo.getTransform()->rotate(1);
+
+	myText.getTransform().rotate(1);
+
 
 	BG::Vector2f logoPosition = objLogo.getTransform()->getPosition();
 	auto keyboard = BG::Keyboard::getInstance();
@@ -78,6 +91,7 @@ void Game::draw()
 	window->draw(objLogo);
 
 	window->draw(myText);
+	window->draw(myOtherText);
 
 	// Update the screen
 	window->display();

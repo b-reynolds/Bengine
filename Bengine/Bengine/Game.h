@@ -19,6 +19,7 @@ private:
 	const int SPEED = 250;
 
 	BG::Text myText;
+	BG::Text myOtherText;
 
 	BG::Sprite sprLogo;
 	BG::GameObject objLogo;
