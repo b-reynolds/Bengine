@@ -69,32 +69,6 @@ BG::Texture* BG::ResourceManager::getTexture(const std::string& filePath, Window
 	return texture;
 }
 
-/** \brief Loads a font resource into a Font and returns it.
-* Searches the ResourceManager's map of fonts for the specified font and returns a reference to it.
-* If the font does not exist, loads it into memory and stores it in the map.
-* \param filePath file path of the desired font resource (TTF)
-* \param size desired font size 
-*/
-BG::Font* BG::ResourceManager::getFont(const std::string& filePath, const int& size)
-{
-	// Search the map of existing fonts for the requested font
-	auto result = mpFonts.find(filePath);
-
-	if(result != mpFonts.end())
-	{
-		// The font already exists and is already loaded into memory, return a reference to it
-		return result->second;
-	}
-
-	// Attempt to load the font resource into memory
-	Font* font = loadFont(filePath, size);
-
-	// Insert the font into the fonts map
-	mpFonts.insert(std::pair<std::string, Font*>(filePath, font));
-
-	return font;
-}
-
 /**
 * \brief Free the memory associated with an image resource and remove it from the textures map.
 * Iterates through the textures map, if a resource with the same file path is found, frees all associated memory and nullifies the pointer.
@@ -150,19 +124,21 @@ BG::SoundEffect* BG::ResourceManager::getSoundEffect(const std::string &filePath
 */
 void BG::ResourceManager::freeSoundEffect(const std::string &filePath)
 {
-	std::map<std::string, Mix_Chunk*>::iterator iterator = mpSoundEffects.begin();
-	while (iterator != mpSoundEffects.end())
+	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects.begin();
+	while (itSoundEffects != mpSoundEffects.end())
 	{
-		if (iterator->first == filePath)
+		if (itSoundEffects->first == filePath)
 		{
-			SoundEffect* soundEffect = iterator->second;
+			SoundEffect* soundEffect = itSoundEffects->second;
 			Mix_FreeChunk(soundEffect);
 			soundEffect = nullptr;
-			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
-			iterator = mpSoundEffects.erase(iterator);
-			break;
+			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + itSoundEffects->first + "\"");
+			itSoundEffects = mpSoundEffects.erase(itSoundEffects);
 		}
-		++iterator;
+		else
+		{
+			++itSoundEffects;
+		}
 	}
 }
 
@@ -198,19 +174,72 @@ BG::Music* BG::ResourceManager::getMusic(const std::string &filePath)
 */
 void BG::ResourceManager::freeMusic(const std::string &filePath)
 {
-	std::map<std::string, Mix_Music*>::iterator iterator = mpMusic.begin();
-	while (iterator != mpMusic.end())
+	std::map<std::string, Music*>::iterator itMusic = mpMusic.begin();
+	while (itMusic != mpMusic.end())
 	{
-		if (iterator->first == filePath)
+		if (itMusic->first == filePath)
 		{
-			Music* music = iterator->second;
+			Music* music = itMusic->second;
 			Mix_FreeMusic(music);
 			music = nullptr;
-			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + iterator->first + "\"");
-			iterator = mpMusic.erase(iterator);
-			break;
+			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + itMusic->first + "\"");
+			itMusic = mpMusic.erase(itMusic);
 		}
-		++iterator;
+		else
+		{
+			++itMusic;
+		}
+	}
+}
+
+/** \brief Loads a font resource into a Font and returns it.
+* Searches the ResourceManager's map of fonts for the specified font and returns a reference to it.
+* If the font does not exist, loads it into memory and stores it in the map.
+* \param filePath file path of the desired font resource (TTF)
+* \param size desired font size
+*/
+BG::Font* BG::ResourceManager::getFont(const std::string& filePath, const int& size)
+{
+	// Search the map of existing fonts for the requested font
+	auto result = mpFonts.find(filePath);
+
+	if (result != mpFonts.end() && result->second.second == size)
+	{
+		// The font already exists is already loaded into memory, return a reference to it
+		return result->second.first;
+	}
+
+	// Attempt to load the font resource into memory
+	Font* font = loadFont(filePath, size);
+
+	// Insert the font into the fonts map
+	mpFonts.emplace(std::make_pair(filePath, std::make_pair(font, size)));
+
+	return font;
+}
+
+/**
+* \brief Free the memory associated with a font resource and remove it from the font map.
+* Iterates through the font map, if a resource with the same file path is found, frees all associated memory and nullifies the pointer.
+* \param filePath file path of the font resource
+*/
+void BG::ResourceManager::freeFont(const std::string& filePath)
+{
+	std::map<std::string, std::pair<Font*, int>>::iterator itFonts = mpFonts.begin();
+	while (itFonts != mpFonts.end())
+	{
+		if (itFonts->first == filePath)
+		{
+			Font* font = itFonts->second.first;
+			TTF_CloseFont(font);
+			font = nullptr;
+			Logger::getInstance().log(Logger::INFO, "Freed resource \"" + itFonts->first + "\"");
+			itFonts = mpFonts.erase(itFonts);
+		}
+		else
+		{
+			++itFonts;
+		}
 	}
 }
 
@@ -232,9 +261,6 @@ void BG::ResourceManager::free()
 		itTextures = mpTextures.erase(itTextures);
 	}
 
-	// Unload the SDL_IMG libaries
-	IMG_Quit();
-
 	// Iterate through the map of sound effects
 	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects.begin();
 	while (itSoundEffects != mpSoundEffects.end())
@@ -255,8 +281,15 @@ void BG::ResourceManager::free()
 		itMusic = mpMusic.erase(itMusic);
 	}
 
-	// Unload the Mix_Init libraries
-	Mix_Quit();
+	// Iterate through the map of fonts
+	std::map<std::string, std::pair<Font*, int>>::iterator itFonts = mpFonts.begin();
+	while(itFonts != mpFonts.end())
+	{
+		// Free the font resource and erase the element from the map
+		TTF_CloseFont(itFonts->second.first);
+		logger.log(Logger::INFO, "Freed resource \"" + itFonts->first + "\"");
+		itFonts = mpFonts.erase(itFonts);
+	}
 }
 
 /**

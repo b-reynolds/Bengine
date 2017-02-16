@@ -27,23 +27,26 @@ namespace BG
 		/* Loads an image resource into a Texture and returns it */
 		Texture* getTexture(const std::string &filePath, Window* window);
 
-		/* Loads a font resource into a Font and returns it */
-		Font* getFont(const std::string &filePath, const int &size);
-
-		/* Free the memory associated with an image resource and remove it from the textures map */
+		/* Frees the memory associated with an image resource and removes it from the textures map */
 		void freeTexture(const std::string &filePath);
 
 		/* Loads a sound resource into a SoundEffect and returns it */
 		SoundEffect* getSoundEffect(const std::string &filePath);
 
-		/* Free the memory associated with a sound effect resource and remove it from the sound effects map */
+		/* Frees the memory associated with a sound effect resource and removes it from the sound effects map */
 		void freeSoundEffect(const std::string &filePath);
 
 		/* Loads a sound resource into a Music and returns it */
 		Music* getMusic(const std::string &filePath);
 
-		/* Free the memory associated with a music resource and remove it from the music map */
+		/* Frees the memory associated with a music resource and removes it from the music map */
 		void freeMusic(const std::string &filePath);
+
+		/* Loads a font resource into a Font and returns it */
+		Font* getFont(const std::string &filePath, const int &size);
+
+		/* Frees the memory associated with a font resource and removes it from the music map */
+		void freeFont(const std::string &filePath);
 
 		/* Free all memory associated with loaded resources and unload all dependencies */
 		void free();
@@ -66,7 +69,7 @@ namespace BG
 		std::map <std::string, Music*> mpMusic;
 
 		/* Map that stores Font resources */
-		std::map<std::string, Font*> mpFonts;
+		std::map<std::string, std::pair<Font*, int>> mpFonts;
 
 		/* The singleton instance of ResourceManager */
 		static ResourceManager* instance;
