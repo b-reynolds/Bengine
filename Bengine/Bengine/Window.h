@@ -31,7 +31,10 @@ namespace BG
 
 		/* Destroys the window and renderer freeing all associated memory */
 		void destroy();
-		
+
+		/* Render Text to the window */		
+		void draw(Text &text);
+
 		/* Render a GameObject to the window */
 		void draw(GameObject &gameObject) const;
 
@@ -40,8 +43,6 @@ namespace BG
 
 		/* Render a FloatRect of the specified Colour to the window */
 		void draw(const FloatRect &rect, const Colour &colour) const;
-
-		void draw(Text &text) const;
 
 		/* Set the Window's position */
 		void setPosition(const Vector2i &position) const;

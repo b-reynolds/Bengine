@@ -65,6 +65,26 @@ void BG::Window::destroy()
 }
 
 /*
+ * \brief Render text to the window
+ * \param Text text to be rendered
+ */
+void BG::Window::draw(Text& text) const
+{
+	Texture* texture = text.getTexture();
+	Transform transform = text.getTransform();
+	Vector2f txtPosition = transform.getPosition();
+	Vector2f txtOrigin = text.getOrigin();
+	float txtAngle = transform.getRotation();
+
+	SDL_Rect dstRect = { txtPosition.x, txtPosition.y, 0, 0 };
+	SDL_Point origin = { text.getOrigin().x, text.getOrigin().y };
+
+	SDL_QueryTexture(texture, nullptr, nullptr, &dstRect.w, &dstRect.h);
+	SDL_RenderCopyEx(renderer, texture, nullptr, &dstRect, txtAngle, &origin, SDL_FLIP_NONE);
+	SDL_DestroyTexture(texture);
+}
+
+/*
  * \brief Render a GameObject to the Window
  * \param gameObject GameObject to render
  */
@@ -109,16 +129,6 @@ void BG::Window::draw(const FloatRect& rect, const Colour& colour) const
 	SDL_SetRenderDrawColor(renderer, colour.r, colour.g, colour.b, 255);
 	SDL_RenderDrawRect(renderer, &bounds);
 	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
-}
-
-void BG::Window::draw(Text& text) const
-{
-	SDL_Rect destination;
-	destination.x = 250;
-	destination.y = 250;
-	Texture* texture = text.getTexture();
-	SDL_QueryTexture(texture, nullptr, nullptr, &destination.w, &destination.h);
-	SDL_RenderCopy(renderer, texture, nullptr, &destination);
 }
 
 /*
