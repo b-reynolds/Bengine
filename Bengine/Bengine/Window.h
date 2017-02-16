@@ -3,6 +3,7 @@
 #include "Rectangle.h"
 #include <SDL.h>
 #include <string>
+#include "Colour.h"
 
 namespace BG
 {
@@ -33,7 +34,7 @@ namespace BG
 		void destroy();
 
 		/* Render Text to the window */		
-		void draw(Text &text);
+		void draw(Text &text) const;
 
 		/* Render a GameObject to the window */
 		void draw(GameObject &gameObject) const;
@@ -75,6 +76,9 @@ namespace BG
 
 		/* Used for drawing/rendering to the window */
 		SDL_Renderer* renderer;
+
+		/* The clear colour of the window */
+		Colour clrBackground;
 
 	};
 }

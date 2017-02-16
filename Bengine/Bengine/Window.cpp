@@ -23,6 +23,8 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
 	}
 	logger.log(BG::Logger::INFO, "Created window");
 
+	clrBackground = BG::CLR_BLACK;
+
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
 	if(renderer == nullptr)
@@ -126,9 +128,9 @@ void BG::Window::draw(GameObject& gameObject, const Colour& tint) const
 void BG::Window::draw(const FloatRect& rect, const Colour& colour) const
 {
 	SDL_Rect bounds = { rect.left, rect.top, rect.width, rect.height };
-	SDL_SetRenderDrawColor(renderer, colour.r, colour.g, colour.b, 255);
+	SDL_SetRenderDrawColor(renderer, colour.r, colour.g, colour.b, colour.a);
 	SDL_RenderDrawRect(renderer, &bounds);
-	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	SDL_SetRenderDrawColor(renderer, clrBackground.r, clrBackground.g, clrBackground.b, clrBackground.a);
 }
 
 /*

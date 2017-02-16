@@ -93,6 +93,10 @@ void Game::draw()
 	window->draw(myText);
 	window->draw(myOtherText);
 
+	window->draw(myOtherText.getBounds(), BG::CLR_RED);
+	window->draw(myText.getBounds(), BG::CLR_RED);
+	window->draw(objLogo.getBounds(), BG::CLR_RED);
+
 	// Update the screen
 	window->display();
 }

@@ -1,5 +1,6 @@
-#include "Text.h"
+﻿#include "Text.h"
 #include "Window.h"
+#include "Math.h"
 
 /*
  * \brief Default Constructor
@@ -101,4 +102,41 @@ BG::Texture* BG::Text::getTexture() const
 BG::Transform& BG::Text::getTransform() 
 {
 	return transform;
+}
+
+BG::Vector2f BG::Text::rotatePoint(const Vector2f &point, const float &angle)
+{
+	float theta = Math::degreesToRadians(angle);
+	BG::Vector2f newPoint;
+
+
+	newPoint.x = point.x * cos(theta) - point.y * sin(theta);
+	newPoint.y = point.x * sin(theta) + point.y * cos(theta);
+
+	return newPoint;
+
+
+}
+
+
+BG::FloatRect BG::Text::getBounds()
+{
+	Vector2i size;
+	Vector2f position = getTransform().getPosition();
+	TTF_SizeText(font, text.c_str(), &size.x, &size.y);
+
+	Vector2f topLeft(position.x, position.y);
+	Vector2f topRight(position.x + size.x, position.y);
+	Vector2f bottomLeft(position.x, position.y + size.y);
+	Vector2f bottomRight(position.x + size.x, position.y + size.y);
+
+	float angle = transform.getRotation();
+
+	topLeft = rotatePoint(topLeft, angle);
+	topRight = rotatePoint(topRight, angle);
+	bottomLeft = rotatePoint(bottomLeft, angle);
+	bottomRight = rotatePoint(bottomRight, angle);
+
+
+	return FloatRect(topLeft.x, topLeft.y, topRight.x - topLeft.x, bottomRight.y - topRight.y);
 }

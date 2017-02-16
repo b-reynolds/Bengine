@@ -3,6 +3,7 @@
 #include "Transform.h"
 #include "Colour.h"
 #include <string>
+#include "Rectangle.h"
 
 namespace BG
 {
@@ -46,6 +47,10 @@ namespace BG
 
 		/* Returns a reference to the Text's Transform */
 		Transform& getTransform();
+
+		Vector2f rotatePoint(const Vector2f &point, const float &angle);
+
+		FloatRect getBounds();
 
 	private:
 
