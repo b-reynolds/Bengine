@@ -34,51 +34,57 @@
     <Filter Include="Rendering">
       <UniqueIdentifier>{96a38040-1362-4d96-8774-135dcdd25ef6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{0fd8146d-bca5-4836-bcb4-7e53820ed6a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{ab46b424-373c-4376-a245-eef60eb5c297}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Keyboard.cpp">
-      <Filter>Input Management</Filter>
-    </ClCompile>
-    <ClCompile Include="Mouse.cpp">
-      <Filter>Input Management</Filter>
-    </ClCompile>
-    <ClCompile Include="Logger.cpp">
-      <Filter>Debugging</Filter>
-    </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
-    <ClCompile Include="ResourceManager.cpp">
+    <ClCompile Include="resource_manager.cpp">
       <Filter>Resource Management</Filter>
     </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Data Types</Filter>
+    <ClCompile Include="sprite.cpp">
+      <Filter>Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Data Types</Filter>
+    <ClCompile Include="window.cpp">
+      <Filter>Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="Timer.cpp">
-      <Filter>Data Types</Filter>
-    </ClCompile>
-    <ClCompile Include="Audio.cpp">
+    <ClCompile Include="audio.cpp">
       <Filter>Multimedia</Filter>
     </ClCompile>
-    <ClCompile Include="Window.cpp">
-      <Filter>Rendering</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>Rendering</Filter>
-    </ClCompile>
-    <ClCompile Include="Bengine.cpp">
+    <ClCompile Include="keyboard.cpp">
       <Filter>Input Management</Filter>
     </ClCompile>
-    <ClCompile Include="Text.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mouse.cpp">
+      <Filter>Input Management</Filter>
     </ClCompile>
-    <ClCompile Include="Math.cpp">
+    <ClCompile Include="logger.cpp">
+      <Filter>Debugging</Filter>
+    </ClCompile>
+    <ClCompile Include="bengine.cpp">
+      <Filter>Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="game_object.cpp">
+      <Filter>Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="text.cpp">
+      <Filter>Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="transform.cpp">
+      <Filter>Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="game.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="math.cpp">
+      <Filter>Util</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -86,59 +92,59 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Keyboard.h">
-      <Filter>Input Management</Filter>
-    </ClInclude>
-    <ClInclude Include="Mouse.h">
-      <Filter>Input Management</Filter>
-    </ClInclude>
-    <ClInclude Include="Logger.h">
-      <Filter>Debugging</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
-      <Filter>Game</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>Data Types</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceManager.h">
+    <ClInclude Include="resource_manager.h">
       <Filter>Resource Management</Filter>
     </ClInclude>
-    <ClInclude Include="Rectangle.h">
-      <Filter>Data Types</Filter>
+    <ClInclude Include="sprite.h">
+      <Filter>Rendering</Filter>
     </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Data Types</Filter>
+    <ClInclude Include="window.h">
+      <Filter>Rendering</Filter>
     </ClInclude>
-    <ClInclude Include="Transform.h">
-      <Filter>Data Types</Filter>
-    </ClInclude>
-    <ClInclude Include="Timer.h">
-      <Filter>Data Types</Filter>
-    </ClInclude>
-    <ClInclude Include="Colour.h">
-      <Filter>Data Types</Filter>
-    </ClInclude>
-    <ClInclude Include="Audio.h">
+    <ClInclude Include="audio.h">
       <Filter>Multimedia</Filter>
     </ClInclude>
-    <ClInclude Include="Bengine.h">
-      <Filter>Debugging</Filter>
-    </ClInclude>
-    <ClInclude Include="Window.h">
-      <Filter>Rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Rendering</Filter>
-    </ClInclude>
-    <ClInclude Include="BengineTypedefs.h">
+    <ClInclude Include="keyboard.h">
       <Filter>Input Management</Filter>
     </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="mouse.h">
+      <Filter>Input Management</Filter>
     </ClInclude>
-    <ClInclude Include="Math.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="logger.h">
+      <Filter>Debugging</Filter>
+    </ClInclude>
+    <ClInclude Include="bengine.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="bengine_typedefs.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="colour.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="game_object.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="rectangle.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="text.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="transform.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="vector2.h">
+      <Filter>Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="game.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="math.h">
+      <Filter>Util</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

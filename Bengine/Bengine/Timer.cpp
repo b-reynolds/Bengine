@@ -1,28 +1,28 @@
-#include "Timer.h"
+#include "timer.h"
 
 BG::Timer::Timer()
 {
-	this->interval = 0;
+	this->interval_ = 0;
 	reset();
 }
 
 BG::Timer::Timer(const int& interval)
 {
-	this->interval = interval;
+	this->interval_ = interval;
 	reset();
 }
 
-bool BG::Timer::hasExpired() const
+bool BG::Timer::expired() const
 {
-	return getTime() - lastTick > interval;
+	return time() - last_tick_ > interval_;
 }
 
 void BG::Timer::reset()
 {
-	lastTick = getTime();
+	last_tick_ = time();
 }
 
-int BG::Timer::getTime() const
+int BG::Timer::time() const
 {
 	return static_cast<int>(std::chrono::duration_cast<std::chrono::seconds>(Clock::now().time_since_epoch()).count());
 }

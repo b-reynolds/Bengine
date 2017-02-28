@@ -9,27 +9,27 @@ namespace BG
 	struct Vector2
 	{
 
-		T x;
-		T y;
+		T x_;
+		T y_;
 
-		Vector2() : x(0), y(0) {}
-		Vector2(const T &x, const T &y) : x(x), y(y) {}
+		Vector2() : x_(0), y_(0) {}
+		Vector2(const T &x, const T &y) : x_(x), y_(y) {}
 
-		Vector2& operator+(const Vector2 &v) { x += v.x; y += v.y; return *this; }
-		Vector2& operator+=(const Vector2 &v) { x += v.x; y += v.y; return *this; }
+		Vector2& operator+(const Vector2 &v) { x_ += v.x_; y_ += v.y_; return *this; }
+		Vector2& operator+=(const Vector2 &v) { x_ += v.x_; y_ += v.y_; return *this; }
 
-		Vector2& operator-(const Vector2 &v) { x -= v.x; y -= v.y; return *this; }
-		Vector2& operator-=(const Vector2 &v) { x -= v.x; y -= v.y; return *this; }
+		Vector2& operator-(const Vector2 &v) { x_ -= v.x_; y_ -= v.y_; return *this; }
+		Vector2& operator-=(const Vector2 &v) { x_ -= v.x_; y_ -= v.y_; return *this; }
 
-		Vector2& operator*(const Vector2 &v) { x *= v.x; y *= v.y; return *this; }
-		Vector2& operator*=(const Vector2 &v) { x *= v.x; y *= v.y; return *this; }
-		Vector2& operator*(const T &scalar) { x *= scalar; y *= scalar; return *this; }
+		Vector2& operator*(const Vector2 &v) { x_ *= v.x_; y_ *= v.y_; return *this; }
+		Vector2& operator*=(const Vector2 &v) { x_ *= v.x_; y_ *= v.y_; return *this; }
+		Vector2& operator*(const T &scalar) { x_ *= scalar; y_ *= scalar; return *this; }
 
-		Vector2& operator/(const Vector2 &v) { x /= v.x; y /= v.y; return *this; }
-		Vector2& operator/=(const Vector2 &v) { x /= v.x; y /= v.y; return *this; }
-		Vector2 operator/(const T &scalar) { x /= scalar; y /= scalar; return *this; }
+		Vector2& operator/(const Vector2 &v) { x_ /= v.x_; y_ /= v.y_; return *this; }
+		Vector2& operator/=(const Vector2 &v) { x_ /= v.x_; y_ /= v.y_; return *this; }
+		Vector2 operator/(const T &scalar) { x_ /= scalar; y_ /= scalar; return *this; }
 
-		bool operator==(const Vector2 &v) { return x == v.x && y == v.y; }
+		bool operator==(const Vector2 &v) { return x_ == v.x_ && y_ == v.y_; }
 		bool operator!=(const Vector2 &v) { return !(*this == v); }
 
 	};

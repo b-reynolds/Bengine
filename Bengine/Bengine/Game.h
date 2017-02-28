@@ -1,8 +1,7 @@
 #pragma once
-#include "Window.h"
-#include "ResourceManager.h"
-#include "Sprite.h"
-#include "GameObject.h"
+#include "window.h"
+#include "sprite.h"
+#include "game_object.h"
 #include "Text.h"
 
 class Game
@@ -16,17 +15,17 @@ public:
 
 private:
 
-	const int SPEED = 250;
+	const int kSpeed = 250;
 
-	BG::Text myText;
-	BG::Text myOtherText;
+	BG::Text txt_my_text_;
+	BG::Text txt_my_other_text_;
 
-	BG::Sprite sprLogo;
-	BG::GameObject objLogo;
+	BG::Sprite spr_logo_;
+	BG::GameObject obj_logo;
 
-	BG::Window* window;
+	BG::Window* window_;
 
-	bool initialized;
+	bool initialized_;
 
 	bool initialize();
 

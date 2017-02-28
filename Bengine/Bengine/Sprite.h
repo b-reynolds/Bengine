@@ -1,7 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include "Rectangle.h"
-#include "BengineTypedefs.h"
+#include "bengine_typedefs.h"
 
 namespace BG
 {
@@ -14,7 +14,7 @@ namespace BG
 	class Sprite
 	{
 
-	public:
+	 public:
 
 		/* Default Constructor */
 		Sprite();
@@ -26,51 +26,51 @@ namespace BG
 		void setSize(const Vector2f &size);
 
 		/* Returns the Sprite's current size (scaled) */
-		Vector2f getSize() const;
+		Vector2f size() const;
 
 		/* Set the Sprite's origin for rendering and rotation */
-		void setOrigin(const Vector2f &origin);
+		void set_origin(const Vector2f &origin);
 
 		/* Returns the Sprite's current point of origin for rendering and rotation */
-		Vector2f getOrigin() const;
+		Vector2f origin() const;
 
 		/* Set the Sprite's scale */
-		void setScale(const Vector2f &scale);
+		void set_scale(const Vector2f &scale);
 
 		/* Returns the Sprite's current scale */
-		Vector2f getScale() const;
+		Vector2f scale() const;
 
 		/* Set the horizontal flip state of the Sprite */
-		void setFlipped(const bool &state);
+		void set_flipped(const bool &state);
 
 		/* Returns the horizontal flip state of the Sprite */
-		SDL_RendererFlip getFlipped() const;
+		SDL_RendererFlip flipped() const;
 
 		/* Returns a pointer to the Sprite's texture */
-		SDL_Texture* getTexture() const;
+		SDL_Texture* texture() const;
 
 		/* Returns a pointer to the Sprite's renderer */
-		SDL_Renderer* getRenderer() const;
+		SDL_Renderer* renderer() const;
 
-	private:
+	 private:
 
 		/* Texture used when the Sprite is rendered */
-		SDL_Texture* texture;
+		SDL_Texture* texture_;
 
 		/* Renderer used to render the Sprite */
-		SDL_Renderer* renderer;
+		SDL_Renderer* renderer_;
 
 		/* Horizontal flip state of the Sprite*/
-		SDL_RendererFlip flipped;
+		SDL_RendererFlip flipped_;
 
 		/* Sprite's size without scaling factored */
-		Vector2f size;
+		Vector2f size_;
 
 		/* Sprite's scale */
-		Vector2f scale;
+		Vector2f scale_;
 
 		/* Sprite's point of origin */
-		Vector2f origin;
+		Vector2f origin_;
 
 	};
 }

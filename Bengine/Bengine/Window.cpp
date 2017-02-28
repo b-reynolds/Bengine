@@ -1,7 +1,7 @@
-#include "Window.h"
+#include "window.h"
 #include "Logger.h"
-#include "GameObject.h"
-#include "Colour.h"
+#include "game_object.h"
+#include "colour.h"
 #include "Text.h"
 
 /*
@@ -11,29 +11,29 @@
  */
 BG::Window::Window(const std::string& title, const Vector2u& size)
 {
-	window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x, size.y, SDL_WINDOW_OPENGL);
+	window_ = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x_, size.y_, SDL_WINDOW_OPENGL);
 
-	auto logger = Logger::getInstance();
+	auto logger = Logger::instance();
 
-	if(window == nullptr)
+	if(window_ == nullptr)
 	{
 		// Window creation failed, report error, clean up and exit.
-		logger.log(BG::Logger::ERROR, std::string("Failed to create window (") + SDL_GetError() + ")");
-		SDL_DestroyWindow(window);
+		logger.log(BG::Logger::kError, std::string("Failed to create window (") + SDL_GetError() + ")");
+		SDL_DestroyWindow(window_);
 	}
-	logger.log(BG::Logger::INFO, "Created window");
+	logger.log(BG::Logger::kInfo, "Created window");
 
-	clrBackground = BG::CLR_BLACK;
+	clr_background_ = BG::kClrBlack;
 
-	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	renderer_ = SDL_CreateRenderer(window_, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
-	if(renderer == nullptr)
+	if(renderer_ == nullptr)
 	{
 		// Render creation failed, report error, clean up and exit.
-		logger.log(BG::Logger::ERROR, std::string("Failed to create renderer (") + SDL_GetError() + ")");
-		SDL_DestroyRenderer(renderer);
+		logger.log(BG::Logger::kError, std::string("Failed to create renderer (") + SDL_GetError() + ")");
+		SDL_DestroyRenderer(renderer_);
 	}
-	logger.log(BG::Logger::INFO, "Created renderer");
+	logger.log(BG::Logger::kInfo, "Created renderer");
 }
 
 /*
@@ -41,7 +41,7 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
  */
 void BG::Window::clear() const
 {
-	SDL_RenderClear(renderer);
+	SDL_RenderClear(renderer_);
 }
 
 /*
@@ -49,7 +49,7 @@ void BG::Window::clear() const
  */
 void BG::Window::display() const
 {
-	SDL_RenderPresent(renderer);
+	SDL_RenderPresent(renderer_);
 }
 
 /*
@@ -57,13 +57,13 @@ void BG::Window::display() const
  */
 void BG::Window::destroy()
 {
-	auto logger = Logger::getInstance();
-	logger.log(Logger::INFO, "Destroying window");
-	SDL_DestroyWindow(window);
-	window = nullptr;
-	logger.log(Logger::INFO, "Destroying renderer and freeing associated textures");
-	SDL_DestroyRenderer(renderer);
-	renderer = nullptr;
+	auto logger = Logger::instance();
+	logger.log(Logger::kInfo, "Destroying window");
+	SDL_DestroyWindow(window_);
+	window_ = nullptr;
+	logger.log(Logger::kInfo, "Destroying renderer and freeing associated textures");
+	SDL_DestroyRenderer(renderer_);
+	renderer_ = nullptr;
 }
 
 /*
@@ -72,17 +72,17 @@ void BG::Window::destroy()
  */
 void BG::Window::draw(Text& text) const
 {
-	Texture* texture = text.getTexture();
-	Transform transform = text.getTransform();
-	Vector2f txtPosition = transform.getPosition();
-	Vector2f txtOrigin = text.getOrigin();
-	float txtAngle = transform.getRotation();
+	Texture* texture = text.texture();
+	Transform transform = text.transform();
+	Vector2f txtPosition = transform.position();
+	Vector2f txtOrigin = text.origin();
+	float txtAngle = transform.rotation();
 
-	SDL_Rect dstRect = { txtPosition.x, txtPosition.y, 0, 0 };
-	SDL_Point origin = { text.getOrigin().x, text.getOrigin().y };
+	SDL_Rect dstRect = { txtPosition.x_, txtPosition.y_, 0, 0 };
+	SDL_Point origin = { text.origin().x_, text.origin().y_ };
 
 	SDL_QueryTexture(texture, nullptr, nullptr, &dstRect.w, &dstRect.h);
-	SDL_RenderCopyEx(renderer, texture, nullptr, &dstRect, txtAngle, &origin, SDL_FLIP_NONE);
+	SDL_RenderCopyEx(renderer_, texture, nullptr, &dstRect, txtAngle, &origin, SDL_FLIP_NONE);
 	SDL_DestroyTexture(texture);
 }
 
@@ -92,20 +92,20 @@ void BG::Window::draw(Text& text) const
  */
 void BG::Window::draw(GameObject& gameObject) const
 {
-	Transform* transform = gameObject.getTransform();
-	Vector2f position = transform->getPosition();
-	float angle = transform->getRotation();
+	Transform* transform = gameObject.transform();
+	Vector2f position = transform->position();
+	float angle = transform->rotation();
 
-	Sprite* sprite = gameObject.getSprite();
-	SDL_Texture* texture = sprite->getTexture();
-	Vector2f size = sprite->getSize();
-	SDL_RendererFlip flipped = sprite->getFlipped();
-	Vector2f sprOrigin = sprite->getOrigin();
+	Sprite* sprite = gameObject.sprite();
+	SDL_Texture* texture = sprite->texture();
+	Vector2f size = sprite->size();
+	SDL_RendererFlip flipped = sprite->flipped();
+	Vector2f sprOrigin = sprite->origin();
 
-	SDL_Point origin = { sprOrigin.x, sprOrigin.y };
-	SDL_Rect destination = { position.x, position.y, size.x, size.y };
+	SDL_Point origin = { sprOrigin.x_, sprOrigin.y_ };
+	SDL_Rect destination = { position.x_, position.y_, size.x_, size.y_ };
 
-	SDL_RenderCopyEx(renderer, texture, nullptr, &destination, angle, &origin, flipped);
+	SDL_RenderCopyEx(renderer_, texture, nullptr, &destination, angle, &origin, flipped);
 }
 
 /*
@@ -115,9 +115,9 @@ void BG::Window::draw(GameObject& gameObject) const
  */
 void BG::Window::draw(GameObject& gameObject, const Colour& tint) const
 {
-	SDL_SetTextureColorMod(gameObject.getSprite()->getTexture(), tint.r, tint.g, tint.b);
+	SDL_SetTextureColorMod(gameObject.sprite()->texture(), tint.r_, tint.g_, tint.b_);
 	draw(gameObject);
-	SDL_SetTextureColorMod(gameObject.getSprite()->getTexture(), 255, 255, 255);
+	SDL_SetTextureColorMod(gameObject.sprite()->texture(), 255, 255, 255);
 }
 
 /*
@@ -127,28 +127,28 @@ void BG::Window::draw(GameObject& gameObject, const Colour& tint) const
  */
 void BG::Window::draw(const FloatRect& rect, const Colour& colour) const
 {
-	SDL_Rect bounds = { rect.left, rect.top, rect.width, rect.height };
-	SDL_SetRenderDrawColor(renderer, colour.r, colour.g, colour.b, colour.a);
-	SDL_RenderDrawRect(renderer, &bounds);
-	SDL_SetRenderDrawColor(renderer, clrBackground.r, clrBackground.g, clrBackground.b, clrBackground.a);
+	SDL_Rect bounds = { rect.left_, rect.top_, rect.width_, rect.height_ };
+	SDL_SetRenderDrawColor(renderer_, colour.r_, colour.g_, colour.b_, colour.a_);
+	SDL_RenderDrawRect(renderer_, &bounds);
+	SDL_SetRenderDrawColor(renderer_, clr_background_.r_, clr_background_.g_, clr_background_.b_, clr_background_.a_);
 }
 
 /*
  * \brief Set the Window's position
  * \param position Window position
  */
-void BG::Window::setPosition(const Vector2i& position) const
+void BG::Window::set_position(const Vector2i& position) const
 {
-	SDL_SetWindowPosition(window, position.x, position.y);
+	SDL_SetWindowPosition(window_, position.x_, position.y_);
 }
 
 /*
  * Returns the Window's current position
  */
-BG::Vector2i BG::Window::getPosition() const
+BG::Vector2i BG::Window::position() const
 {
 	Vector2i position = Vector2i(0, 0);
-	SDL_GetWindowPosition(window, &position.x, &position.y);
+	SDL_GetWindowPosition(window_, &position.x_, &position.y_);
 	return position;
 }
 
@@ -156,18 +156,18 @@ BG::Vector2i BG::Window::getPosition() const
  * \brief Set the Window's size
  * \param size Window size
  */
-void BG::Window::setSize(const Vector2i& size) const
+void BG::Window::set_size(const Vector2i& size) const
 {
-	SDL_SetWindowSize(window, size.x, size.y);
+	SDL_SetWindowSize(window_, size.x_, size.y_);
 }
 
 /*
  * \brief Returns the Window's current size
  */
-BG::Vector2i BG::Window::getSize() const
+BG::Vector2i BG::Window::size() const
 {
 	Vector2i size = Vector2i(0, 0);
-	SDL_GetWindowSize(window, &size.x, &size.y);
+	SDL_GetWindowSize(window_, &size.x_, &size.y_);
 	return size;
 }
 
@@ -175,32 +175,32 @@ BG::Vector2i BG::Window::getSize() const
  * \brief Set the fullscreen state of the Window
  * \brief state fullscreen state
  */
-void BG::Window::setFullscreen(const bool& state) const
+void BG::Window::set_fullscreen(const bool& state) const
 {
-	SDL_SetWindowFullscreen(window, state ? SDL_WINDOW_FULLSCREEN : 0);
+	SDL_SetWindowFullscreen(window_, state ? SDL_WINDOW_FULLSCREEN : 0);
 }
 
 /*
  * \brief Set the Window's title
  * \param title Window title
  */
-void BG::Window::setTitle(const std::string& title) const
+void BG::Window::set_title(const std::string& title) const
 {
-	SDL_SetWindowTitle(window, title.c_str());
+	SDL_SetWindowTitle(window_, title.c_str());
 }
 
 /*
  * \brief Returns a reference to the Window's renderer
  */
-SDL_Renderer* BG::Window::getRenderer() const
+SDL_Renderer* BG::Window::renderer() const
 {
-	return renderer;
+	return renderer_;
 }
 
 /*
  * \brief Returns true if the Window and its renderer initialized successfully
  */
-bool BG::Window::isOpen() const
+bool BG::Window::open() const
 {
-	return window != nullptr && renderer != nullptr;
+	return window_ != nullptr && renderer_ != nullptr;
 }

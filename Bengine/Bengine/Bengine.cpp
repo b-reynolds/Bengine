@@ -1,68 +1,68 @@
-#include "Bengine.h"
+#include "bengine.h"
 #include "Logger.h"
 #include <SDL.h>
 #include <SDL_image.h>
 #include <SDL_mixer.h>
-#include "Game.h"
+#include "game.h"
 
 // Initialize static members
-float BG::Bengine::deltaTime = 0.0f;
+float BG::Bengine::delta_time_ = 0.0f;
 
 /*
  * \brief Initializes Bengine and all of it's dependencies
  */
 bool BG::Bengine::initialize()
 {
-	mouse = Mouse::getInstance();
-	keyboard = Keyboard::getInstance();
+	mouse_ = Mouse::instance();
+	keyboard_ = Keyboard::instance();
 
-	auto logger = Logger::getInstance();
+	auto logger = Logger::instance();
 
 	// Initialize the SDL video subsystem
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 	{
-		logger.log(BG::Logger::ERROR, std::string("Failed to initialize video subsystem (") + SDL_GetError() + ")");
+		logger.log(BG::Logger::kError, std::string("Failed to initialize video subsystem (") + SDL_GetError() + ")");
 		SDL_Quit();
 		return false;
 	}
-	logger.log(BG::Logger::INFO, "Initialized video subsystem");
+	logger.log(BG::Logger::kInfo, "Initialized video subsystem");
 
 	// Initialize SDL_Image
 	if ((IMG_Init(IMG_INIT_PNG) & IMG_INIT_PNG) != IMG_INIT_PNG)
 	{
-		logger.log(BG::Logger::ERROR, std::string("Failed to initialize SDL_Image (") + IMG_GetError() + ")");
+		logger.log(BG::Logger::kError, std::string("Failed to initialize SDL_Image (") + IMG_GetError() + ")");
 		SDL_Quit();
 		IMG_Quit();
 		return false;
 	}
-	logger.log(BG::Logger::INFO, "Initialized SDL_Image");
+	logger.log(BG::Logger::kInfo, "Initialized SDL_Image");
 
 	// Initialize Mix_Init with support for the OGG sound resources
 	int flags = MIX_INIT_OGG;
 	if(Mix_Init(flags != flags))
 	{
-		logger.log(Logger::ERROR, std::string("Failed to initialize SDL_Mix (") + Mix_GetError() + ")");
+		logger.log(Logger::kError, std::string("Failed to initialize SDL_Mix (") + Mix_GetError() + ")");
 		SDL_Quit();
 		IMG_Quit();
 		Mix_Quit();
 		return false;
 	}
-	logger.log(Logger::INFO, "Initialized SDL_Mix");
+	logger.log(Logger::kInfo, "Initialized SDL_Mix");
 
 	if (TTF_Init() != 0)
 	{
-		logger.log(Logger::ERROR, std::string("Failed to initialize SDL_TTF (") + TTF_GetError() + ")");
+		logger.log(Logger::kError, std::string("Failed to initialize SDL_TTF (") + TTF_GetError() + ")");
 		SDL_Quit();
 		IMG_Quit();
 		Mix_Quit();
 		return false;
 	}
-	logger.log(Logger::INFO, "Initialized SDL_TTF");
+	logger.log(Logger::kInfo, "Initialized SDL_TTF");
 
 
-	window = new Window(WIN_TITLE, Vector2u(WIN_WIDTH, WIN_HEIGHT));
+	window_ = new Window(kWinTitle, Vector2u(kWinWidth, kWinHeight));
 
-	if(!window->isOpen())
+	if(!window_->open())
 	{
 		return false;
 	}
@@ -75,17 +75,22 @@ bool BG::Bengine::initialize()
  */
 void BG::Bengine::exit()
 {
-	auto logger = Logger::getInstance();
+	auto logger = Logger::instance();
 
-	window->destroy();
+	window_->destroy();
 
-	logger.log(Logger::INFO, "Unloading Mix_Init");
+	logger.log(Logger::kInfo, "Unloading Mix_Init");
 	Mix_Quit();
-	logger.log(Logger::INFO, "Unloading IMG_Init");
+	logger.log(Logger::kInfo, "Unloading IMG_Init");
 	IMG_Quit();
-	logger.log(Logger::INFO, "Cleaning up SDL subsystems");
+	logger.log(Logger::kInfo, "Cleaning up SDL subsystems");
 	SDL_Quit();
-	logger.log(Logger::INFO, "Exiting application");
+	logger.log(Logger::kInfo, "Exiting application");
+}
+
+float BG::Bengine::delta_time()
+{
+	return delta_time_;
 }
 
 /*
@@ -93,11 +98,11 @@ void BG::Bengine::exit()
  */
 BG::Bengine::Bengine()
 {
-	mouse = nullptr;
-	keyboard = nullptr;
-	window = nullptr;
-	current = 0;
-	last = 0;
+	mouse_ = nullptr;
+	keyboard_ = nullptr;
+	window_ = nullptr;
+	current_ = 0;
+	last_ = 0;
 }
 
 /*
@@ -118,45 +123,45 @@ bool BG::Bengine::run()
 	while (true)
 	{
 		// Swap the high resolution counter buffers
-		last = current;
-		current = SDL_GetPerformanceCounter();
+		last_ = current_;
+		current_ = SDL_GetPerformanceCounter();
 
-		while (SDL_PollEvent(&event))
+		while (SDL_PollEvent(&event_))
 		{
-			switch (event.type)
+			switch (event_.type)
 			{
 				case SDL_QUIT:
 					game.exit();
 					exit();
 					return false;
 				case SDL_MOUSEBUTTONDOWN:
-					mouse->setMouseState(event.button.button, true);
+					mouse_->set_mouse_state(event_.button.button, true);
 					break;
 				case SDL_MOUSEBUTTONUP:
-					mouse->setMouseState(event.button.button, false);
+					mouse_->set_mouse_state(event_.button.button, false);
 					break;
 				case SDL_KEYDOWN:
-					keyboard->setKeyState(event.key.keysym.sym, true);
+					keyboard_->set_key_state(event_.key.keysym.sym, true);
 					break;
 				case SDL_KEYUP:
-					keyboard->setKeyState(event.key.keysym.sym, false);
+					keyboard_->set_key_state(event_.key.keysym.sym, false);
 					break;
 			default: break;
 			}
 		}
 
-		if(!game.run(window))
+		if(!game.run(window_))
 		{
 			exit();
 			return false;
 		}
 
 		// Swap the mouse and keyboard buffers
-		mouse->swapStates();
-		keyboard->swapStates();
+		mouse_->swap_states();
+		keyboard_->swap_states();
 
 		// Calculate delta time
-		deltaTime = (current - last) * 1000 / SDL_GetPerformanceFrequency() * 0.001;
+		delta_time_ = (current_ - last_) * 1000 / SDL_GetPerformanceFrequency() * 0.001;
 	}
 
 	return false;

@@ -1,5 +1,5 @@
 #define USE_MATH_DEFINES
-#include "Math.h"
+#include "math.h"
 #include <SDL_stdinc.h>
 
 float BG::Math::radiansToDegrees(const float& radians)

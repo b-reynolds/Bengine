@@ -1,14 +1,14 @@
 ﻿#include "Text.h"
-#include "Window.h"
-#include "Math.h"
+#include "window.h"
+#include "math.h"
 
 /*
  * \brief Default Constructor
  */
 BG::Text::Text()
 {
-	font = nullptr;
-	window = nullptr;
+	font_ = nullptr;
+	window_ = nullptr;
 }
 
 /*
@@ -19,77 +19,77 @@ BG::Text::Text()
  */
 BG::Text::Text(Font* font, const std::string& text, Window* window)
 {
-	this->font = font;
-	this->text = text;
-	this->window = window;
+	this->font_ = font;
+	this->text_ = text;
+	this->window_ = window;
 }
 
 /*
  * \brief Set the text that is displayed
  * \brief text text to be displayed
  */
-void BG::Text::setText(const std::string& text)
+void BG::Text::set_text(const std::string& text)
 {
-	this->text = text;
+	this->text_ = text;
 }
 
 /*
  * \brief Returns the current text value
  */
-std::string BG::Text::getText() const
+std::string BG::Text::text() const
 {
-	return text;
+	return text_;
 }
 
 /*
  * \brief Set the text Colour
  * \param colour text Colour
  */
-void BG::Text::setColour(const Colour& colour)
+void BG::Text::set_colour(const Colour& colour)
 {
-	this->colour = colour;
+	this->colour_ = colour;
 }
 
 /*
  * \brief Returns the text Colour
  */
-BG::Colour BG::Text::getColour() const
+BG::Colour BG::Text::colour() const
 {
-	return Colour(colour.r, colour.g, colour.b, colour.a);
+	return Colour(colour_.r_, colour_.g_, colour_.b_, colour_.a_);
 }
 
 /* 
  * \brief Set the Text's origin for rendering and rotations
  * \param origin point of origin
  */
-void BG::Text::setOrigin(const Vector2f& origin)
+void BG::Text::set_origin(const Vector2f& origin)
 {
-	this->origin = origin;
+	this->origin_ = origin;
 }
 
 /*
  * \brief Returns the Text's current point of origin for rendering and rotations
  */
-BG::Vector2f BG::Text::getOrigin() const
+BG::Vector2f BG::Text::origin() const
 {
-	return origin;
+	return origin_;
 }
 
 /*
  * Creates and returns a texture ready for rendering 
  */
-BG::Texture* BG::Text::getTexture() const
+BG::Texture* BG::Text::texture() const
 {
 	SDL_Color txtColour;
 
-	txtColour.r = colour.r;
-	txtColour.g = colour.g;
-	txtColour.b = colour.b;
-	txtColour.a = colour.a;
+	txtColour.r = colour_.r_;
+	txtColour.g = colour_.g_;
+	txtColour.b = colour_.b_;
+	txtColour.a = colour_.a_;
 
-	SDL_Surface* surface = TTF_RenderText_Blended(font, text.c_str(), txtColour);
+	SDL_Surface* surface = TTF_RenderText_Blended(font_, text_.c_str(), txtColour);
 
-	SDL_Texture* texture = SDL_CreateTextureFromSurface(window->getRenderer(), surface);
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(window_->renderer(), surface);
 
 	SDL_FreeSurface(surface);
 
@@ -99,19 +99,19 @@ BG::Texture* BG::Text::getTexture() const
 /*
  * Returns a reference to the Text's Transform
  */
-BG::Transform& BG::Text::getTransform() 
+BG::Transform& BG::Text::transform() 
 {
-	return transform;
+	return transform_;
 }
 
-BG::Vector2f BG::Text::rotatePoint(const Vector2f &point, const float &angle)
+BG::Vector2f BG::Text::rotate_point(const Vector2f &point, const float &angle)
 {
 	float theta = Math::degreesToRadians(angle);
 	BG::Vector2f newPoint;
 
 
-	newPoint.x = point.x * cos(theta) - point.y * sin(theta);
-	newPoint.y = point.x * sin(theta) + point.y * cos(theta);
+	newPoint.x_ = point.x_ * cos(theta) - point.y_ * sin(theta);
+	newPoint.y_ = point.x_ * sin(theta) + point.y_ * cos(theta);
 
 	return newPoint;
 
@@ -119,24 +119,24 @@ BG::Vector2f BG::Text::rotatePoint(const Vector2f &point, const float &angle)
 }
 
 
-BG::FloatRect BG::Text::getBounds()
+BG::FloatRect BG::Text::bounds()
 {
 	Vector2i size;
-	Vector2f position = getTransform().getPosition();
-	TTF_SizeText(font, text.c_str(), &size.x, &size.y);
+	Vector2f position = transform().position();
+	TTF_SizeText(font_, text_.c_str(), &size.x_, &size.y_);
 
-	Vector2f topLeft(position.x, position.y);
-	Vector2f topRight(position.x + size.x, position.y);
-	Vector2f bottomLeft(position.x, position.y + size.y);
-	Vector2f bottomRight(position.x + size.x, position.y + size.y);
+	Vector2f topLeft(position.x_, position.y_);
+	Vector2f topRight(position.x_ + size.x_, position.y_);
+	Vector2f bottomLeft(position.x_, position.y_ + size.y_);
+	Vector2f bottomRight(position.x_ + size.x_, position.y_ + size.y_);
 
-	float angle = transform.getRotation();
+	float angle = transform_.rotation();
 
-	topLeft = rotatePoint(topLeft, angle);
-	topRight = rotatePoint(topRight, angle);
-	bottomLeft = rotatePoint(bottomLeft, angle);
-	bottomRight = rotatePoint(bottomRight, angle);
+	topLeft = rotate_point(topLeft, angle);
+	topRight = rotate_point(topRight, angle);
+	bottomLeft = rotate_point(bottomLeft, angle);
+	bottomRight = rotate_point(bottomRight, angle);
 
 
-	return FloatRect(topLeft.x, topLeft.y, topRight.x - topLeft.x, bottomRight.y - topRight.y);
+	return FloatRect(topLeft.x_, topLeft.y_, topRight.x_ - topLeft.x_, bottomRight.y_ - topRight.y_);
 }

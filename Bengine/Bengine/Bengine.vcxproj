@@ -130,42 +130,42 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Audio.cpp" />
-    <ClCompile Include="Bengine.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Keyboard.cpp" />
-    <ClCompile Include="Logger.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Math.cpp" />
-    <ClCompile Include="Mouse.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="Sprite.cpp" />
-    <ClCompile Include="Text.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Transform.cpp" />
-    <ClCompile Include="Window.cpp" />
+    <ClCompile Include="audio.cpp" />
+    <ClCompile Include="bengine.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="game_object.cpp" />
+    <ClCompile Include="keyboard.cpp" />
+    <ClCompile Include="logger.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="math.cpp" />
+    <ClCompile Include="mouse.cpp" />
+    <ClCompile Include="resource_manager.cpp" />
+    <ClCompile Include="sprite.cpp" />
+    <ClCompile Include="text.cpp" />
+    <ClCompile Include="timer.cpp" />
+    <ClCompile Include="transform.cpp" />
+    <ClCompile Include="window.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Audio.h" />
-    <ClInclude Include="Bengine.h" />
-    <ClInclude Include="BengineTypedefs.h" />
-    <ClInclude Include="Colour.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Keyboard.h" />
-    <ClInclude Include="Logger.h" />
-    <ClInclude Include="Math.h" />
-    <ClInclude Include="Mouse.h" />
-    <ClInclude Include="Rectangle.h" />
+    <ClInclude Include="audio.h" />
+    <ClInclude Include="bengine.h" />
+    <ClInclude Include="bengine_typedefs.h" />
+    <ClInclude Include="colour.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="game_object.h" />
+    <ClInclude Include="keyboard.h" />
+    <ClInclude Include="logger.h" />
+    <ClInclude Include="math.h" />
+    <ClInclude Include="mouse.h" />
+    <ClInclude Include="rectangle.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="Sprite.h" />
-    <ClInclude Include="Text.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="Transform.h" />
-    <ClInclude Include="Vector2.h" />
-    <ClInclude Include="Window.h" />
+    <ClInclude Include="resource_manager.h" />
+    <ClInclude Include="sprite.h" />
+    <ClInclude Include="text.h" />
+    <ClInclude Include="timer.h" />
+    <ClInclude Include="transform.h" />
+    <ClInclude Include="vector2.h" />
+    <ClInclude Include="window.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Bengine.rc" />

@@ -1,7 +1,7 @@
 #pragma once
 #include "Audio.h"
-#include "Transform.h"
-#include "Colour.h"
+#include "transform.h"
+#include "colour.h"
 #include <string>
 #include "Rectangle.h"
 
@@ -25,52 +25,52 @@ namespace BG
 		explicit Text(Font* font, const std::string &text, Window* window);
 
 		/* Set the text that is displayed */
-		void setText(const std::string &text);
+		void set_text(const std::string &text);
 		
 		/* Returns the current text value */
-		std::string getText() const;
+		std::string text() const;
 
 		/* Set the text colour */
-		void setColour(const Colour &colour);
+		void set_colour(const Colour &colour);
 		
 		/* Returns the text colour*/
-		Colour getColour() const;
+		Colour colour() const;
 
 		/* Set the Text's origin for rendering and rotation */
-		void setOrigin(const Vector2f &origin);
+		void set_origin(const Vector2f &origin);
 
 		/* Returns the Text's current point of origin for rendering and rotations */
-		Vector2f getOrigin() const;
+		Vector2f origin() const;
 		
 		/* Creates and returns a texture ready for tendering */
-		Texture* getTexture() const;
+		Texture* texture() const;
 
 		/* Returns a reference to the Text's Transform */
-		Transform& getTransform();
+		Transform& transform();
 
-		Vector2f rotatePoint(const Vector2f &point, const float &angle);
+		Vector2f rotate_point(const Vector2f &point, const float &angle);
 
-		FloatRect getBounds();
+		FloatRect bounds();
 
 	private:
 
 		/* Text's current transformation */
-		Transform transform;
+		Transform transform_;
 
 		/* Text's string value */
-		std::string text;
+		std::string text_;
 
 		/* Font the text renders in */
-		Font* font;
+		Font* font_;
 
 		/* Colour the text renders in */
-		Colour colour;
+		Colour colour_;
 
 		/* Window the text renders to */
-		Window* window;
+		Window* window_;
 
 		/* Text's point of origin for rendering and rotations */
-		Vector2f origin;
+		Vector2f origin_;
 
 	};
 

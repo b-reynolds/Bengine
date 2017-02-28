@@ -16,36 +16,36 @@ namespace BG
 	public:
 
 		/* Returns a pointer to the singleton instance of the Keyboard class */
-		static Keyboard* getInstance();
+		static Keyboard* instance();
 
 		/* Set the current state of a key */
-		void setKeyState(const SDL_Keycode &key, const bool &state);
+		void set_key_state(const SDL_Keycode &key, const bool &state);
 
 		/* Returns true if the specified key is currently down */
-		bool isKeyDown(const SDL_Keycode &key);
+		bool key_down(const SDL_Keycode &key);
 
 		/* Returns true if the specified key is currently down and it was up in the previous frame */
-		bool isKeyPressed(const SDL_Keycode &key);
+		bool key_pressed(const SDL_Keycode &key);
 
 		/* Returns true if the specified key is currently up and it was down in the previous frame */
-		bool isKeyReleased(const SDL_Keycode &key);
+		bool key_released(const SDL_Keycode &key);
 
 		/* Returns true if the specified key is up */
-		bool isKeyUp(const SDL_Keycode &key);
+		bool key_up(const SDL_Keycode &key);
 
 		/* Copies the current key state array into the previous key state array */
-		void swapStates();
+		void swap_states();
 
 	private:
 
 		/* Contains the current state of the keyboard */
-		bool keyStates[KEYCODES_MAX] = { false };
+		bool key_states_[KEYCODES_MAX] = { false };
 
 		/* Stores the state of the keyvoard in the previous frame */
-		bool prevKeyStates[KEYCODES_MAX] = { false };
+		bool prev_key_states_[KEYCODES_MAX] = { false };
 
 		/* The singleton class instance */
-		static Keyboard* instance;
+		static Keyboard* instance_;
 
 	};
 }

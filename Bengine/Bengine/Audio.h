@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL_mixer.h>
-#include "BengineTypedefs.h"
+#include "bengine_typedefs.h"
 
 namespace BG
 {
@@ -13,46 +13,46 @@ namespace BG
 	public:
 
 		/* Plays a sound effect file */
-		static void playSoundEffect(SoundEffect* soundEffect, const int &channel, const int &loops, const int &fadeInMilliseconds);
+		static void play_sound_effect(SoundEffect* sound_effect, const int &channel, const int &loops, const int &fade_time);
 
 		/* Returns true if the specified channel is currently playing (ignores volume and pause state) */
-		static bool isChannelPlaying(const int &channel);
+		static bool channel_playing(const int &channel);
 
 		/* Stop all currently playing sound effects on the specified channel */
-		static void stopChannel(const int &channel, const int &fadeOutMilliseconds);
+		static void stop_channel(const int &channel, const int &fade_time);
 
 		/* Set the pause state of the specified channel */
-		static void setChannelPaused(const int &channel, const bool &state);
+		static void set_channel_paused(const int &channel, const bool &state);
 
 		/* Returns true if the specified channel is currently paused */
-		static bool getChannelPaused(const int &channel);
+		static bool channel_paused(const int &channel);
 
 		/* Set the volume level sound effect files are played at on the specified channel (0 - 128) */
-		static void setChannelVolume(const int &channel, int volume);
+		static void set_channel_volume(const int &channel, int volume);
 
 		/* Returns the current volume level of the specified channel */
-		static int getChannelVolume(const int &channel);
+		static int channel_volume(const int &channel);
 
 		/* Plays a music file */
-		static void playMusic(Music* music, const int &loops, const int &fadeInMilliseconds);
+		static void play_music(Music* music, const int &loops, const int &fade_time);
 
 		/* Returns true if music is currently being played (ignores volume and pause state) */
-		static bool isMusicPlaying();
+		static bool music_playing();
 
 		/* Stops all currently playing music */
-		static void stopMusic(const int &fadeOutMilliseconds);
+		static void stop_music(const int &fade_time);
 
 		/* Set the pause state of currently playing music */
-		static void setMusicPaused(const bool &state);
+		static void set_music_paused(const bool &state);
 
 		/* Returns true if music is currently paused */
-		static bool getMusicPaused();
+		static bool music_paused();
 
 		/* Set the volume level music files are played at (0 - 128) */
-		static void setMusicVolume(int volume);
+		static void set_music_volume(int volume);
 
 		/* Returns the current music volume level */
-		static int getMusicVolume();
+		static int music_volume();
 
 	};
 }

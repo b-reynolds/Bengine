@@ -11,15 +11,15 @@ namespace BG
 		Timer();
 		explicit Timer(const int &interval);
 
-		bool hasExpired() const;
+		bool expired() const;
 		void reset();
 
 	private:
 
-		int interval;
-		int lastTick;
+		int interval_;
+		int last_tick_;
 
-		int getTime() const;
+		int time() const;
 
 	};
 

@@ -12,16 +12,16 @@
  */
 BG::Logger::Logger()	
 {
-	severity = SEVERITY_DEFAULT;
-	logMode = LOG_MODE_DEFAULT;
-	logFileName = LOG_FILE_DEFAULT;
-	logDirectory = LOG_DIRECTORY_DEFAULT;
+	severity_ = kSeverityDefault;
+	log_mode_ = kLogModeDefault;
+	log_file_name_ = kLogFileDefault;
+	log_directory_ = kLogDirectoryDefault;
 }
 
 /**
 * \brief Returns a reference to the singleton instance of the Logger class
 */
-BG::Logger& BG::Logger::getInstance()
+BG::Logger& BG::Logger::instance()
 {
 	static Logger instance;
 	return instance;
@@ -29,38 +29,38 @@ BG::Logger& BG::Logger::getInstance()
 
 /**
 * \brief Set the current log mode
-* \param logMode log mode
+* \param log_mode log mode
 */
-void BG::Logger::setLogMode(const LogMode& logMode)
+void BG::Logger::set_log_mode(const LogMode& log_mode)
 {
-	this->logMode = logMode;
+	this->log_mode_ = log_mode;
 }
 
 /**
  * \brief Set the current severity level
  * \param severity severity level
  */
-void BG::Logger::setSeverity(const Severity& severity)
+void BG::Logger::set_severity(const Severity& severity)
 {
-	this->severity = severity;
+	this->severity_ = severity;
 }
 
 /**
 * \brief Set the name of the log file
-* \param fileName name of the log file
+* \param file_name name of the log file
 */
-void BG::Logger::setLogFile(const std::string& fileName)
+void BG::Logger::set_log_file(const std::string& file_name)
 {
-	logFileName = fileName;
+	log_file_name_ = file_name;
 }
 
 /**
 * \brief Set the directory log files are created in
 * \param directory directory
 */
-void BG::Logger::setLogDirectory(const std::string& directory)
+void BG::Logger::set_log_directory(const std::string& directory)
 {
-	logDirectory = directory;
+	log_directory_ = directory;
 }
 
 /**
@@ -71,24 +71,24 @@ void BG::Logger::setLogDirectory(const std::string& directory)
 void BG::Logger::log(const Severity& severity, const std::string& message)
 {
 	// If the severity level of the log is less than our set severity level discontinue
-	if (this->severity < severity)
+	if (this->severity_ < severity)
 	{
 		return;
 	}
 
 	// Format the destination path and output message
-	std::string output = getDateTime("[%d-%m-%Y %H:%M:%S] ") + toString(severity) + ": " + message;
-	std::string destination = logDirectory + "/" + logFileName;
+	std::string output = date_time("[%d-%m-%Y %H:%M:%S] ") + severity_to_string(severity) + ": " + message;
+	std::string destination = log_directory_ + "/" + log_file_name_;
 	
-	if(CreateDirectory(logDirectory.c_str(), nullptr) || GetLastError() == ERROR_ALREADY_EXISTS)
+	if(CreateDirectory(log_directory_.c_str(), nullptr) || GetLastError() == ERROR_ALREADY_EXISTS)
 	{
-		std::fstream file(logDirectory + "/" + logFileName, std::ios::out | std::ios::app);
-		switch (logMode)
+		std::fstream file(log_directory_ + "/" + log_file_name_, std::ios::out | std::ios::app);
+		switch (log_mode_)
 		{
-			case CONSOLE:
+			case kConsole:
 				std::cout << output << std::endl;
 				break;
-			case FILE:
+			case kFile:
 				file << output << std::endl;
 				break;
 			default:
@@ -104,13 +104,13 @@ void BG::Logger::log(const Severity& severity, const std::string& message)
  * \brief Returns the string representation of a severity level
  * \param severity severity level
  */
-std::string BG::Logger::toString(const Severity& severity) const
+std::string BG::Logger::severity_to_string(const Severity& severity) const
 {
 	switch(severity)
 	{
 		case ERROR:
 			return "Error";
-		case DEBUG:
+		case kDebug:
 			return "Debug";
 		default:
 			return "Info";
@@ -121,7 +121,7 @@ std::string BG::Logger::toString(const Severity& severity) const
  * \brief Returns a string containing the system's locale time in the specified format
  * \param format desired format of the time stamp (e.g. D-M-Y H:M:S)
  */
-std::string BG::Logger::getDateTime(const std::string &format) const
+std::string BG::Logger::date_time(const std::string &format) const
 {
 	time_t t = time(nullptr);
 	tm time = *localtime(&t);

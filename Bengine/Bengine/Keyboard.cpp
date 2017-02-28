@@ -1,20 +1,20 @@
-#include "Keyboard.h"
+#include "keyboard.h"
 #include "Logger.h"
 #include <string>
 
 // Initialize static member
-BG::Keyboard* BG::Keyboard::instance = nullptr;
+BG::Keyboard* BG::Keyboard::instance_ = nullptr;
 
 /**
 * \brief Returns a pointer to the singleton instance of the Keyboard class
 */
-BG::Keyboard* BG::Keyboard::getInstance()
+BG::Keyboard* BG::Keyboard::instance()
 {
-	if (instance == nullptr)
+	if (instance_ == nullptr)
 	{
-		instance = new Keyboard();
+		instance_ = new Keyboard();
 	}
-	return instance;
+	return instance_;
 }
 
 /**
@@ -22,13 +22,13 @@ BG::Keyboard* BG::Keyboard::getInstance()
  * \param key keycode to set
  * \param state state of the key
  */
-void BG::Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
+void BG::Keyboard::set_key_state(const SDL_Keycode &key, const bool &state)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return;
-	keyStates[key] = state;
-	if (prevKeyStates[key] != keyStates[key])
+	key_states_[key] = state;
+	if (prev_key_states_[key] != key_states_[key])
 	{
-		Logger::getInstance().log(Logger::DEBUG, std::string("Key (") +
+		Logger::instance().log(Logger::kDebug, std::string("Key (") +
 			std::to_string(key) + "/" + static_cast<char>(key) + ") State: " + (state ? "Down" : "Up"));
 	}
 }
@@ -37,50 +37,50 @@ void BG::Keyboard::setKeyState(const SDL_Keycode &key, const bool &state)
 * \brief Returns true if the specified key is currently down
 * \param key keycode to poll
 */
-bool BG::Keyboard::isKeyDown(const SDL_Keycode &key)
+bool BG::Keyboard::key_down(const SDL_Keycode &key)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
-	return keyStates[key];
+	return key_states_[key];
 }
 
 /**
 * \brief Returns true if the specified key is currently down and it was up in the previous frame
 * \param key The keycode to poll
 */
-bool BG::Keyboard::isKeyPressed(const SDL_Keycode &key)
+bool BG::Keyboard::key_pressed(const SDL_Keycode &key)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
-	return keyStates[key] && !prevKeyStates[key];
+	return key_states_[key] && !prev_key_states_[key];
 }
 
 /**
 * \brief Returns true if the specified key is currently up and it was down in the previous frame
 * \param key keycode to poll
 */
-bool BG::Keyboard::isKeyReleased(const SDL_Keycode &key)
+bool BG::Keyboard::key_released(const SDL_Keycode &key)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
-	return prevKeyStates[key] && !keyStates[key];
+	return prev_key_states_[key] && !key_states_[key];
 }
 
 /**
 * \brief Returns true if the specified key is up
 * \param key keycode to poll
 */
-bool BG::Keyboard::isKeyUp(const SDL_Keycode &key)
+bool BG::Keyboard::key_up(const SDL_Keycode &key)
 {
 	if (key < KEYCODES_MIN || key > KEYCODES_MAX) return false;
-	return !keyStates[key];
+	return !key_states_[key];
 }
 
 /**
  * \brief Copies the current key state array into the previous key state array
  * Allows for comparisons against the last frames key states.
 */
-void BG::Keyboard::swapStates()
+void BG::Keyboard::swap_states()
 {
 	for(auto i = KEYCODES_MIN; i <= KEYCODES_MAX; ++i)
 	{
-		prevKeyStates[i] = keyStates[i];
+		prev_key_states_[i] = key_states_[i];
 	}
 }

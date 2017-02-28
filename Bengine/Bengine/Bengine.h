@@ -1,9 +1,9 @@
 #pragma once
 #include <SDL_stdinc.h>
 #include <SDL.h>
-#include "Mouse.h"
-#include "Keyboard.h"
-#include "Window.h"
+#include "mouse.h"
+#include "keyboard.h"
+#include "window.h"
 
 namespace BG
 {
@@ -12,7 +12,7 @@ namespace BG
 
 	public:
 
-		static float deltaTime;
+		static float delta_time();
 
 		Bengine();
 
@@ -20,17 +20,19 @@ namespace BG
 
 	private:
 		
-		const char* WIN_TITLE = "Bengine";
-		const int WIN_WIDTH = 800;
-		const int WIN_HEIGHT = 600;
+		const char* kWinTitle = "Bengine";
+		const int kWinWidth = 800;
+		const int kWinHeight = 600;
 
-		Mouse* mouse;
-		Keyboard* keyboard;
-		Window* window;
+		static float delta_time_;
 
-		SDL_Event event;
-		Uint64 current;
-		Uint64 last;
+		Mouse* mouse_;
+		Keyboard* keyboard_;
+		Window* window_;
+
+		SDL_Event event_;
+		Uint64 current_;
+		Uint64 last_;
 
 		bool initialize();
 

@@ -1,11 +1,11 @@
-#include "Transform.h"
+#include "transform.h"
 
 /*
  * \brief Default Constructor
  */
 BG::Transform::Transform()
 {
-	rotation = 0.0f;
+	rotation_ = 0.0f;
 }
 
 /*
@@ -14,17 +14,17 @@ BG::Transform::Transform()
  */
 BG::Transform::Transform(const Vector2f& position)
 {
-	this->position = position;
-	rotation = 0.0f;
+	this->position_ = position;
+	rotation_ = 0.0f;
 }
 
 /*
  * \brief Set the Transform's position
  * \param position position
  */
-void BG::Transform::setPosition(const Vector2f& position)
+void BG::Transform::set_position(const Vector2f& position)
 {
-	this->position = position;
+	this->position_ = position;
 }
 
 /*
@@ -32,18 +32,18 @@ void BG::Transform::setPosition(const Vector2f& position)
 * \param x x position
 * \param y y position
 */
-void BG::Transform::setPosition(const float& x, const float& y)
+void BG::Transform::set_position(const float& x, const float& y)
 {
-	position.x = x;
-	position.y = y;
+	position_.x_ = x;
+	position_.y_ = y;
 }
 
 /*
  * \brief Returns the Transform's current position
  */
-BG::Vector2f BG::Transform::getPosition() const
+BG::Vector2f BG::Transform::position() const
 {
-	return position;
+	return position_;
 }
 
 /*
@@ -52,7 +52,7 @@ BG::Vector2f BG::Transform::getPosition() const
  */
 void BG::Transform::move(const Vector2f& velocity)
 {
-	position += velocity;
+	position_ += velocity;
 }
 
 /*
@@ -62,25 +62,25 @@ void BG::Transform::move(const Vector2f& velocity)
 */
 void BG::Transform::move(const float& x, const float& y)
 {
-	position.x += x;
-	position.y += y;
+	position_.x_ += x;
+	position_.y_ += y;
 }
 
 /*
  * \brief Set the Transform's rotation (degrees)
  * \param angle angle (degrees)
  */
-void BG::Transform::setRotation(const float& angle)
+void BG::Transform::set_rotation(const float& angle)
 {
-	rotation = angle;
+	rotation_ = angle;
 }
 
 /*
  * \brief Returns the Transform's current rotation
  */
-float BG::Transform::getRotation() const
+float BG::Transform::rotation() const
 {
-	return rotation;
+	return rotation_;
 }
 
 /*
@@ -89,5 +89,5 @@ float BG::Transform::getRotation() const
  */
 void BG::Transform::rotate(const float& angle)
 {
-	rotation += angle;
+	rotation_ += angle;
 }

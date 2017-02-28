@@ -1,5 +1,5 @@
 #pragma once
-#include "Vector2.h"
+#include "vector2.h"
 
 namespace BG
 {
@@ -7,14 +7,14 @@ namespace BG
 	struct Rectangle
 	{
 
-		T left;
-		T top;
-		T width;
-		T height;
+		T left_;
+		T top_;
+		T width_;
+		T height_;
 
-		Rectangle() : left(0), top(0), width(0), height(0) {}
-		Rectangle(const T &left, const T &top, const T &width, const T &height) : left(left), top(top), width(width), height(height) {}
-		Rectangle(const Vector2<T> &position, const Vector2<T> &size) : left(position.x), top(position.y), width(size.x), height(size.y) {}
+		Rectangle() : left_(0), top_(0), width_(0), height_(0) {}
+		Rectangle(const T &left, const T &top, const T &width, const T &height) : left_(left), top_(top), width_(width), height_(height) {}
+		Rectangle(const Vector2<T> &position, const Vector2<T> &size) : left_(position.x_), top_(position.y_), width_(size.x_), height_(size.y_) {}
 
 	};
 	
