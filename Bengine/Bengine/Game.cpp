@@ -1,6 +1,15 @@
 #include "game.h"
 #include "bengine.h"
 #include "resource_manager.h"
+#include "math.h"
+#include "World.h"
+#include <winioctl.h>
+
+Game::Game()
+{
+	window_ = nullptr;
+	initialized_ = false;
+}
 
 bool Game::run(BG::Window* window)
 {
@@ -46,16 +55,29 @@ bool Game::initialize()
 	txt_my_other_text_.set_colour(BG::kClrWhite);
 	txt_my_other_text_.transform().set_position(BG::Vector2f(450, 250));
 
+
 	return true;
 }
 
 bool Game::update()
 {
+	//BG::World::instance()->Step(1 / 60.0f, 8, 3);
+
 	obj_logo.sprite()->set_origin(obj_logo.sprite()->size() / 2);
 	obj_logo.transform()->rotate(1);
 
 	txt_my_text_.transform().rotate(1);
 
+	auto mouse = BG::Mouse::instance();
+
+	if(mouse->button_down(3))
+	{
+
+	}
+	else if(mouse->button_down(1))
+	{
+
+	}
 
 	BG::Vector2f logoPosition = obj_logo.transform()->position();
 	auto keyboard = BG::Keyboard::instance();
@@ -88,14 +110,32 @@ void Game::draw()
 	// Clear the renderer
 	window_->clear();
 
-	window_->draw(obj_logo);
+	//window_->draw(obj_logo);
 
-	window_->draw(txt_my_text_);
-	window_->draw(txt_my_other_text_);
+	//window_->draw(txt_my_text_);
+	//window_->draw(txt_my_other_text_);
 
-	window_->draw(txt_my_other_text_.bounds(), BG::kClrRed);
-	window_->draw(txt_my_text_.bounds(), BG::kClrRed);
-	window_->draw(obj_logo.bounds(), BG::kClrRed);
+	//window_->draw(txt_my_other_text_.bounds(), BG::kClrRed);
+	//window_->draw(txt_my_text_.bounds(), BG::kClrRed);
+	//window_->draw(obj_logo.bounds(), BG::kClrRed);
+
+	//for(b2Body* body_iterator = BG::World::instance()->GetBodyList(); body_iterator != nullptr; body_iterator = body_iterator->GetNext())
+	//{
+	//	auto game_object = reinterpret_cast<BG::GameObject*>(body_iterator->GetUserData());
+	//	
+	//	game_object->transform()->set_position(30 * body_iterator->GetPosition().x, 30 * body_iterator->GetPosition().y);
+
+	//	auto sprite = game_object->sprite();
+
+	//	auto origin_temp = sprite->origin();
+	//	
+	//	game_object->sprite()->set_origin(BG::Vector2f(sprite->size().x_ / 2, sprite->size().y_ / 2));
+	//	game_object->transform()->set_rotation(BG::Math::radiansToDegrees(body_iterator->GetAngle()));
+
+	//	window_->draw(*game_object);
+
+	//	game_object->sprite()->set_origin(origin_temp); // ???
+	//}
 
 	// Update the screen
 	window_->display();

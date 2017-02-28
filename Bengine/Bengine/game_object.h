@@ -2,6 +2,7 @@
 #include "Vector2.h"
 #include "transform.h"
 #include "sprite.h"
+#include <Dynamics/b2Body.h>
 
 namespace BG
 {
@@ -24,6 +25,7 @@ namespace BG
 			
 	protected:
 
+		b2BodyDef* body_def_;
 		Transform transform_;
 		Sprite* sprite_;
 

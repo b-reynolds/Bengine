@@ -16,76 +16,79 @@
     <Filter Include="Game">
       <UniqueIdentifier>{57c48f0b-3a70-4ee7-a7f5-eb73331b7dd8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Debugging">
-      <UniqueIdentifier>{2fd5121f-ed02-4da1-ab93-58615715bd6c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Data Types">
-      <UniqueIdentifier>{f2d13bbb-e647-4163-9c29-00db39725260}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Input Management">
-      <UniqueIdentifier>{8bb719f5-de4a-47aa-9c6b-01f5230ecaf7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Multimedia">
-      <UniqueIdentifier>{434fb5a9-9ffb-49e9-be06-65f3b3e320aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Management">
-      <UniqueIdentifier>{a2797a25-846d-40cd-9238-3e8f0e1e4aec}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Rendering">
-      <UniqueIdentifier>{96a38040-1362-4d96-8774-135dcdd25ef6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Engine">
       <UniqueIdentifier>{0fd8146d-bca5-4836-bcb4-7e53820ed6a2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Util">
+    <Filter Include="Engine\Debugging">
+      <UniqueIdentifier>{2fd5121f-ed02-4da1-ab93-58615715bd6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Data Types">
+      <UniqueIdentifier>{f2d13bbb-e647-4163-9c29-00db39725260}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Input Management">
+      <UniqueIdentifier>{8bb719f5-de4a-47aa-9c6b-01f5230ecaf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Multimedia">
+      <UniqueIdentifier>{434fb5a9-9ffb-49e9-be06-65f3b3e320aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Rendering">
+      <UniqueIdentifier>{96a38040-1362-4d96-8774-135dcdd25ef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Resource Management">
+      <UniqueIdentifier>{a2797a25-846d-40cd-9238-3e8f0e1e4aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util">
       <UniqueIdentifier>{ab46b424-373c-4376-a245-eef60eb5c297}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="resource_manager.cpp">
-      <Filter>Resource Management</Filter>
+      <Filter>Engine\Resource Management</Filter>
     </ClCompile>
     <ClCompile Include="sprite.cpp">
-      <Filter>Rendering</Filter>
+      <Filter>Engine\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="window.cpp">
-      <Filter>Rendering</Filter>
+      <Filter>Engine\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="audio.cpp">
-      <Filter>Multimedia</Filter>
+      <Filter>Engine\Multimedia</Filter>
     </ClCompile>
     <ClCompile Include="keyboard.cpp">
-      <Filter>Input Management</Filter>
+      <Filter>Engine\Input Management</Filter>
     </ClCompile>
     <ClCompile Include="mouse.cpp">
-      <Filter>Input Management</Filter>
+      <Filter>Engine\Input Management</Filter>
     </ClCompile>
     <ClCompile Include="logger.cpp">
-      <Filter>Debugging</Filter>
+      <Filter>Engine\Debugging</Filter>
     </ClCompile>
     <ClCompile Include="bengine.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
     <ClCompile Include="game_object.cpp">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClCompile>
     <ClCompile Include="text.cpp">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClCompile>
     <ClCompile Include="timer.cpp">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClCompile>
     <ClCompile Include="transform.cpp">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClCompile>
     <ClCompile Include="game.cpp">
       <Filter>Game</Filter>
     </ClCompile>
     <ClCompile Include="math.cpp">
-      <Filter>Util</Filter>
+      <Filter>Engine\Util</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="world.cpp">
+      <Filter>Engine\Data Types</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -93,25 +96,25 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource_manager.h">
-      <Filter>Resource Management</Filter>
+      <Filter>Engine\Resource Management</Filter>
     </ClInclude>
     <ClInclude Include="sprite.h">
-      <Filter>Rendering</Filter>
+      <Filter>Engine\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="window.h">
-      <Filter>Rendering</Filter>
+      <Filter>Engine\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="audio.h">
-      <Filter>Multimedia</Filter>
+      <Filter>Engine\Multimedia</Filter>
     </ClInclude>
     <ClInclude Include="keyboard.h">
-      <Filter>Input Management</Filter>
+      <Filter>Engine\Input Management</Filter>
     </ClInclude>
     <ClInclude Include="mouse.h">
-      <Filter>Input Management</Filter>
+      <Filter>Engine\Input Management</Filter>
     </ClInclude>
     <ClInclude Include="logger.h">
-      <Filter>Debugging</Filter>
+      <Filter>Engine\Debugging</Filter>
     </ClInclude>
     <ClInclude Include="bengine.h">
       <Filter>Engine</Filter>
@@ -120,31 +123,34 @@
       <Filter>Engine</Filter>
     </ClInclude>
     <ClInclude Include="colour.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="game_object.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="rectangle.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="text.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="timer.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="transform.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="vector2.h">
-      <Filter>Data Types</Filter>
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
     <ClInclude Include="game.h">
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="math.h">
-      <Filter>Util</Filter>
+      <Filter>Engine\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="world.h">
+      <Filter>Engine\Data Types</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -4,10 +4,14 @@
 #include "game_object.h"
 #include "Text.h"
 
+#include "Box2D.h"
+
 class Game
 {
 
 public:
+
+	Game();
 
 	bool run(BG::Window* window);
 
