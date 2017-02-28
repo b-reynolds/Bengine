@@ -1,7 +1,7 @@
 #include "game_object.h"
 #include "World.h"
-#include "Box2D/Collision/Shapes/b2PolygonShape.h"
-#include "Box2D/Dynamics/b2Fixture.h"
+
+#include "Box2D/Box2D.h"
 
 BG::GameObject::GameObject()
 {
@@ -13,29 +13,26 @@ BG::GameObject::GameObject(Sprite* sprite, const Vector2f& position)
 {
 	sprite_ = sprite;
 	transform_.set_position(position);
-	body_def_ = nullptr;
 
-	//body_def_ = new b2BodyDef();
+	body_def_ = new b2BodyDef();
+	body_def_->type = b2_dynamicBody;
+	body_def_->userData = this;
 
-	//body_def_->type = b2_dynamicBody;
+	body_ = World::instance()->CreateBody(body_def_);
 
-	//body_def_->userData = this;
-	//World::instance()->CreateBody(body_def_);
+	b2PolygonShape shape;
 
-	//b2Body* body = World::instance()->CreateBody(body_def_);
+	auto sprite_size = sprite->size();
 
+	shape.SetAsBox(sprite_size.x_ / 2 / 30.0f, sprite_size.y_ / 2 / 30.0f);
 
-	//b2PolygonShape shape;
+	b2FixtureDef fixture_def;
 
-	//shape.SetAsBox(sprite->size().x_ / 2 / 30.0f, sprite->size().y_ / 2 / 30.0f);
-	//b2FixtureDef fixture_def;
+	fixture_def.density = 1.0f;
+	fixture_def.friction = 0.7f;
+	fixture_def.shape = &shape;
 
-	//fixture_def.density = 1.0f;
-	//fixture_def.friction = 0.7f;
-	//fixture_def.shape = &shape;
-	//body->CreateFixture(&fixture_def);
-
-
+	body_->CreateFixture(&fixture_def);
 }
 
 BG::Transform* BG::GameObject::transform()

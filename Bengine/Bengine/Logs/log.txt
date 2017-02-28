@@ -12416,3 +12416,265 @@
 [28-02-2017 11:32:42] Info: Unloading IMG_Init
 [28-02-2017 11:32:42] Info: Cleaning up SDL subsystems
 [28-02-2017 11:32:42] Info: Exiting application
+[28-02-2017 13:58:38] Info: Initialized video subsystem
+[28-02-2017 13:58:38] Info: Initialized SDL_Image
+[28-02-2017 13:58:38] Info: Initialized SDL_Mix
+[28-02-2017 13:58:38] Info: Initialized SDL_TTF
+[28-02-2017 13:58:39] Info: Created window
+[28-02-2017 13:58:39] Info: Created renderer
+[28-02-2017 13:58:39] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 13:58:39] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 13:58:39] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 13:58:39] Debug: Mouse Position: 147, 0
+[28-02-2017 13:58:39] Debug: Mouse Position: 182, 2
+[28-02-2017 13:58:39] Debug: Mouse Position: 202, 5
+[28-02-2017 13:58:39] Debug: Mouse Position: 219, 7
+[28-02-2017 13:58:39] Debug: Mouse Position: 228, 11
+[28-02-2017 13:58:39] Debug: Mouse Position: 233, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 238, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 249, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 259, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 269, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 289, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 321, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 381, 12
+[28-02-2017 13:58:40] Debug: Mouse Position: 472, 4
+[28-02-2017 13:58:40] Debug: Mouse Position: 663, 0
+[28-02-2017 13:58:40] Info: Destroying window
+[28-02-2017 13:58:40] Info: Destroying renderer and freeing associated textures
+[28-02-2017 13:58:40] Info: Unloading Mix_Init
+[28-02-2017 13:58:40] Info: Unloading IMG_Init
+[28-02-2017 13:58:40] Info: Cleaning up SDL subsystems
+[28-02-2017 13:58:40] Info: Exiting application
+[28-02-2017 13:59:19] Info: Initialized video subsystem
+[28-02-2017 13:59:19] Info: Initialized SDL_Image
+[28-02-2017 13:59:19] Info: Initialized SDL_Mix
+[28-02-2017 13:59:19] Info: Initialized SDL_TTF
+[28-02-2017 13:59:19] Info: Created window
+[28-02-2017 13:59:19] Info: Created renderer
+[28-02-2017 13:59:19] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 13:59:19] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 13:59:19] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 13:59:19] Debug: Mouse Position: 509, 202
+[28-02-2017 13:59:24] Debug: Mouse Position: 504, 192
+[28-02-2017 13:59:24] Debug: Mouse Position: 482, 167
+[28-02-2017 13:59:24] Debug: Mouse Position: 472, 159
+[28-02-2017 13:59:24] Debug: Mouse Position: 470, 153
+[28-02-2017 13:59:24] Debug: Mouse Position: 470, 145
+[28-02-2017 13:59:24] Debug: Mouse Position: 470, 137
+[28-02-2017 13:59:24] Debug: Mouse Position: 470, 130
+[28-02-2017 13:59:24] Debug: Mouse Position: 470, 124
+[28-02-2017 13:59:24] Debug: Mouse Position: 470, 116
+[28-02-2017 13:59:24] Debug: Mouse Position: 472, 109
+[28-02-2017 13:59:24] Debug: Mouse Position: 473, 106
+[28-02-2017 13:59:24] Debug: Mouse Position: 474, 103
+[28-02-2017 13:59:24] Debug: Mouse Position: 479, 92
+[28-02-2017 13:59:24] Debug: Mouse Position: 488, 78
+[28-02-2017 13:59:24] Debug: Mouse Position: 499, 59
+[28-02-2017 13:59:24] Debug: Mouse Position: 531, 38
+[28-02-2017 13:59:24] Debug: Mouse Position: 562, 30
+[28-02-2017 13:59:24] Debug: Mouse Position: 594, 27
+[28-02-2017 13:59:24] Debug: Mouse Position: 626, 21
+[28-02-2017 13:59:24] Debug: Mouse Position: 649, 19
+[28-02-2017 13:59:24] Debug: Mouse Position: 664, 14
+[28-02-2017 13:59:24] Debug: Mouse Position: 667, 12
+[28-02-2017 13:59:24] Debug: Mouse Position: 668, 12
+[28-02-2017 13:59:24] Debug: Mouse Position: 669, 10
+[28-02-2017 13:59:24] Debug: Mouse Position: 670, 9
+[28-02-2017 13:59:24] Debug: Mouse Position: 671, 8
+[28-02-2017 13:59:24] Debug: Mouse Position: 679, 5
+[28-02-2017 13:59:24] Debug: Mouse Position: 710, 0
+[28-02-2017 13:59:25] Info: Destroying window
+[28-02-2017 13:59:25] Info: Destroying renderer and freeing associated textures
+[28-02-2017 13:59:25] Info: Unloading Mix_Init
+[28-02-2017 13:59:25] Info: Unloading IMG_Init
+[28-02-2017 13:59:25] Info: Cleaning up SDL subsystems
+[28-02-2017 13:59:25] Info: Exiting application
+[28-02-2017 13:59:46] Info: Initialized video subsystem
+[28-02-2017 13:59:46] Info: Initialized SDL_Image
+[28-02-2017 13:59:46] Info: Initialized SDL_Mix
+[28-02-2017 13:59:46] Info: Initialized SDL_TTF
+[28-02-2017 13:59:46] Info: Created window
+[28-02-2017 13:59:46] Info: Created renderer
+[28-02-2017 13:59:46] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 13:59:46] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 13:59:46] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:00:42] Info: Initialized video subsystem
+[28-02-2017 14:00:42] Info: Initialized SDL_Image
+[28-02-2017 14:00:42] Info: Initialized SDL_Mix
+[28-02-2017 14:00:42] Info: Initialized SDL_TTF
+[28-02-2017 14:00:42] Info: Created window
+[28-02-2017 14:00:42] Info: Created renderer
+[28-02-2017 14:00:42] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:00:42] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:00:42] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:01:28] Info: Initialized video subsystem
+[28-02-2017 14:01:28] Info: Initialized SDL_Image
+[28-02-2017 14:01:28] Info: Initialized SDL_Mix
+[28-02-2017 14:01:28] Info: Initialized SDL_TTF
+[28-02-2017 14:01:28] Info: Created window
+[28-02-2017 14:01:28] Info: Created renderer
+[28-02-2017 14:01:28] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:01:28] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:01:28] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:01:47] Info: Initialized video subsystem
+[28-02-2017 14:01:47] Info: Initialized SDL_Image
+[28-02-2017 14:01:47] Info: Initialized SDL_Mix
+[28-02-2017 14:01:47] Info: Initialized SDL_TTF
+[28-02-2017 14:01:47] Info: Created window
+[28-02-2017 14:01:47] Info: Created renderer
+[28-02-2017 14:01:47] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:01:47] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:01:47] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:04:23] Info: Initialized video subsystem
+[28-02-2017 14:04:23] Info: Initialized SDL_Image
+[28-02-2017 14:04:23] Info: Initialized SDL_Mix
+[28-02-2017 14:04:23] Info: Initialized SDL_TTF
+[28-02-2017 14:04:23] Info: Created window
+[28-02-2017 14:04:23] Info: Created renderer
+[28-02-2017 14:04:23] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:04:23] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:04:23] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:04:44] Info: Initialized video subsystem
+[28-02-2017 14:04:44] Info: Initialized SDL_Image
+[28-02-2017 14:04:44] Info: Initialized SDL_Mix
+[28-02-2017 14:04:44] Info: Initialized SDL_TTF
+[28-02-2017 14:04:44] Info: Created window
+[28-02-2017 14:04:44] Info: Created renderer
+[28-02-2017 14:04:44] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:04:44] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:04:44] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:06:34] Info: Initialized video subsystem
+[28-02-2017 14:06:34] Info: Initialized SDL_Image
+[28-02-2017 14:06:34] Info: Initialized SDL_Mix
+[28-02-2017 14:06:34] Info: Initialized SDL_TTF
+[28-02-2017 14:06:34] Info: Created window
+[28-02-2017 14:06:34] Info: Created renderer
+[28-02-2017 14:06:34] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:06:34] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:06:34] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:07:01] Info: Initialized video subsystem
+[28-02-2017 14:07:01] Info: Initialized SDL_Image
+[28-02-2017 14:07:01] Info: Initialized SDL_Mix
+[28-02-2017 14:07:01] Info: Initialized SDL_TTF
+[28-02-2017 14:07:01] Info: Created window
+[28-02-2017 14:07:01] Info: Created renderer
+[28-02-2017 14:07:01] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:07:01] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:07:01] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:07:05] Debug: Mouse Position: 559, 2
+[28-02-2017 14:07:05] Debug: Mouse Position: 643, 2
+[28-02-2017 14:07:05] Debug: Mouse Position: 714, 1
+[28-02-2017 14:07:05] Debug: Mouse Position: 785, 0
+[28-02-2017 14:07:06] Info: Destroying window
+[28-02-2017 14:07:06] Info: Destroying renderer and freeing associated textures
+[28-02-2017 14:07:06] Info: Unloading Mix_Init
+[28-02-2017 14:07:06] Info: Unloading IMG_Init
+[28-02-2017 14:07:06] Info: Cleaning up SDL subsystems
+[28-02-2017 14:07:06] Info: Exiting application
+[28-02-2017 14:08:07] Info: Initialized video subsystem
+[28-02-2017 14:08:07] Info: Initialized SDL_Image
+[28-02-2017 14:08:07] Info: Initialized SDL_Mix
+[28-02-2017 14:08:07] Info: Initialized SDL_TTF
+[28-02-2017 14:08:07] Info: Created window
+[28-02-2017 14:08:08] Info: Created renderer
+[28-02-2017 14:08:08] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:08:08] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:08:08] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:10:53] Info: Initialized video subsystem
+[28-02-2017 14:10:53] Info: Initialized SDL_Image
+[28-02-2017 14:10:53] Info: Initialized SDL_Mix
+[28-02-2017 14:10:53] Info: Initialized SDL_TTF
+[28-02-2017 14:10:53] Info: Created window
+[28-02-2017 14:10:53] Info: Created renderer
+[28-02-2017 14:10:53] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:10:53] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:10:53] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:11:14] Info: Initialized video subsystem
+[28-02-2017 14:11:14] Info: Initialized SDL_Image
+[28-02-2017 14:11:14] Info: Initialized SDL_Mix
+[28-02-2017 14:11:14] Info: Initialized SDL_TTF
+[28-02-2017 14:11:15] Info: Created window
+[28-02-2017 14:11:15] Info: Created renderer
+[28-02-2017 14:11:15] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:11:15] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:11:15] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:12:38] Info: Initialized video subsystem
+[28-02-2017 14:12:38] Info: Initialized SDL_Image
+[28-02-2017 14:12:38] Info: Initialized SDL_Mix
+[28-02-2017 14:12:38] Info: Initialized SDL_TTF
+[28-02-2017 14:12:38] Info: Created window
+[28-02-2017 14:12:38] Info: Created renderer
+[28-02-2017 14:12:38] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:12:38] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:12:38] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:12:53] Info: Initialized video subsystem
+[28-02-2017 14:12:53] Info: Initialized SDL_Image
+[28-02-2017 14:12:53] Info: Initialized SDL_Mix
+[28-02-2017 14:12:53] Info: Initialized SDL_TTF
+[28-02-2017 14:12:53] Info: Created window
+[28-02-2017 14:12:53] Info: Created renderer
+[28-02-2017 14:12:53] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:12:53] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:12:53] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:13:56] Info: Initialized video subsystem
+[28-02-2017 14:13:56] Info: Initialized SDL_Image
+[28-02-2017 14:13:56] Info: Initialized SDL_Mix
+[28-02-2017 14:13:56] Info: Initialized SDL_TTF
+[28-02-2017 14:13:56] Info: Created window
+[28-02-2017 14:13:56] Info: Created renderer
+[28-02-2017 14:13:56] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:13:56] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:13:56] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:14:10] Info: Initialized video subsystem
+[28-02-2017 14:14:10] Info: Initialized SDL_Image
+[28-02-2017 14:14:10] Info: Initialized SDL_Mix
+[28-02-2017 14:14:10] Info: Initialized SDL_TTF
+[28-02-2017 14:14:10] Info: Created window
+[28-02-2017 14:14:10] Info: Created renderer
+[28-02-2017 14:14:10] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:14:10] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:14:10] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:18:09] Info: Initialized video subsystem
+[28-02-2017 14:18:09] Info: Initialized SDL_Image
+[28-02-2017 14:18:09] Info: Initialized SDL_Mix
+[28-02-2017 14:18:09] Info: Initialized SDL_TTF
+[28-02-2017 14:18:09] Info: Created window
+[28-02-2017 14:18:09] Info: Created renderer
+[28-02-2017 14:18:09] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:18:09] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:18:09] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:19:11] Info: Initialized video subsystem
+[28-02-2017 14:19:11] Info: Initialized SDL_Image
+[28-02-2017 14:19:11] Info: Initialized SDL_Mix
+[28-02-2017 14:19:11] Info: Initialized SDL_TTF
+[28-02-2017 14:19:11] Info: Created window
+[28-02-2017 14:19:11] Info: Created renderer
+[28-02-2017 14:19:11] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:22:10] Info: Initialized video subsystem
+[28-02-2017 14:22:10] Info: Initialized SDL_Image
+[28-02-2017 14:22:10] Info: Initialized SDL_Mix
+[28-02-2017 14:22:10] Info: Initialized SDL_TTF
+[28-02-2017 14:22:10] Info: Created window
+[28-02-2017 14:22:10] Info: Created renderer
+[28-02-2017 14:22:10] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:22:10] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:22:10] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:23:37] Info: Initialized video subsystem
+[28-02-2017 14:23:37] Info: Initialized SDL_Image
+[28-02-2017 14:23:37] Info: Initialized SDL_Mix
+[28-02-2017 14:23:37] Info: Initialized SDL_TTF
+[28-02-2017 14:23:37] Info: Created window
+[28-02-2017 14:23:37] Info: Created renderer
+[28-02-2017 14:23:37] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:23:37] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:23:37] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:23:58] Info: Initialized video subsystem
+[28-02-2017 14:23:58] Info: Initialized SDL_Image
+[28-02-2017 14:23:58] Info: Initialized SDL_Mix
+[28-02-2017 14:23:58] Info: Initialized SDL_TTF
+[28-02-2017 14:23:58] Info: Created window
+[28-02-2017 14:23:58] Info: Created renderer
+[28-02-2017 14:23:58] Info: Loaded "Images/Icon/bengine.fw.png"
+[28-02-2017 14:23:58] Info: Loaded "Fonts/Horta.ttf"
+[28-02-2017 14:23:58] Info: Loaded "Fonts/Horta.ttf"

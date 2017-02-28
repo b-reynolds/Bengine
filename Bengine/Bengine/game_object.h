@@ -26,6 +26,7 @@ namespace BG
 	protected:
 
 		b2BodyDef* body_def_;
+		b2Body* body_;
 		Transform transform_;
 		Sprite* sprite_;
 

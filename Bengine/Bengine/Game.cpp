@@ -3,7 +3,6 @@
 #include "resource_manager.h"
 #include "math.h"
 #include "World.h"
-#include <winioctl.h>
 
 Game::Game()
 {
@@ -110,18 +109,37 @@ void Game::draw()
 	// Clear the renderer
 	window_->clear();
 
-	//window_->draw(obj_logo);
+	window_->draw(obj_logo);
 
-	//window_->draw(txt_my_text_);
-	//window_->draw(txt_my_other_text_);
+	window_->draw(txt_my_text_);
+	window_->draw(txt_my_other_text_);
 
-	//window_->draw(txt_my_other_text_.bounds(), BG::kClrRed);
-	//window_->draw(txt_my_text_.bounds(), BG::kClrRed);
-	//window_->draw(obj_logo.bounds(), BG::kClrRed);
+	window_->draw(txt_my_other_text_.bounds(), BG::kClrRed);
+	window_->draw(txt_my_text_.bounds(), BG::kClrRed);
+	window_->draw(obj_logo.bounds(), BG::kClrRed);
 
-	//for(b2Body* body_iterator = BG::World::instance()->GetBodyList(); body_iterator != nullptr; body_iterator = body_iterator->GetNext())
+	b2Body* body = BG::World::instance()->GetBodyList();
+
+	while(body != nullptr)
+	{
+		BG::GameObject* game_object = static_cast<BG::GameObject*>(body->GetUserData());
+
+		if(game_object != nullptr)
+		{
+			window_->draw(*game_object);
+		}
+
+		body = body->GetNext();
+	}
+
+	//b2World* world = BG::World::instance();
+
+	//int t = 0;
+	//for(b2Body* body_iterator = world->GetBodyList(); body_iterator != nullptr; body_iterator = body_iterator->GetNext())
 	//{
-	//	auto game_object = reinterpret_cast<BG::GameObject*>(body_iterator->GetUserData());
+	//	
+	//	printf("BODY %d\n", ++t);
+	//	auto game_object = static_cast<BG::GameObject*>(body_iterator->GetUserData());
 	//	
 	//	game_object->transform()->set_position(30 * body_iterator->GetPosition().x, 30 * body_iterator->GetPosition().y);
 
@@ -137,7 +155,6 @@ void Game::draw()
 	//	game_object->sprite()->set_origin(origin_temp); // ???
 	//}
 
-	// Update the screen
 	window_->display();
 }
 
