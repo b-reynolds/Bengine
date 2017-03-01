@@ -24,7 +24,8 @@ BG::Transform::Transform(const Vector2f& position)
  */
 void BG::Transform::set_position(const Vector2f& position)
 {
-	this->position_ = position;
+	position_ = position;
+	position_ -= origin_;
 }
 
 /*
@@ -36,6 +37,7 @@ void BG::Transform::set_position(const float& x, const float& y)
 {
 	position_.x_ = x;
 	position_.y_ = y;
+	position_ -= origin_; 
 }
 
 /*
@@ -90,4 +92,14 @@ float BG::Transform::rotation() const
 void BG::Transform::rotate(const float& angle)
 {
 	rotation_ += angle;
+}
+
+void BG::Transform::set_origin(const Vector2f& origin)
+{
+	origin_ = origin;
+}
+
+BG::Vector2f BG::Transform::origin() const
+{
+	return origin_;
 }

@@ -3,6 +3,7 @@
 #include "resource_manager.h"
 #include "math.h"
 #include "World.h"
+#include "Box2D/Common/b2Draw.h"
 
 Game::Game()
 {
@@ -33,73 +34,47 @@ bool Game::run(BG::Window* window)
 
 bool Game::initialize()
 {
-	BG::Texture* txtrLogo = BG::ResourceManager::instance()->texture("Images/Icon/bengine.fw.png", window_);
-	spr_logo_ = BG::Sprite(txtrLogo, window_);
+	BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/box.png", window_), window_), BG::Vector2f(0, 0));
+	obj_block->init_physics(b2_dynamicBody, 0.5f);
+	game_objects.push_back(obj_block);
 
-	BG::Vector2f logoSize = spr_logo_.size();
-	BG::Vector2i windowSize = window_->size();
-
-	obj_logo = BG::GameObject(&spr_logo_, BG::Vector2f(windowSize.x_ / 2 - logoSize.x_ / 2,
-		windowSize.y_ / 2 - logoSize.y_ / 2));
-
-	txt_my_other_text_ = BG::Text(BG::ResourceManager::instance()->font("Fonts/Horta.ttf", 64), "Hey", window_);
-
-	txt_my_text_ = BG::Text(BG::ResourceManager::instance()->font("Fonts/Horta.ttf", 32), "Hi", window_);
-
-
-	txt_my_text_.set_colour(BG::kClrWhite);
-	txt_my_text_.set_text("Hello World");
-	txt_my_text_.transform().set_position(BG::Vector2f(250, 250));
-
-	txt_my_other_text_.set_colour(BG::kClrWhite);
-	txt_my_other_text_.transform().set_position(BG::Vector2f(450, 250));
-
-
+	BG::GameObject* obj_ablock = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/floor.png", window_), window_), BG::Vector2f(0.0f, 128.0f));
+	obj_ablock->init_physics(b2_staticBody, 0.0f);
+	game_objects.push_back(obj_ablock);
 	return true;
 }
 
 bool Game::update()
 {
-	//BG::World::instance()->Step(1 / 60.0f, 8, 3);
-
-	obj_logo.sprite()->set_origin(obj_logo.sprite()->size() / 2);
-	obj_logo.transform()->rotate(1);
-
-	txt_my_text_.transform().rotate(1);
+	BG::World::instance()->Step(1 / 60.0f, 8, 3);
 
 	auto mouse = BG::Mouse::instance();
 
-	if(mouse->button_down(3))
+	if(mouse->button_pressed(3))
 	{
-
+		BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/box.png", window_), window_), BG::Vector2f(BG::Mouse::instance()->position().x_, BG::Mouse::instance()->position().y_));
+		obj_block->init_physics(b2_dynamicBody, 0.5f);
+		game_objects.push_back(obj_block);
 	}
-	else if(mouse->button_down(1))
+	else if(mouse->button_pressed(1))
 	{
-
+		BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/floor.png", window_), window_), BG::Vector2f(BG::Mouse::instance()->position().x_, BG::Mouse::instance()->position().y_));
+		obj_block->init_physics(b2_staticBody, 0.0f);
+		game_objects.push_back(obj_block);
 	}
 
-	BG::Vector2f logoPosition = obj_logo.transform()->position();
 	auto keyboard = BG::Keyboard::instance();
-	
-	if(keyboard->key_down(SDLK_w))
+
+	if(keyboard->key_down(SDLK_d))
 	{
-		logoPosition.y_ -= kSpeed * BG::Bengine::delta_time();
+		game_objects[0]->rigidbody()->ApplyForce(b2Vec2(1.0f, 0.0f), b2Vec2_zero, true);
 	}
-	else if(keyboard->key_down(SDLK_s))
+	else if(keyboard->key_down(SDLK_a))
 	{
-		logoPosition.y_ += kSpeed * BG::Bengine::delta_time();
+		game_objects[0]->rigidbody()->ApplyForce(b2Vec2(-1.0f, 0.0f), b2Vec2_zero, true);
 	}
 
-	if(keyboard->key_down(SDLK_a))
-	{
-		logoPosition.x_ -= kSpeed * BG::Bengine::delta_time();
-	}
-	else if(keyboard->key_down(SDLK_d))
-	{
-		logoPosition.x_ += kSpeed * BG::Bengine::delta_time();
-	}
 
-	obj_logo.transform()->set_position(logoPosition);
 
 	return true;
 }
@@ -109,27 +84,21 @@ void Game::draw()
 	// Clear the renderer
 	window_->clear();
 
-	window_->draw(obj_logo);
+	//obj_logo.initializeBody();
 
-	window_->draw(txt_my_text_);
-	window_->draw(txt_my_other_text_);
-
-	window_->draw(txt_my_other_text_.bounds(), BG::kClrRed);
-	window_->draw(txt_my_text_.bounds(), BG::kClrRed);
-	window_->draw(obj_logo.bounds(), BG::kClrRed);
-
-	b2Body* body = BG::World::instance()->GetBodyList();
-
-	while(body != nullptr)
+	for (auto body = BG::World::instance()->GetBodyList(); body != nullptr; body = body->GetNext())
 	{
-		BG::GameObject* game_object = static_cast<BG::GameObject*>(body->GetUserData());
+		auto game_object = static_cast<BG::GameObject*>(body->GetUserData());
 
-		if(game_object != nullptr)
+		if (game_object != nullptr)
 		{
-			window_->draw(*game_object);
+			game_object->apply_physics(body);
 		}
+	}
 
-		body = body->GetNext();
+	for(auto & game_object : game_objects)
+	{
+		window_->draw(*game_object);
 	}
 
 	//b2World* world = BG::World::instance();

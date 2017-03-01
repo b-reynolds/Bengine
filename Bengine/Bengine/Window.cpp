@@ -100,7 +100,7 @@ void BG::Window::draw(GameObject& gameObject) const
 	SDL_Texture* texture = sprite->texture();
 	Vector2f size = sprite->size();
 	SDL_RendererFlip flipped = sprite->flipped();
-	Vector2f sprOrigin = sprite->origin();
+	Vector2f sprOrigin = transform->origin();
 
 	SDL_Point origin = { sprOrigin.x_, sprOrigin.y_ };
 	SDL_Rect destination = { position.x_, position.y_, size.x_, size.y_ };

@@ -19,6 +19,7 @@ namespace BG
 		static b2World* instance_;
 
 		b2Vec2 gravity_;
+	
 
 	};
 

@@ -5,6 +5,7 @@
 #include "Text.h"
 
 #include "Box2D.h"
+#include <vector>
 
 class Game
 {
@@ -24,8 +25,7 @@ private:
 	BG::Text txt_my_text_;
 	BG::Text txt_my_other_text_;
 
-	BG::Sprite spr_logo_;
-	BG::GameObject obj_logo;
+	std::vector<BG::GameObject*> game_objects;
 
 	BG::Window* window_;
 

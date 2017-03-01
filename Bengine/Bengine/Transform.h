@@ -41,6 +41,12 @@ namespace BG
 		/* Rotate the Transform by the specified angle (degrees) */
 		void rotate(const float &angle);
 
+		/* Set the Transform's origin for rendering and rotation */
+		void set_origin(const Vector2f &origin);
+
+		/* Returns the Transform's current point of origin */
+		Vector2f origin() const;
+
 	private:
 
 		/* Current position of the Transform */
@@ -48,6 +54,9 @@ namespace BG
 
 		/* Current rotation of the Transform in degrees */
 		float rotation_;
+
+		/* Transform's point of origin */
+		Vector2f origin_;
 
 	};
 
