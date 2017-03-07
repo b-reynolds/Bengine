@@ -5,6 +5,11 @@
 #include "World.h"
 #include "Box2D/Common/b2Draw.h"
 
+#include "lua.hpp"
+#include "Lua.h"
+
+#include "lua_functions.cpp"
+
 Game::Game()
 {
 	window_ = nullptr;
@@ -41,6 +46,43 @@ bool Game::initialize()
 	BG::GameObject* obj_ablock = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/floor.png", window_), window_), BG::Vector2f(0.0f, 128.0f));
 	obj_ablock->init_physics(b2_staticBody, 0.0f);
 	game_objects.push_back(obj_ablock);
+
+	//BG::Lua::instance()->register_function("DoSomething", lua_GetLockpickLevel);
+
+	//std::string* lua_script = BG::ResourceManager::instance()->script("Scripts/script.lua");
+
+	//BG::Lua::instance()->load_script(*lua_script, nullptr);
+
+	//int status = lua_pcall(BG::Lua::instance()->state(), 0, 1, 0);
+
+	//int result = lua_toboolean(BG::Lua::instance()->state(), -1);
+
+	//printf("The result is %s\n", result == 1 ? "true" : "false");
+
+	//std::string* lua_script = BG::ResourceManager::instance()->script("Scripts/script.lua");
+
+	//lua_State* lua_state;
+
+	//lua_state = luaL_newstate();
+	//luaL_openlibs(lua_state);
+
+	//int status = luaL_loadstring(lua_state, lua_script->c_str());
+	//if(status)
+	//{
+	//	printf("Error: %s\n", lua_tostring(lua_state, -1));
+	//	return false;
+	//}
+
+	//status = lua_pcall(lua_state, 0, 1, 0);
+
+	//int result = lua_toboolean(lua_state, -1);
+
+	//printf("The result is %s\n", result == 1 ? "true" : "false");
+
+	//lua_close(lua_state);
+
+	getchar();
+
 	return true;
 }
 
@@ -74,17 +116,12 @@ bool Game::update()
 		game_objects[0]->rigidbody()->ApplyForce(b2Vec2(-1.0f, 0.0f), b2Vec2_zero, true);
 	}
 
-
-
 	return true;
 }
 
 void Game::draw()
 {
-	// Clear the renderer
 	window_->clear();
-
-	//obj_logo.initializeBody();
 
 	for (auto body = BG::World::instance()->GetBodyList(); body != nullptr; body = body->GetNext())
 	{
@@ -100,29 +137,6 @@ void Game::draw()
 	{
 		window_->draw(*game_object);
 	}
-
-	//b2World* world = BG::World::instance();
-
-	//int t = 0;
-	//for(b2Body* body_iterator = world->GetBodyList(); body_iterator != nullptr; body_iterator = body_iterator->GetNext())
-	//{
-	//	
-	//	printf("BODY %d\n", ++t);
-	//	auto game_object = static_cast<BG::GameObject*>(body_iterator->GetUserData());
-	//	
-	//	game_object->transform()->set_position(30 * body_iterator->GetPosition().x, 30 * body_iterator->GetPosition().y);
-
-	//	auto sprite = game_object->sprite();
-
-	//	auto origin_temp = sprite->origin();
-	//	
-	//	game_object->sprite()->set_origin(BG::Vector2f(sprite->size().x_ / 2, sprite->size().y_ / 2));
-	//	game_object->transform()->set_rotation(BG::Math::radiansToDegrees(body_iterator->GetAngle()));
-
-	//	window_->draw(*game_object);
-
-	//	game_object->sprite()->set_origin(origin_temp); // ???
-	//}
 
 	window_->display();
 }

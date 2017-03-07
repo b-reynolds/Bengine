@@ -24,6 +24,8 @@ namespace BG
 		/* Frees dynamically allocated memory and unloads dependencies */
 		ResourceManager::~ResourceManager();
 
+		std::string* script(const std::string& file_path);
+
 		/* Loads an image resource into a Texture and returns it */
 		Texture* texture(const std::string &file_path, Window* window);
 
@@ -60,22 +62,27 @@ namespace BG
 		const int kTextureSizeDefault = 32;
 
 		/* Map that stores Texture resources */
-		std::map<std::string, Texture*> mpTextures_;
+		std::map<std::string, Texture*> textures_;
 
 		/* Map that stores SoundEffect resources */
-		std::map<std::string, SoundEffect*> mpSoundEffects_;
+		std::map<std::string, SoundEffect*> sound_effects_;
 
 		/* Map that stores Music resources */
-		std::map <std::string, Music*> mpMusic_;
+		std::map <std::string, Music*> music_;
 
 		/* Map that stores Font resources */
-		std::map<std::string, std::pair<Font*, int>> mpFonts_;
+		std::map<std::string, std::pair<Font*, int>> fonts_;
+
+		/* Map that stores Script resources */
+		std::map<std::string, std::string*> scripts_;
 
 		/* The singleton instance of ResourceManager */
 		static ResourceManager* instance_;
 
 		/* Private default constructor */
 		ResourceManager();
+
+		std::string* load_script(const std::string& file_path) const;
 
 		/* Creates and returns a Texture of the specified size and colour */
 		Texture* create_texture(const int &size, const Colour &colour, Window *window) const;	

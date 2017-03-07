@@ -6,6 +6,8 @@
 
 #include "Box2D.h"
 #include <vector>
+#include <lauxlib.h>
+#include <lstate.h>
 
 class Game
 {

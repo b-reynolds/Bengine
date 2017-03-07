@@ -4,6 +4,7 @@
 #include "Bengine.h"
 #include "colour.h"
 #include <SDL_image.h>
+#include <iterator>
 
 // Initialize static members
 BG::ResourceManager* BG::ResourceManager::instance_ = nullptr;
@@ -36,6 +37,26 @@ BG::ResourceManager* BG::ResourceManager::instance()
 	return instance_;
 }
 
+/**
+ * \brief Loads a script resource into a string and returns it
+ * \param file_path path of desired script resource
+ */
+std::string* BG::ResourceManager::script(const std::string& file_path)
+{
+	auto result = scripts_.find(file_path);
+
+	if(result != scripts_.end())
+	{
+		return result->second;
+	}
+
+	std::string* script = load_script(file_path);
+
+	scripts_.insert(std::pair<std::string, std::string*>(file_path, script));
+
+	return script;
+}
+
 /** \brief Loads an image resource into a Texture and returns it.
 * Searches the ResourceManager's map of textures for the specified texture and returns a reference to it.
 * If the texture does not exist, loads it into memory and stores it in the map.
@@ -46,9 +67,9 @@ BG::ResourceManager* BG::ResourceManager::instance()
 BG::Texture* BG::ResourceManager::texture(const std::string& file_path, Window* window)
 {
 	// Search the map of existing textures for the requested texture
-	auto result = mpTextures_.find(file_path);
+	auto result = textures_.find(file_path);
 
-	if (result != mpTextures_.end())
+	if (result != textures_.end())
 	{
 		// The texture exists and is already loaded into memory, return a reference to it
 		return result->second;
@@ -64,7 +85,7 @@ BG::Texture* BG::ResourceManager::texture(const std::string& file_path, Window* 
 	}
 
 	// Insert the texture into the textures map
-	mpTextures_.insert(std::pair<std::string, Texture*>(file_path, texture));
+	textures_.insert(std::pair<std::string, Texture*>(file_path, texture));
 
 	return texture;
 }
@@ -76,8 +97,8 @@ BG::Texture* BG::ResourceManager::texture(const std::string& file_path, Window* 
 */
 void BG::ResourceManager::free_texture(const std::string &file_path)
 {
-	std::map<std::string, SDL_Texture*>::iterator iterator = mpTextures_.begin();
-	while (iterator != mpTextures_.end())
+	std::map<std::string, SDL_Texture*>::iterator iterator = textures_.begin();
+	while (iterator != textures_.end())
 	{
 		if (iterator->first == file_path)
 		{
@@ -85,7 +106,7 @@ void BG::ResourceManager::free_texture(const std::string &file_path)
 			SDL_DestroyTexture(texture);
 			texture = nullptr;
 			Logger::instance().log(Logger::kInfo, "Freed resource \"" + iterator->first + "\"");
-			iterator = mpTextures_.erase(iterator);
+			iterator = textures_.erase(iterator);
 			break;
 		}
 		++iterator;
@@ -100,9 +121,9 @@ void BG::ResourceManager::free_texture(const std::string &file_path)
 BG::SoundEffect* BG::ResourceManager::sound_effect(const std::string &file_path)
 {
 	// Search the map of existing sound effects for the requested sound effect
-	auto result = mpSoundEffects_.find(file_path);
+	auto result = sound_effects_.find(file_path);
 
-	if (result != mpSoundEffects_.end())
+	if (result != sound_effects_.end())
 	{
 		// The sound effect exists and is already loaded into memory, return a reference to it
 		return result->second;
@@ -112,7 +133,7 @@ BG::SoundEffect* BG::ResourceManager::sound_effect(const std::string &file_path)
 	SoundEffect* soundEffect = load_sound_effect(file_path);
 
 	// Insert the sound effect into the sound effects map
-	mpSoundEffects_.insert(std::pair<std::string, Mix_Chunk*>(file_path, soundEffect));
+	sound_effects_.insert(std::pair<std::string, Mix_Chunk*>(file_path, soundEffect));
 
 	return soundEffect;
 }
@@ -124,8 +145,8 @@ BG::SoundEffect* BG::ResourceManager::sound_effect(const std::string &file_path)
 */
 void BG::ResourceManager::free_sound_effect(const std::string &file_path)
 {
-	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects_.begin();
-	while (itSoundEffects != mpSoundEffects_.end())
+	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = sound_effects_.begin();
+	while (itSoundEffects != sound_effects_.end())
 	{
 		if (itSoundEffects->first == file_path)
 		{
@@ -133,7 +154,7 @@ void BG::ResourceManager::free_sound_effect(const std::string &file_path)
 			Mix_FreeChunk(soundEffect);
 			soundEffect = nullptr;
 			Logger::instance().log(Logger::kInfo, "Freed resource \"" + itSoundEffects->first + "\"");
-			itSoundEffects = mpSoundEffects_.erase(itSoundEffects);
+			itSoundEffects = sound_effects_.erase(itSoundEffects);
 		}
 		else
 		{
@@ -150,9 +171,9 @@ void BG::ResourceManager::free_sound_effect(const std::string &file_path)
 BG::Music* BG::ResourceManager::music(const std::string &file_path)
 {
 	// Search the map of existing musics for the requested music
-	auto result = mpMusic_.find(file_path);
+	auto result = music_.find(file_path);
 
-	if (result != mpMusic_.end())
+	if (result != music_.end())
 	{
 		// The music exists and is already loaded into memory, return a reference to it
 		return result->second;
@@ -162,7 +183,7 @@ BG::Music* BG::ResourceManager::music(const std::string &file_path)
 	Music* music = load_music(file_path);
 
 	// Insert the music into the musics map
-	mpMusic_.insert(std::pair<std::string, Mix_Music*>(file_path, music));
+	music_.insert(std::pair<std::string, Mix_Music*>(file_path, music));
 
 	return music;
 }
@@ -174,8 +195,8 @@ BG::Music* BG::ResourceManager::music(const std::string &file_path)
 */
 void BG::ResourceManager::free_music(const std::string &file_path)
 {
-	std::map<std::string, Music*>::iterator itMusic = mpMusic_.begin();
-	while (itMusic != mpMusic_.end())
+	std::map<std::string, Music*>::iterator itMusic = music_.begin();
+	while (itMusic != music_.end())
 	{
 		if (itMusic->first == file_path)
 		{
@@ -183,7 +204,7 @@ void BG::ResourceManager::free_music(const std::string &file_path)
 			Mix_FreeMusic(music);
 			music = nullptr;
 			Logger::instance().log(Logger::kInfo, "Freed resource \"" + itMusic->first + "\"");
-			itMusic = mpMusic_.erase(itMusic);
+			itMusic = music_.erase(itMusic);
 		}
 		else
 		{
@@ -201,9 +222,9 @@ void BG::ResourceManager::free_music(const std::string &file_path)
 BG::Font* BG::ResourceManager::font(const std::string& file_path, const int& size)
 {
 	// Search the map of existing fonts for the requested font
-	auto result = mpFonts_.find(file_path);
+	auto result = fonts_.find(file_path);
 
-	if (result != mpFonts_.end() && result->second.second == size)
+	if (result != fonts_.end() && result->second.second == size)
 	{
 		// The font already exists is already loaded into memory, return a reference to it
 		return result->second.first;
@@ -213,7 +234,7 @@ BG::Font* BG::ResourceManager::font(const std::string& file_path, const int& siz
 	Font* font = load_font(file_path, size);
 
 	// Insert the font into the fonts map
-	mpFonts_.emplace(std::make_pair(file_path, std::make_pair(font, size)));
+	fonts_.emplace(std::make_pair(file_path, std::make_pair(font, size)));
 
 	return font;
 }
@@ -225,8 +246,8 @@ BG::Font* BG::ResourceManager::font(const std::string& file_path, const int& siz
 */
 void BG::ResourceManager::free_font(const std::string& file_path)
 {
-	std::map<std::string, std::pair<Font*, int>>::iterator itFonts = mpFonts_.begin();
-	while (itFonts != mpFonts_.end())
+	std::map<std::string, std::pair<Font*, int>>::iterator itFonts = fonts_.begin();
+	while (itFonts != fonts_.end())
 	{
 		if (itFonts->first == file_path)
 		{
@@ -234,7 +255,7 @@ void BG::ResourceManager::free_font(const std::string& file_path)
 			TTF_CloseFont(font);
 			font = nullptr;
 			Logger::instance().log(Logger::kInfo, "Freed resource \"" + itFonts->first + "\"");
-			itFonts = mpFonts_.erase(itFonts);
+			itFonts = fonts_.erase(itFonts);
 		}
 		else
 		{
@@ -252,44 +273,63 @@ void BG::ResourceManager::free()
 	Logger logger = Logger::instance();
 
 	// Iterate through the map of textures
-	std::map<std::string, SDL_Texture*>::iterator itTextures = mpTextures_.begin();
-	while (itTextures != mpTextures_.end())
+	std::map<std::string, SDL_Texture*>::iterator itTextures = textures_.begin();
+	while (itTextures != textures_.end())
 	{
 		// Free the texture resource and erase the element from the map
 		SDL_DestroyTexture(itTextures->second);
 		logger.log(Logger::kInfo, "Freed resource \"" + itTextures->first + "\"");
-		itTextures = mpTextures_.erase(itTextures);
+		itTextures = textures_.erase(itTextures);
 	}
 
 	// Iterate through the map of sound effects
-	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = mpSoundEffects_.begin();
-	while (itSoundEffects != mpSoundEffects_.end())
+	std::map<std::string, Mix_Chunk*>::iterator itSoundEffects = sound_effects_.begin();
+	while (itSoundEffects != sound_effects_.end())
 	{
 		// Free the sound effect resource and erase the element from the map
 		Mix_FreeChunk(itSoundEffects->second);
 		logger.log(Logger::kInfo, "Freed resource \"" + itTextures->first + "\"");
-		itSoundEffects = mpSoundEffects_.erase(itSoundEffects);
+		itSoundEffects = sound_effects_.erase(itSoundEffects);
 	}
 
 	// Iterate through the map of music
-	std::map<std::string, Mix_Music*>::iterator itMusic = mpMusic_.begin();
-	while (itMusic != mpMusic_.end())
+	std::map<std::string, Mix_Music*>::iterator itMusic = music_.begin();
+	while (itMusic != music_.end())
 	{
 		// Free the music resource and erase the element from the map
 		Mix_FreeMusic(itMusic->second);
 		logger.log(Logger::kInfo, "Freed resource \"" + itTextures->first + "\"");
-		itMusic = mpMusic_.erase(itMusic);
+		itMusic = music_.erase(itMusic);
 	}
 
 	// Iterate through the map of fonts
-	std::map<std::string, std::pair<Font*, int>>::iterator itFonts = mpFonts_.begin();
-	while(itFonts != mpFonts_.end())
+	std::map<std::string, std::pair<Font*, int>>::iterator itFonts = fonts_.begin();
+	while(itFonts != fonts_.end())
 	{
 		// Free the font resource and erase the element from the map
 		TTF_CloseFont(itFonts->second.first);
 		logger.log(Logger::kInfo, "Freed resource \"" + itFonts->first + "\"");
-		itFonts = mpFonts_.erase(itFonts);
+		itFonts = fonts_.erase(itFonts);
 	}
+}
+
+/**
+ * \brief Loads a script from a text file
+ * \param file_path path of script resource
+ */
+std::string* BG::ResourceManager::load_script(const std::string& file_path) const
+{
+	std::ifstream input_stream;
+	input_stream.open(file_path);
+
+	if(!input_stream.is_open())
+	{
+		return nullptr;
+	}
+
+	std::string* file_contents = new std::string{ std::istreambuf_iterator<char>(input_stream), std::istreambuf_iterator<char>() };
+
+	return file_contents;
 }
 
 /**

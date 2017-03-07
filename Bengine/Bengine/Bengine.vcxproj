@@ -74,7 +74,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)lua\src;$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)Box2D\lib;$(ProjectDir)SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -87,7 +87,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)lua\src;$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(ProjectDir)Box2D\lib;$(ProjectDir)SDL2\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -102,7 +102,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)lua\src;$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -119,7 +119,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)lua\src;$(ProjectDir)Box2D;$(ProjectDir)SDL2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -136,6 +136,41 @@
     <ClCompile Include="game_object.cpp" />
     <ClCompile Include="keyboard.cpp" />
     <ClCompile Include="logger.cpp" />
+    <ClCompile Include="Lua.cpp" />
+    <ClCompile Include="lua\src\lapi.c" />
+    <ClCompile Include="lua\src\lauxlib.c" />
+    <ClCompile Include="lua\src\lbaselib.c" />
+    <ClCompile Include="lua\src\lbitlib.c" />
+    <ClCompile Include="lua\src\lcode.c" />
+    <ClCompile Include="lua\src\lcorolib.c" />
+    <ClCompile Include="lua\src\lctype.c" />
+    <ClCompile Include="lua\src\ldblib.c" />
+    <ClCompile Include="lua\src\ldebug.c" />
+    <ClCompile Include="lua\src\ldo.c" />
+    <ClCompile Include="lua\src\ldump.c" />
+    <ClCompile Include="lua\src\lfunc.c" />
+    <ClCompile Include="lua\src\lgc.c" />
+    <ClCompile Include="lua\src\linit.c" />
+    <ClCompile Include="lua\src\liolib.c" />
+    <ClCompile Include="lua\src\llex.c" />
+    <ClCompile Include="lua\src\lmathlib.c" />
+    <ClCompile Include="lua\src\lmem.c" />
+    <ClCompile Include="lua\src\loadlib.c" />
+    <ClCompile Include="lua\src\lobject.c" />
+    <ClCompile Include="lua\src\lopcodes.c" />
+    <ClCompile Include="lua\src\loslib.c" />
+    <ClCompile Include="lua\src\lparser.c" />
+    <ClCompile Include="lua\src\lstate.c" />
+    <ClCompile Include="lua\src\lstring.c" />
+    <ClCompile Include="lua\src\lstrlib.c" />
+    <ClCompile Include="lua\src\ltable.c" />
+    <ClCompile Include="lua\src\ltablib.c" />
+    <ClCompile Include="lua\src\ltm.c" />
+    <ClCompile Include="lua\src\lundump.c" />
+    <ClCompile Include="lua\src\lutf8lib.c" />
+    <ClCompile Include="lua\src\lvm.c" />
+    <ClCompile Include="lua\src\lzio.c" />
+    <ClCompile Include="lua_functions.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math.cpp" />
     <ClCompile Include="mouse.cpp" />
@@ -156,6 +191,7 @@
     <ClInclude Include="game_object.h" />
     <ClInclude Include="keyboard.h" />
     <ClInclude Include="logger.h" />
+    <ClInclude Include="Lua.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="mouse.h" />
     <ClInclude Include="rectangle.h" />

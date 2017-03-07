@@ -40,6 +40,12 @@
     <Filter Include="Engine\Util">
       <UniqueIdentifier>{ab46b424-373c-4376-a245-eef60eb5c297}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Lua">
+      <UniqueIdentifier>{9147a8ef-c5bd-416e-a82c-eef3673e7c40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Lua\src">
+      <UniqueIdentifier>{77aeba83-3ed5-4ea4-bf8a-5c08af2988fd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="resource_manager.cpp">
@@ -89,6 +95,111 @@
     </ClCompile>
     <ClCompile Include="world.cpp">
       <Filter>Engine\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lapi.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lauxlib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lbaselib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lbitlib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lcode.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lcorolib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lctype.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ldblib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ldebug.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ldo.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ldump.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lfunc.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lgc.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\linit.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\liolib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\llex.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lmathlib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lmem.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\loadlib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lobject.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lopcodes.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\loslib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lparser.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lstate.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lstring.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lstrlib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ltable.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ltablib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\ltm.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lundump.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lutf8lib.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lvm.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\src\lzio.c">
+      <Filter>Engine\Lua\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Lua.cpp">
+      <Filter>Engine\Lua</Filter>
+    </ClCompile>
+    <ClCompile Include="lua_functions.cpp">
+      <Filter>Engine\Lua</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +262,9 @@
     </ClInclude>
     <ClInclude Include="world.h">
       <Filter>Engine\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="Lua.h">
+      <Filter>Engine\Lua</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
