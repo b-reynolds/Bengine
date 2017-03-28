@@ -49,6 +49,13 @@ bool BG::Bengine::initialize()
 	}
 	logger.log(Logger::kInfo, "Initialized SDL_Mix");
 
+	// Initialize open audio
+	if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == 1)
+	{
+		logger.log(Logger::kError, std::string("Failed to initialize Open Audio (") + Mix_GetError() + ")");
+		return false;
+	}
+
 	if (TTF_Init() != 0)
 	{
 		logger.log(Logger::kError, std::string("Failed to initialize SDL_TTF (") + TTF_GetError() + ")");
