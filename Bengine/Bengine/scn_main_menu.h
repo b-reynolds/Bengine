@@ -27,9 +27,18 @@ namespace BG
 
 		const Colour kColourBackground = Colour(102, 144, 184, 255);
 		const float kCloudSpeed = 100.0f;
+		const unsigned int kCloudRainPoolSize = 10;
+		const std::vector<Colour> kCloudRainColours =
+		{
+			Colour(194, 84, 57, 255),
+			Colour(211, 123, 51, 255),
+			Colour(198, 187, 72, 255),
+			Colour(119, 211, 124, 255)
+		};
 
 		Texture* txtr_title_;
 		Texture* txtr_cloud_;
+		Texture* txtr_box_;
 
 		Texture* txtr_btn_play_idle_;
 		Texture* txtr_btn_play_hovered_;
@@ -54,13 +63,16 @@ namespace BG
 
 		Sprite* spr_title_;
 		Sprite* spr_cloud_;
+		Sprite* spr_box_;
 
 		GameObject* obj_title_;
 		GameObject* obj_cloud_;
 
 		std::vector<GameObject*> game_objects_;
+		std::vector<GameObject*> cloud_rain_pool;
 
-		Vector2f obj_cloud_size;
+		Vector2f obj_cloud_size_;
+		Vector2f obj_cloud_position_;
 
 	};
 

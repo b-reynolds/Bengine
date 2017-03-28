@@ -175,6 +175,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="math.cpp" />
     <ClCompile Include="mouse.cpp" />
+    <ClCompile Include="random.cpp" />
     <ClCompile Include="resource_manager.cpp" />
     <ClCompile Include="scn_main_menu.cpp" />
     <ClCompile Include="sprite.cpp" />
@@ -197,6 +198,7 @@
     <ClInclude Include="Lua.h" />
     <ClInclude Include="math.h" />
     <ClInclude Include="mouse.h" />
+    <ClInclude Include="random.h" />
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource_manager.h" />

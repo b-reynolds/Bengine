@@ -210,6 +210,9 @@
     <ClCompile Include="scn_main_menu.cpp">
       <Filter>Game\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="random.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -283,6 +286,9 @@
     </ClInclude>
     <ClInclude Include="scn_main_menu.h">
       <Filter>Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="random.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

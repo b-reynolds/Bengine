@@ -8,12 +8,16 @@ BG::GameObject::GameObject()
 {
 	sprite_ = nullptr;
 	transform_.set_position(69.0f, 69.0f);
+	active_ = true;
+	colour_ = Colour(255, 255, 255, 255);
 }
 
 BG::GameObject::GameObject(Sprite* sprite, const Vector2f& position)
 {
 	sprite_ = sprite;
 	transform_.set_position(position);
+	active_ = true;
+	colour_ = Colour(255, 255, 255, 255);
 }
 
 BG::Transform& BG::GameObject::transform()
@@ -68,6 +72,26 @@ void BG::GameObject::init_physics(b2BodyType body_type, float density)
 	fixture_def.shape = &shape;
 
 	body_->CreateFixture(&fixture_def);
+}
+
+bool BG::GameObject::active() const
+{
+	return active_;
+}
+
+void BG::GameObject::set_active(const bool& state)
+{
+	active_ = state;
+}
+
+void BG::GameObject::set_colour(const Colour& colour)
+{
+	colour_ = colour;
+}
+
+BG::Colour BG::GameObject::colour() const
+{
+	return colour_;
 }
 
 b2Body* BG::GameObject::rigidbody() const

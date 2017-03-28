@@ -2,6 +2,8 @@
 #include "resource_manager.h"
 #include "window.h"
 #include "bengine.h"
+#include "World.h"
+#include "random.h"
 
 bool BG::ScnMainMenu::load()
 {
@@ -12,6 +14,7 @@ bool BG::ScnMainMenu::load()
 
 	txtr_title_ = resource_manager->texture("Images/Main Menu/Title.png", window_);
 	txtr_cloud_ = resource_manager->texture("Images/Main Menu/Cloud.png", window_);
+	txtr_box_ = resource_manager->texture("Images/Main Menu/Box.png", window_);
 
 	txtr_btn_play_idle_ = resource_manager->texture("Images/Main Menu/ButtonPlayIdle.png", window_);
 	txtr_btn_play_hovered_ = resource_manager->texture("Images/Main Menu/ButtonPlayHovered.png", window_);
@@ -62,6 +65,7 @@ bool BG::ScnMainMenu::load()
 
 	spr_title_ = new Sprite(txtr_title_, window_);
 	spr_cloud_ = new Sprite(txtr_cloud_, window_);
+	spr_box_ = new Sprite(txtr_box_, window_);
 
 	// -------------------------
 
@@ -74,11 +78,26 @@ bool BG::ScnMainMenu::load()
 	obj_title_->transform().set_origin(Vector2f(obj_title_size.x_ / 2.0f, obj_title_size.y_ / 2.0f));
 	obj_title_->transform().set_position(window_->size().x_ / 2.0f, (obj_title_size.y_ / 2.0f) * 1.25f);
 
-	obj_cloud_ = new GameObject(spr_cloud_, Vector2f(0.0f, -12.0f));
-	obj_cloud_size = obj_cloud_->sprite().size();
+	obj_cloud_ = new GameObject(spr_cloud_, Vector2f(0, -0.0f));
+	obj_cloud_size_ = obj_cloud_->sprite().size();
+	obj_cloud_->transform().set_origin(Vector2f(obj_cloud_size_.x_ / 2.0f, obj_cloud_size_.y_ / 2.0f));
+	obj_cloud_->transform().set_position(Vector2f(window_->size().x_ / 2.0f, obj_cloud_size_.y_));
+	obj_cloud_position_ = obj_cloud_->transform().position();
 
 	game_objects_.push_back(obj_cloud_);
 	game_objects_.push_back(obj_title_);
+
+	// -------------------------
+
+	// ----- Initialize Cloud Rain -----
+
+	for(unsigned int i = 0; i < kCloudRainPoolSize; ++i)
+	{
+		GameObject* obj_box = new GameObject(spr_box_, Vector2f(0.0f, window_->size().y_));
+		obj_box->init_physics(b2_dynamicBody, 0.5f);
+		obj_box->set_active(false);
+		cloud_rain_pool.push_back(obj_box);
+	}
 
 	// -------------------------
 
@@ -115,6 +134,13 @@ bool BG::ScnMainMenu::unload()
 
 	// -------------------------
 
+	// ----- Free Sound Effects -----
+
+	resource_manager->free_sound_effect("Audio/ButtonHover.wav");
+	resource_manager->free_sound_effect("Audio/ButtonClick.wav");
+
+	// -------------------------
+
 	// ----- Free Sprites -----
 
 	delete spr_title_;
@@ -126,6 +152,19 @@ bool BG::ScnMainMenu::unload()
 	delete obj_title_;
 
 	// -------------------------
+
+	// ----- Free Physics Objects -----
+
+	b2World* world = World::instance();
+	for(unsigned int i = 0; i < cloud_rain_pool.size(); ++i)
+	{
+		world->DestroyBody(cloud_rain_pool[i]->rigidbody());
+		delete cloud_rain_pool[i];\
+	}
+
+	// -------------------------
+
+	getchar();
 
 	return true;
 
@@ -161,16 +200,50 @@ bool BG::ScnMainMenu::update()
 	// ----- Update Cloud Animation -----
 
 	obj_cloud_->transform().move(Vector2f(kCloudSpeed * Bengine::delta_time(), 0.0f));
+	obj_cloud_position_ = obj_cloud_->transform().position();
 
-	Vector2f obj_cloud_position = obj_cloud_->transform().position();
-
-	if(obj_cloud_position.x_ >= window_->size().x_)
+	if(obj_cloud_position_.x_ >= window_->size().x_)
 	{
-		obj_cloud_->transform().set_position(Vector2f(-obj_cloud_size.x_, obj_cloud_position.y_));
+		obj_cloud_->transform().set_position(Vector2f(-obj_cloud_size_.x_, obj_cloud_position_.y_));
 	}
 
 	// -------------------------
 
+	// ----- Update Physics -----
+
+	World::instance()->Step(1 / 60.0f, 8, 3);
+
+	for (auto body = World::instance()->GetBodyList(); body != nullptr; body = body->GetNext())
+	{
+		auto game_object = static_cast<GameObject*>(body->GetUserData());
+
+		if (game_object != nullptr)
+		{
+			game_object->apply_physics(body);
+		}
+	}
+
+	for (unsigned int i = 0; i < cloud_rain_pool.size(); ++i)
+	{
+		if (!cloud_rain_pool[i]->active())
+		{
+			b2Body* rigidbody = cloud_rain_pool[i]->rigidbody();
+
+			rigidbody->SetTransform(b2Vec2((obj_cloud_position_.x_ + obj_cloud_size_.x_ / 2.0f) / 30.0f, (obj_cloud_position_.y_ + obj_cloud_size_.y_ / 2.0f) / 30.0f), 0);
+			rigidbody->SetLinearDamping(0.0f);
+			rigidbody->SetLinearVelocity(b2Vec2(0.0f, 0.0f));
+			rigidbody->ApplyForce(b2Vec2(Random::random_int(-kCloudSpeed, kCloudSpeed), kCloudSpeed), b2Vec2_zero, true);
+			cloud_rain_pool[i]->set_colour(kCloudRainColours[Random::random_int(0, kCloudRainColours.size() - 1)]);
+
+			cloud_rain_pool[i]->set_active(true);
+		}
+		else if (cloud_rain_pool[i]->transform().position().y_ >= window_->size().y_)
+		{
+			cloud_rain_pool[i]->set_active(false);
+		}
+	}
+
+	// -------------------------
 
 	return true;
 
@@ -179,6 +252,15 @@ bool BG::ScnMainMenu::update()
 bool BG::ScnMainMenu::draw()
 {
 	window_->clear();
+
+	// ----- Draw Cloud Rain -----
+
+	for (unsigned int i = 0; i < cloud_rain_pool.size(); ++i)
+	{
+		window_->draw(*cloud_rain_pool[i]);
+	}
+
+	// -------------------------
 
 	// ----- Draw Game Objects -----
 

@@ -28,6 +28,15 @@ namespace BG
 
 		void init_physics(b2BodyType body_type, float density);
 
+		bool active() const;
+		void set_active(const bool& state);
+
+		/* Sets the Sprite's default colour */
+		void set_colour(const Colour& colour);
+
+		/* Returns the Sprite's default colour */
+		Colour colour() const;
+
 		b2Body* rigidbody() const;
 
 	protected:
@@ -35,8 +44,11 @@ namespace BG
 		Transform transform_;
 		Sprite* sprite_;
 		b2Body* body_;
+		Colour colour_;
 
 		void* foo;
+
+		bool active_;
 
 	};
 

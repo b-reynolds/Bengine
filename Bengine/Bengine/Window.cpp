@@ -110,6 +110,11 @@ void BG::Window::draw(Text& text) const
  */
 void BG::Window::draw(GameObject& gameObject) const
 {
+	if(!gameObject.active())
+	{
+		return;
+	}
+
 	Transform transform = gameObject.transform();
 	Sprite sprite = gameObject.sprite();
 
@@ -118,7 +123,7 @@ void BG::Window::draw(GameObject& gameObject) const
 	SDL_Point origin = { transform.origin().x_, transform.origin().y_ };
 	SDL_Rect destination = { transform.position().x_, transform.position().y_, sprite.size().x_, sprite.size().y_ };
 
-	SDL_SetTextureColorMod(texture, sprite.colour().r_, sprite.colour().g_, sprite.colour().b_);
+	SDL_SetTextureColorMod(texture, gameObject.colour().r_, gameObject.colour().g_, gameObject.colour().b_);
 	SDL_RenderCopyEx(renderer_, texture, nullptr, &destination, transform.rotation(), &origin, sprite.flipped());
 	SDL_SetTextureColorMod(gameObject.sprite().texture(), 255, 255, 255);
 }
