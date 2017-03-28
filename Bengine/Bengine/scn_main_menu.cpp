@@ -93,28 +93,18 @@ bool BG::ScnMainMenu::unload()
 	// ----- Free Textures -----
 
 	resource_manager->free_texture("Images/Main Menu/Title.png");
-	delete txtr_title_;
 
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayIdle.png");
-	delete txtr_btn_play_idle_;
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayHovered.png");
-	delete txtr_btn_play_hovered_;
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayClicked.png");
-	delete txtr_btn_play_clicked_;
 
 	resource_manager->free_texture("Images/Main Menu/ButtonHelpIdle.png");
-	delete txtr_btn_help_idle_;
 	resource_manager->free_texture("Images/Main Menu/ButtonHelpHovered.png");
-	delete txtr_btn_help_hovered_;
 	resource_manager->free_texture("Images/Main Menu/ButtonHelpClicked.png");
-	delete txtr_btn_help_clicked_;
 
 	resource_manager->free_texture("Images/Main Menu/ButtonExitIdle.png");
-	delete txtr_btn_exit_idle_;
 	resource_manager->free_texture("Images/Main Menu/ButtonExitHovered.png");
-	delete txtr_btn_exit_hovered_;
 	resource_manager->free_texture("Images/Main Menu/ButtonExitClicked.png");
-	delete txtr_btn_exit_clicked_;
 
 	// -------------------------
 
@@ -146,7 +136,7 @@ bool BG::ScnMainMenu::update()
 
 	if(btn_play_->clicked())
 	{
-		
+		unload();
 	}
 
 	if(btn_help_->clicked())
