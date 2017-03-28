@@ -10,6 +10,8 @@
 
 #include "lua_functions.cpp"
 
+#include "button.h"
+
 Game::Game()
 {
 	window_ = nullptr;
@@ -47,6 +49,16 @@ bool Game::initialize()
 	obj_ablock->init_physics(b2_staticBody, 0.0f);
 	game_objects.push_back(obj_ablock);
 
+	BG::ResourceManager* resource_manager = BG::ResourceManager::instance();
+
+	BG::Texture* txtr_button_idle = resource_manager->texture("Images/Buttons/ButtonIdle.png", window_);
+	BG::Texture* txtr_button_hovered = resource_manager->texture("Images/Buttons/ButtonHovered.png", window_);
+	BG::Texture* txtr_button_clicked = resource_manager->texture("Images/Buttons/ButtonClicked.png", window_);
+
+	button_ = new BG::Button(BG::Vector2f(25, 25), txtr_button_idle, txtr_button_hovered, txtr_button_clicked, *window_);
+
+	buttons_.push_back(button_);
+
 	//BG::Lua::instance()->register_function("DoSomething", lua_GetLockpickLevel);
 
 	//std::string* lua_script = BG::ResourceManager::instance()->script("Scripts/script.lua");
@@ -81,8 +93,6 @@ bool Game::initialize()
 
 	//lua_close(lua_state);
 
-	getchar();
-
 	return true;
 }
 
@@ -94,15 +104,15 @@ bool Game::update()
 
 	if(mouse->button_pressed(3))
 	{
-		BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/box.png", window_), window_), BG::Vector2f(BG::Mouse::instance()->position().x_, BG::Mouse::instance()->position().y_));
-		obj_block->init_physics(b2_dynamicBody, 0.5f);
-		game_objects.push_back(obj_block);
+		//BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/box.png", window_), window_), BG::Vector2f(BG::Mouse::instance()->position().x_, BG::Mouse::instance()->position().y_));
+		//obj_block->init_physics(b2_dynamicBody, 0.5f);
+		//game_objects.push_back(obj_block);
 	}
 	else if(mouse->button_pressed(1))
 	{
-		BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/floor.png", window_), window_), BG::Vector2f(BG::Mouse::instance()->position().x_, BG::Mouse::instance()->position().y_));
-		obj_block->init_physics(b2_staticBody, 0.0f);
-		game_objects.push_back(obj_block);
+		//BG::GameObject* obj_block = new BG::GameObject(new BG::Sprite(BG::ResourceManager::instance()->texture("Images/floor.png", window_), window_), BG::Vector2f(BG::Mouse::instance()->position().x_, BG::Mouse::instance()->position().y_));
+		//obj_block->init_physics(b2_staticBody, 0.0f);
+		//game_objects.push_back(obj_block);
 	}
 
 	auto keyboard = BG::Keyboard::instance();
@@ -115,6 +125,15 @@ bool Game::update()
 	{
 		game_objects[0]->rigidbody()->ApplyForce(b2Vec2(-1.0f, 0.0f), b2Vec2_zero, true);
 	}
+
+	button_->update();
+
+	if(button_->clicked())
+	{
+		return false;
+	}
+
+	printf("Delta Time: %f\n", BG::Bengine::delta_time());
 
 	return true;
 }
@@ -133,9 +152,14 @@ void Game::draw()
 		}
 	}
 
-	for(auto & game_object : game_objects)
+	for(unsigned int i = 0; i < game_objects.size(); ++i)
 	{
-		window_->draw(*game_object);
+		window_->draw(*game_objects[i]);
+	}
+
+	for (unsigned int i = 0; i < buttons_.size(); ++i)
+	{
+		window_->draw(*buttons_[i]);
 	}
 
 	window_->display();

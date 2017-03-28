@@ -21,8 +21,8 @@ namespace BG
 	private:
 		
 		const char* kWinTitle = "Bengine";
-		const int kWinWidth = 800;
-		const int kWinHeight = 600;
+		const int kWinWidth = 1280;
+		const int kWinHeight = 720;
 
 		static float delta_time_;
 

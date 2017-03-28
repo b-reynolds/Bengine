@@ -17,10 +17,10 @@ namespace BG
 		GameObject();
 		GameObject(Sprite* sprite, const Vector2f &position);
 
-		Transform* transform();
+		Transform& transform();
 
 		void set_sprite(Sprite* sprite);
-		Sprite* sprite() const;
+		Sprite& sprite() const;
 
 		FloatRect bounds() const;
 

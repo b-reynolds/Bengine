@@ -16,9 +16,9 @@ BG::GameObject::GameObject(Sprite* sprite, const Vector2f& position)
 	transform_.set_position(position);
 }
 
-BG::Transform* BG::GameObject::transform()
+BG::Transform& BG::GameObject::transform()
 {
-	return &transform_;
+	return transform_;
 }
 
 
@@ -27,9 +27,9 @@ void BG::GameObject::set_sprite(Sprite* sprite)
 	sprite_ = sprite;
 }
 
-BG::Sprite* BG::GameObject::sprite() const
+BG::Sprite& BG::GameObject::sprite() const
 {
-	return sprite_;
+	return *sprite_;
 }
 
 BG::FloatRect BG::GameObject::bounds() const

@@ -18,19 +18,24 @@ BG::Sprite::Sprite(Texture* texture, Window* window)
 {
 	this->texture_ = texture;
 	this->renderer_ = window->renderer();
-	flipped_ = SDL_FLIP_NONE;
-	scale_ = Vector2f(1.0f, 1.0f);
+
+	flipped_ = kDefaultFlipState;
+	scale_ = Vector2f(kScaleDefault, kScaleDefault);
+
 	int sizeX = 0;
 	int sizeY = 0;
+
 	SDL_QueryTexture(texture, nullptr, nullptr, &sizeX, &sizeY);
 	size_ = Vector2f(sizeX, sizeY);
+
+	colour_ = kColourDefault;
 }
 
 /*
  * \brief Set the size of the Sprite
  * \param size Sprite size
  */
-void BG::Sprite::setSize(const Vector2f& size)
+void BG::Sprite::set_size(const Vector2f& size)
 {
 	this->size_ = size;
 }
@@ -73,6 +78,16 @@ void BG::Sprite::set_scale(const Vector2f& scale)
 BG::Vector2f BG::Sprite::scale() const
 {
 	return scale_;
+}
+
+void BG::Sprite::set_colour(const Colour& colour)
+{
+	colour_ = colour;
+}
+
+BG::Colour BG::Sprite::colour()
+{
+	return colour_;
 }
 
 /* 

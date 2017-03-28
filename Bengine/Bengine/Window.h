@@ -4,13 +4,14 @@
 #include <SDL.h>
 #include <string>
 #include "colour.h"
+#include "button.h"
 
 namespace BG
 {
-	class Text;
 	// Forward Declarations
-	struct Colour;
+	class Text;
 	class GameObject;
+	struct Colour;
 
 	/*
 	 * \brief Windowing Class
@@ -26,6 +27,9 @@ namespace BG
 
 		/* Clears the Window's renderer ignoring the viewport and clip rectangle */
 		void clear() const;
+
+		/* Sets the clear colour of the window */
+		void set_clear_colour(const Colour& colour);
 
 		/* Updates the windows contents post rendering */
 		void display() const;
@@ -44,6 +48,9 @@ namespace BG
 
 		/* Render a FloatRect of the specified Colour to the window */
 		void draw(const FloatRect &rect, const Colour &colour) const;
+
+		/* Render a button to the window */
+		void draw(Button& button);
 
 		/* Set the Window's position */
 		void set_position(const Vector2i &position) const;

@@ -46,6 +46,9 @@
     <Filter Include="Engine\Lua\src">
       <UniqueIdentifier>{77aeba83-3ed5-4ea4-bf8a-5c08af2988fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Game\Scenes">
+      <UniqueIdentifier>{7ebea94d-37c7-4302-932c-c32d9d644b45}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="resource_manager.cpp">
@@ -201,6 +204,12 @@
     <ClCompile Include="lua_functions.cpp">
       <Filter>Engine\Lua</Filter>
     </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Engine\Data Types</Filter>
+    </ClCompile>
+    <ClCompile Include="scn_main_menu.cpp">
+      <Filter>Game\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -265,6 +274,15 @@
     </ClInclude>
     <ClInclude Include="Lua.h">
       <Filter>Engine\Lua</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Engine\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>Engine\Data Types</Filter>
+    </ClInclude>
+    <ClInclude Include="scn_main_menu.h">
+      <Filter>Game\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

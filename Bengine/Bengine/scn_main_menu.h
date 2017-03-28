@@ -1,0 +1,54 @@
+#pragma once
+#include "scene.h"
+#include "sprite.h"
+#include "button.h"
+#include "bengine_typedefs.h"
+#include <vector>
+
+namespace BG
+{
+
+	class ScnMainMenu : public Scene
+	{
+
+	public:
+
+		bool load() override;
+
+		bool unload() override;
+
+		bool update() override;
+
+		bool draw() override;
+
+	private:
+
+		const Colour kColourBackground = Colour(102, 144, 184, 255);
+
+		Texture* txtr_title_;
+
+		Texture* txtr_btn_play_idle_;
+		Texture* txtr_btn_play_hovered_;
+		Texture* txtr_btn_play_clicked_;
+
+		Texture* txtr_btn_help_idle_;
+		Texture* txtr_btn_help_hovered_;
+		Texture* txtr_btn_help_clicked_;
+
+		Texture* txtr_btn_exit_idle_;
+		Texture* txtr_btn_exit_hovered_;
+		Texture* txtr_btn_exit_clicked_;
+
+		Button* btn_play_;
+		Button* btn_help_;
+		Button* btn_exit_;
+
+		std::vector<Button*> buttons_;
+
+		Sprite* spr_title_;
+
+		GameObject* obj_title_;
+
+	};
+
+}

@@ -3,13 +3,15 @@
 #include "game_object.h"
 #include "colour.h"
 #include "Text.h"
+#include "button.h"
+
 
 /*
  * \brief Creates and initializes a Window with the specified title and of the specified size
  * \param title Window title
  * \param size Window size
  */
-BG::Window::Window(const std::string& title, const Vector2u& size)
+BG::Window::Window(const std::string &title, const Vector2u& size)
 {
 	window_ = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, size.x_, size.y_, SDL_WINDOW_OPENGL);
 
@@ -20,7 +22,9 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
 		// Window creation failed, report error, clean up and exit.
 		logger.log(BG::Logger::kError, std::string("Failed to create window (") + SDL_GetError() + ")");
 		SDL_DestroyWindow(window_);
+		return;
 	}
+
 	logger.log(BG::Logger::kInfo, "Created window");
 
 	clr_background_ = BG::kClrBlack;
@@ -32,7 +36,9 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
 		// Render creation failed, report error, clean up and exit.
 		logger.log(BG::Logger::kError, std::string("Failed to create renderer (") + SDL_GetError() + ")");
 		SDL_DestroyRenderer(renderer_);
+		return;
 	}
+
 	logger.log(BG::Logger::kInfo, "Created renderer");
 }
 
@@ -42,6 +48,15 @@ BG::Window::Window(const std::string& title, const Vector2u& size)
 void BG::Window::clear() const
 {
 	SDL_RenderClear(renderer_);
+}
+
+/*
+ * \brief Sets the clear colour of the window
+ * \param colour new colour
+ */
+void BG::Window::set_clear_colour(const Colour& colour)
+{
+	clr_background_ = colour;
 }
 
 /*
@@ -58,11 +73,15 @@ void BG::Window::display() const
 void BG::Window::destroy()
 {
 	auto logger = Logger::instance();
+
 	logger.log(Logger::kInfo, "Destroying window");
 	SDL_DestroyWindow(window_);
+
 	window_ = nullptr;
+
 	logger.log(Logger::kInfo, "Destroying renderer and freeing associated textures");
 	SDL_DestroyRenderer(renderer_);
+
 	renderer_ = nullptr;
 }
 
@@ -74,15 +93,13 @@ void BG::Window::draw(Text& text) const
 {
 	Texture* texture = text.texture();
 	Transform transform = text.transform();
-	Vector2f txtPosition = transform.position();
-	Vector2f txtOrigin = text.origin();
-	float txtAngle = transform.rotation();
 
-	SDL_Rect dstRect = { txtPosition.x_, txtPosition.y_, 0, 0 };
+	SDL_Rect destination_rectangle = { transform.position().x_, transform.position().y_, 0, 0 };
 	SDL_Point origin = { text.origin().x_, text.origin().y_ };
 
-	SDL_QueryTexture(texture, nullptr, nullptr, &dstRect.w, &dstRect.h);
-	SDL_RenderCopyEx(renderer_, texture, nullptr, &dstRect, txtAngle, &origin, SDL_FLIP_NONE);
+	SDL_QueryTexture(texture, nullptr, nullptr, &destination_rectangle.w, &destination_rectangle.h);
+	SDL_RenderCopyEx(renderer_, texture, nullptr, &destination_rectangle, transform.rotation(), &origin, SDL_FLIP_NONE);
+
 	SDL_DestroyTexture(texture);
 }
 
@@ -92,20 +109,17 @@ void BG::Window::draw(Text& text) const
  */
 void BG::Window::draw(GameObject& gameObject) const
 {
-	Transform* transform = gameObject.transform();
-	Vector2f position = transform->position();
-	float angle = transform->rotation();
+	Transform transform = gameObject.transform();
+	Sprite sprite = gameObject.sprite();
 
-	Sprite* sprite = gameObject.sprite();
-	SDL_Texture* texture = sprite->texture();
-	Vector2f size = sprite->size();
-	SDL_RendererFlip flipped = sprite->flipped();
-	Vector2f sprOrigin = transform->origin();
+	SDL_Texture* texture = sprite.texture();
 
-	SDL_Point origin = { sprOrigin.x_, sprOrigin.y_ };
-	SDL_Rect destination = { position.x_, position.y_, size.x_, size.y_ };
+	SDL_Point origin = { transform.origin().x_, transform.origin().y_ };
+	SDL_Rect destination = { transform.position().x_, transform.position().y_, sprite.size().x_, sprite.size().y_ };
 
-	SDL_RenderCopyEx(renderer_, texture, nullptr, &destination, angle, &origin, flipped);
+	SDL_SetTextureColorMod(texture, sprite.colour().r_, sprite.colour().g_, sprite.colour().b_);
+	SDL_RenderCopyEx(renderer_, texture, nullptr, &destination, transform.rotation(), &origin, sprite.flipped());
+	SDL_SetTextureColorMod(gameObject.sprite().texture(), 255, 255, 255);
 }
 
 /*
@@ -115,9 +129,10 @@ void BG::Window::draw(GameObject& gameObject) const
  */
 void BG::Window::draw(GameObject& gameObject, const Colour& tint) const
 {
-	SDL_SetTextureColorMod(gameObject.sprite()->texture(), tint.r_, tint.g_, tint.b_);
+	SDL_SetTextureColorMod(gameObject.sprite().texture(), tint.r_, tint.g_, tint.b_);
 	draw(gameObject);
-	SDL_SetTextureColorMod(gameObject.sprite()->texture(), 255, 255, 255);
+
+	SDL_SetTextureColorMod(gameObject.sprite().texture(), 255, 255, 255);
 }
 
 /*
@@ -131,6 +146,11 @@ void BG::Window::draw(const FloatRect& rect, const Colour& colour) const
 	SDL_SetRenderDrawColor(renderer_, colour.r_, colour.g_, colour.b_, colour.a_);
 	SDL_RenderDrawRect(renderer_, &bounds);
 	SDL_SetRenderDrawColor(renderer_, clr_background_.r_, clr_background_.g_, clr_background_.b_, clr_background_.a_);
+}
+
+void BG::Window::draw(Button& button)
+{
+	draw(button.game_object());
 }
 
 /*
