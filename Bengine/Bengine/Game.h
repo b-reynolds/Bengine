@@ -10,6 +10,8 @@
 #include <lstate.h>
 #include "button.h"
 
+#include "scn_main_menu.h"
+
 class Game
 {
 
@@ -23,15 +25,7 @@ public:
 
 private:
 
-	const int kSpeed = 250;
-
-	BG::Text txt_my_text_;
-	BG::Text txt_my_other_text_;
-
-	BG::Button* button_;
-
-	std::vector<BG::GameObject*> game_objects;
-	std::vector<BG::Button*> buttons_;
+	BG::ScnMainMenu* scn_main_menu_;
 
 	BG::Window* window_;
 

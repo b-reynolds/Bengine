@@ -10,6 +10,7 @@ bool BG::ScnMainMenu::load()
 	// ----- Load Textures -----
 
 	txtr_title_ = resource_manager->texture("Images/Main Menu/Title.png", window_);
+	txtr_cloud_ = resource_manager->texture("Images/Main Menu/Cloud.png", window_);
 
 	txtr_btn_play_idle_ = resource_manager->texture("Images/Main Menu/ButtonPlayIdle.png", window_);
 	txtr_btn_play_hovered_ = resource_manager->texture("Images/Main Menu/ButtonPlayHovered.png", window_);
@@ -28,8 +29,20 @@ bool BG::ScnMainMenu::load()
 	// ----- Initialize Buttons -----
 
 	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, *window_);
+
+	Vector2f btn_play_size = btn_play_->game_object().sprite().size();
+	btn_play_->game_object().transform().set_origin(Vector2f(btn_play_size.x_ / 2.0f, btn_play_size.y_ / 2.0f));
+	btn_play_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 368));
+
 	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, *window_);
+	Vector2f btn_help_size = btn_help_->game_object().sprite().size();
+	btn_help_->game_object().transform().set_origin(Vector2f(btn_help_size.x_ / 2.0f, btn_help_size.y_ / 2.0f));
+	btn_help_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 502));
+
 	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, *window_);
+	Vector2f btn_exit_size = btn_exit_->game_object().sprite().size();
+	btn_exit_->game_object().transform().set_origin(Vector2f(btn_exit_size.x_ / 2.0f, btn_exit_size.y_ / 2.0f));
+	btn_exit_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 625));
 
 	buttons_.push_back(btn_play_);
 	buttons_.push_back(btn_help_);
@@ -40,12 +53,23 @@ bool BG::ScnMainMenu::load()
 	// ----- Initialize Sprites -----
 
 	spr_title_ = new Sprite(txtr_title_, window_);
+	spr_cloud_ = new Sprite(txtr_cloud_, window_);
 
 	// -------------------------
 
 	// ----- Initialize Game Objects -----
 
 	obj_title_ = new GameObject(spr_title_, Vector2f(0, 0));
+
+	Vector2f obj_title_size = obj_title_->sprite().size();
+
+	obj_title_->transform().set_origin(Vector2f(obj_title_size.x_ / 2.0f, obj_title_size.y_ / 2.0f));
+	obj_title_->transform().set_position(window_->size().x_ / 2.0f, (obj_title_size.y_ / 2.0f) * 1.25f);
+
+	obj_cloud_ = new GameObject(spr_cloud_, Vector2f(0, 0));
+
+	game_objects_.push_back(obj_cloud_);
+	game_objects_.push_back(obj_title_);
 
 	// -------------------------
 
@@ -126,6 +150,16 @@ bool BG::ScnMainMenu::update()
 
 bool BG::ScnMainMenu::draw()
 {
+	window_->clear();
+
+	// ----- Draw Game Objects -----
+
+	for (unsigned int i = 0; i < game_objects_.size(); ++i)
+	{
+		window_->draw(*game_objects_[i]);
+	}
+
+	// -------------------------
 
 	// ----- Draw Buttons -----
 
@@ -135,6 +169,8 @@ bool BG::ScnMainMenu::draw()
 	}
 
 	// -------------------------
+
+	window_->display();
 
 	return true;
 

@@ -29,6 +29,8 @@ namespace BG
 		/* Returns the Sprite's current size (scaled) */
 		Vector2f size() const;
 
+		// TODO: Sprite Origin IS OBSOLETE (SEE TRANSFORM)
+
 		/* Set the Sprite's origin for rendering and rotation */
 		void set_origin(const Vector2f& origin);
 

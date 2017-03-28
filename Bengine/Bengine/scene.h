@@ -3,6 +3,8 @@
 namespace BG
 {
 
+	class Window;
+
 	class Scene
 	{
 

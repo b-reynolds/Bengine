@@ -47,6 +47,7 @@ BG::Window::Window(const std::string &title, const Vector2u& size)
  */
 void BG::Window::clear() const
 {
+	SDL_SetRenderDrawColor(renderer_, clr_background_.r_, clr_background_.g_, clr_background_.b_, clr_background_.a_);
 	SDL_RenderClear(renderer_);
 }
 

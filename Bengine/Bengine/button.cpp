@@ -25,6 +25,8 @@ void BG::Button::update()
 
 	Vector2i mouse_pos = Mouse::instance()->position();
 	Sprite* spr_next;
+
+	calculate_size();
 	
 	if (mouse_pos.x_ >= position_.x_ && mouse_pos.x_ <= position_.x_ + size_.x_ && mouse_pos.y_ >= position_.y_ && mouse_pos.y_ <= position_.y_ + size_.y_)
 	{
@@ -40,7 +42,6 @@ void BG::Button::update()
 	if(spr_next->texture() != game_object_.sprite().texture())
 	{
 		game_object_.set_sprite(spr_next);
-		calculate_size();
 	}
 
 }
