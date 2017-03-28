@@ -27,20 +27,27 @@ bool BG::ScnMainMenu::load()
 
 	// -------------------------
 
+	// ----- Load Sound Effects -----
+
+	sfx_btn_hover = resource_manager->sound_effect("Audio/ButtonHover.wav");
+	sfx_btn_click = resource_manager->sound_effect("Audio/ButtonClick.wav");
+
+	// -------------------------
+
 	// ----- Initialize Buttons -----
 
-	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, *window_);
+	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
 
 	Vector2f btn_play_size = btn_play_->game_object().sprite().size();
 	btn_play_->game_object().transform().set_origin(Vector2f(btn_play_size.x_ / 2.0f, btn_play_size.y_ / 2.0f));
 	btn_play_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 368));
 
-	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, *window_);
+	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
 	Vector2f btn_help_size = btn_help_->game_object().sprite().size();
 	btn_help_->game_object().transform().set_origin(Vector2f(btn_help_size.x_ / 2.0f, btn_help_size.y_ / 2.0f));
 	btn_help_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 502));
 
-	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, *window_);
+	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
 	Vector2f btn_exit_size = btn_exit_->game_object().sprite().size();
 	btn_exit_->game_object().transform().set_origin(Vector2f(btn_exit_size.x_ / 2.0f, btn_exit_size.y_ / 2.0f));
 	btn_exit_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 625));

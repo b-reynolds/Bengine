@@ -42,6 +42,9 @@ namespace BG
 		Texture* txtr_btn_exit_idle_;
 		Texture* txtr_btn_exit_hovered_;
 		Texture* txtr_btn_exit_clicked_;
+		
+		SoundEffect* sfx_btn_click;
+		SoundEffect* sfx_btn_hover;
 
 		Button* btn_play_;
 		Button* btn_help_;
