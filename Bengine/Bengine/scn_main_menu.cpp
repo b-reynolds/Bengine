@@ -144,6 +144,21 @@ bool BG::ScnMainMenu::update()
 		buttons_[i]->update();
 	}
 
+	if(btn_play_->clicked())
+	{
+		
+	}
+
+	if(btn_help_->clicked())
+	{
+		
+	}
+
+	if(btn_exit_->clicked())
+	{
+		
+	}
+
 	// -------------------------
 
 	// ----- Update Cloud Animation -----
