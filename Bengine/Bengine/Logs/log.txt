@@ -30131,3 +30131,384 @@
 [28-03-2017 14:47:48] Info: Unloading IMG_Init
 [28-03-2017 14:47:48] Info: Cleaning up SDL subsystems
 [28-03-2017 14:47:48] Info: Exiting application
+[28-03-2017 14:55:48] Info: Initialized video subsystem
+[28-03-2017 14:55:48] Info: Initialized SDL_Image
+[28-03-2017 14:55:48] Info: Initialized SDL_Mix
+[28-03-2017 14:55:48] Info: Initialized SDL_TTF
+[28-03-2017 14:55:48] Info: Created window
+[28-03-2017 14:55:48] Info: Created renderer
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/Title.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/Cloud.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[28-03-2017 14:55:48] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[28-03-2017 14:55:48] Debug: Mouse Position: 314, 88
+[28-03-2017 14:56:25] Debug: Mouse Position: 386, 86
+[28-03-2017 14:56:25] Debug: Mouse Position: 466, 89
+[28-03-2017 14:56:25] Debug: Mouse Position: 537, 85
+[28-03-2017 14:56:25] Debug: Mouse Position: 557, 75
+[28-03-2017 14:56:25] Debug: Mouse Position: 583, 65
+[28-03-2017 14:56:25] Debug: Mouse Position: 631, 53
+[28-03-2017 14:56:25] Debug: Mouse Position: 694, 41
+[28-03-2017 14:56:25] Debug: Mouse Position: 766, 24
+[28-03-2017 14:56:25] Debug: Mouse Position: 827, 6
+[28-03-2017 14:56:25] Debug: Mouse Position: 896, 0
+[28-03-2017 14:56:25] Debug: Mouse Position: 1189, 0
+[28-03-2017 14:56:25] Debug: Mouse Position: 1212, 0
+[28-03-2017 14:56:25] Debug: Mouse Position: 1222, 2
+[28-03-2017 14:56:25] Debug: Mouse Position: 1207, 3
+[28-03-2017 14:56:25] Debug: Mouse Position: 1205, 4
+[28-03-2017 14:56:25] Debug: Mouse Position: 1205, 2
+[28-03-2017 14:56:25] Debug: Mouse Position: 1226, 0
+[28-03-2017 14:56:26] Info: Destroying window
+[28-03-2017 14:56:26] Info: Destroying renderer and freeing associated textures
+[28-03-2017 14:56:26] Info: Unloading Mix_Init
+[28-03-2017 14:56:26] Info: Unloading IMG_Init
+[28-03-2017 14:56:26] Info: Cleaning up SDL subsystems
+[28-03-2017 14:56:26] Info: Exiting application
+[28-03-2017 14:56:53] Info: Initialized video subsystem
+[28-03-2017 14:56:53] Info: Initialized SDL_Image
+[28-03-2017 14:56:53] Info: Initialized SDL_Mix
+[28-03-2017 14:56:53] Info: Initialized SDL_TTF
+[28-03-2017 14:56:54] Info: Created window
+[28-03-2017 14:56:54] Info: Created renderer
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/Title.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/Cloud.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[28-03-2017 14:56:54] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[28-03-2017 14:56:54] Debug: Mouse Position: 367, 269
+[28-03-2017 14:56:57] Debug: Mouse Position: 366, 269
+[28-03-2017 14:56:57] Debug: Mouse Position: 365, 269
+[28-03-2017 14:56:57] Debug: Mouse Position: 364, 269
+[28-03-2017 14:56:57] Debug: Mouse Position: 363, 269
+[28-03-2017 14:56:58] Debug: Mouse Position: 360, 269
+[28-03-2017 14:56:58] Debug: Mouse Position: 359, 269
+[28-03-2017 14:56:58] Debug: Mouse Position: 357, 270
+[28-03-2017 14:57:01] Debug: Mouse Position: 358, 270
+[28-03-2017 14:57:01] Debug: Mouse Position: 359, 272
+[28-03-2017 14:57:01] Debug: Mouse Position: 368, 283
+[28-03-2017 14:57:01] Debug: Mouse Position: 382, 293
+[28-03-2017 14:57:01] Debug: Mouse Position: 398, 304
+[28-03-2017 14:57:01] Debug: Mouse Position: 416, 315
+[28-03-2017 14:57:01] Debug: Mouse Position: 437, 329
+[28-03-2017 14:57:01] Debug: Mouse Position: 452, 337
+[28-03-2017 14:57:01] Debug: Mouse Position: 464, 344
+[28-03-2017 14:57:01] Debug: Mouse Position: 474, 349
+[28-03-2017 14:57:01] Debug: Mouse Position: 485, 356
+[28-03-2017 14:57:01] Debug: Mouse Position: 493, 362
+[28-03-2017 14:57:01] Debug: Mouse Position: 498, 366
+[28-03-2017 14:57:01] Debug: Mouse Position: 500, 367
+[28-03-2017 14:57:02] Debug: Mouse Position: 500, 373
+[28-03-2017 14:57:02] Debug: Mouse Position: 500, 389
+[28-03-2017 14:57:02] Debug: Mouse Position: 500, 413
+[28-03-2017 14:57:02] Debug: Mouse Position: 500, 422
+[28-03-2017 14:57:02] Debug: Mouse Position: 500, 443
+[28-03-2017 14:57:02] Debug: Mouse Position: 500, 464
+[28-03-2017 14:57:02] Debug: Mouse Position: 503, 478
+[28-03-2017 14:57:02] Debug: Mouse Position: 507, 488
+[28-03-2017 14:57:02] Debug: Mouse Position: 509, 492
+[28-03-2017 14:57:02] Debug: Mouse Position: 510, 496
+[28-03-2017 14:57:02] Debug: Mouse Position: 510, 497
+[28-03-2017 14:57:03] Debug: Mouse Position: 510, 504
+[28-03-2017 14:57:03] Debug: Mouse Position: 510, 515
+[28-03-2017 14:57:03] Debug: Mouse Position: 510, 524
+[28-03-2017 14:57:03] Debug: Mouse Position: 510, 536
+[28-03-2017 14:57:03] Debug: Mouse Position: 512, 552
+[28-03-2017 14:57:03] Debug: Mouse Position: 515, 569
+[28-03-2017 14:57:03] Debug: Mouse Position: 517, 582
+[28-03-2017 14:57:03] Debug: Mouse Position: 521, 598
+[28-03-2017 14:57:03] Debug: Mouse Position: 521, 605
+[28-03-2017 14:57:03] Debug: Mouse Position: 522, 610
+[28-03-2017 14:57:03] Debug: Mouse Position: 522, 612
+[28-03-2017 14:57:03] Debug: Mouse Position: 522, 613
+[28-03-2017 14:57:03] Debug: Mouse Position: 522, 611
+[28-03-2017 14:57:03] Debug: Mouse Position: 522, 609
+[28-03-2017 14:57:03] Debug: Mouse Position: 522, 606
+[28-03-2017 14:57:04] Debug: Mouse Position: 522, 602
+[28-03-2017 14:57:04] Debug: Mouse Position: 524, 593
+[28-03-2017 14:57:04] Debug: Mouse Position: 524, 581
+[28-03-2017 14:57:04] Debug: Mouse Position: 527, 566
+[28-03-2017 14:57:04] Debug: Mouse Position: 528, 551
+[28-03-2017 14:57:04] Debug: Mouse Position: 530, 537
+[28-03-2017 14:57:04] Debug: Mouse Position: 530, 527
+[28-03-2017 14:57:04] Debug: Mouse Position: 527, 519
+[28-03-2017 14:57:04] Debug: Mouse Position: 526, 515
+[28-03-2017 14:57:04] Debug: Mouse Position: 525, 512
+[28-03-2017 14:57:04] Debug: Mouse Position: 524, 512
+[28-03-2017 14:57:04] Debug: Mouse Position: 523, 511
+[28-03-2017 14:57:04] Debug: Mouse Position: 523, 500
+[28-03-2017 14:57:04] Debug: Mouse Position: 527, 467
+[28-03-2017 14:57:04] Debug: Mouse Position: 530, 449
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 425
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 416
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 408
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 404
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 401
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 400
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 405
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 426
+[28-03-2017 14:57:04] Debug: Mouse Position: 531, 438
+[28-03-2017 14:57:04] Debug: Mouse Position: 530, 452
+[28-03-2017 14:57:04] Debug: Mouse Position: 527, 467
+[28-03-2017 14:57:04] Debug: Mouse Position: 526, 481
+[28-03-2017 14:57:04] Debug: Mouse Position: 524, 491
+[28-03-2017 14:57:04] Debug: Mouse Position: 522, 498
+[28-03-2017 14:57:04] Debug: Mouse Position: 521, 500
+[28-03-2017 14:57:04] Debug: Mouse Position: 521, 501
+[28-03-2017 14:57:04] Debug: Mouse Position: 521, 502
+[28-03-2017 14:57:04] Debug: Mouse Position: 521, 509
+[28-03-2017 14:57:04] Debug: Mouse Position: 524, 522
+[28-03-2017 14:57:04] Debug: Mouse Position: 532, 539
+[28-03-2017 14:57:05] Debug: Mouse Position: 536, 551
+[28-03-2017 14:57:05] Debug: Mouse Position: 541, 563
+[28-03-2017 14:57:05] Debug: Mouse Position: 547, 576
+[28-03-2017 14:57:05] Debug: Mouse Position: 551, 589
+[28-03-2017 14:57:05] Debug: Mouse Position: 555, 602
+[28-03-2017 14:57:05] Debug: Mouse Position: 558, 613
+[28-03-2017 14:57:05] Debug: Mouse Position: 560, 620
+[28-03-2017 14:57:05] Debug: Mouse Position: 562, 622
+[28-03-2017 14:57:05] Debug: Mouse Position: 562, 621
+[28-03-2017 14:57:05] Debug: Mouse Position: 561, 607
+[28-03-2017 14:57:05] Debug: Mouse Position: 559, 593
+[28-03-2017 14:57:05] Debug: Mouse Position: 556, 575
+[28-03-2017 14:57:05] Debug: Mouse Position: 553, 559
+[28-03-2017 14:57:05] Debug: Mouse Position: 550, 547
+[28-03-2017 14:57:05] Debug: Mouse Position: 547, 533
+[28-03-2017 14:57:05] Debug: Mouse Position: 546, 529
+[28-03-2017 14:57:05] Debug: Mouse Position: 545, 526
+[28-03-2017 14:57:05] Debug: Mouse Position: 545, 524
+[28-03-2017 14:57:05] Debug: Mouse Position: 545, 523
+[28-03-2017 14:57:05] Debug: Mouse Position: 545, 517
+[28-03-2017 14:57:05] Debug: Mouse Position: 545, 506
+[28-03-2017 14:57:05] Debug: Mouse Position: 551, 479
+[28-03-2017 14:57:05] Debug: Mouse Position: 556, 462
+[28-03-2017 14:57:05] Debug: Mouse Position: 558, 444
+[28-03-2017 14:57:05] Debug: Mouse Position: 561, 427
+[28-03-2017 14:57:05] Debug: Mouse Position: 562, 414
+[28-03-2017 14:57:05] Debug: Mouse Position: 562, 407
+[28-03-2017 14:57:05] Debug: Mouse Position: 563, 402
+[28-03-2017 14:57:05] Debug: Mouse Position: 563, 399
+[28-03-2017 14:57:05] Debug: Mouse Position: 563, 403
+[28-03-2017 14:57:05] Debug: Mouse Position: 567, 426
+[28-03-2017 14:57:05] Debug: Mouse Position: 569, 434
+[28-03-2017 14:57:05] Debug: Mouse Position: 569, 451
+[28-03-2017 14:57:05] Debug: Mouse Position: 571, 467
+[28-03-2017 14:57:05] Debug: Mouse Position: 573, 479
+[28-03-2017 14:57:05] Debug: Mouse Position: 574, 489
+[28-03-2017 14:57:05] Debug: Mouse Position: 575, 493
+[28-03-2017 14:57:06] Debug: Mouse Position: 578, 500
+[28-03-2017 14:57:06] Debug: Mouse Position: 581, 509
+[28-03-2017 14:57:06] Debug: Mouse Position: 590, 527
+[28-03-2017 14:57:06] Debug: Mouse Position: 596, 537
+[28-03-2017 14:57:06] Debug: Mouse Position: 604, 549
+[28-03-2017 14:57:06] Debug: Mouse Position: 608, 562
+[28-03-2017 14:57:06] Debug: Mouse Position: 612, 575
+[28-03-2017 14:57:06] Debug: Mouse Position: 615, 587
+[28-03-2017 14:57:06] Debug: Mouse Position: 617, 600
+[28-03-2017 14:57:06] Debug: Mouse Position: 617, 605
+[28-03-2017 14:57:06] Debug: Mouse Position: 618, 607
+[28-03-2017 14:57:06] Debug: Mouse Position: 618, 608
+[28-03-2017 14:57:06] Debug: Mouse Position: 618, 586
+[28-03-2017 14:57:06] Debug: Mouse Position: 617, 568
+[28-03-2017 14:57:06] Debug: Mouse Position: 611, 554
+[28-03-2017 14:57:06] Debug: Mouse Position: 606, 542
+[28-03-2017 14:57:06] Debug: Mouse Position: 603, 535
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 533
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 532
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 524
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 511
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 493
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 464
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 446
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 428
+[28-03-2017 14:57:06] Debug: Mouse Position: 602, 411
+[28-03-2017 14:57:06] Debug: Mouse Position: 601, 401
+[28-03-2017 14:57:06] Debug: Mouse Position: 599, 390
+[28-03-2017 14:57:06] Debug: Mouse Position: 599, 382
+[28-03-2017 14:57:06] Debug: Mouse Position: 599, 377
+[28-03-2017 14:57:06] Debug: Mouse Position: 599, 374
+[28-03-2017 14:57:07] Debug: Mouse Position: 599, 380
+[28-03-2017 14:57:07] Debug: Mouse Position: 599, 401
+[28-03-2017 14:57:07] Debug: Mouse Position: 599, 418
+[28-03-2017 14:57:07] Debug: Mouse Position: 599, 434
+[28-03-2017 14:57:07] Debug: Mouse Position: 598, 448
+[28-03-2017 14:57:07] Debug: Mouse Position: 595, 459
+[28-03-2017 14:57:07] Debug: Mouse Position: 594, 467
+[28-03-2017 14:57:07] Debug: Mouse Position: 591, 476
+[28-03-2017 14:57:07] Debug: Mouse Position: 590, 479
+[28-03-2017 14:57:07] Debug: Mouse Position: 590, 481
+[28-03-2017 14:57:07] Debug: Mouse Position: 590, 482
+[28-03-2017 14:57:07] Debug: Mouse Position: 590, 485
+[28-03-2017 14:57:07] Debug: Mouse Position: 588, 490
+[28-03-2017 14:57:07] Debug: Mouse Position: 587, 497
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 506
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 523
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 539
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 558
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 577
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 592
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 605
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 614
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 620
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 626
+[28-03-2017 14:57:07] Debug: Mouse Position: 584, 629
+[28-03-2017 14:57:07] Debug: Mouse Position: 580, 629
+[28-03-2017 14:57:07] Debug: Mouse Position: 575, 621
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 606
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 587
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 560
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 539
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 527
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 523
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 519
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 518
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 517
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 515
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 500
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 485
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 467
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 447
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 426
+[28-03-2017 14:57:07] Debug: Mouse Position: 573, 410
+[28-03-2017 14:57:07] Debug: Mouse Position: 572, 396
+[28-03-2017 14:57:07] Debug: Mouse Position: 571, 387
+[28-03-2017 14:57:07] Debug: Mouse Position: 568, 377
+[28-03-2017 14:57:08] Debug: Mouse Position: 567, 374
+[28-03-2017 14:57:08] Debug: Mouse Position: 566, 374
+[28-03-2017 14:57:08] Debug: Mouse Position: 560, 374
+[28-03-2017 14:57:08] Debug: Mouse Position: 550, 374
+[28-03-2017 14:57:08] Debug: Mouse Position: 536, 374
+[28-03-2017 14:57:08] Debug: Mouse Position: 515, 374
+[28-03-2017 14:57:08] Debug: Mouse Position: 500, 378
+[28-03-2017 14:57:08] Debug: Mouse Position: 487, 381
+[28-03-2017 14:57:08] Debug: Mouse Position: 479, 382
+[28-03-2017 14:57:08] Debug: Mouse Position: 476, 382
+[28-03-2017 14:57:08] Debug: Mouse Position: 484, 382
+[28-03-2017 14:57:08] Debug: Mouse Position: 493, 382
+[28-03-2017 14:57:08] Debug: Mouse Position: 502, 380
+[28-03-2017 14:57:08] Debug: Mouse Position: 506, 380
+[28-03-2017 14:57:08] Debug: Mouse Button (1) State: Down
+[28-03-2017 14:57:08] Debug: Mouse Position: 500, 380
+[28-03-2017 14:57:08] Debug: Mouse Position: 485, 383
+[28-03-2017 14:57:08] Debug: Mouse Position: 470, 385
+[28-03-2017 14:57:08] Debug: Mouse Position: 452, 386
+[28-03-2017 14:57:08] Debug: Mouse Position: 431, 389
+[28-03-2017 14:57:08] Debug: Mouse Position: 398, 393
+[28-03-2017 14:57:08] Debug: Mouse Position: 378, 396
+[28-03-2017 14:57:08] Debug: Mouse Position: 363, 398
+[28-03-2017 14:57:08] Debug: Mouse Position: 353, 400
+[28-03-2017 14:57:08] Debug: Mouse Position: 350, 400
+[28-03-2017 14:57:08] Debug: Mouse Position: 349, 400
+[28-03-2017 14:57:08] Debug: Mouse Button (1) State: Up
+[28-03-2017 14:57:08] Debug: Mouse Position: 348, 401
+[28-03-2017 14:57:08] Debug: Mouse Position: 348, 402
+[28-03-2017 14:57:08] Debug: Mouse Position: 348, 408
+[28-03-2017 14:57:08] Debug: Mouse Position: 353, 418
+[28-03-2017 14:57:08] Debug: Mouse Position: 365, 437
+[28-03-2017 14:57:09] Debug: Mouse Position: 376, 452
+[28-03-2017 14:57:09] Debug: Mouse Position: 392, 467
+[28-03-2017 14:57:09] Debug: Mouse Position: 411, 479
+[28-03-2017 14:57:09] Debug: Mouse Position: 434, 488
+[28-03-2017 14:57:09] Debug: Mouse Position: 458, 498
+[28-03-2017 14:57:09] Debug: Mouse Position: 480, 504
+[28-03-2017 14:57:09] Debug: Mouse Position: 497, 506
+[28-03-2017 14:57:09] Debug: Mouse Position: 506, 508
+[28-03-2017 14:57:09] Debug: Mouse Position: 509, 509
+[28-03-2017 14:57:09] Debug: Mouse Button (1) State: Down
+[28-03-2017 14:57:09] Debug: Mouse Button (1) State: Up
+[28-03-2017 14:57:09] Debug: Mouse Position: 506, 509
+[28-03-2017 14:57:09] Debug: Mouse Position: 478, 520
+[28-03-2017 14:57:09] Debug: Mouse Position: 452, 531
+[28-03-2017 14:57:09] Debug: Mouse Position: 427, 546
+[28-03-2017 14:57:09] Debug: Mouse Position: 410, 560
+[28-03-2017 14:57:09] Debug: Mouse Position: 398, 572
+[28-03-2017 14:57:09] Debug: Mouse Position: 395, 583
+[28-03-2017 14:57:09] Debug: Mouse Position: 395, 588
+[28-03-2017 14:57:09] Debug: Mouse Position: 396, 593
+[28-03-2017 14:57:09] Debug: Mouse Position: 399, 599
+[28-03-2017 14:57:09] Debug: Mouse Position: 405, 605
+[28-03-2017 14:57:09] Debug: Mouse Position: 424, 618
+[28-03-2017 14:57:09] Debug: Mouse Position: 442, 625
+[28-03-2017 14:57:09] Debug: Mouse Position: 463, 629
+[28-03-2017 14:57:09] Debug: Mouse Position: 484, 633
+[28-03-2017 14:57:09] Debug: Mouse Position: 504, 636
+[28-03-2017 14:57:09] Debug: Mouse Position: 518, 638
+[28-03-2017 14:57:09] Debug: Mouse Position: 527, 639
+[28-03-2017 14:57:09] Debug: Mouse Position: 528, 639
+[28-03-2017 14:57:09] Debug: Mouse Button (1) State: Down
+[28-03-2017 14:57:10] Debug: Mouse Button (1) State: Up
+[28-03-2017 14:57:10] Debug: Mouse Position: 522, 635
+[28-03-2017 14:57:10] Debug: Mouse Position: 497, 620
+[28-03-2017 14:57:10] Debug: Mouse Position: 473, 609
+[28-03-2017 14:57:10] Debug: Mouse Position: 445, 596
+[28-03-2017 14:57:10] Debug: Mouse Position: 412, 581
+[28-03-2017 14:57:10] Debug: Mouse Position: 380, 565
+[28-03-2017 14:57:10] Debug: Mouse Position: 348, 551
+[28-03-2017 14:57:10] Debug: Mouse Position: 318, 538
+[28-03-2017 14:57:10] Debug: Mouse Position: 295, 527
+[28-03-2017 14:57:10] Debug: Mouse Position: 276, 519
+[28-03-2017 14:57:10] Debug: Mouse Position: 260, 512
+[28-03-2017 14:57:10] Debug: Mouse Position: 257, 510
+[28-03-2017 14:57:10] Debug: Mouse Position: 256, 509
+[28-03-2017 14:57:10] Debug: Mouse Position: 255, 509
+[28-03-2017 14:57:10] Debug: Mouse Position: 254, 508
+[28-03-2017 14:57:17] Debug: Mouse Position: 251, 508
+[28-03-2017 14:57:17] Debug: Mouse Position: 251, 509
+[28-03-2017 14:57:17] Debug: Mouse Position: 250, 509
+[28-03-2017 14:57:17] Debug: Mouse Position: 250, 511
+[28-03-2017 14:59:16] Debug: Mouse Position: 246, 511
+[28-03-2017 14:59:16] Debug: Mouse Position: 235, 508
+[28-03-2017 14:59:16] Debug: Mouse Position: 227, 506
+[28-03-2017 14:59:16] Debug: Mouse Position: 251, 496
+[28-03-2017 14:59:16] Debug: Mouse Position: 323, 470
+[28-03-2017 14:59:16] Debug: Mouse Position: 427, 430
+[28-03-2017 14:59:16] Debug: Mouse Position: 530, 387
+[28-03-2017 14:59:16] Debug: Mouse Position: 623, 360
+[28-03-2017 14:59:16] Debug: Mouse Position: 710, 345
+[28-03-2017 14:59:16] Debug: Mouse Position: 787, 331
+[28-03-2017 14:59:16] Debug: Mouse Position: 854, 312
+[28-03-2017 14:59:16] Debug: Mouse Position: 901, 290
+[28-03-2017 14:59:16] Debug: Mouse Position: 935, 272
+[28-03-2017 14:59:16] Debug: Mouse Position: 971, 252
+[28-03-2017 14:59:16] Debug: Mouse Position: 990, 243
+[28-03-2017 14:59:16] Debug: Mouse Position: 1008, 233
+[28-03-2017 14:59:16] Debug: Mouse Position: 1025, 222
+[28-03-2017 14:59:16] Debug: Mouse Position: 1034, 215
+[28-03-2017 14:59:16] Debug: Mouse Position: 1040, 212
+[28-03-2017 14:59:16] Debug: Mouse Position: 1053, 212
+[28-03-2017 14:59:17] Debug: Mouse Position: 1083, 212
+[28-03-2017 14:59:17] Debug: Mouse Position: 1127, 212
+[28-03-2017 14:59:17] Debug: Mouse Position: 1167, 212
+[28-03-2017 14:59:17] Debug: Mouse Position: 1197, 203
+[28-03-2017 14:59:17] Debug: Mouse Position: 1218, 190
+[28-03-2017 14:59:17] Debug: Mouse Position: 1252, 155
+[28-03-2017 14:59:17] Debug: Mouse Position: 1270, 128
+[28-03-2017 14:59:17] Debug: Mouse Position: 1279, 110
+[28-03-2017 14:59:17] Debug: Mouse Position: 1274, 16
+[28-03-2017 14:59:17] Debug: Mouse Position: 1268, 11
+[28-03-2017 14:59:17] Debug: Mouse Position: 1265, 9
+[28-03-2017 14:59:17] Debug: Mouse Position: 1262, 8
+[28-03-2017 14:59:17] Debug: Mouse Position: 1262, 5
+[28-03-2017 14:59:17] Debug: Mouse Position: 1262, 4
+[28-03-2017 14:59:17] Debug: Mouse Position: 1262, 3
+[28-03-2017 14:59:17] Debug: Mouse Position: 1262, 2
+[28-03-2017 14:59:17] Debug: Mouse Position: 1264, 0
+[28-03-2017 14:59:18] Info: Destroying window
+[28-03-2017 14:59:18] Info: Destroying renderer and freeing associated textures
+[28-03-2017 14:59:18] Info: Unloading Mix_Init
+[28-03-2017 14:59:18] Info: Unloading IMG_Init
+[28-03-2017 14:59:18] Info: Cleaning up SDL subsystems
+[28-03-2017 14:59:18] Info: Exiting application

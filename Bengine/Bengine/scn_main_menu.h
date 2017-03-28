@@ -26,6 +26,7 @@ namespace BG
 	private:
 
 		const Colour kColourBackground = Colour(102, 144, 184, 255);
+		const float kCloudSpeed = 100.0f;
 
 		Texture* txtr_title_;
 		Texture* txtr_cloud_;
@@ -55,6 +56,8 @@ namespace BG
 		GameObject* obj_cloud_;
 
 		std::vector<GameObject*> game_objects_;
+
+		Vector2f obj_cloud_size;
 
 	};
 
