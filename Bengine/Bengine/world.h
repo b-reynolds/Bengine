@@ -13,6 +13,8 @@ namespace BG
 		static b2World* instance();
 
 		void set_gravity(const BG::Vector2f& gravity);
+		
+		static b2Vec2 world_to_sim(const Vector2f& vector);
 
 	private:
 

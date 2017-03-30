@@ -19,3 +19,8 @@ void BG::World::set_gravity(const BG::Vector2f& gravity)
 
 	instance_->SetGravity(gravity_);
 }
+
+b2Vec2 BG::World::world_to_sim(const Vector2f& vector)
+{
+	return b2Vec2(vector.x_ / 30.0f, vector.y_ / 30.0f);
+}

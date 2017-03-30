@@ -169,6 +169,12 @@ bool BG::Bengine::run()
 
 		// Calculate delta time
 		delta_time_ = (current_ - last_) * 1000 / SDL_GetPerformanceFrequency() * 0.001;
+
+		if(delta_time_ > 2.0f)
+		{
+			delta_time_ = 2.0f;
+		}
+
 	}
 
 	return false;

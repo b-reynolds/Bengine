@@ -13,7 +13,7 @@ namespace BG
 
 	public:
 
-		ScnMainMenu(Window& window) : Scene(window) {};
+		explicit ScnMainMenu(Window& window);
 
 		bool load() override;
 
@@ -27,7 +27,7 @@ namespace BG
 
 		const Colour kColourBackground = Colour(102, 144, 184, 255);
 		const float kCloudSpeed = 100.0f;
-		const unsigned int kCloudRainPoolSize = 10;
+		const unsigned int kCloudRainPoolSize = 25;
 		const std::vector<Colour> kCloudRainColours =
 		{
 			Colour(194, 84, 57, 255),
@@ -51,6 +51,8 @@ namespace BG
 		Texture* txtr_btn_exit_idle_;
 		Texture* txtr_btn_exit_hovered_;
 		Texture* txtr_btn_exit_clicked_;
+
+		Music* mus_loop;
 		
 		SoundEffect* sfx_btn_click;
 		SoundEffect* sfx_btn_hover;
@@ -70,9 +72,6 @@ namespace BG
 
 		std::vector<GameObject*> game_objects_;
 		std::vector<GameObject*> cloud_rain_pool;
-
-		Vector2f obj_cloud_size_;
-		Vector2f obj_cloud_position_;
 
 	};
 

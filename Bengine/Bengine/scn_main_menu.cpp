@@ -4,10 +4,42 @@
 #include "bengine.h"
 #include "World.h"
 #include "random.h"
+#include "Audio.h"
+
+BG::ScnMainMenu::ScnMainMenu(Window& window) : Scene(window)
+{
+	txtr_title_ = nullptr;
+	txtr_cloud_ = nullptr;
+	txtr_box_ = nullptr;
+
+	txtr_btn_play_idle_ = nullptr;
+	txtr_btn_play_hovered_ = nullptr;
+	txtr_btn_play_clicked_ = nullptr;
+
+	txtr_btn_help_idle_ = nullptr;
+	txtr_btn_help_hovered_ = nullptr;
+	txtr_btn_help_clicked_ = nullptr;
+
+	txtr_btn_exit_idle_ = nullptr;
+	txtr_btn_exit_hovered_ = nullptr;
+	txtr_btn_exit_clicked_ = nullptr;
+
+	sfx_btn_click = nullptr;
+	sfx_btn_hover = nullptr;
+
+	mus_loop = nullptr;
+
+	btn_play_ = nullptr;
+	btn_help_ = nullptr;
+	btn_exit_ = nullptr;
+
+	spr_cloud_ = nullptr;
+	spr_box_ = nullptr;
+	spr_title_ = nullptr;
+}
 
 bool BG::ScnMainMenu::load()
 {
-
 	ResourceManager* resource_manager = ResourceManager::instance();
 
 	// ----- Load Textures -----
@@ -37,26 +69,27 @@ bool BG::ScnMainMenu::load()
 
 	// -------------------------
 
+	// ----- Load Music -----
+
+	mus_loop = resource_manager->music("Audio/MenuLoop.wav");
+
+	// -------------------------
+
 	// ----- Initialize Buttons -----
 
 	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
-
-	Vector2f btn_play_size = btn_play_->game_object().sprite().size();
-	btn_play_->game_object().transform().set_origin(Vector2f(btn_play_size.x_ / 2.0f, btn_play_size.y_ / 2.0f));
+	btn_play_->game_object().transform().set_origin(btn_play_->game_object().sprite().size() / 2.0f);
 	btn_play_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 368));
+	buttons_.push_back(btn_play_);
 
 	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
-	Vector2f btn_help_size = btn_help_->game_object().sprite().size();
-	btn_help_->game_object().transform().set_origin(Vector2f(btn_help_size.x_ / 2.0f, btn_help_size.y_ / 2.0f));
+	btn_help_->game_object().transform().set_origin(btn_help_->game_object().sprite().size() / 2.0f);
 	btn_help_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 502));
+	buttons_.push_back(btn_help_);
 
 	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
-	Vector2f btn_exit_size = btn_exit_->game_object().sprite().size();
-	btn_exit_->game_object().transform().set_origin(Vector2f(btn_exit_size.x_ / 2.0f, btn_exit_size.y_ / 2.0f));
+	btn_exit_->game_object().transform().set_origin(btn_exit_->game_object().sprite().size() / 2.0f);
 	btn_exit_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 625));
-
-	buttons_.push_back(btn_play_);
-	buttons_.push_back(btn_help_);
 	buttons_.push_back(btn_exit_);
 
 	// -------------------------
@@ -71,20 +104,13 @@ bool BG::ScnMainMenu::load()
 
 	// ----- Initialize Game Objects -----
 
-	obj_title_ = new GameObject(spr_title_, Vector2f(0, 0));
-
-	Vector2f obj_title_size = obj_title_->sprite().size();
-
-	obj_title_->transform().set_origin(Vector2f(obj_title_size.x_ / 2.0f, obj_title_size.y_ / 2.0f));
-	obj_title_->transform().set_position(window_->size().x_ / 2.0f, (obj_title_size.y_ / 2.0f) * 1.25f);
-
-	obj_cloud_ = new GameObject(spr_cloud_, Vector2f(0, -0.0f));
-	obj_cloud_size_ = obj_cloud_->sprite().size();
-	obj_cloud_->transform().set_origin(Vector2f(obj_cloud_size_.x_ / 2.0f, obj_cloud_size_.y_ / 2.0f));
-	obj_cloud_->transform().set_position(Vector2f(window_->size().x_ / 2.0f, obj_cloud_size_.y_));
-	obj_cloud_position_ = obj_cloud_->transform().position();
-
+	obj_cloud_ = new GameObject(spr_cloud_, Vector2f(spr_cloud_->size().x_ / 2.0f, 0.0f));
+	obj_cloud_->transform().set_origin(spr_cloud_->size() / 2.0f);
 	game_objects_.push_back(obj_cloud_);
+
+	obj_title_ = new GameObject(spr_title_, Vector2f(0, 0));
+	obj_title_->transform().set_origin(obj_title_->sprite().size() / 2.0f);
+	obj_title_->transform().set_position(window_->size().x_ / 2.0f, obj_title_->sprite().size().y_ / 2.0f * 1.25f);
 	game_objects_.push_back(obj_title_);
 
 	// -------------------------
@@ -93,7 +119,7 @@ bool BG::ScnMainMenu::load()
 
 	for(unsigned int i = 0; i < kCloudRainPoolSize; ++i)
 	{
-		GameObject* obj_box = new GameObject(spr_box_, Vector2f(0.0f, window_->size().y_));
+		GameObject* obj_box = new GameObject(spr_box_, Vector2f(-spr_cloud_->size().x_ / 2.0f, obj_cloud_->transform().position().y_));
 		obj_box->init_physics(b2_dynamicBody, 0.5f);
 		obj_box->set_active(false);
 		cloud_rain_pool.push_back(obj_box);
@@ -107,18 +133,25 @@ bool BG::ScnMainMenu::load()
 
 	// -------------------------
 
-	return true;
+	// ----- Start Music -----
 
+	Audio::play_music(mus_loop, -1, 0);
+	Audio::set_music_volume(32);
+
+	// -------------------------
+
+	return true;
 }
 
 bool BG::ScnMainMenu::unload()
 {
-
 	ResourceManager* resource_manager = ResourceManager::instance();
 
 	// ----- Free Textures -----
 
 	resource_manager->free_texture("Images/Main Menu/Title.png");
+	resource_manager->free_texture("Images/Main Menu/Cloud.png");
+	resource_manager->free_texture("Images/Main Menu/Box.png");
 
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayIdle.png");
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayHovered.png");
@@ -141,15 +174,25 @@ bool BG::ScnMainMenu::unload()
 
 	// -------------------------
 
+	// ----- Free Music -----
+
+	Audio::stop_music(0);
+	resource_manager->free_music("Audio/MenuLoop.wav");
+
+	// -------------------------
+
 	// ----- Free Sprites -----
 
 	delete spr_title_;
+	delete spr_cloud_;
+	delete spr_box_;
 
 	// -------------------------
 
 	// ----- Free Game Objects -----
 
 	delete obj_title_;
+	delete obj_cloud_;
 
 	// -------------------------
 
@@ -164,15 +207,11 @@ bool BG::ScnMainMenu::unload()
 
 	// -------------------------
 
-	getchar();
-
 	return true;
-
 }
 
 bool BG::ScnMainMenu::update()
 {
-
 	// ----- Update Buttons -----
 
 	for (unsigned int i = 0; i < buttons_.size(); ++i)
@@ -200,11 +239,10 @@ bool BG::ScnMainMenu::update()
 	// ----- Update Cloud Animation -----
 
 	obj_cloud_->transform().move(Vector2f(kCloudSpeed * Bengine::delta_time(), 0.0f));
-	obj_cloud_position_ = obj_cloud_->transform().position();
 
-	if(obj_cloud_position_.x_ >= window_->size().x_)
+	if(obj_cloud_->transform().position().x_ >= window_->size().x_)
 	{
-		obj_cloud_->transform().set_position(Vector2f(-obj_cloud_size_.x_, obj_cloud_position_.y_));
+		obj_cloud_->transform().set_position(Vector2f(-spr_cloud_->size().x_ / 2.0f, obj_cloud_->transform().position().y_));
 	}
 
 	// -------------------------
@@ -223,30 +261,32 @@ bool BG::ScnMainMenu::update()
 		}
 	}
 
-	for (unsigned int i = 0; i < cloud_rain_pool.size(); ++i)
+	for(unsigned int i = 0; i < cloud_rain_pool.size(); ++i)
 	{
-		if (!cloud_rain_pool[i]->active())
+		if(cloud_rain_pool[i]->active())
 		{
-			b2Body* rigidbody = cloud_rain_pool[i]->rigidbody();
-
-			rigidbody->SetTransform(b2Vec2((obj_cloud_position_.x_ + obj_cloud_size_.x_ / 2.0f) / 30.0f, (obj_cloud_position_.y_ + obj_cloud_size_.y_ / 2.0f) / 30.0f), 0);
-			rigidbody->SetLinearDamping(0.0f);
-			rigidbody->SetLinearVelocity(b2Vec2(0.0f, 0.0f));
-			rigidbody->ApplyForce(b2Vec2(Random::random_int(-kCloudSpeed, kCloudSpeed), kCloudSpeed), b2Vec2_zero, true);
-			cloud_rain_pool[i]->set_colour(kCloudRainColours[Random::random_int(0, kCloudRainColours.size() - 1)]);
-
-			cloud_rain_pool[i]->set_active(true);
+			if (cloud_rain_pool[i]->transform().position().y_ >= window_->size().y_)
+			{
+				cloud_rain_pool[i]->set_active(false);
+			}
+			continue;
 		}
-		else if (cloud_rain_pool[i]->transform().position().y_ >= window_->size().y_)
-		{
-			cloud_rain_pool[i]->set_active(false);
-		}
+
+		b2Body* rigidbody = cloud_rain_pool[i]->rigidbody();
+
+		rigidbody->SetLinearDamping(0.0f);
+		rigidbody->SetLinearVelocity(b2Vec2(0.0f, 0.0f));
+
+		rigidbody->SetTransform(World::world_to_sim(obj_cloud_->transform().position() + spr_cloud_->size() / 2.0f), 0.0f);
+		rigidbody->ApplyForce(b2Vec2(Random::random_int(-kCloudSpeed, kCloudSpeed), kCloudSpeed), b2Vec2_zero, true);
+
+		cloud_rain_pool[i]->set_colour(kCloudRainColours[Random::random_int(0, kCloudRainColours.size() - 1)]);
+		cloud_rain_pool[i]->set_active(true);
 	}
 
 	// -------------------------
 
 	return true;
-
 }
 
 bool BG::ScnMainMenu::draw()
@@ -283,5 +323,4 @@ bool BG::ScnMainMenu::draw()
 	window_->display();
 
 	return true;
-
 }

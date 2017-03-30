@@ -24,8 +24,15 @@ BG::Transform::Transform(const Vector2f& position)
  */
 void BG::Transform::set_position(const Vector2f& position)
 {
-	position_ = position;
-	position_ -= origin_;
+	if(position.x_ != position_.x_)
+	{
+		position_.x_ = position.x_ - origin_.x_;
+	}
+
+	if (position.y_ != position_.y_)
+	{
+		position_.y_ = position.y_ - origin_.y_;
+	}
 }
 
 /*
@@ -35,9 +42,15 @@ void BG::Transform::set_position(const Vector2f& position)
 */
 void BG::Transform::set_position(const float& x, const float& y)
 {
-	position_.x_ = x;
-	position_.y_ = y;
-	position_ -= origin_; 
+	if(position_.x_ != x)
+	{
+		position_.x_ = x - origin_.x_;
+	}
+
+	if (position_.y_ != y)
+	{
+		position_.y_ = y - origin_.y_;
+	}
 }
 
 /*
