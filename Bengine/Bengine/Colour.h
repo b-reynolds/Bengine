@@ -2,6 +2,10 @@
 
 namespace BG
 {
+	
+	/**
+	 * \brief Basic Colour class containing predefined static colours
+	 */
 	struct Colour
 	{
 
