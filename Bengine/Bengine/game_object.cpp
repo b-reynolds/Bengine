@@ -1,8 +1,7 @@
 #include "game_object.h"
 #include "World.h"
-
-#include "Box2D/Box2D.h"
 #include "math.h"
+#include <Box2D.h>
 
 BG::GameObject::GameObject()
 {
@@ -10,6 +9,7 @@ BG::GameObject::GameObject()
 	transform_.set_position(69.0f, 69.0f);
 	active_ = true;
 	colour_ = Colour(255, 255, 255, 255);
+	body_ = nullptr;
 }
 
 BG::GameObject::GameObject(Sprite* sprite, const Vector2f& position)
@@ -18,24 +18,36 @@ BG::GameObject::GameObject(Sprite* sprite, const Vector2f& position)
 	transform_.set_position(position);
 	active_ = true;
 	colour_ = Colour(255, 255, 255, 255);
+	body_ = nullptr;
 }
 
+/**
+ * \brief Returns a reference to the Game Object's underlying Transform
+ */
 BG::Transform& BG::GameObject::transform()
 {
 	return transform_;
 }
 
-
+/**
+ * \brief Set the Game Object's Sprite
+ */
 void BG::GameObject::set_sprite(Sprite* sprite)
 {
 	sprite_ = sprite;
 }
 
+/**
+ * \brief Returns a reference to the Game Object's underlying Sprite
+ */
 BG::Sprite& BG::GameObject::sprite() const
 {
 	return *sprite_;
 }
 
+/**
+ * \brief Returns the Game Object's bounding box
+ */
 BG::FloatRect BG::GameObject::bounds() const
 {
 	Vector2f position = transform_.position();
@@ -43,12 +55,21 @@ BG::FloatRect BG::GameObject::bounds() const
 	return FloatRect(position.x_, position.y_, size.x_, size.y_);
 }
 
+/**
+ * \brief Updates the Game Object's Transform using a Box2D rigidbody
+ * \param body rigidbody
+ */
 void BG::GameObject::apply_physics(b2Body* body)
 {
 	transform_.set_position(30 * body->GetPosition().x, 30 * body->GetPosition().y);
 	transform_.set_rotation(Math::radiansToDegrees(body->GetAngle()));
 }
 
+/**
+ * \brief Initialize / add a rigidbody to the Game Object
+ * \param body_type rigidbody type
+ * \param density rigidbody density
+ */
 void BG::GameObject::init_physics(b2BodyType body_type, float density)
 {
 	auto sprite_size = sprite_->size();
@@ -74,26 +95,44 @@ void BG::GameObject::init_physics(b2BodyType body_type, float density)
 	body_->CreateFixture(&fixture_def);
 }
 
+
+/**
+ * \brief Returns the current Active state of the Game Object
+ */
 bool BG::GameObject::active() const
 {
 	return active_;
 }
 
+/**
+ * \brief Set the Active state of the Game Object
+ * \param state new state
+ */
 void BG::GameObject::set_active(const bool& state)
 {
 	active_ = state;
 }
 
+/**
+ * \brief Set the Game Object's tint colour
+ * \param colour new colour
+ */
 void BG::GameObject::set_colour(const Colour& colour)
 {
 	colour_ = colour;
 }
 
+/**
+ * \brief Returns the Game Object's tint colour
+ */
 BG::Colour BG::GameObject::colour() const
 {
 	return colour_;
 }
 
+/**
+ * \brief Returns a pointer to the Game Object's rigidbody
+ */
 b2Body* BG::GameObject::rigidbody() const
 {
 	return body_;
