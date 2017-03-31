@@ -24,7 +24,7 @@ BG::ScnMainMenu::ScnMainMenu(Window& window, SceneManager& scene_manager) : Scen
 	txtr_btn_exit_hovered_ = nullptr;
 	txtr_btn_exit_clicked_ = nullptr;
 
-	sfx_btn_click = nullptr;
+	sfx_btn_click_ = nullptr;
 	sfx_btn_hover = nullptr;
 
 	mus_loop = nullptr;
@@ -68,7 +68,7 @@ bool BG::ScnMainMenu::load()
 	// ----- Load Sound Effects -----
 
 	sfx_btn_hover = resource_manager->sound_effect("Audio/ButtonHover.wav");
-	sfx_btn_click = resource_manager->sound_effect("Audio/ButtonClick.wav");
+	sfx_btn_click_ = resource_manager->sound_effect("Audio/ButtonClick.wav");
 
 	// -------------------------
 
@@ -80,17 +80,17 @@ bool BG::ScnMainMenu::load()
 
 	// ----- Initialize Buttons -----
 
-	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
+	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, sfx_btn_hover, sfx_btn_click_, *window_);
 	btn_play_->game_object().transform().set_origin(btn_play_->game_object().sprite().size() / 2.0f);
 	btn_play_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 368));
 	buttons_.push_back(btn_play_);
 
-	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
+	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, sfx_btn_hover, sfx_btn_click_, *window_);
 	btn_help_->game_object().transform().set_origin(btn_help_->game_object().sprite().size() / 2.0f);
 	btn_help_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 502));
 	buttons_.push_back(btn_help_);
 
-	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, sfx_btn_hover, sfx_btn_click, *window_);
+	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, sfx_btn_hover, sfx_btn_click_, *window_);
 	btn_exit_->game_object().transform().set_origin(btn_exit_->game_object().sprite().size() / 2.0f);
 	btn_exit_->game_object().transform().set_position(Vector2f(window_->size().x_ / 2.0f, 625));
 	buttons_.push_back(btn_exit_);
@@ -179,6 +179,16 @@ bool BG::ScnMainMenu::unload()
 
 	// -------------------------
 
+	// ----- Free Buttons -----
+
+	delete btn_play_;
+	delete btn_help_;
+	delete btn_exit_;
+
+	buttons_.clear();
+
+	// -------------------------
+
 	// ----- Free Music -----
 
 	Audio::stop_music(0);
@@ -199,6 +209,8 @@ bool BG::ScnMainMenu::unload()
 	delete obj_title_;
 	delete obj_cloud_;
 
+	game_objects_.clear();
+
 	// -------------------------
 
 	// ----- Free Physics Objects -----
@@ -209,6 +221,8 @@ bool BG::ScnMainMenu::unload()
 		world->DestroyBody(cloud_rain_pool[i]->rigidbody());
 		delete cloud_rain_pool[i];\
 	}
+
+	cloud_rain_pool.clear();
 
 	// -------------------------
 
@@ -233,8 +247,7 @@ bool BG::ScnMainMenu::update()
 
 	if(btn_help_->clicked())
 	{
-		scene_manager_->set_current_scene("help_screen");
-		return true;
+		return scene_manager_->set_current_scene("help_screen");
 	}
 
 	if(btn_exit_->clicked())

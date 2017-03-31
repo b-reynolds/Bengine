@@ -54,7 +54,7 @@ namespace BG
 
 		Music* mus_loop;
 		
-		SoundEffect* sfx_btn_click;
+		SoundEffect* sfx_btn_click_;
 		SoundEffect* sfx_btn_hover;
 
 		Button* btn_play_;
