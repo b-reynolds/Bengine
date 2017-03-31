@@ -152,7 +152,7 @@ bool BG::ScnHelpScreen::update()
 
 	if(btn_back_->clicked())
 	{
-		return scene_manager_->set_current_scene("main_menu");
+		return scene_manager_->transition_to("main_menu");
 	}
 
 	// -------------------------

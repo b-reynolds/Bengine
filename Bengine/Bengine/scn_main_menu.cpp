@@ -247,7 +247,7 @@ bool BG::ScnMainMenu::update()
 
 	if(btn_help_->clicked())
 	{
-		return scene_manager_->set_current_scene("help_screen");
+		return scene_manager_->transition_to("help_screen");
 	}
 
 	if(btn_exit_->clicked())

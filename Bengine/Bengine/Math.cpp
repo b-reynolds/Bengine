@@ -1,4 +1,3 @@
-#define USE_MATH_DEFINES
 #include "math.h"
 #include <SDL_stdinc.h>
 

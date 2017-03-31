@@ -39,7 +39,7 @@ bool Game::initialize()
 	scn_help_screen_ = new BG::ScnHelpScreen(*window_, scene_manager_);
 	scene_manager_.add_scene("help_screen", *scn_help_screen_);
 
-	scene_manager_.set_current_scene("main_menu");
+	scene_manager_.transition_to("main_menu");
 
 	return true;
 }
