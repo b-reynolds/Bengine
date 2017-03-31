@@ -3,6 +3,16 @@
 #include "Audio.h"
 #include "game.h"
 
+/**
+ * \brief Creates a Button
+ * \param position button position
+ * \param texture_idle  idle texture
+ * \param texture_hovered hovered texture
+ * \param texture_clicked clicked texture
+ * \param sfx_hover hover sound effect 
+ * \param sfx_click click sound effect
+ * \param window window
+ */
 BG::Button::Button(const Vector2f& position, Texture* texture_idle, Texture* texture_hovered, Texture* texture_clicked, SoundEffect* sfx_hover, SoundEffect* sfx_click, Window& window)
 {
 	ResourceManager* resource_manager = ResourceManager::instance();
@@ -17,18 +27,27 @@ BG::Button::Button(const Vector2f& position, Texture* texture_idle, Texture* tex
 	game_object_ = GameObject(spr_idle_, position);
 
 	mouse_ = Mouse::instance();
+
+	clicked_ = false;
+	hovered_ = false;
 }
 
+/**
+ * \brief Returns a reference to the Button's underlying Game Object
+ */
 BG::GameObject& BG::Button::game_object()
 {
 	return game_object_;
 }
 
+/**
+ * \brief Update the button, checking if it is hovered/clicked and changing its state accordingly
+ */
 void BG::Button::update()
 {
-	mouse_pos_ = mouse_->position();
-	position_ = game_object_.transform().position();
-	size_ = game_object_.sprite().size();
+	Vector2i mouse_pos_ = mouse_->position();
+	Vector2f position_ = game_object_.transform().position();
+	Vector2f size_ = game_object_.sprite().size();
 
 	if (!(mouse_pos_.x_ >= position_.x_ && mouse_pos_.x_ <= position_.x_ + size_.x_ && mouse_pos_.y_ >= position_.y_ && mouse_pos_.y_ <= position_.y_ + size_.y_))
 	{
@@ -59,46 +78,12 @@ void BG::Button::update()
 		game_object_.set_sprite(spr_hovered_);
 		hovered_ = true;
 	}
-
-	//Sprite* spr_next;
-
-	//calculate_size();
-	//
-	//if (mouse_pos_.x_ >= position_.x_ && mouse_pos_.x_ <= position_.x_ + size_.x_ && mouse_pos_.y_ >= position_.y_ && mouse_pos_.y_ <= position_.y_ + size_.y_)
-	//{
-	//	clicked_ = Mouse::instance()->button_down(1);
-
-	//	if(!hovered_)
-	//	{
-	//		Audio::play_sound_effect(clicked_ ? sfx_click_ : sfx_hover_, 1, 0, 0);
-	//	}
-
-	//	hovered_ = true;
-
-	//	spr_next = clicked_ ? spr_clicked_ : spr_hovered_;
-	//}
-	//else
-	//{
-	//	hovered_ = false;
-	//	clicked_ = false;
-	//	spr_next = spr_idle_;
-	//}
-	//
-	//if(spr_next->texture() != game_object_.sprite().texture())
-	//{
-	//	game_object_.set_sprite(spr_next);
-	//}
-
 }
 
+/**
+ * \brief Returns true if the button is currently clicked
+ */
 bool BG::Button::clicked() const
 {
 	return clicked_;
 }
-
-void BG::Button::calculate_size()
-{
-	position_ = game_object_.transform().position();
-	size_ = game_object_.sprite().size();
-}
-;
