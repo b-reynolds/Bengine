@@ -13,7 +13,7 @@ namespace BG
 
 	public:
 
-		explicit ScnMainMenu(Window& window);
+		explicit ScnMainMenu(Window& window, SceneManager& scene_manager);
 
 		bool load() override;
 

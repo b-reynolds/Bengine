@@ -6,7 +6,7 @@
 #include "random.h"
 #include "Audio.h"
 
-BG::ScnMainMenu::ScnMainMenu(Window& window) : Scene(window)
+BG::ScnMainMenu::ScnMainMenu(Window& window, SceneManager& scene_manager) : Scene(window, scene_manager)
 {
 	txtr_title_ = nullptr;
 	txtr_cloud_ = nullptr;
@@ -36,6 +36,9 @@ BG::ScnMainMenu::ScnMainMenu(Window& window) : Scene(window)
 	spr_cloud_ = nullptr;
 	spr_box_ = nullptr;
 	spr_title_ = nullptr;
+
+	obj_title_ = nullptr;
+	obj_cloud_ = nullptr;
 }
 
 bool BG::ScnMainMenu::load()
@@ -140,6 +143,8 @@ bool BG::ScnMainMenu::load()
 
 	// -------------------------
 
+	loaded_ = true;
+
 	return true;
 }
 
@@ -207,6 +212,8 @@ bool BG::ScnMainMenu::unload()
 
 	// -------------------------
 
+	loaded_ = false;
+
 	return true;
 }
 
@@ -221,17 +228,18 @@ bool BG::ScnMainMenu::update()
 
 	if(btn_play_->clicked())
 	{
-		unload();
+
 	}
 
 	if(btn_help_->clicked())
 	{
-		
+		scene_manager_->set_current_scene("help_screen");
+		return true;
 	}
 
 	if(btn_exit_->clicked())
 	{
-		
+		return false;
 	}
 
 	// -------------------------

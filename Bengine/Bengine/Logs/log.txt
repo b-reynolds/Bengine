@@ -50330,3 +50330,2001 @@
 [30-03-2017 22:25:21] Info: Freed resource "Audio/ButtonClick.wav"
 [30-03-2017 22:25:21] Debug: Stopped music
 [30-03-2017 22:25:21] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:42:22] Info: Initialized video subsystem
+[30-03-2017 22:42:22] Info: Initialized SDL_Image
+[30-03-2017 22:42:22] Info: Initialized SDL_Mix
+[30-03-2017 22:42:22] Info: Initialized SDL_TTF
+[30-03-2017 22:42:22] Info: Created window
+[30-03-2017 22:42:22] Info: Created renderer
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:42:22] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:42:23] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:42:23] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:42:23] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:42:23] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:42:23] Debug: Playing music
+[30-03-2017 22:42:23] Debug: Set music volume to 32
+[30-03-2017 22:42:23] Debug: Mouse Position: 315, 156
+[30-03-2017 22:42:24] Debug: Mouse Position: 315, 157
+[30-03-2017 22:42:24] Debug: Mouse Position: 316, 158
+[30-03-2017 22:42:24] Debug: Mouse Position: 316, 159
+[30-03-2017 22:42:25] Debug: Mouse Position: 322, 168
+[30-03-2017 22:42:25] Debug: Mouse Position: 365, 232
+[30-03-2017 22:42:25] Debug: Mouse Position: 416, 296
+[30-03-2017 22:42:25] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:25] Debug: Mouse Position: 463, 350
+[30-03-2017 22:42:25] Debug: Mouse Position: 510, 392
+[30-03-2017 22:42:25] Debug: Mouse Position: 523, 399
+[30-03-2017 22:42:25] Debug: Mouse Position: 524, 399
+[30-03-2017 22:42:26] Debug: Mouse Position: 527, 398
+[30-03-2017 22:42:26] Debug: Mouse Position: 657, 312
+[30-03-2017 22:42:26] Debug: Mouse Position: 837, 235
+[30-03-2017 22:42:26] Debug: Mouse Position: 1035, 151
+[30-03-2017 22:42:26] Debug: Mouse Position: 1166, 105
+[30-03-2017 22:42:26] Debug: Mouse Position: 1193, 101
+[30-03-2017 22:42:26] Debug: Mouse Position: 1196, 101
+[30-03-2017 22:42:26] Debug: Mouse Position: 1197, 100
+[30-03-2017 22:42:26] Debug: Mouse Position: 1201, 94
+[30-03-2017 22:42:26] Debug: Mouse Position: 1207, 79
+[30-03-2017 22:42:26] Debug: Mouse Position: 1217, 60
+[30-03-2017 22:42:26] Debug: Mouse Position: 1223, 49
+[30-03-2017 22:42:26] Debug: Mouse Position: 1236, 33
+[30-03-2017 22:42:26] Debug: Mouse Position: 1241, 28
+[30-03-2017 22:42:26] Debug: Mouse Position: 1251, 19
+[30-03-2017 22:42:26] Debug: Mouse Position: 1256, 14
+[30-03-2017 22:42:26] Debug: Mouse Position: 1270, 1
+[30-03-2017 22:42:26] Debug: Mouse Position: 1279, 0
+[30-03-2017 22:42:27] Info: Destroying window
+[30-03-2017 22:42:27] Info: Destroying renderer and freeing associated textures
+[30-03-2017 22:42:27] Info: Unloading Mix_Init
+[30-03-2017 22:42:27] Info: Unloading IMG_Init
+[30-03-2017 22:42:27] Info: Cleaning up SDL subsystems
+[30-03-2017 22:42:28] Info: Exiting application
+[30-03-2017 22:42:30] Info: Initialized video subsystem
+[30-03-2017 22:42:30] Info: Initialized SDL_Image
+[30-03-2017 22:42:31] Info: Initialized SDL_Mix
+[30-03-2017 22:42:31] Info: Initialized SDL_TTF
+[30-03-2017 22:42:31] Info: Created window
+[30-03-2017 22:42:31] Info: Created renderer
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:42:31] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:42:31] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:42:31] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:42:31] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:42:31] Debug: Playing music
+[30-03-2017 22:42:31] Debug: Set music volume to 32
+[30-03-2017 22:42:33] Debug: Mouse Position: 606, 32
+[30-03-2017 22:42:33] Debug: Mouse Position: 690, 76
+[30-03-2017 22:42:33] Debug: Mouse Position: 740, 100
+[30-03-2017 22:42:33] Debug: Mouse Position: 753, 100
+[30-03-2017 22:42:33] Debug: Mouse Position: 953, 100
+[30-03-2017 22:42:33] Debug: Mouse Position: 1058, 106
+[30-03-2017 22:42:34] Debug: Mouse Position: 1125, 112
+[30-03-2017 22:42:34] Debug: Mouse Position: 1156, 124
+[30-03-2017 22:42:34] Debug: Mouse Position: 1163, 132
+[30-03-2017 22:42:34] Debug: Mouse Position: 1165, 128
+[30-03-2017 22:42:34] Debug: Mouse Position: 1185, 105
+[30-03-2017 22:42:34] Debug: Mouse Position: 1259, 31
+[30-03-2017 22:42:34] Debug: Mouse Position: 1279, 0
+[30-03-2017 22:42:37] Debug: Mouse Position: 1216, 14
+[30-03-2017 22:42:37] Debug: Mouse Position: 1085, 65
+[30-03-2017 22:42:37] Debug: Mouse Position: 921, 159
+[30-03-2017 22:42:37] Debug: Mouse Position: 831, 266
+[30-03-2017 22:42:37] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:37] Debug: Mouse Position: 713, 393
+[30-03-2017 22:42:37] Debug: Mouse Position: 664, 444
+[30-03-2017 22:42:37] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:37] Debug: Mouse Position: 599, 516
+[30-03-2017 22:42:37] Debug: Mouse Position: 572, 547
+[30-03-2017 22:42:37] Debug: Mouse Position: 569, 550
+[30-03-2017 22:42:37] Debug: Mouse Position: 568, 549
+[30-03-2017 22:42:37] Debug: Mouse Position: 574, 531
+[30-03-2017 22:42:38] Debug: Mouse Position: 573, 535
+[30-03-2017 22:42:38] Debug: Mouse Position: 568, 555
+[30-03-2017 22:42:38] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:38] Debug: Mouse Position: 566, 574
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 619
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 631
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 632
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 631
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 630
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 627
+[30-03-2017 22:42:38] Debug: Mouse Position: 565, 612
+[30-03-2017 22:42:38] Debug: Mouse Position: 569, 587
+[30-03-2017 22:42:38] Debug: Mouse Position: 570, 572
+[30-03-2017 22:42:38] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:38] Debug: Mouse Position: 571, 537
+[30-03-2017 22:42:38] Debug: Mouse Position: 572, 510
+[30-03-2017 22:42:38] Debug: Mouse Position: 573, 492
+[30-03-2017 22:42:38] Debug: Mouse Position: 573, 485
+[30-03-2017 22:42:38] Debug: Mouse Position: 574, 471
+[30-03-2017 22:42:38] Debug: Mouse Position: 576, 459
+[30-03-2017 22:42:38] Debug: Mouse Position: 577, 452
+[30-03-2017 22:42:38] Debug: Mouse Position: 578, 440
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 427
+[30-03-2017 22:42:38] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 422
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 421
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 422
+[30-03-2017 22:42:38] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 453
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 490
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 513
+[30-03-2017 22:42:38] Debug: Mouse Position: 579, 524
+[30-03-2017 22:42:39] Debug: Mouse Position: 579, 542
+[30-03-2017 22:42:39] Debug: Mouse Position: 579, 549
+[30-03-2017 22:42:39] Debug: Mouse Position: 579, 552
+[30-03-2017 22:42:39] Debug: Mouse Position: 579, 553
+[30-03-2017 22:42:39] Debug: Mouse Position: 580, 556
+[30-03-2017 22:42:39] Debug: Mouse Position: 580, 559
+[30-03-2017 22:42:39] Debug: Mouse Position: 580, 562
+[30-03-2017 22:42:39] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:39] Debug: Mouse Position: 582, 577
+[30-03-2017 22:42:39] Debug: Mouse Position: 585, 592
+[30-03-2017 22:42:39] Debug: Mouse Position: 586, 592
+[30-03-2017 22:42:39] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:42:39] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:39] Debug: Mouse Button (1) State: Up
+[30-03-2017 22:42:40] Debug: Mouse Position: 587, 586
+[30-03-2017 22:42:40] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:40] Debug: Mouse Position: 609, 452
+[30-03-2017 22:42:40] Debug: Mouse Position: 648, 306
+[30-03-2017 22:42:40] Debug: Mouse Position: 651, 294
+[30-03-2017 22:42:40] Debug: Mouse Position: 654, 289
+[30-03-2017 22:42:40] Debug: Mouse Position: 654, 291
+[30-03-2017 22:42:40] Debug: Mouse Position: 654, 293
+[30-03-2017 22:42:40] Debug: Mouse Position: 654, 301
+[30-03-2017 22:42:40] Debug: Mouse Position: 654, 305
+[30-03-2017 22:42:40] Debug: Mouse Position: 652, 311
+[30-03-2017 22:42:40] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:40] Debug: Mouse Position: 651, 318
+[30-03-2017 22:42:40] Debug: Mouse Position: 648, 336
+[30-03-2017 22:42:40] Debug: Mouse Position: 646, 350
+[30-03-2017 22:42:40] Debug: Mouse Position: 645, 361
+[30-03-2017 22:42:40] Debug: Mouse Position: 645, 365
+[30-03-2017 22:42:40] Debug: Mouse Position: 645, 369
+[30-03-2017 22:42:41] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:42:41] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:42:41] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:42:41] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:42:41] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:42:41] Debug: Stopped music
+[30-03-2017 22:42:41] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:53:05] Info: Initialized video subsystem
+[30-03-2017 22:53:05] Info: Initialized SDL_Image
+[30-03-2017 22:53:05] Info: Initialized SDL_Mix
+[30-03-2017 22:53:05] Info: Initialized SDL_TTF
+[30-03-2017 22:53:05] Info: Created window
+[30-03-2017 22:53:05] Info: Created renderer
+[30-03-2017 22:53:05] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:53:05] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:53:05] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:53:05] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:53:06] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:53:06] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:53:06] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:53:06] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:53:06] Debug: Playing music
+[30-03-2017 22:53:06] Debug: Set music volume to 32
+[30-03-2017 22:53:06] Debug: Mouse Position: 338, 66
+[30-03-2017 22:53:06] Debug: Mouse Position: 443, 209
+[30-03-2017 22:53:06] Debug: Mouse Position: 472, 246
+[30-03-2017 22:53:06] Debug: Mouse Position: 491, 264
+[30-03-2017 22:53:06] Debug: Mouse Position: 502, 280
+[30-03-2017 22:53:06] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:53:06] Debug: Mouse Position: 530, 319
+[30-03-2017 22:53:07] Debug: Mouse Position: 531, 319
+[30-03-2017 22:53:07] Debug: Mouse Position: 536, 325
+[30-03-2017 22:53:07] Debug: Mouse Position: 543, 331
+[30-03-2017 22:53:07] Debug: Mouse Position: 549, 337
+[30-03-2017 22:53:07] Debug: Mouse Position: 552, 340
+[30-03-2017 22:53:07] Debug: Mouse Position: 553, 341
+[30-03-2017 22:53:07] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:53:07] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:53:07] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:53:07] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:53:07] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:53:07] Debug: Stopped music
+[30-03-2017 22:53:07] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:56:20] Info: Initialized video subsystem
+[30-03-2017 22:56:20] Info: Initialized SDL_Image
+[30-03-2017 22:56:20] Info: Initialized SDL_Mix
+[30-03-2017 22:56:21] Info: Initialized SDL_TTF
+[30-03-2017 22:56:21] Info: Created window
+[30-03-2017 22:56:21] Info: Created renderer
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:56:21] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:56:21] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:56:21] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:56:21] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:56:21] Debug: Playing music
+[30-03-2017 22:56:21] Debug: Set music volume to 32
+[30-03-2017 22:56:21] Debug: Mouse Position: 323, 29
+[30-03-2017 22:56:21] Debug: Mouse Position: 434, 142
+[30-03-2017 22:56:21] Debug: Mouse Position: 463, 171
+[30-03-2017 22:56:21] Debug: Mouse Position: 513, 228
+[30-03-2017 22:56:21] Debug: Mouse Position: 544, 263
+[30-03-2017 22:56:21] Debug: Mouse Position: 550, 273
+[30-03-2017 22:56:21] Debug: Mouse Position: 553, 281
+[30-03-2017 22:56:21] Debug: Mouse Position: 554, 290
+[30-03-2017 22:56:21] Debug: Mouse Position: 552, 291
+[30-03-2017 22:56:22] Debug: Mouse Position: 552, 290
+[30-03-2017 22:56:25] Debug: Mouse Position: 552, 291
+[30-03-2017 22:56:25] Debug: Mouse Position: 553, 298
+[30-03-2017 22:56:25] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:56:25] Debug: Mouse Position: 556, 316
+[30-03-2017 22:56:25] Debug: Mouse Position: 563, 342
+[30-03-2017 22:56:25] Debug: Mouse Position: 564, 346
+[30-03-2017 22:56:25] Debug: Mouse Position: 567, 353
+[30-03-2017 22:56:25] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:56:25] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:56:25] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:56:25] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:56:25] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:56:25] Debug: Stopped music
+[30-03-2017 22:56:25] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:56:25] Debug: Mouse Button (1) State: Up
+[30-03-2017 22:56:26] Debug: Mouse Position: 568, 352
+[30-03-2017 22:56:26] Debug: Mouse Position: 569, 350
+[30-03-2017 22:56:26] Debug: Mouse Position: 572, 346
+[30-03-2017 22:56:26] Debug: Mouse Position: 577, 338
+[30-03-2017 22:56:26] Debug: Mouse Position: 585, 329
+[30-03-2017 22:56:26] Debug: Mouse Position: 595, 314
+[30-03-2017 22:56:26] Debug: Mouse Position: 611, 292
+[30-03-2017 22:56:26] Debug: Mouse Position: 626, 273
+[30-03-2017 22:56:26] Debug: Mouse Position: 640, 255
+[30-03-2017 22:56:26] Debug: Mouse Position: 655, 242
+[30-03-2017 22:56:26] Debug: Mouse Position: 668, 229
+[30-03-2017 22:56:26] Debug: Mouse Position: 681, 218
+[30-03-2017 22:56:26] Debug: Mouse Position: 691, 209
+[30-03-2017 22:56:26] Debug: Mouse Position: 701, 201
+[30-03-2017 22:56:26] Debug: Mouse Position: 709, 196
+[30-03-2017 22:56:26] Debug: Mouse Position: 715, 192
+[30-03-2017 22:56:26] Debug: Mouse Position: 720, 191
+[30-03-2017 22:56:26] Debug: Mouse Position: 723, 190
+[30-03-2017 22:56:26] Debug: Mouse Position: 724, 190
+[30-03-2017 22:56:26] Debug: Mouse Position: 725, 190
+[30-03-2017 22:56:27] Debug: Mouse Position: 726, 190
+[30-03-2017 22:56:27] Debug: Mouse Position: 729, 190
+[30-03-2017 22:56:27] Debug: Mouse Position: 735, 186
+[30-03-2017 22:56:27] Debug: Mouse Position: 744, 179
+[30-03-2017 22:56:27] Debug: Mouse Position: 759, 169
+[30-03-2017 22:56:27] Debug: Mouse Position: 780, 159
+[30-03-2017 22:56:27] Debug: Mouse Position: 800, 150
+[30-03-2017 22:56:27] Debug: Mouse Position: 816, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 831, 140
+[30-03-2017 22:56:27] Debug: Mouse Position: 844, 139
+[30-03-2017 22:56:27] Debug: Mouse Position: 867, 137
+[30-03-2017 22:56:27] Debug: Mouse Position: 879, 137
+[30-03-2017 22:56:27] Debug: Mouse Position: 885, 137
+[30-03-2017 22:56:27] Debug: Mouse Position: 897, 138
+[30-03-2017 22:56:27] Debug: Mouse Position: 900, 139
+[30-03-2017 22:56:27] Debug: Mouse Position: 903, 139
+[30-03-2017 22:56:27] Debug: Mouse Position: 904, 141
+[30-03-2017 22:56:27] Debug: Mouse Position: 905, 142
+[30-03-2017 22:56:27] Debug: Mouse Position: 908, 143
+[30-03-2017 22:56:27] Debug: Mouse Position: 911, 143
+[30-03-2017 22:56:27] Debug: Mouse Position: 918, 143
+[30-03-2017 22:56:27] Debug: Mouse Position: 926, 143
+[30-03-2017 22:56:27] Debug: Mouse Position: 934, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 943, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 951, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 959, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 967, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 974, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 979, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 984, 145
+[30-03-2017 22:56:27] Debug: Mouse Position: 986, 145
+[30-03-2017 22:56:33] Debug: Mouse Position: 986, 151
+[30-03-2017 22:56:33] Debug: Mouse Position: 986, 156
+[30-03-2017 22:56:33] Debug: Mouse Position: 986, 159
+[30-03-2017 22:56:33] Debug: Mouse Position: 986, 160
+[30-03-2017 22:56:33] Debug: Mouse Position: 986, 154
+[30-03-2017 22:56:33] Debug: Mouse Position: 984, 142
+[30-03-2017 22:56:33] Debug: Mouse Position: 981, 117
+[30-03-2017 22:56:33] Debug: Mouse Position: 973, 72
+[30-03-2017 22:56:33] Debug: Mouse Position: 964, 27
+[30-03-2017 22:56:33] Debug: Mouse Position: 957, 0
+[30-03-2017 22:56:34] Info: Destroying window
+[30-03-2017 22:56:34] Info: Destroying renderer and freeing associated textures
+[30-03-2017 22:56:34] Info: Unloading Mix_Init
+[30-03-2017 22:56:34] Info: Unloading IMG_Init
+[30-03-2017 22:56:34] Info: Cleaning up SDL subsystems
+[30-03-2017 22:56:35] Info: Exiting application
+[30-03-2017 22:58:10] Info: Initialized video subsystem
+[30-03-2017 22:58:10] Info: Initialized SDL_Image
+[30-03-2017 22:58:10] Info: Initialized SDL_Mix
+[30-03-2017 22:58:10] Info: Initialized SDL_TTF
+[30-03-2017 22:58:10] Info: Created window
+[30-03-2017 22:58:10] Info: Created renderer
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:58:10] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:58:10] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:58:10] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:58:10] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:58:10] Debug: Playing music
+[30-03-2017 22:58:10] Debug: Set music volume to 32
+[30-03-2017 22:58:15] Debug: Mouse Position: 313, 35
+[30-03-2017 22:58:15] Debug: Mouse Position: 380, 128
+[30-03-2017 22:58:15] Debug: Mouse Position: 436, 200
+[30-03-2017 22:58:15] Debug: Mouse Position: 481, 253
+[30-03-2017 22:58:15] Debug: Mouse Position: 501, 278
+[30-03-2017 22:58:15] Debug: Mouse Position: 504, 283
+[30-03-2017 22:58:15] Debug: Mouse Position: 505, 284
+[30-03-2017 22:58:15] Debug: Mouse Position: 510, 299
+[30-03-2017 22:58:15] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:15] Debug: Mouse Position: 525, 332
+[30-03-2017 22:58:15] Debug: Mouse Position: 535, 359
+[30-03-2017 22:58:15] Debug: Mouse Position: 539, 368
+[30-03-2017 22:58:15] Debug: Mouse Position: 540, 371
+[30-03-2017 22:58:16] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:58:16] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:58:16] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:58:16] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:58:16] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:58:16] Debug: Stopped music
+[30-03-2017 22:58:16] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:58:16] Debug: Mouse Button (1) State: Up
+[30-03-2017 22:58:16] Debug: Mouse Position: 541, 367
+[30-03-2017 22:58:16] Debug: Mouse Position: 547, 359
+[30-03-2017 22:58:16] Debug: Mouse Position: 555, 346
+[30-03-2017 22:58:16] Debug: Mouse Position: 580, 315
+[30-03-2017 22:58:16] Debug: Mouse Position: 614, 283
+[30-03-2017 22:58:17] Debug: Mouse Position: 655, 256
+[30-03-2017 22:58:17] Debug: Mouse Position: 708, 223
+[30-03-2017 22:58:17] Debug: Mouse Position: 766, 196
+[30-03-2017 22:58:17] Debug: Mouse Position: 824, 174
+[30-03-2017 22:58:17] Debug: Mouse Position: 876, 156
+[30-03-2017 22:58:17] Debug: Mouse Position: 919, 142
+[30-03-2017 22:58:17] Debug: Mouse Position: 951, 136
+[30-03-2017 22:58:17] Debug: Mouse Position: 970, 132
+[30-03-2017 22:58:17] Debug: Mouse Position: 981, 130
+[30-03-2017 22:58:17] Debug: Mouse Position: 988, 129
+[30-03-2017 22:58:17] Debug: Mouse Position: 990, 128
+[30-03-2017 22:58:17] Debug: Mouse Position: 992, 126
+[30-03-2017 22:58:17] Debug: Mouse Position: 1001, 120
+[30-03-2017 22:58:17] Debug: Mouse Position: 1017, 111
+[30-03-2017 22:58:17] Debug: Mouse Position: 1047, 94
+[30-03-2017 22:58:17] Debug: Mouse Position: 1081, 74
+[30-03-2017 22:58:17] Debug: Mouse Position: 1118, 55
+[30-03-2017 22:58:17] Debug: Mouse Position: 1147, 40
+[30-03-2017 22:58:17] Debug: Mouse Position: 1175, 29
+[30-03-2017 22:58:17] Debug: Mouse Position: 1190, 22
+[30-03-2017 22:58:17] Debug: Mouse Position: 1201, 18
+[30-03-2017 22:58:17] Debug: Mouse Position: 1208, 16
+[30-03-2017 22:58:17] Debug: Mouse Position: 1211, 14
+[30-03-2017 22:58:17] Debug: Mouse Position: 1215, 14
+[30-03-2017 22:58:17] Debug: Mouse Position: 1217, 13
+[30-03-2017 22:58:17] Debug: Mouse Position: 1219, 11
+[30-03-2017 22:58:17] Debug: Mouse Position: 1221, 11
+[30-03-2017 22:58:17] Debug: Mouse Position: 1224, 9
+[30-03-2017 22:58:17] Debug: Mouse Position: 1228, 6
+[30-03-2017 22:58:17] Debug: Mouse Position: 1229, 5
+[30-03-2017 22:58:17] Debug: Mouse Position: 1230, 4
+[30-03-2017 22:58:17] Debug: Mouse Position: 1230, 3
+[30-03-2017 22:58:17] Debug: Mouse Position: 1231, 0
+[30-03-2017 22:58:17] Debug: Mouse Position: 1232, 0
+[30-03-2017 22:58:19] Info: Destroying window
+[30-03-2017 22:58:19] Info: Destroying renderer and freeing associated textures
+[30-03-2017 22:58:19] Info: Unloading Mix_Init
+[30-03-2017 22:58:19] Info: Unloading IMG_Init
+[30-03-2017 22:58:19] Info: Cleaning up SDL subsystems
+[30-03-2017 22:58:19] Info: Exiting application
+[30-03-2017 22:58:40] Info: Initialized video subsystem
+[30-03-2017 22:58:40] Info: Initialized SDL_Image
+[30-03-2017 22:58:40] Info: Initialized SDL_Mix
+[30-03-2017 22:58:40] Info: Initialized SDL_TTF
+[30-03-2017 22:58:40] Info: Created window
+[30-03-2017 22:58:40] Info: Created renderer
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:58:40] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:58:40] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:58:40] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:58:40] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:58:40] Debug: Playing music
+[30-03-2017 22:58:40] Debug: Set music volume to 32
+[30-03-2017 22:58:40] Debug: Mouse Position: 418, 376
+[30-03-2017 22:58:41] Debug: Mouse Position: 422, 377
+[30-03-2017 22:58:41] Debug: Mouse Position: 440, 380
+[30-03-2017 22:58:41] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:41] Debug: Mouse Position: 465, 383
+[30-03-2017 22:58:41] Debug: Mouse Position: 516, 388
+[30-03-2017 22:58:41] Debug: Mouse Position: 547, 391
+[30-03-2017 22:58:41] Debug: Mouse Position: 616, 399
+[30-03-2017 22:58:41] Debug: Mouse Position: 637, 402
+[30-03-2017 22:58:41] Debug: Mouse Position: 642, 403
+[30-03-2017 22:58:41] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:58:41] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:58:41] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:58:42] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:58:42] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:58:42] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:58:42] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:58:42] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:58:42] Debug: Stopped music
+[30-03-2017 22:58:42] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:58:42] Debug: Mouse Button (1) State: Up
+[30-03-2017 22:58:42] Debug: Mouse Position: 643, 403
+[30-03-2017 22:58:42] Debug: Mouse Position: 646, 403
+[30-03-2017 22:58:42] Debug: Mouse Position: 650, 403
+[30-03-2017 22:58:42] Debug: Mouse Position: 658, 403
+[30-03-2017 22:58:42] Debug: Mouse Position: 669, 403
+[30-03-2017 22:58:42] Debug: Mouse Position: 685, 403
+[30-03-2017 22:58:42] Debug: Mouse Position: 706, 407
+[30-03-2017 22:58:42] Debug: Mouse Position: 730, 413
+[30-03-2017 22:58:42] Debug: Mouse Position: 749, 418
+[30-03-2017 22:58:42] Debug: Mouse Position: 780, 428
+[30-03-2017 22:58:42] Debug: Mouse Position: 790, 432
+[30-03-2017 22:58:42] Debug: Mouse Position: 797, 435
+[30-03-2017 22:58:42] Debug: Mouse Position: 802, 436
+[30-03-2017 22:58:42] Debug: Mouse Position: 805, 438
+[30-03-2017 22:58:42] Debug: Mouse Position: 805, 439
+[30-03-2017 22:58:42] Debug: Mouse Position: 806, 440
+[30-03-2017 22:58:42] Debug: Mouse Position: 806, 441
+[30-03-2017 22:58:42] Debug: Mouse Position: 806, 442
+[30-03-2017 22:58:43] Debug: Mouse Position: 807, 442
+[30-03-2017 22:58:43] Debug: Mouse Position: 808, 444
+[30-03-2017 22:58:43] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:43] Debug: Mouse Position: 809, 447
+[30-03-2017 22:58:43] Debug: Mouse Position: 813, 452
+[30-03-2017 22:58:43] Debug: Mouse Position: 823, 465
+[30-03-2017 22:58:43] Debug: Mouse Position: 830, 473
+[30-03-2017 22:58:43] Debug: Mouse Position: 836, 480
+[30-03-2017 22:58:43] Debug: Mouse Position: 841, 488
+[30-03-2017 22:58:43] Debug: Mouse Position: 847, 496
+[30-03-2017 22:58:43] Debug: Mouse Position: 851, 505
+[30-03-2017 22:58:43] Debug: Mouse Position: 854, 513
+[30-03-2017 22:58:43] Debug: Mouse Position: 857, 520
+[30-03-2017 22:58:43] Debug: Mouse Position: 858, 526
+[30-03-2017 22:58:43] Debug: Mouse Position: 860, 530
+[30-03-2017 22:58:43] Debug: Mouse Position: 860, 533
+[30-03-2017 22:58:43] Debug: Mouse Position: 861, 536
+[30-03-2017 22:58:44] Debug: Mouse Position: 860, 533
+[30-03-2017 22:58:44] Debug: Mouse Position: 854, 529
+[30-03-2017 22:58:44] Debug: Mouse Position: 847, 524
+[30-03-2017 22:58:44] Debug: Mouse Position: 838, 516
+[30-03-2017 22:58:44] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:44] Debug: Mouse Position: 825, 503
+[30-03-2017 22:58:44] Debug: Mouse Position: 792, 469
+[30-03-2017 22:58:44] Debug: Mouse Position: 777, 455
+[30-03-2017 22:58:44] Debug: Mouse Position: 764, 444
+[30-03-2017 22:58:44] Debug: Mouse Position: 754, 438
+[30-03-2017 22:58:44] Debug: Mouse Position: 745, 431
+[30-03-2017 22:58:44] Debug: Mouse Position: 737, 426
+[30-03-2017 22:58:44] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:58:44] Debug: Mouse Position: 732, 422
+[30-03-2017 22:58:44] Debug: Mouse Position: 728, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 725, 419
+[30-03-2017 22:58:44] Debug: Mouse Position: 723, 419
+[30-03-2017 22:58:44] Debug: Mouse Position: 721, 419
+[30-03-2017 22:58:44] Debug: Mouse Position: 720, 419
+[30-03-2017 22:58:44] Debug: Mouse Position: 718, 419
+[30-03-2017 22:58:44] Debug: Mouse Position: 717, 419
+[30-03-2017 22:58:44] Debug: Mouse Position: 715, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 714, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 713, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 712, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 711, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 710, 420
+[30-03-2017 22:58:44] Debug: Mouse Position: 709, 420
+[30-03-2017 22:58:45] Debug: Mouse Position: 709, 419
+[30-03-2017 22:58:45] Debug: Mouse Position: 708, 418
+[30-03-2017 22:58:45] Debug: Mouse Position: 707, 415
+[30-03-2017 22:58:45] Debug: Mouse Position: 706, 412
+[30-03-2017 22:58:45] Debug: Mouse Position: 705, 407
+[30-03-2017 22:58:45] Debug: Mouse Position: 704, 401
+[30-03-2017 22:58:45] Debug: Mouse Position: 701, 396
+[30-03-2017 22:58:45] Debug: Mouse Position: 699, 392
+[30-03-2017 22:58:45] Debug: Mouse Position: 697, 388
+[30-03-2017 22:58:45] Debug: Mouse Position: 695, 385
+[30-03-2017 22:58:45] Debug: Mouse Position: 693, 380
+[30-03-2017 22:58:45] Debug: Mouse Position: 691, 378
+[30-03-2017 22:58:45] Debug: Mouse Position: 691, 375
+[30-03-2017 22:58:45] Debug: Mouse Position: 689, 373
+[30-03-2017 22:58:45] Debug: Mouse Position: 688, 372
+[30-03-2017 22:58:45] Debug: Mouse Position: 688, 370
+[30-03-2017 22:58:45] Debug: Mouse Position: 688, 369
+[30-03-2017 22:58:46] Debug: Mouse Position: 688, 366
+[30-03-2017 22:58:46] Debug: Mouse Position: 688, 361
+[30-03-2017 22:58:46] Debug: Mouse Position: 691, 351
+[30-03-2017 22:58:46] Debug: Mouse Position: 699, 325
+[30-03-2017 22:58:46] Debug: Mouse Position: 716, 286
+[30-03-2017 22:58:46] Debug: Mouse Position: 742, 236
+[30-03-2017 22:58:46] Debug: Mouse Position: 773, 185
+[30-03-2017 22:58:46] Debug: Mouse Position: 805, 136
+[30-03-2017 22:58:46] Debug: Mouse Position: 838, 85
+[30-03-2017 22:58:46] Debug: Mouse Position: 874, 44
+[30-03-2017 22:58:46] Debug: Mouse Position: 907, 14
+[30-03-2017 22:58:46] Debug: Mouse Position: 941, 0
+[30-03-2017 22:59:00] Info: Initialized video subsystem
+[30-03-2017 22:59:00] Info: Initialized SDL_Image
+[30-03-2017 22:59:00] Info: Initialized SDL_Mix
+[30-03-2017 22:59:00] Info: Initialized SDL_TTF
+[30-03-2017 22:59:00] Info: Created window
+[30-03-2017 22:59:00] Info: Created renderer
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:59:00] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:59:00] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:59:00] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:59:00] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:59:00] Debug: Playing music
+[30-03-2017 22:59:00] Debug: Set music volume to 32
+[30-03-2017 22:59:00] Debug: Mouse Position: 315, 145
+[30-03-2017 22:59:00] Debug: Mouse Position: 336, 160
+[30-03-2017 22:59:01] Debug: Mouse Position: 341, 169
+[30-03-2017 22:59:01] Debug: Mouse Position: 359, 188
+[30-03-2017 22:59:01] Debug: Mouse Position: 397, 219
+[30-03-2017 22:59:01] Debug: Mouse Position: 437, 254
+[30-03-2017 22:59:01] Debug: Mouse Position: 479, 285
+[30-03-2017 22:59:01] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:01] Debug: Mouse Position: 526, 319
+[30-03-2017 22:59:01] Debug: Mouse Position: 542, 329
+[30-03-2017 22:59:01] Debug: Mouse Position: 553, 335
+[30-03-2017 22:59:01] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:59:01] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:59:01] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:59:01] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:59:01] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:59:01] Debug: Stopped music
+[30-03-2017 22:59:01] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:59:01] Debug: Mouse Button (1) State: Up
+[30-03-2017 22:59:02] Debug: Mouse Position: 554, 334
+[30-03-2017 22:59:02] Debug: Mouse Position: 556, 332
+[30-03-2017 22:59:02] Debug: Mouse Position: 558, 328
+[30-03-2017 22:59:02] Debug: Mouse Position: 569, 313
+[30-03-2017 22:59:02] Debug: Mouse Position: 578, 303
+[30-03-2017 22:59:02] Debug: Mouse Position: 586, 294
+[30-03-2017 22:59:02] Debug: Mouse Position: 593, 288
+[30-03-2017 22:59:02] Debug: Mouse Position: 600, 283
+[30-03-2017 22:59:02] Debug: Mouse Position: 606, 279
+[30-03-2017 22:59:02] Debug: Mouse Position: 616, 273
+[30-03-2017 22:59:02] Debug: Mouse Position: 621, 269
+[30-03-2017 22:59:02] Debug: Mouse Position: 624, 268
+[30-03-2017 22:59:02] Debug: Mouse Position: 627, 265
+[30-03-2017 22:59:02] Debug: Mouse Position: 630, 264
+[30-03-2017 22:59:02] Debug: Mouse Position: 631, 264
+[30-03-2017 22:59:02] Debug: Mouse Position: 631, 263
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 267
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 294
+[30-03-2017 22:59:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 324
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 339
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 341
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 342
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 344
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 343
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 342
+[30-03-2017 22:59:04] Debug: Mouse Position: 631, 341
+[30-03-2017 22:59:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:59:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:05] Debug: Stopped music
+[30-03-2017 22:59:19] Info: Initialized video subsystem
+[30-03-2017 22:59:19] Info: Initialized SDL_Image
+[30-03-2017 22:59:19] Info: Initialized SDL_Mix
+[30-03-2017 22:59:20] Info: Initialized SDL_TTF
+[30-03-2017 22:59:20] Info: Created window
+[30-03-2017 22:59:20] Info: Created renderer
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:59:20] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:59:20] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:59:20] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:59:20] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:59:20] Debug: Playing music
+[30-03-2017 22:59:20] Debug: Set music volume to 32
+[30-03-2017 22:59:20] Debug: Mouse Position: 437, 177
+[30-03-2017 22:59:20] Debug: Mouse Position: 460, 206
+[30-03-2017 22:59:20] Debug: Mouse Position: 465, 213
+[30-03-2017 22:59:20] Debug: Mouse Position: 498, 252
+[30-03-2017 22:59:20] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:20] Debug: Mouse Position: 547, 344
+[30-03-2017 22:59:21] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:59:21] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:59:21] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:59:21] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:59:21] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:59:21] Debug: Stopped music
+[30-03-2017 22:59:21] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 22:59:21] Debug: Mouse Button (1) State: Up
+[30-03-2017 22:59:22] Debug: Mouse Position: 547, 342
+[30-03-2017 22:59:22] Debug: Mouse Position: 546, 338
+[30-03-2017 22:59:22] Debug: Mouse Position: 544, 327
+[30-03-2017 22:59:22] Debug: Mouse Position: 541, 312
+[30-03-2017 22:59:22] Debug: Mouse Position: 539, 289
+[30-03-2017 22:59:22] Debug: Mouse Position: 535, 253
+[30-03-2017 22:59:22] Debug: Mouse Position: 532, 214
+[30-03-2017 22:59:22] Debug: Mouse Position: 528, 175
+[30-03-2017 22:59:22] Debug: Mouse Position: 526, 134
+[30-03-2017 22:59:22] Debug: Mouse Position: 523, 95
+[30-03-2017 22:59:22] Debug: Mouse Position: 520, 66
+[30-03-2017 22:59:22] Debug: Mouse Position: 517, 41
+[30-03-2017 22:59:22] Debug: Mouse Position: 514, 20
+[30-03-2017 22:59:22] Debug: Mouse Position: 513, 8
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 1
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 0
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 1
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 6
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 11
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 16
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 20
+[30-03-2017 22:59:22] Debug: Mouse Position: 512, 24
+[30-03-2017 22:59:23] Debug: Mouse Position: 512, 23
+[30-03-2017 22:59:23] Debug: Mouse Position: 512, 19
+[30-03-2017 22:59:23] Debug: Mouse Position: 512, 12
+[30-03-2017 22:59:23] Debug: Mouse Position: 512, 7
+[30-03-2017 22:59:23] Debug: Mouse Position: 512, 0
+[30-03-2017 22:59:29] Debug: Mouse Position: 496, 109
+[30-03-2017 22:59:30] Debug: Mouse Position: 496, 111
+[30-03-2017 22:59:30] Debug: Mouse Position: 499, 115
+[30-03-2017 22:59:30] Debug: Mouse Position: 505, 122
+[30-03-2017 22:59:30] Debug: Mouse Position: 513, 132
+[30-03-2017 22:59:30] Debug: Mouse Position: 523, 149
+[30-03-2017 22:59:30] Debug: Mouse Position: 537, 177
+[30-03-2017 22:59:30] Debug: Mouse Position: 550, 203
+[30-03-2017 22:59:30] Debug: Mouse Position: 566, 240
+[30-03-2017 22:59:30] Debug: Mouse Position: 579, 281
+[30-03-2017 22:59:30] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:30] Debug: Mouse Position: 594, 317
+[30-03-2017 22:59:30] Debug: Mouse Position: 613, 387
+[30-03-2017 22:59:30] Debug: Mouse Position: 618, 413
+[30-03-2017 22:59:30] Debug: Mouse Position: 621, 427
+[30-03-2017 22:59:30] Debug: Mouse Position: 622, 436
+[30-03-2017 22:59:30] Debug: Mouse Position: 623, 442
+[30-03-2017 22:59:30] Debug: Mouse Position: 623, 445
+[30-03-2017 22:59:30] Debug: Mouse Position: 623, 446
+[30-03-2017 22:59:30] Debug: Mouse Position: 623, 445
+[30-03-2017 22:59:30] Debug: Mouse Position: 623, 443
+[30-03-2017 22:59:30] Debug: Mouse Position: 623, 442
+[30-03-2017 22:59:30] Debug: Mouse Position: 622, 441
+[30-03-2017 22:59:30] Debug: Mouse Position: 622, 440
+[30-03-2017 22:59:30] Debug: Mouse Position: 622, 439
+[30-03-2017 22:59:30] Debug: Mouse Position: 621, 438
+[30-03-2017 22:59:30] Debug: Mouse Position: 621, 437
+[30-03-2017 22:59:30] Debug: Mouse Position: 621, 435
+[30-03-2017 22:59:30] Debug: Mouse Position: 620, 432
+[30-03-2017 22:59:30] Debug: Mouse Position: 619, 429
+[30-03-2017 22:59:30] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:30] Debug: Mouse Position: 617, 422
+[30-03-2017 22:59:30] Debug: Mouse Position: 615, 413
+[30-03-2017 22:59:30] Debug: Mouse Position: 613, 404
+[30-03-2017 22:59:30] Debug: Mouse Position: 610, 397
+[30-03-2017 22:59:30] Debug: Mouse Position: 608, 392
+[30-03-2017 22:59:30] Debug: Mouse Position: 606, 389
+[30-03-2017 22:59:30] Debug: Mouse Position: 605, 387
+[30-03-2017 22:59:30] Debug: Mouse Position: 604, 386
+[30-03-2017 22:59:30] Debug: Mouse Position: 604, 387
+[30-03-2017 22:59:33] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:59:33] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:33] Debug: Stopped music
+[30-03-2017 22:59:41] Info: Initialized video subsystem
+[30-03-2017 22:59:41] Info: Initialized SDL_Image
+[30-03-2017 22:59:41] Info: Initialized SDL_Mix
+[30-03-2017 22:59:41] Info: Initialized SDL_TTF
+[30-03-2017 22:59:41] Info: Created window
+[30-03-2017 22:59:41] Info: Created renderer
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:59:41] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:59:41] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 22:59:41] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 22:59:41] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 22:59:41] Debug: Playing music
+[30-03-2017 22:59:41] Debug: Set music volume to 32
+[30-03-2017 22:59:41] Debug: Mouse Position: 334, 73
+[30-03-2017 22:59:41] Debug: Mouse Position: 339, 73
+[30-03-2017 22:59:42] Debug: Mouse Position: 343, 80
+[30-03-2017 22:59:42] Debug: Mouse Position: 361, 103
+[30-03-2017 22:59:42] Debug: Mouse Position: 372, 120
+[30-03-2017 22:59:42] Debug: Mouse Position: 409, 175
+[30-03-2017 22:59:42] Debug: Mouse Position: 468, 243
+[30-03-2017 22:59:42] Debug: Mouse Position: 487, 266
+[30-03-2017 22:59:42] Debug: Mouse Position: 549, 312
+[30-03-2017 22:59:43] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:43] Debug: Mouse Position: 549, 313
+[30-03-2017 22:59:43] Debug: Mouse Position: 552, 319
+[30-03-2017 22:59:43] Debug: Mouse Position: 554, 322
+[30-03-2017 22:59:43] Debug: Mouse Position: 554, 324
+[30-03-2017 22:59:43] Debug: Mouse Position: 557, 326
+[30-03-2017 22:59:43] Debug: Mouse Position: 558, 328
+[30-03-2017 22:59:44] Debug: Mouse Position: 560, 332
+[30-03-2017 22:59:44] Debug: Mouse Position: 560, 333
+[30-03-2017 22:59:44] Debug: Mouse Position: 561, 334
+[30-03-2017 22:59:44] Debug: Mouse Button (1) State: Down
+[30-03-2017 22:59:44] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 22:59:44] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 22:59:44] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 22:59:45] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 22:59:45] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 22:59:45] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 22:59:45] Debug: Stopped music
+[30-03-2017 22:59:47] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:00:42] Debug: Mouse Position: 159, 0
+[30-03-2017 23:00:43] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:00:43] Debug: Mouse Position: 167, 0
+[30-03-2017 23:00:43] Debug: Mouse Position: 304, 2
+[30-03-2017 23:00:43] Debug: Mouse Position: 319, 14
+[30-03-2017 23:00:43] Debug: Mouse Position: 331, 25
+[30-03-2017 23:00:43] Debug: Mouse Position: 341, 36
+[30-03-2017 23:00:43] Debug: Mouse Position: 349, 44
+[30-03-2017 23:00:43] Debug: Mouse Position: 356, 51
+[30-03-2017 23:00:43] Debug: Mouse Position: 360, 56
+[30-03-2017 23:00:43] Debug: Mouse Position: 362, 57
+[30-03-2017 23:00:43] Debug: Mouse Position: 361, 56
+[30-03-2017 23:00:43] Debug: Mouse Position: 359, 53
+[30-03-2017 23:00:44] Debug: Mouse Position: 359, 55
+[30-03-2017 23:00:44] Debug: Mouse Position: 359, 60
+[30-03-2017 23:00:44] Debug: Mouse Position: 361, 69
+[30-03-2017 23:00:44] Debug: Mouse Position: 364, 81
+[30-03-2017 23:00:44] Debug: Mouse Position: 373, 98
+[30-03-2017 23:00:44] Debug: Mouse Position: 386, 122
+[30-03-2017 23:00:44] Debug: Mouse Position: 399, 148
+[30-03-2017 23:00:44] Debug: Mouse Position: 415, 172
+[30-03-2017 23:00:44] Debug: Mouse Position: 431, 194
+[30-03-2017 23:00:44] Debug: Mouse Position: 447, 219
+[30-03-2017 23:00:44] Debug: Mouse Position: 465, 248
+[30-03-2017 23:00:44] Debug: Mouse Position: 481, 275
+[30-03-2017 23:00:44] Debug: Mouse Position: 494, 299
+[30-03-2017 23:00:44] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:00:44] Debug: Mouse Position: 507, 325
+[30-03-2017 23:00:44] Debug: Mouse Position: 514, 347
+[30-03-2017 23:00:44] Debug: Mouse Position: 520, 364
+[30-03-2017 23:00:44] Debug: Mouse Position: 521, 376
+[30-03-2017 23:00:44] Debug: Mouse Position: 521, 384
+[30-03-2017 23:00:44] Debug: Mouse Position: 521, 389
+[30-03-2017 23:00:44] Debug: Mouse Position: 519, 391
+[30-03-2017 23:00:44] Debug: Mouse Position: 519, 393
+[30-03-2017 23:00:44] Debug: Mouse Position: 519, 396
+[30-03-2017 23:00:44] Debug: Mouse Position: 520, 400
+[30-03-2017 23:00:44] Debug: Mouse Position: 521, 409
+[30-03-2017 23:00:44] Debug: Mouse Position: 524, 419
+[30-03-2017 23:00:44] Debug: Mouse Position: 528, 430
+[30-03-2017 23:00:44] Debug: Mouse Position: 531, 442
+[30-03-2017 23:00:44] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:00:44] Debug: Mouse Position: 535, 452
+[30-03-2017 23:00:44] Debug: Mouse Position: 543, 473
+[30-03-2017 23:00:44] Debug: Mouse Position: 546, 481
+[30-03-2017 23:00:44] Debug: Mouse Position: 549, 487
+[30-03-2017 23:00:44] Debug: Mouse Position: 550, 489
+[30-03-2017 23:00:44] Debug: Mouse Position: 552, 491
+[30-03-2017 23:00:44] Debug: Mouse Position: 552, 490
+[30-03-2017 23:00:45] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:00:45] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:00:45] Debug: Stopped music
+[30-03-2017 23:00:52] Info: Initialized video subsystem
+[30-03-2017 23:00:52] Info: Initialized SDL_Image
+[30-03-2017 23:00:52] Info: Initialized SDL_Mix
+[30-03-2017 23:00:52] Info: Initialized SDL_TTF
+[30-03-2017 23:00:52] Info: Created window
+[30-03-2017 23:00:53] Info: Created renderer
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:00:53] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:00:53] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:00:53] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:00:53] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:00:53] Debug: Playing music
+[30-03-2017 23:00:53] Debug: Set music volume to 32
+[30-03-2017 23:00:53] Debug: Mouse Position: 492, 237
+[30-03-2017 23:00:53] Debug: Mouse Position: 495, 241
+[30-03-2017 23:00:53] Debug: Mouse Position: 516, 271
+[30-03-2017 23:00:53] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:00:53] Debug: Mouse Position: 543, 326
+[30-03-2017 23:00:53] Debug: Mouse Position: 565, 377
+[30-03-2017 23:00:53] Debug: Mouse Position: 579, 426
+[30-03-2017 23:00:53] Debug: Mouse Position: 583, 442
+[30-03-2017 23:00:53] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:00:53] Debug: Mouse Position: 585, 460
+[30-03-2017 23:00:53] Debug: Mouse Position: 585, 465
+[30-03-2017 23:00:53] Debug: Mouse Position: 583, 465
+[30-03-2017 23:00:53] Debug: Mouse Position: 583, 468
+[30-03-2017 23:00:53] Debug: Mouse Position: 579, 479
+[30-03-2017 23:00:53] Debug: Mouse Position: 577, 489
+[30-03-2017 23:00:53] Debug: Mouse Position: 576, 493
+[30-03-2017 23:00:53] Debug: Mouse Position: 575, 498
+[30-03-2017 23:00:54] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:00:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:00:54] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:00:54] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:00:54] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:00:54] Debug: Stopped music
+[30-03-2017 23:00:54] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:00:54] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:00:54] Debug: Mouse Position: 576, 496
+[30-03-2017 23:00:54] Debug: Mouse Position: 587, 485
+[30-03-2017 23:00:54] Debug: Mouse Position: 594, 479
+[30-03-2017 23:00:54] Debug: Mouse Position: 614, 465
+[30-03-2017 23:00:54] Debug: Mouse Position: 729, 402
+[30-03-2017 23:00:54] Debug: Mouse Position: 757, 382
+[30-03-2017 23:00:54] Debug: Mouse Position: 778, 369
+[30-03-2017 23:00:56] Debug: Mouse Position: 779, 368
+[30-03-2017 23:00:56] Debug: Mouse Position: 787, 351
+[30-03-2017 23:00:56] Debug: Mouse Position: 814, 313
+[30-03-2017 23:00:56] Debug: Mouse Position: 841, 283
+[30-03-2017 23:00:56] Debug: Mouse Position: 851, 274
+[30-03-2017 23:00:56] Debug: Mouse Position: 860, 267
+[30-03-2017 23:00:56] Debug: Mouse Position: 873, 259
+[30-03-2017 23:00:56] Debug: Mouse Position: 884, 256
+[30-03-2017 23:00:56] Debug: Mouse Position: 898, 253
+[30-03-2017 23:00:56] Debug: Mouse Position: 901, 252
+[30-03-2017 23:00:56] Debug: Mouse Position: 907, 250
+[30-03-2017 23:00:56] Debug: Mouse Position: 910, 248
+[30-03-2017 23:00:56] Debug: Mouse Position: 912, 247
+[30-03-2017 23:00:57] Debug: Mouse Position: 918, 242
+[30-03-2017 23:00:57] Debug: Mouse Position: 949, 224
+[30-03-2017 23:00:57] Debug: Mouse Position: 996, 186
+[30-03-2017 23:00:57] Debug: Mouse Position: 1014, 170
+[30-03-2017 23:00:57] Debug: Mouse Position: 1048, 143
+[30-03-2017 23:00:57] Debug: Mouse Position: 1053, 140
+[30-03-2017 23:00:57] Debug: Mouse Position: 1056, 139
+[30-03-2017 23:00:57] Debug: Mouse Position: 1058, 137
+[30-03-2017 23:00:57] Debug: Mouse Position: 1100, 108
+[30-03-2017 23:00:57] Debug: Mouse Position: 1128, 88
+[30-03-2017 23:00:57] Debug: Mouse Position: 1158, 69
+[30-03-2017 23:00:57] Debug: Mouse Position: 1174, 59
+[30-03-2017 23:00:57] Debug: Mouse Position: 1179, 55
+[30-03-2017 23:00:57] Debug: Mouse Position: 1180, 52
+[30-03-2017 23:00:58] Debug: Mouse Position: 1182, 51
+[30-03-2017 23:00:58] Debug: Mouse Position: 1191, 45
+[30-03-2017 23:00:58] Debug: Mouse Position: 1197, 41
+[30-03-2017 23:00:58] Debug: Mouse Position: 1199, 40
+[30-03-2017 23:00:58] Debug: Mouse Position: 1202, 35
+[30-03-2017 23:00:58] Debug: Mouse Position: 1205, 30
+[30-03-2017 23:00:58] Debug: Mouse Position: 1211, 24
+[30-03-2017 23:00:58] Debug: Mouse Position: 1216, 19
+[30-03-2017 23:00:58] Debug: Mouse Position: 1226, 6
+[30-03-2017 23:00:58] Debug: Mouse Position: 1238, 0
+[30-03-2017 23:00:59] Info: Destroying window
+[30-03-2017 23:00:59] Info: Destroying renderer and freeing associated textures
+[30-03-2017 23:00:59] Info: Unloading Mix_Init
+[30-03-2017 23:00:59] Info: Unloading IMG_Init
+[30-03-2017 23:00:59] Info: Cleaning up SDL subsystems
+[30-03-2017 23:00:59] Info: Exiting application
+[30-03-2017 23:01:02] Info: Initialized video subsystem
+[30-03-2017 23:01:02] Info: Initialized SDL_Image
+[30-03-2017 23:01:02] Info: Initialized SDL_Mix
+[30-03-2017 23:01:03] Info: Initialized SDL_TTF
+[30-03-2017 23:01:03] Info: Created window
+[30-03-2017 23:01:03] Info: Created renderer
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:01:03] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:01:03] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:01:03] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:01:03] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:01:03] Debug: Playing music
+[30-03-2017 23:01:03] Debug: Set music volume to 32
+[30-03-2017 23:01:03] Debug: Mouse Position: 452, 102
+[30-03-2017 23:01:03] Debug: Mouse Position: 482, 159
+[30-03-2017 23:01:04] Debug: Mouse Position: 483, 161
+[30-03-2017 23:01:04] Debug: Mouse Position: 485, 168
+[30-03-2017 23:01:04] Debug: Mouse Position: 485, 172
+[30-03-2017 23:01:04] Debug: Mouse Position: 492, 186
+[30-03-2017 23:01:04] Debug: Mouse Position: 496, 194
+[30-03-2017 23:01:04] Debug: Mouse Position: 511, 237
+[30-03-2017 23:01:04] Debug: Mouse Position: 519, 269
+[30-03-2017 23:01:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:01:04] Debug: Mouse Position: 529, 314
+[30-03-2017 23:01:04] Debug: Mouse Position: 550, 382
+[30-03-2017 23:01:04] Debug: Mouse Position: 555, 395
+[30-03-2017 23:01:04] Debug: Mouse Position: 563, 414
+[30-03-2017 23:01:04] Debug: Mouse Position: 567, 421
+[30-03-2017 23:01:04] Debug: Mouse Position: 567, 418
+[30-03-2017 23:01:04] Debug: Mouse Position: 567, 419
+[30-03-2017 23:01:04] Debug: Mouse Position: 567, 430
+[30-03-2017 23:01:04] Debug: Mouse Position: 567, 436
+[30-03-2017 23:01:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:01:04] Debug: Mouse Position: 568, 449
+[30-03-2017 23:01:04] Debug: Mouse Position: 569, 463
+[30-03-2017 23:01:04] Debug: Mouse Position: 569, 471
+[30-03-2017 23:01:04] Debug: Mouse Position: 569, 470
+[30-03-2017 23:01:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:01:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:01:05] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:01:05] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:01:05] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:01:05] Debug: Stopped music
+[30-03-2017 23:01:05] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:01:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:01:06] Debug: Mouse Position: 570, 468
+[30-03-2017 23:01:06] Debug: Mouse Position: 604, 415
+[30-03-2017 23:01:06] Debug: Mouse Position: 615, 401
+[30-03-2017 23:01:06] Debug: Mouse Position: 649, 358
+[30-03-2017 23:01:06] Debug: Mouse Position: 665, 340
+[30-03-2017 23:01:06] Debug: Mouse Position: 696, 309
+[30-03-2017 23:01:07] Debug: Mouse Position: 720, 291
+[30-03-2017 23:01:07] Debug: Mouse Position: 751, 282
+[30-03-2017 23:01:07] Debug: Mouse Position: 754, 282
+[30-03-2017 23:01:07] Debug: Mouse Position: 765, 237
+[30-03-2017 23:01:07] Debug: Mouse Position: 882, 0
+[30-03-2017 23:01:07] Debug: Mouse Position: 869, 43
+[30-03-2017 23:01:07] Debug: Mouse Position: 825, 199
+[30-03-2017 23:01:07] Debug: Mouse Position: 824, 200
+[30-03-2017 23:01:07] Debug: Mouse Position: 824, 198
+[30-03-2017 23:01:07] Debug: Mouse Position: 824, 191
+[30-03-2017 23:01:07] Debug: Mouse Position: 824, 190
+[30-03-2017 23:01:07] Debug: Mouse Position: 824, 189
+[30-03-2017 23:01:07] Debug: Mouse Position: 824, 188
+[30-03-2017 23:01:07] Debug: Mouse Position: 827, 182
+[30-03-2017 23:01:07] Debug: Mouse Position: 831, 160
+[30-03-2017 23:01:07] Debug: Mouse Position: 842, 119
+[30-03-2017 23:01:07] Debug: Mouse Position: 857, 70
+[30-03-2017 23:01:07] Debug: Mouse Position: 871, 40
+[30-03-2017 23:01:07] Debug: Mouse Position: 882, 16
+[30-03-2017 23:01:07] Debug: Mouse Position: 889, 6
+[30-03-2017 23:01:07] Debug: Mouse Position: 899, 0
+[30-03-2017 23:02:53] Info: Destroying window
+[30-03-2017 23:02:53] Info: Destroying renderer and freeing associated textures
+[30-03-2017 23:02:53] Info: Unloading Mix_Init
+[30-03-2017 23:02:53] Info: Unloading IMG_Init
+[30-03-2017 23:02:53] Info: Cleaning up SDL subsystems
+[30-03-2017 23:02:53] Info: Exiting application
+[30-03-2017 23:02:56] Info: Initialized video subsystem
+[30-03-2017 23:02:56] Info: Initialized SDL_Image
+[30-03-2017 23:02:56] Info: Initialized SDL_Mix
+[30-03-2017 23:02:57] Info: Initialized SDL_TTF
+[30-03-2017 23:02:57] Info: Created window
+[30-03-2017 23:02:57] Info: Created renderer
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:02:57] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:02:57] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:02:57] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:02:57] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:02:57] Debug: Playing music
+[30-03-2017 23:02:57] Debug: Set music volume to 32
+[30-03-2017 23:02:57] Debug: Mouse Position: 398, 294
+[30-03-2017 23:02:58] Debug: Mouse Position: 405, 299
+[30-03-2017 23:02:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:02:58] Debug: Mouse Position: 454, 336
+[30-03-2017 23:02:58] Debug: Mouse Position: 575, 424
+[30-03-2017 23:02:58] Debug: Mouse Position: 590, 438
+[30-03-2017 23:02:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:02:58] Debug: Mouse Position: 599, 447
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 464
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 467
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 470
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 472
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 473
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 476
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 478
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 494
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 502
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 516
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 518
+[30-03-2017 23:02:58] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:02:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:02:58] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:02:58] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:02:58] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:02:58] Debug: Stopped music
+[30-03-2017 23:02:58] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 519
+[30-03-2017 23:02:58] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:02:58] Debug: Mouse Position: 610, 518
+[30-03-2017 23:02:59] Debug: Mouse Position: 610, 512
+[30-03-2017 23:02:59] Debug: Mouse Position: 636, 440
+[30-03-2017 23:02:59] Debug: Mouse Position: 655, 411
+[30-03-2017 23:02:59] Debug: Mouse Position: 748, 340
+[30-03-2017 23:02:59] Debug: Mouse Position: 886, 271
+[30-03-2017 23:02:59] Debug: Mouse Position: 949, 246
+[30-03-2017 23:02:59] Debug: Mouse Position: 1027, 212
+[30-03-2017 23:02:59] Debug: Mouse Position: 1031, 207
+[30-03-2017 23:02:59] Debug: Mouse Position: 1052, 182
+[30-03-2017 23:02:59] Debug: Mouse Position: 1067, 164
+[30-03-2017 23:02:59] Debug: Mouse Position: 1087, 136
+[30-03-2017 23:02:59] Debug: Mouse Position: 1099, 120
+[30-03-2017 23:02:59] Debug: Mouse Position: 1099, 121
+[30-03-2017 23:02:59] Debug: Mouse Position: 1099, 122
+[30-03-2017 23:03:00] Debug: Mouse Position: 1086, 122
+[30-03-2017 23:03:00] Debug: Mouse Position: 896, 75
+[30-03-2017 23:03:00] Debug: Mouse Position: 794, 47
+[30-03-2017 23:03:00] Debug: Mouse Position: 670, 0
+[30-03-2017 23:04:00] Info: Initialized video subsystem
+[30-03-2017 23:04:01] Info: Initialized SDL_Image
+[30-03-2017 23:04:01] Info: Initialized SDL_Mix
+[30-03-2017 23:04:01] Info: Initialized SDL_TTF
+[30-03-2017 23:04:01] Info: Created window
+[30-03-2017 23:04:01] Info: Created renderer
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:04:01] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:04:01] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:04:01] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:04:01] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:04:01] Debug: Playing music
+[30-03-2017 23:04:01] Debug: Set music volume to 32
+[30-03-2017 23:04:01] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:01] Debug: Mouse Position: 582, 314
+[30-03-2017 23:04:02] Debug: Mouse Position: 582, 315
+[30-03-2017 23:04:02] Debug: Mouse Position: 584, 322
+[30-03-2017 23:04:02] Debug: Mouse Position: 584, 324
+[30-03-2017 23:04:02] Debug: Mouse Position: 584, 327
+[30-03-2017 23:04:02] Debug: Mouse Position: 586, 334
+[30-03-2017 23:04:02] Debug: Mouse Position: 587, 340
+[30-03-2017 23:04:02] Debug: Mouse Position: 587, 343
+[30-03-2017 23:04:02] Debug: Mouse Position: 588, 348
+[30-03-2017 23:04:02] Debug: Mouse Position: 589, 351
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 354
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 390
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 407
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 417
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 418
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 420
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 423
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 431
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 440
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 446
+[30-03-2017 23:04:03] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 449
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 459
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 466
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 471
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 472
+[30-03-2017 23:04:03] Debug: Mouse Position: 589, 473
+[30-03-2017 23:04:03] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:03] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:04:03] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:04:03] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:04:03] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:04:03] Debug: Stopped music
+[30-03-2017 23:04:03] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:04:20] Info: Initialized video subsystem
+[30-03-2017 23:04:20] Info: Initialized SDL_Image
+[30-03-2017 23:04:20] Info: Initialized SDL_Mix
+[30-03-2017 23:04:20] Info: Initialized SDL_TTF
+[30-03-2017 23:04:21] Info: Created window
+[30-03-2017 23:04:21] Info: Created renderer
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:04:21] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:04:21] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:04:21] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:04:21] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:04:21] Debug: Playing music
+[30-03-2017 23:04:21] Debug: Set music volume to 32
+[30-03-2017 23:04:21] Debug: Mouse Position: 284, 108
+[30-03-2017 23:04:21] Debug: Mouse Position: 284, 111
+[30-03-2017 23:04:21] Debug: Mouse Position: 288, 121
+[30-03-2017 23:04:21] Debug: Mouse Position: 310, 173
+[30-03-2017 23:04:21] Debug: Mouse Position: 344, 258
+[30-03-2017 23:04:21] Debug: Mouse Position: 356, 284
+[30-03-2017 23:04:21] Debug: Mouse Position: 377, 330
+[30-03-2017 23:04:21] Debug: Mouse Position: 395, 359
+[30-03-2017 23:04:21] Debug: Mouse Position: 403, 369
+[30-03-2017 23:04:21] Debug: Mouse Position: 417, 385
+[30-03-2017 23:04:21] Debug: Mouse Position: 428, 396
+[30-03-2017 23:04:21] Debug: Mouse Position: 432, 398
+[30-03-2017 23:04:21] Debug: Mouse Position: 434, 398
+[30-03-2017 23:04:22] Debug: Mouse Position: 436, 398
+[30-03-2017 23:04:22] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:22] Debug: Mouse Position: 471, 387
+[30-03-2017 23:04:22] Debug: Mouse Position: 492, 380
+[30-03-2017 23:04:22] Debug: Mouse Position: 497, 378
+[30-03-2017 23:04:22] Debug: Mouse Position: 500, 376
+[30-03-2017 23:04:22] Debug: Mouse Position: 501, 375
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 373
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 375
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 378
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 389
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 401
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 416
+[30-03-2017 23:04:22] Debug: Mouse Position: 503, 428
+[30-03-2017 23:04:22] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:22] Debug: Mouse Position: 505, 467
+[30-03-2017 23:04:22] Debug: Mouse Position: 506, 503
+[30-03-2017 23:04:22] Debug: Mouse Position: 508, 524
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 525
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 526
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 525
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 523
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 521
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 517
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 514
+[30-03-2017 23:04:22] Debug: Mouse Position: 509, 501
+[30-03-2017 23:04:22] Debug: Mouse Position: 508, 476
+[30-03-2017 23:04:22] Debug: Mouse Position: 505, 431
+[30-03-2017 23:04:22] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:22] Debug: Mouse Position: 504, 406
+[30-03-2017 23:04:22] Debug: Mouse Position: 501, 352
+[30-03-2017 23:04:22] Debug: Mouse Position: 501, 337
+[30-03-2017 23:04:22] Debug: Mouse Position: 501, 334
+[30-03-2017 23:04:22] Debug: Mouse Position: 501, 337
+[30-03-2017 23:04:23] Debug: Mouse Position: 500, 363
+[30-03-2017 23:04:23] Debug: Mouse Position: 500, 375
+[30-03-2017 23:04:23] Debug: Mouse Position: 500, 403
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 500, 455
+[30-03-2017 23:04:23] Debug: Mouse Position: 500, 508
+[30-03-2017 23:04:23] Debug: Mouse Position: 500, 536
+[30-03-2017 23:04:23] Debug: Mouse Position: 502, 550
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 504, 573
+[30-03-2017 23:04:23] Debug: Mouse Position: 508, 591
+[30-03-2017 23:04:23] Debug: Mouse Position: 511, 599
+[30-03-2017 23:04:23] Debug: Mouse Position: 515, 600
+[30-03-2017 23:04:23] Debug: Mouse Position: 516, 600
+[30-03-2017 23:04:23] Debug: Mouse Position: 520, 595
+[30-03-2017 23:04:23] Debug: Mouse Position: 521, 590
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 540, 491
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 527, 381
+[30-03-2017 23:04:23] Debug: Mouse Position: 512, 367
+[30-03-2017 23:04:23] Debug: Mouse Position: 502, 368
+[30-03-2017 23:04:23] Debug: Mouse Position: 496, 375
+[30-03-2017 23:04:23] Debug: Mouse Position: 489, 387
+[30-03-2017 23:04:23] Debug: Mouse Position: 486, 394
+[30-03-2017 23:04:23] Debug: Mouse Position: 481, 414
+[30-03-2017 23:04:23] Debug: Mouse Position: 480, 427
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 479, 456
+[30-03-2017 23:04:23] Debug: Mouse Position: 484, 516
+[30-03-2017 23:04:23] Debug: Mouse Position: 488, 532
+[30-03-2017 23:04:23] Debug: Mouse Position: 490, 547
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 499, 592
+[30-03-2017 23:04:23] Debug: Mouse Position: 506, 609
+[30-03-2017 23:04:23] Debug: Mouse Position: 509, 612
+[30-03-2017 23:04:23] Debug: Mouse Position: 524, 616
+[30-03-2017 23:04:23] Debug: Mouse Position: 529, 616
+[30-03-2017 23:04:23] Debug: Mouse Position: 542, 611
+[30-03-2017 23:04:23] Debug: Mouse Position: 554, 603
+[30-03-2017 23:04:23] Debug: Mouse Position: 559, 597
+[30-03-2017 23:04:23] Debug: Mouse Position: 569, 577
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 576, 548
+[30-03-2017 23:04:23] Debug: Mouse Position: 583, 476
+[30-03-2017 23:04:23] Debug: Mouse Position: 583, 449
+[30-03-2017 23:04:23] Debug: Mouse Position: 583, 425
+[30-03-2017 23:04:23] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:23] Debug: Mouse Position: 577, 380
+[30-03-2017 23:04:23] Debug: Mouse Position: 570, 361
+[30-03-2017 23:04:23] Debug: Mouse Position: 567, 356
+[30-03-2017 23:04:23] Debug: Mouse Position: 560, 354
+[30-03-2017 23:04:23] Debug: Mouse Position: 554, 354
+[30-03-2017 23:04:23] Debug: Mouse Position: 552, 354
+[30-03-2017 23:04:23] Debug: Mouse Position: 544, 356
+[30-03-2017 23:04:24] Debug: Mouse Position: 536, 358
+[30-03-2017 23:04:24] Debug: Mouse Position: 527, 360
+[30-03-2017 23:04:24] Debug: Mouse Position: 518, 365
+[30-03-2017 23:04:24] Debug: Mouse Position: 515, 368
+[30-03-2017 23:04:24] Debug: Mouse Position: 504, 398
+[30-03-2017 23:04:24] Debug: Mouse Position: 501, 415
+[30-03-2017 23:04:24] Debug: Mouse Position: 501, 430
+[30-03-2017 23:04:24] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:24] Debug: Mouse Position: 501, 465
+[30-03-2017 23:04:24] Debug: Mouse Position: 501, 484
+[30-03-2017 23:04:24] Debug: Mouse Position: 502, 511
+[30-03-2017 23:04:24] Debug: Mouse Position: 507, 535
+[30-03-2017 23:04:24] Debug: Mouse Position: 517, 557
+[30-03-2017 23:04:24] Debug: Mouse Position: 522, 563
+[30-03-2017 23:04:24] Debug: Mouse Position: 534, 569
+[30-03-2017 23:04:24] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:24] Debug: Mouse Position: 545, 571
+[30-03-2017 23:04:24] Debug: Mouse Position: 553, 571
+[30-03-2017 23:04:24] Debug: Mouse Position: 556, 571
+[30-03-2017 23:04:24] Debug: Mouse Position: 563, 569
+[30-03-2017 23:04:24] Debug: Mouse Position: 570, 561
+[30-03-2017 23:04:24] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:24] Debug: Mouse Position: 574, 554
+[30-03-2017 23:04:24] Debug: Mouse Position: 582, 528
+[30-03-2017 23:04:24] Debug: Mouse Position: 589, 489
+[30-03-2017 23:04:24] Debug: Mouse Position: 591, 461
+[30-03-2017 23:04:24] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:24] Debug: Mouse Position: 592, 398
+[30-03-2017 23:04:24] Debug: Mouse Position: 592, 346
+[30-03-2017 23:04:24] Debug: Mouse Position: 589, 315
+[30-03-2017 23:04:24] Debug: Mouse Position: 585, 307
+[30-03-2017 23:04:24] Debug: Mouse Position: 581, 302
+[30-03-2017 23:04:24] Debug: Mouse Position: 576, 302
+[30-03-2017 23:04:24] Debug: Mouse Position: 574, 303
+[30-03-2017 23:04:24] Debug: Mouse Position: 567, 310
+[30-03-2017 23:04:24] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:24] Debug: Mouse Position: 556, 318
+[30-03-2017 23:04:24] Debug: Mouse Position: 547, 331
+[30-03-2017 23:04:24] Debug: Mouse Position: 536, 376
+[30-03-2017 23:04:24] Debug: Mouse Position: 531, 402
+[30-03-2017 23:04:24] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:24] Debug: Mouse Position: 523, 467
+[30-03-2017 23:04:24] Debug: Mouse Position: 514, 521
+[30-03-2017 23:04:24] Debug: Mouse Position: 513, 530
+[30-03-2017 23:04:24] Debug: Mouse Position: 513, 536
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Down
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Up
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Down
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Up
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Down
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Up
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Down
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Up
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Down
+[30-03-2017 23:04:25] Debug: Key (98/b) State: Up
+[30-03-2017 23:04:26] Debug: Mouse Position: 512, 541
+[30-03-2017 23:04:26] Debug: Mouse Position: 512, 550
+[30-03-2017 23:04:26] Debug: Mouse Position: 513, 556
+[30-03-2017 23:04:26] Debug: Mouse Position: 515, 560
+[30-03-2017 23:04:26] Debug: Mouse Position: 519, 563
+[30-03-2017 23:04:26] Debug: Mouse Position: 521, 564
+[30-03-2017 23:04:26] Debug: Mouse Position: 523, 564
+[30-03-2017 23:04:26] Debug: Mouse Position: 532, 559
+[30-03-2017 23:04:26] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:26] Debug: Mouse Position: 550, 543
+[30-03-2017 23:04:26] Debug: Mouse Position: 571, 521
+[30-03-2017 23:04:26] Debug: Mouse Position: 582, 505
+[30-03-2017 23:04:26] Debug: Mouse Position: 598, 478
+[30-03-2017 23:04:26] Debug: Mouse Position: 602, 467
+[30-03-2017 23:04:26] Debug: Mouse Position: 608, 443
+[30-03-2017 23:04:26] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:26] Debug: Mouse Position: 610, 419
+[30-03-2017 23:04:26] Debug: Mouse Position: 610, 404
+[30-03-2017 23:04:26] Debug: Mouse Position: 608, 399
+[30-03-2017 23:04:26] Debug: Mouse Position: 606, 397
+[30-03-2017 23:04:26] Debug: Mouse Position: 606, 401
+[30-03-2017 23:04:26] Debug: Mouse Position: 606, 424
+[30-03-2017 23:04:26] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:26] Debug: Mouse Position: 606, 449
+[30-03-2017 23:04:26] Debug: Mouse Position: 610, 506
+[30-03-2017 23:04:26] Debug: Mouse Position: 611, 524
+[30-03-2017 23:04:26] Debug: Mouse Position: 613, 548
+[30-03-2017 23:04:26] Debug: Mouse Position: 614, 563
+[30-03-2017 23:04:26] Debug: Mouse Position: 615, 569
+[30-03-2017 23:04:26] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:26] Debug: Mouse Position: 616, 577
+[30-03-2017 23:04:26] Debug: Mouse Position: 616, 584
+[30-03-2017 23:04:26] Debug: Mouse Position: 616, 593
+[30-03-2017 23:04:26] Debug: Mouse Position: 616, 601
+[30-03-2017 23:04:26] Debug: Mouse Position: 616, 606
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 613
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 620
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 626
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 629
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 634
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 638
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 639
+[30-03-2017 23:04:27] Debug: Mouse Position: 616, 638
+[30-03-2017 23:04:27] Debug: Mouse Position: 615, 622
+[30-03-2017 23:04:27] Debug: Mouse Position: 614, 604
+[30-03-2017 23:04:27] Debug: Mouse Position: 614, 578
+[30-03-2017 23:04:27] Debug: Mouse Position: 614, 563
+[30-03-2017 23:04:27] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:27] Debug: Mouse Position: 614, 529
+[30-03-2017 23:04:27] Debug: Mouse Position: 617, 516
+[30-03-2017 23:04:27] Debug: Mouse Position: 620, 508
+[30-03-2017 23:04:27] Debug: Mouse Position: 621, 506
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 504
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 508
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 526
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 546
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 566
+[30-03-2017 23:04:27] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 579
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 582
+[30-03-2017 23:04:27] Debug: Mouse Position: 623, 583
+[30-03-2017 23:04:27] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:27] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:28] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:28] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:28] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:28] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:28] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:28] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:28] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:28] Debug: Mouse Position: 623, 578
+[30-03-2017 23:04:28] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:28] Debug: Mouse Position: 620, 529
+[30-03-2017 23:04:28] Debug: Mouse Position: 610, 431
+[30-03-2017 23:04:28] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:28] Debug: Mouse Position: 610, 404
+[30-03-2017 23:04:28] Debug: Mouse Position: 609, 368
+[30-03-2017 23:04:28] Debug: Mouse Position: 609, 360
+[30-03-2017 23:04:28] Debug: Mouse Position: 609, 356
+[30-03-2017 23:04:28] Debug: Mouse Position: 609, 359
+[30-03-2017 23:04:29] Debug: Mouse Position: 609, 360
+[30-03-2017 23:04:29] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:29] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:04:29] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:04:29] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:04:29] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:04:29] Debug: Stopped music
+[30-03-2017 23:04:29] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:04:29] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:29] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:29] Debug: Stopped music
+[30-03-2017 23:04:51] Info: Initialized video subsystem
+[30-03-2017 23:04:51] Info: Initialized SDL_Image
+[30-03-2017 23:04:51] Info: Initialized SDL_Mix
+[30-03-2017 23:04:52] Info: Initialized SDL_TTF
+[30-03-2017 23:04:52] Info: Created window
+[30-03-2017 23:04:52] Info: Created renderer
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:04:52] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:04:52] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:04:52] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:04:52] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:04:52] Debug: Playing music
+[30-03-2017 23:04:52] Debug: Set music volume to 32
+[30-03-2017 23:04:52] Debug: Mouse Position: 314, 102
+[30-03-2017 23:04:52] Debug: Mouse Position: 315, 103
+[30-03-2017 23:04:52] Debug: Mouse Position: 324, 118
+[30-03-2017 23:04:52] Debug: Mouse Position: 334, 126
+[30-03-2017 23:04:52] Debug: Mouse Position: 381, 174
+[30-03-2017 23:04:52] Debug: Mouse Position: 457, 257
+[30-03-2017 23:04:52] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:53] Debug: Mouse Position: 543, 362
+[30-03-2017 23:04:53] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:53] Debug: Mouse Position: 648, 519
+[30-03-2017 23:04:53] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:53] Debug: Mouse Position: 694, 638
+[30-03-2017 23:04:53] Debug: Mouse Position: 694, 643
+[30-03-2017 23:04:53] Debug: Mouse Position: 691, 683
+[30-03-2017 23:04:53] Debug: Mouse Position: 690, 683
+[30-03-2017 23:04:53] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:53] Debug: Mouse Position: 690, 682
+[30-03-2017 23:04:53] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:53] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:53] Debug: Mouse Position: 690, 680
+[30-03-2017 23:04:53] Debug: Mouse Position: 689, 671
+[30-03-2017 23:04:53] Debug: Mouse Position: 689, 664
+[30-03-2017 23:04:53] Debug: Mouse Position: 689, 661
+[30-03-2017 23:04:53] Debug: Mouse Position: 689, 654
+[30-03-2017 23:04:53] Debug: Mouse Position: 688, 645
+[30-03-2017 23:04:53] Debug: Mouse Position: 688, 643
+[30-03-2017 23:04:53] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:53] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:53] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:54] Debug: Mouse Position: 687, 642
+[30-03-2017 23:04:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:54] Debug: Mouse Position: 587, 464
+[30-03-2017 23:04:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:54] Debug: Mouse Position: 537, 332
+[30-03-2017 23:04:54] Debug: Mouse Position: 491, 203
+[30-03-2017 23:04:54] Debug: Mouse Position: 476, 156
+[30-03-2017 23:04:54] Debug: Mouse Position: 464, 108
+[30-03-2017 23:04:54] Debug: Mouse Position: 454, 75
+[30-03-2017 23:04:54] Debug: Mouse Position: 444, 39
+[30-03-2017 23:04:54] Debug: Mouse Position: 444, 46
+[30-03-2017 23:04:54] Debug: Mouse Position: 453, 99
+[30-03-2017 23:04:54] Debug: Mouse Position: 472, 203
+[30-03-2017 23:04:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:54] Debug: Mouse Position: 501, 329
+[30-03-2017 23:04:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:54] Debug: Mouse Position: 537, 453
+[30-03-2017 23:04:54] Debug: Mouse Position: 573, 562
+[30-03-2017 23:04:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:54] Debug: Mouse Position: 600, 620
+[30-03-2017 23:04:54] Debug: Mouse Position: 612, 640
+[30-03-2017 23:04:54] Debug: Mouse Position: 614, 642
+[30-03-2017 23:04:54] Debug: Mouse Position: 616, 642
+[30-03-2017 23:04:55] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:55] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:55] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:55] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:55] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:55] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:55] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:55] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:56] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:56] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:56] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:56] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:56] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:57] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:57] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:57] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:57] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:58] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:58] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:59] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:59] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:59] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:04:59] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:04:59] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:00] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:00] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:00] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:00] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:00] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:00] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:01] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:01] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:01] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:01] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:01] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:01] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:01] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:01] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:01] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:02] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:03] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:03] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:03] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:03] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:03] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:04] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:04] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:05] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:05] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:06] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:06] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:06] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:06] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:06] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:06] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:06] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:06] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:08] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:08] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:08] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:08] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:09] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:09] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:10] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:10] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:10] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:12] Debug: Mouse Position: 615, 640
+[30-03-2017 23:05:12] Debug: Mouse Position: 603, 630
+[30-03-2017 23:05:12] Debug: Mouse Position: 568, 613
+[30-03-2017 23:05:12] Debug: Mouse Position: 518, 585
+[30-03-2017 23:05:12] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:12] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:05:12] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:05:12] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:05:12] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:05:12] Debug: Stopped music
+[30-03-2017 23:05:12] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:05:12] Debug: Mouse Position: 475, 552
+[30-03-2017 23:05:12] Debug: Mouse Position: 405, 466
+[30-03-2017 23:05:12] Debug: Mouse Position: 405, 467
+[30-03-2017 23:05:14] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:05:14] Debug: Mouse Position: 405, 457
+[30-03-2017 23:05:14] Debug: Mouse Position: 403, 418
+[30-03-2017 23:05:14] Debug: Mouse Position: 377, 300
+[30-03-2017 23:05:14] Debug: Mouse Position: 346, 171
+[30-03-2017 23:05:14] Debug: Mouse Position: 319, 53
+[30-03-2017 23:05:14] Debug: Mouse Position: 310, 5
+[30-03-2017 23:05:14] Debug: Mouse Position: 295, 0
+[30-03-2017 23:05:52] Info: Initialized video subsystem
+[30-03-2017 23:05:52] Info: Initialized SDL_Image
+[30-03-2017 23:05:52] Info: Initialized SDL_Mix
+[30-03-2017 23:05:53] Info: Initialized SDL_TTF
+[30-03-2017 23:05:53] Info: Created window
+[30-03-2017 23:05:53] Info: Created renderer
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:05:53] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:05:53] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:05:53] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:05:53] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:05:53] Debug: Playing music
+[30-03-2017 23:05:53] Debug: Set music volume to 32
+[30-03-2017 23:05:53] Debug: Mouse Position: 415, 22
+[30-03-2017 23:05:54] Debug: Mouse Position: 415, 20
+[30-03-2017 23:05:54] Debug: Mouse Position: 415, 19
+[30-03-2017 23:05:54] Debug: Mouse Position: 418, 19
+[30-03-2017 23:05:54] Debug: Mouse Position: 427, 28
+[30-03-2017 23:05:54] Debug: Mouse Position: 439, 38
+[30-03-2017 23:05:54] Debug: Mouse Position: 486, 104
+[30-03-2017 23:05:54] Debug: Mouse Position: 533, 191
+[30-03-2017 23:05:54] Debug: Mouse Position: 574, 268
+[30-03-2017 23:05:54] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:54] Debug: Mouse Position: 608, 334
+[30-03-2017 23:05:54] Debug: Mouse Position: 623, 372
+[30-03-2017 23:05:54] Debug: Mouse Position: 625, 384
+[30-03-2017 23:05:54] Debug: Mouse Position: 626, 393
+[30-03-2017 23:05:54] Debug: Mouse Position: 627, 392
+[30-03-2017 23:05:54] Debug: Mouse Position: 631, 385
+[30-03-2017 23:05:54] Debug: Mouse Position: 638, 374
+[30-03-2017 23:05:55] Debug: Mouse Position: 638, 382
+[30-03-2017 23:05:55] Debug: Mouse Position: 638, 425
+[30-03-2017 23:05:55] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:55] Debug: Mouse Position: 638, 461
+[30-03-2017 23:05:55] Debug: Mouse Position: 638, 540
+[30-03-2017 23:05:55] Debug: Mouse Position: 638, 564
+[30-03-2017 23:05:55] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:05:55] Debug: Mouse Position: 638, 592
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 601
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 600
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 598
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 597
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 599
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 609
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 615
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 618
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 619
+[30-03-2017 23:05:55] Debug: Mouse Position: 637, 618
+[30-03-2017 23:05:56] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:05:56] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:33] Info: Initialized video subsystem
+[30-03-2017 23:08:33] Info: Initialized SDL_Image
+[30-03-2017 23:08:33] Info: Initialized SDL_Mix
+[30-03-2017 23:08:33] Info: Initialized SDL_TTF
+[30-03-2017 23:08:33] Info: Created window
+[30-03-2017 23:08:33] Info: Created renderer
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/Title.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/Cloud.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/Box.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:08:33] Info: Loaded "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:08:33] Info: Loaded "Audio/ButtonHover.wav"
+[30-03-2017 23:08:33] Info: Loaded "Audio/ButtonClick.wav"
+[30-03-2017 23:08:34] Info: Loaded "Audio/MenuLoop.wav"
+[30-03-2017 23:08:34] Debug: Playing music
+[30-03-2017 23:08:34] Debug: Set music volume to 32
+[30-03-2017 23:08:35] Debug: Mouse Position: 326, 36
+[30-03-2017 23:08:35] Debug: Mouse Position: 436, 166
+[30-03-2017 23:08:35] Debug: Mouse Position: 503, 252
+[30-03-2017 23:08:35] Debug: Mouse Position: 548, 303
+[30-03-2017 23:08:35] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:35] Debug: Mouse Position: 560, 320
+[30-03-2017 23:08:35] Debug: Mouse Position: 572, 341
+[30-03-2017 23:08:35] Debug: Mouse Position: 572, 346
+[30-03-2017 23:08:35] Debug: Mouse Position: 572, 357
+[30-03-2017 23:08:35] Debug: Mouse Position: 574, 380
+[30-03-2017 23:08:35] Debug: Mouse Position: 577, 409
+[30-03-2017 23:08:35] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 450
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 490
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 496
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 500
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 507
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 510
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 519
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 526
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 527
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 528
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 533
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 542
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 559
+[30-03-2017 23:08:35] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 593
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 629
+[30-03-2017 23:08:35] Debug: Mouse Position: 578, 641
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 654
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 657
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 656
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 653
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 652
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 651
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 650
+[30-03-2017 23:08:36] Debug: Mouse Position: 578, 645
+[30-03-2017 23:08:36] Debug: Mouse Position: 581, 633
+[30-03-2017 23:08:36] Debug: Mouse Position: 584, 608
+[30-03-2017 23:08:36] Debug: Mouse Position: 588, 590
+[30-03-2017 23:08:36] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:36] Debug: Mouse Position: 596, 536
+[30-03-2017 23:08:36] Debug: Mouse Position: 600, 502
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 465
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 451
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 432
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 427
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 429
+[30-03-2017 23:08:36] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 423
+[30-03-2017 23:08:36] Debug: Mouse Position: 603, 412
+[30-03-2017 23:08:36] Debug: Mouse Position: 604, 404
+[30-03-2017 23:08:36] Debug: Mouse Position: 605, 400
+[30-03-2017 23:08:36] Debug: Mouse Position: 605, 403
+[30-03-2017 23:08:36] Debug: Mouse Position: 608, 439
+[30-03-2017 23:08:36] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:36] Debug: Mouse Position: 614, 493
+[30-03-2017 23:08:36] Debug: Mouse Position: 622, 546
+[30-03-2017 23:08:36] Debug: Mouse Position: 622, 547
+[30-03-2017 23:08:36] Debug: Mouse Position: 622, 546
+[30-03-2017 23:08:37] Debug: Mouse Button (1) State: Down
+[30-03-2017 23:08:37] Debug: Playing sound effect on channel 1 (0 loops)
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/Title.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/Cloud.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/Box.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonPlayIdle.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonPlayHovered.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonPlayClicked.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonHelpIdle.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonHelpHovered.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonHelpClicked.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonExitIdle.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonExitHovered.png"
+[30-03-2017 23:08:37] Info: Freed resource "Images/Main Menu/ButtonExitClicked.png"
+[30-03-2017 23:08:37] Info: Freed resource "Audio/ButtonHover.wav"
+[30-03-2017 23:08:37] Info: Freed resource "Audio/ButtonClick.wav"
+[30-03-2017 23:08:37] Debug: Stopped music
+[30-03-2017 23:08:37] Info: Freed resource "Audio/MenuLoop.wav"
+[30-03-2017 23:08:37] Debug: Mouse Button (1) State: Up
+[30-03-2017 23:08:37] Debug: Mouse Position: 622, 544
+[30-03-2017 23:08:37] Debug: Mouse Position: 641, 493
+[30-03-2017 23:08:37] Debug: Mouse Position: 738, 358
+[30-03-2017 23:08:37] Debug: Mouse Position: 885, 206
+[30-03-2017 23:08:37] Debug: Mouse Position: 1079, 15
+[30-03-2017 23:08:37] Debug: Mouse Position: 1151, 0
+[30-03-2017 23:08:38] Debug: Mouse Position: 1227, 4
+[30-03-2017 23:08:38] Debug: Mouse Position: 1237, 5
+[30-03-2017 23:08:38] Debug: Mouse Position: 1239, 5
+[30-03-2017 23:08:38] Debug: Mouse Position: 1240, 5
+[30-03-2017 23:08:38] Debug: Mouse Position: 1244, 4
+[30-03-2017 23:08:38] Debug: Mouse Position: 1246, 4
+[30-03-2017 23:08:38] Debug: Mouse Position: 1248, 4
+[30-03-2017 23:08:38] Debug: Mouse Position: 1250, 4
+[30-03-2017 23:08:38] Debug: Mouse Position: 1250, 2
+[30-03-2017 23:08:38] Debug: Mouse Position: 1256, 0
+[30-03-2017 23:08:38] Info: Destroying window
+[30-03-2017 23:08:38] Info: Destroying renderer and freeing associated textures
+[30-03-2017 23:08:38] Info: Unloading Mix_Init
+[30-03-2017 23:08:38] Info: Unloading IMG_Init
+[30-03-2017 23:08:38] Info: Cleaning up SDL subsystems
+[30-03-2017 23:08:39] Info: Exiting application

@@ -38,7 +38,7 @@ void BG::Button::update()
 		return;
 	}
 
-	if (mouse_->button_down(1))
+	if (mouse_->button_pressed(1))
 	{
 		if(!clicked_)
 		{

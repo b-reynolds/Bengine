@@ -177,6 +177,8 @@
     <ClCompile Include="mouse.cpp" />
     <ClCompile Include="random.cpp" />
     <ClCompile Include="resource_manager.cpp" />
+    <ClCompile Include="scene_manager.cpp" />
+    <ClCompile Include="scn_help_screen.cpp" />
     <ClCompile Include="scn_main_menu.cpp" />
     <ClCompile Include="sprite.cpp" />
     <ClCompile Include="text.cpp" />
@@ -203,6 +205,8 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource_manager.h" />
     <ClInclude Include="scene.h" />
+    <ClInclude Include="scene_manager.h" />
+    <ClInclude Include="scn_help_screen.h" />
     <ClInclude Include="scn_main_menu.h" />
     <ClInclude Include="sprite.h" />
     <ClInclude Include="text.h" />

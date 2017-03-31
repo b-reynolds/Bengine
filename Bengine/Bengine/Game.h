@@ -1,16 +1,8 @@
 #pragma once
 #include "window.h"
-#include "sprite.h"
-#include "game_object.h"
-#include "Text.h"
-
-#include "Box2D.h"
-#include <vector>
-#include <lauxlib.h>
-#include <lstate.h>
-#include "button.h"
-
 #include "scn_main_menu.h"
+#include "scene_manager.h"
+#include "scn_help_screen.h"
 
 class Game
 {
@@ -25,7 +17,10 @@ public:
 
 private:
 
+	BG::SceneManager scene_manager_;
+
 	BG::ScnMainMenu* scn_main_menu_;
+	BG::ScnHelpScreen* scn_help_screen_;
 
 	BG::Window* window_;
 
@@ -33,9 +28,9 @@ private:
 
 	bool initialize();
 
-	bool update();
+	bool update() const;
 
-	void draw();
+	void draw() const;
 
 };
 
