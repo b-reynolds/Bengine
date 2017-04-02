@@ -47,22 +47,6 @@ BG::Vector2f BG::Sprite::size() const
 {
 	return Vector2f(size_.x_ * scale_.x_, size_.y_ * scale_.y_);
 }
-/*
-* \brief Set the Sprite's origin for rendering and rotation
-* \param origin Sprite origin
-*/
-void BG::Sprite::set_origin(const Vector2f& origin)
-{
-	this->origin_ = origin;
-}
-
-/*
-* \brief Returns the Sprite's current point of origin for rendering and rotation
-*/
-BG::Vector2f BG::Sprite::origin() const
-{
-	return origin_;
-}
 
 /*
 * \brief Set the Sprite's scale

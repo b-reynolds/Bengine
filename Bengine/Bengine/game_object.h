@@ -36,6 +36,8 @@ namespace BG
 		/* Updates the Game Object's Transform using a Box2D rigidbody */
 		void apply_physics(b2Body* body);
 
+		void apply_world(b2Body* body);
+
 		/* Initialize / add a rigidbody to the Game Object */
 		void init_physics(b2BodyType body_type, float density);
 

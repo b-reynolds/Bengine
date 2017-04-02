@@ -6,7 +6,7 @@
 BG::GameObject::GameObject()
 {
 	sprite_ = nullptr;
-	transform_.set_position(69.0f, 69.0f);
+	transform_.set_position(Vector2f(0.0f, 0.0f));
 	active_ = true;
 	colour_ = Colour(255, 255, 255, 255);
 	body_ = nullptr;
@@ -61,8 +61,13 @@ BG::FloatRect BG::GameObject::bounds() const
  */
 void BG::GameObject::apply_physics(b2Body* body)
 {
-	transform_.set_position(30 * body->GetPosition().x, 30 * body->GetPosition().y);
+	transform_.set_position(Vector2f(30 * body->GetPosition().x, 30 * body->GetPosition().y));
 	transform_.set_rotation(Math::radiansToDegrees(body->GetAngle()));
+}
+
+void BG::GameObject::apply_world(b2Body* body)
+{
+	body->SetTransform(b2Vec2(transform_.position().x_ / 30.0f, transform_.position().y_ / 30.0f), transform_.rotation());
 }
 
 /**
@@ -84,7 +89,6 @@ void BG::GameObject::init_physics(b2BodyType body_type, float density)
 
 	body_->SetUserData(this);
 
-
 	b2PolygonShape shape;
 	shape.SetAsBox(sprite_->size().x_ / 2.0f / 30.0f, sprite_->size().y_ / 2.0f / 30.0f);
 
@@ -94,7 +98,6 @@ void BG::GameObject::init_physics(b2BodyType body_type, float density)
 
 	body_->CreateFixture(&fixture_def);
 }
-
 
 /**
  * \brief Returns the current Active state of the Game Object

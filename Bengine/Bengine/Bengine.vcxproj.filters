@@ -222,6 +222,15 @@
     <ClCompile Include="scn_help_screen.cpp">
       <Filter>Game\Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="scn_game.cpp">
+      <Filter>Game\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="player.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="platform.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -304,6 +313,15 @@
     </ClInclude>
     <ClInclude Include="scn_help_screen.h">
       <Filter>Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="scn_game.h">
+      <Filter>Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="player.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="platform.h">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

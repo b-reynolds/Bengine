@@ -20,9 +20,6 @@ namespace BG
 		/* Set the Transform's position */
 		void set_position(const Vector2f &position);
 
-		/* Set the Transform's position */
-		void set_position(const float &x, const float &y);
-
 		/* Returns the Transform's current position */
 		Vector2f position() const;
 

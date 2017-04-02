@@ -113,7 +113,7 @@ bool BG::ScnMainMenu::load()
 
 	obj_title_ = new GameObject(spr_title_, Vector2f(0, 0));
 	obj_title_->transform().set_origin(obj_title_->sprite().size() / 2.0f);
-	obj_title_->transform().set_position(window_->size().x_ / 2.0f, obj_title_->sprite().size().y_ / 2.0f * 1.25f);
+	obj_title_->transform().set_position(Vector2f(window_->size().x_ / 2.0f, obj_title_->sprite().size().y_ / 2.0f * 1.25f));
 	game_objects_.push_back(obj_title_);
 
 	// -------------------------
@@ -242,7 +242,7 @@ bool BG::ScnMainMenu::update()
 
 	if(btn_play_->clicked())
 	{
-
+		return scene_manager_->transition_to("game");
 	}
 
 	if(btn_help_->clicked())
