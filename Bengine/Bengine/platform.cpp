@@ -18,7 +18,9 @@ Platform::Platform(const BG::Vector2f& size, const BG::Vector2f& position, const
 	game_object_ = new BG::GameObject(sprite_, position);
 	game_object_->set_colour(colour);
 
-	game_object_->init_physics(b2_kinematicBody, 5.0f);
+	game_object_->init_physics(b2_kinematicBody, 5.0f, BG::Vector2f(0.0f, 0.0f));
+
+	game_object_->set_position(position);
 }
 
 Platform::~Platform()

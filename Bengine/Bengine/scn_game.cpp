@@ -33,15 +33,22 @@ bool BG::ScnGame::load()
 
 	// -------------------------
 
+	int tiles_x = window_->size().x_ / kPlatformTileSize;
+
+	for(unsigned int i = 0; i < tiles_x; ++i)
+	{
+		platforms_.push_back(new Platform(Vector2f(kPlatformTileSize, kPlatformTileSize), Vector2f(kPlatformTileSize * i, window_->size().y_ - kPlatformTileSize), kClrWhite, *window_));
+	}
+
 	int tile_size = 64;
-	int tiles_x = window_->size().x_ / tile_size;
 
 	for(unsigned int i = 1; i < tiles_x; ++i)
 	{
-		platforms_.push_back(new Platform(Vector2f(tile_size, tile_size), Vector2f(tile_size * i, window_->size().y_ - tile_size / 2.0f), kClrGreen, *window_));
 	}
 
 	platform_speed_ = 1000.0f;
+
+	window_->set_clear_colour(kClrBlack);
 
 	loaded_ = true;
 
@@ -86,6 +93,8 @@ bool BG::ScnGame::update()
 
 	// ----- Update Physics -----
 
+	//update_platforms();
+
 	World::instance()->Step(1 / 60.0f, 8, 3);
 
 	for (auto body = World::instance()->GetBodyList(); body != nullptr; body = body->GetNext())
@@ -98,7 +107,6 @@ bool BG::ScnGame::update()
 		}
 	}
 
-	update_platforms();
 
 	// -------------------------
 
@@ -147,8 +155,7 @@ void BG::ScnGame::update_platforms()
 			}
 		}
 
-		platforms_[i]->game_object().transform().set_position(Vector2f(end_platform->game_object().transform().position().x_ + (kPlatformTileSize * 2.0f), end_platform->game_object().transform().position().y_ + kPlatformTileSize));
-		platforms_[i]->game_object().apply_world(platforms_[i]->game_object().rigidbody());
+		platforms_[i]->game_object().set_position(Vector2f(end_platform->game_object().transform().position().x_ + (kPlatformTileSize * 2.0f), end_platform->game_object().transform().position().y_ + kPlatformTileSize));
 	}
 
 

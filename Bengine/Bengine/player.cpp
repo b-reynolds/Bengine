@@ -13,7 +13,7 @@ Player::Player(BG::Sprite& sprite)
 
 	game_object_ = new BG::GameObject(sprite_, BG::Vector2f(0, 0));
 
-	game_object_->init_physics(b2_dynamicBody, 0.5f);
+	game_object_->init_physics(b2_dynamicBody, 0.5f, BG::Vector2f(0.0f, 0.0f));
 
 	game_object_->rigidbody()->SetFixedRotation(true);
 }

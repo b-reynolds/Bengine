@@ -24,6 +24,10 @@ namespace BG
 		/* Returns a reference to the Game Object's underlying Transform */
 		Transform& transform();
 
+		void set_position(const Vector2f &position);
+
+		Vector2f position() const;
+
 		/* Set the Game Object's Sprite */
 		void set_sprite(Sprite* sprite);
 
@@ -39,7 +43,7 @@ namespace BG
 		void apply_world(b2Body* body);
 
 		/* Initialize / add a rigidbody to the Game Object */
-		void init_physics(b2BodyType body_type, float density);
+		void init_physics(b2BodyType body_type, float density, const Vector2f& origin);
 
 		/* Set the Active state of the Game Object */
 		void set_active(const bool& state);

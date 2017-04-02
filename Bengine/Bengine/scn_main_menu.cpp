@@ -123,7 +123,7 @@ bool BG::ScnMainMenu::load()
 	for(unsigned int i = 0; i < kCloudRainPoolSize; ++i)
 	{
 		GameObject* obj_box = new GameObject(spr_box_, Vector2f(-spr_cloud_->size().x_ / 2.0f, obj_cloud_->transform().position().y_));
-		obj_box->init_physics(b2_dynamicBody, 0.5f);
+		obj_box->init_physics(b2_dynamicBody, 0.5f, Vector2f(spr_box_->size() / 2.0f));
 		obj_box->set_active(false);
 		cloud_rain_pool.push_back(obj_box);
 	}

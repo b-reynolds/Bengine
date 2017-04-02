@@ -29,6 +29,21 @@ BG::Transform& BG::GameObject::transform()
 	return transform_;
 }
 
+void BG::GameObject::set_position(const Vector2f& position)
+{
+	transform_.set_position(position);
+
+	if(body_ != nullptr)
+	{
+		body_->SetTransform(b2Vec2(transform_.position().x_ / 30.0f, transform_.position().y_ / 30.0f), transform_.rotation());
+	}
+}
+
+BG::Vector2f BG::GameObject::position() const
+{
+	return transform_.position();
+}
+
 /**
  * \brief Set the Game Object's Sprite
  */
@@ -65,20 +80,15 @@ void BG::GameObject::apply_physics(b2Body* body)
 	transform_.set_rotation(Math::radiansToDegrees(body->GetAngle()));
 }
 
-void BG::GameObject::apply_world(b2Body* body)
-{
-	body->SetTransform(b2Vec2(transform_.position().x_ / 30.0f, transform_.position().y_ / 30.0f), transform_.rotation());
-}
-
 /**
  * \brief Initialize / add a rigidbody to the Game Object
  * \param body_type rigidbody type
  * \param density rigidbody density
  */
-void BG::GameObject::init_physics(b2BodyType body_type, float density)
+void BG::GameObject::init_physics(b2BodyType body_type, float density, const Vector2f& origin)
 {
 	auto sprite_size = sprite_->size();
-	transform_.set_origin(Vector2f(sprite_size.x_ / 2.0f, sprite_size.y_ / 2.0f));
+	transform_.set_origin(origin);
 
 	b2BodyDef body_def;
 	body_def.position = b2Vec2(transform_.position().x_ / 30.f, transform_.position().y_ / 30.0f);
