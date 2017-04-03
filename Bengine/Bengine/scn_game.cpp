@@ -5,6 +5,7 @@
 #include "World.h"
 #include "bengine.h"
 #include "random.h"
+#include "score_manager.h"
 
 BG::ScnGame::ScnGame(Window& window, SceneManager& scene_manager) : Scene(window, scene_manager)
 {
@@ -204,7 +205,8 @@ bool BG::ScnGame::update()
 
 	if (player_->game_object().transform().position().y_ > window_->size().y_ || player_->game_object().transform().position().x_ < 0)
 	{
-		return scene_manager_->transition_to("game");
+		ScoreManager::instance()->set_score(score_);
+		return scene_manager_->transition_to("game_over");
 	}
 
 	// -------------------------

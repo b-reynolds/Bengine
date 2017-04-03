@@ -4,6 +4,7 @@
 #include "scene_manager.h"
 #include "scn_help_screen.h"
 #include "scn_game.h"
+#include "scn_game_over.h"
 
 class Game
 {
@@ -23,6 +24,7 @@ private:
 	BG::ScnMainMenu* scn_main_menu_;
 	BG::ScnHelpScreen* scn_help_screen_;
 	BG::ScnGame* scn_game_;
+	BG::ScnGameOver* scn_game_over;
 
 	BG::Window* window_;
 

@@ -231,6 +231,12 @@
     <ClCompile Include="platform.cpp">
       <Filter>Game</Filter>
     </ClCompile>
+    <ClCompile Include="scn_game_over.cpp">
+      <Filter>Game\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="score_manager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h">
@@ -321,6 +327,12 @@
       <Filter>Game</Filter>
     </ClInclude>
     <ClInclude Include="platform.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="scn_game_over.h">
+      <Filter>Game\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="score_manager.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>

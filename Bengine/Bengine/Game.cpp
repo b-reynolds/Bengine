@@ -42,6 +42,9 @@ bool Game::initialize()
 	scn_game_ = new BG::ScnGame(*window_, scene_manager_);
 	scene_manager_.add_scene("game", *scn_game_);
 
+	scn_game_over = new BG::ScnGameOver(*window_, scene_manager_);
+	scene_manager_.add_scene("game_over", *scn_game_over);
+
 	scene_manager_.transition_to("main_menu");
 
 	return true;
