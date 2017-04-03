@@ -1,7 +1,5 @@
 #include "game.h"
 #include "bengine.h"
-#include "resource_manager.h"
-#include "scn_help_screen.h"
 
 Game::Game()
 {
@@ -35,9 +33,6 @@ bool Game::initialize()
 {
 	scn_main_menu_ = new BG::ScnMainMenu(*window_, scene_manager_);
 	scene_manager_.add_scene("main_menu", *scn_main_menu_);
-
-	scn_help_screen_ = new BG::ScnHelpScreen(*window_, scene_manager_);
-	scene_manager_.add_scene("help_screen", *scn_help_screen_);
 
 	scn_game_ = new BG::ScnGame(*window_, scene_manager_);
 	scene_manager_.add_scene("game", *scn_game_);

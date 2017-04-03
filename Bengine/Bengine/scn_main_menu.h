@@ -33,10 +33,6 @@ namespace BG
 		Texture* txtr_btn_play_hovered_;
 		Texture* txtr_btn_play_clicked_;
 
-		Texture* txtr_btn_help_idle_;
-		Texture* txtr_btn_help_hovered_;
-		Texture* txtr_btn_help_clicked_;
-
 		Texture* txtr_btn_exit_idle_;
 		Texture* txtr_btn_exit_hovered_;
 		Texture* txtr_btn_exit_clicked_;
@@ -47,7 +43,6 @@ namespace BG
 		SoundEffect* sfx_btn_hover;
 
 		Button* btn_play_;
-		Button* btn_help_;
 		Button* btn_exit_;
 
 		std::vector<Button*> buttons_;

@@ -65,7 +65,7 @@ bool BG::ScnGameOver::load()
 	FloatRect score_bounds = txt_score_.bounds();
 	txt_score_.transform().set_position(Vector2f(score_position.x_ - (score_bounds.width_ / 2.0f), score_position.y_ - (score_bounds.height_ / 2.0f)));
 
-	Vector2f high_score_position = Vector2f(865.0f, 496.0f);
+	Vector2f high_score_position = Vector2f(911.0f, 496.0f);
 	txt_high_score_ = Text(fnt_high_score_, std::to_string(score_manager->high_score()), window_);
 	txt_high_score_.set_colour(Colour(216, 0, 0, 255));
 	FloatRect high_score_bounds = txt_high_score_.bounds();

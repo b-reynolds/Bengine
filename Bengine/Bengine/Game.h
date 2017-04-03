@@ -2,7 +2,6 @@
 #include "window.h"
 #include "scn_main_menu.h"
 #include "scene_manager.h"
-#include "scn_help_screen.h"
 #include "scn_game.h"
 #include "scn_game_over.h"
 
@@ -22,7 +21,6 @@ private:
 	BG::SceneManager scene_manager_;
 
 	BG::ScnMainMenu* scn_main_menu_;
-	BG::ScnHelpScreen* scn_help_screen_;
 	BG::ScnGame* scn_game_;
 	BG::ScnGameOver* scn_game_over;
 

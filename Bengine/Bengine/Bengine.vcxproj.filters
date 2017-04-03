@@ -219,9 +219,6 @@
     <ClCompile Include="scene_manager.cpp">
       <Filter>Engine\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="scn_help_screen.cpp">
-      <Filter>Game\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="scn_game.cpp">
       <Filter>Game\Scenes</Filter>
     </ClCompile>
@@ -316,9 +313,6 @@
     </ClInclude>
     <ClInclude Include="scene_manager.h">
       <Filter>Engine\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="scn_help_screen.h">
-      <Filter>Game\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="scn_game.h">
       <Filter>Game\Scenes</Filter>

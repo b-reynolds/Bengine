@@ -14,10 +14,6 @@ BG::ScnMainMenu::ScnMainMenu(Window& window, SceneManager& scene_manager) : Scen
 	txtr_btn_play_hovered_ = nullptr;
 	txtr_btn_play_clicked_ = nullptr;
 
-	txtr_btn_help_idle_ = nullptr;
-	txtr_btn_help_hovered_ = nullptr;
-	txtr_btn_help_clicked_ = nullptr;
-
 	txtr_btn_exit_idle_ = nullptr;
 	txtr_btn_exit_hovered_ = nullptr;
 	txtr_btn_exit_clicked_ = nullptr;
@@ -32,7 +28,6 @@ BG::ScnMainMenu::ScnMainMenu(Window& window, SceneManager& scene_manager) : Scen
 	mus_loop_ = nullptr;
 
 	btn_play_ = nullptr;
-	btn_help_ = nullptr;
 	btn_exit_ = nullptr;
 }
 
@@ -47,10 +42,6 @@ bool BG::ScnMainMenu::load()
 	txtr_btn_play_idle_ = resource_manager->texture("Images/Main Menu/ButtonPlayIdle.png", window_);
 	txtr_btn_play_hovered_ = resource_manager->texture("Images/Main Menu/ButtonPlayHovered.png", window_);
 	txtr_btn_play_clicked_ = resource_manager->texture("Images/Main Menu/ButtonPlayClicked.png", window_);
-
-	txtr_btn_help_idle_ = resource_manager->texture("Images/Main Menu/ButtonHelpIdle.png", window_);
-	txtr_btn_help_hovered_ = resource_manager->texture("Images/Main Menu/ButtonHelpHovered.png", window_);
-	txtr_btn_help_clicked_ = resource_manager->texture("Images/Main Menu/ButtonHelpClicked.png", window_);
 
 	txtr_btn_exit_idle_ = resource_manager->texture("Images/Main Menu/ButtonExitIdle.png", window_);
 	txtr_btn_exit_hovered_ = resource_manager->texture("Images/Main Menu/ButtonExitHovered.png", window_);
@@ -74,15 +65,11 @@ bool BG::ScnMainMenu::load()
 	// ----- Initialize Buttons -----
 
 	btn_play_ = new Button(Vector2f(0, 0), txtr_btn_play_idle_, txtr_btn_play_hovered_, txtr_btn_play_clicked_, sfx_btn_hover, sfx_btn_click_, *window_);
-	btn_play_->game_object().transform().set_position(Vector2f(857, 576));
+	btn_play_->game_object().transform().set_position(Vector2f(674, 484));
 	buttons_.push_back(btn_play_);
 
-	btn_help_ = new Button(Vector2f(0, 0), txtr_btn_help_idle_, txtr_btn_help_hovered_, txtr_btn_help_clicked_, sfx_btn_hover, sfx_btn_click_, *window_);
-	btn_help_->game_object().transform().set_position(Vector2f(674, 584));
-	buttons_.push_back(btn_help_);
-
 	btn_exit_ = new Button(Vector2f(0, 0), txtr_btn_exit_idle_, txtr_btn_exit_hovered_, txtr_btn_exit_clicked_, sfx_btn_hover, sfx_btn_click_, *window_);
-	btn_exit_->game_object().transform().set_position(Vector2f(1060, 576));
+	btn_exit_->game_object().transform().set_position(Vector2f(1060, 476));
 	buttons_.push_back(btn_exit_);
 
 	// -------------------------
@@ -130,10 +117,6 @@ bool BG::ScnMainMenu::unload()
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayHovered.png");
 	resource_manager->free_texture("Images/Main Menu/ButtonPlayClicked.png");
 
-	resource_manager->free_texture("Images/Main Menu/ButtonHelpIdle.png");
-	resource_manager->free_texture("Images/Main Menu/ButtonHelpHovered.png");
-	resource_manager->free_texture("Images/Main Menu/ButtonHelpClicked.png");
-
 	resource_manager->free_texture("Images/Main Menu/ButtonExitIdle.png");
 	resource_manager->free_texture("Images/Main Menu/ButtonExitHovered.png");
 	resource_manager->free_texture("Images/Main Menu/ButtonExitClicked.png");
@@ -150,7 +133,6 @@ bool BG::ScnMainMenu::unload()
 	// ----- Free Buttons -----
 
 	delete btn_play_;
-	delete btn_help_;
 	delete btn_exit_;
 
 	buttons_.clear();
@@ -195,11 +177,6 @@ bool BG::ScnMainMenu::update()
 	if(btn_play_->clicked())
 	{
 		return scene_manager_->transition_to("game");
-	}
-
-	if(btn_help_->clicked())
-	{
-		return scene_manager_->transition_to("help_screen");
 	}
 
 	if(btn_exit_->clicked())
