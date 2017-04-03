@@ -30,27 +30,34 @@ bool BG::ScnGame::load()
 
 	// ----- Initialize Player ----- // TODO: Clean
 
-	player_ = Player(*spr_player_, Vector2f(256, window_->size().y_ - (Platform::kTileSize * 3.0f)));
+	player_ = Player(*spr_player_, Vector2f(spr_player_->size().x_ * 10.0f, window_->size().y_ - Platform::kTileSize * (kPlatformRows + 2)));
 
 
 	// -------------------------
 
 	int tiles_left = (window_->size().x_ / Platform::kTileSize) * 2;
 
-	while(tiles_left != 0)
+	int row = kPlatformRows;
+
+	while(tiles_left >= 2)
 	{
-		int tiles = Random::random_int(1, tiles_left >= 5 ? 5 : tiles_left);
+		int tiles = Random::random_int(2, tiles_left >= 5 ? 5 : tiles_left);
 		tiles_left -= tiles;
 
 		if(platforms_.empty())
 		{	
-			platforms_.push_back(new Platform(Vector2f(0.0f, window_->size().y_ - Platform::kTileSize), tiles, window_));
+			platforms_.push_back(new Platform(Vector2f(0.0f, window_->size().y_ - Platform::kTileSize * row), tiles, window_));
 			continue;
 		}
 
 		FloatRect last = platforms_[platforms_.size() - 1]->bounds();
 
-		platforms_.push_back(new Platform(Vector2f(last.left_ + last.width_, last.top_), tiles, window_));
+		platforms_.push_back(new Platform(Vector2f(last.left_ + last.width_ + Platform::kTileSize / 2.0f, window_->size().y_ - Platform::kTileSize * row), tiles, window_));
+
+		if(row > 1)
+		{
+			row--;
+		}
 	}
 
 
@@ -58,7 +65,7 @@ bool BG::ScnGame::load()
 	platform_speed_ = 1000.0f;
 
 
-	window_->set_clear_colour(kClrBlack);
+	window_->set_clear_colour(kBackgroundColour);
 
 	loaded_ = true;
 
@@ -158,6 +165,10 @@ bool BG::ScnGame::update()
 		}
 	}
 
+	b2Vec2 velocity = player_.game_object().rigidbody()->GetLinearVelocity();
+	player_.game_object().rigidbody()->SetLinearVelocity(b2Vec2(10.0f * BG::Bengine::delta_time(), velocity.y));
+
+
 
 	// -------------------------
 
@@ -176,15 +187,8 @@ bool BG::ScnGame::draw()
 		{
 			window_->draw(*segment);
 		}
-		window_->draw(platforms_[i]->bounds(), kClrGreen);
 	}
 
-	FloatRect player_bounds = player_.game_object().bounds();
-	player_bounds.width_ += 20;
-	player_bounds.left_ -= 10;
-	player_bounds.top_ += player_bounds.height_;
-	player_bounds.height_ /= 4;
-	window_->draw(player_bounds, kClrPink);
 
 	
 	window_->display();
@@ -204,6 +208,7 @@ void BG::ScnGame::update_platforms()
 			continue;
 
 		float furthest_x = 0.0f;
+		int furthest_row = 0;
 
 		for(unsigned int j = 0; j < platforms_.size(); ++j)
 		{
@@ -214,39 +219,27 @@ void BG::ScnGame::update_platforms()
 			if (platform_x > furthest_x)
 			{
 				furthest_x = platform_x;
+				furthest_row = (window_->size().y_ - platform_bounds.top_) / Platform::kTileSize;
 			}
 		}
 
-		if(Random::random_int(0, kSpaceChance) == 3)
-			furthest_x += Platform::kTileSize * Random::random_int(kSpaceMin, kSpaceMax);
-		
-		int row = Random::random_int(1, kPlatformRows);
+		furthest_x += Platform::kTileSize * Random::random_int(kSpaceMin, kSpaceMax);		
+
+		int row = 0;
+
+		if(furthest_row == kPlatformRows)
+		{
+			row = furthest_row - 1;
+		}
+		else if(furthest_row == 1)
+		{
+			row = furthest_row + 1;
+		}
+		else
+		{
+			row = Random::random_int(0, 1) == 0 ? furthest_row + 1 : furthest_row - 1;
+		}
 
 		platforms_[i]->set_position(Vector2f(furthest_x, window_->size().y_ - Platform::kTileSize * row));
 	}
-
-	//for(unsigned int i = 0; i < platforms_.size(); ++i)
-	//{
-	//	if(platforms_[i]->bounds().left_ + platforms_[i]->bounds().width_ > 0)
-	//	{
-	//		continue;
-	//	}
-
-	//	float furthest_x = 0.0f;
-	//	for (unsigned int j = 0; j < platforms_.size(); ++j)
-	//	{
-	//		float platform_x = platforms_[j]->bounds().left_ + platforms_[j]->bounds().width_;
-
-	//		if(platform_x > furthest_x)
-	//		{
-	//			furthest_x = platform_x;
-	//		}
-	//	}
-
-	//	furthest_x += Platform::kTileSize * Random::random_int(0, 4);
-	//	float platform_y = window_->size().y_ - (Random::random_int(0, 1) == 0 ? Platform::kTileSize : (Platform::kTileSize * 2.0f));
-
-	//	platforms_[i]->set_position(Vector2f(furthest_x, platform_y));
-	//}
-
 }

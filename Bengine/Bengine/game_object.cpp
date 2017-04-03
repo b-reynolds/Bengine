@@ -105,7 +105,7 @@ void BG::GameObject::init_physics(b2BodyType body_type, float density, const Vec
 	body_->SetUserData(this);
 
 	b2PolygonShape shape;
-	shape.SetAsBox(sprite_->size().x_ / 2.0f / 30.0f, sprite_->size().y_ / 2.0f / 30.0f);
+	shape.SetAsBox(sprite_->size().x_ / 2.0f / 30.0f, ((sprite_->size().y_ / 2.0f) - 3.0f) / 30.0f);
 
 	b2FixtureDef fixture_def;
 	fixture_def.density = density;

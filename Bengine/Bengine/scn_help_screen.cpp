@@ -71,7 +71,7 @@ bool BG::ScnHelpScreen::load()
 
 	// ----- Initialzize Window -----
 
-	window_->set_clear_colour(kColourBackground);
+	window_->set_clear_colour(kBackgroundColour);
 
 	// -------------------------
 

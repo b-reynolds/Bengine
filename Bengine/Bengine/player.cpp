@@ -36,7 +36,6 @@ void Player::jump() const
 	}
 
 	b2Vec2 velocity = game_object().rigidbody()->GetLinearVelocity();
-
 	game_object().rigidbody()->SetLinearVelocity(b2Vec2(velocity.x, -kJumpPower * BG::Bengine::delta_time()));
 }
 

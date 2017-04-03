@@ -24,7 +24,7 @@ namespace BG
 
 	private:
 
-		const Colour kColourBackground = Colour(102, 144, 184, 255);
+		const Colour kBackgroundColour = Colour(102, 144, 184, 255);
 
 		Texture* txtr_title_;
 

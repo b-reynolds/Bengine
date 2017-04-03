@@ -3,6 +3,7 @@
 #include "World.h"
 #include "Box2D/Collision/Shapes/b2PolygonShape.h"
 #include "Box2D/Dynamics/b2Fixture.h"
+#include "random.h"
 
 const int Platform::kTileSize = 64;
 
@@ -10,24 +11,44 @@ int Platform::platform_count_ = 0;
 
 Platform::Platform(const BG::Vector2f& position, const unsigned int& length, BG::Window* window)
 {
-	sprite_ = new BG::Sprite(BG::ResourceManager::instance()->texture(kPlatformTexture, window), window);
-	sprite_->set_size(BG::Vector2f(kTileSize, kTileSize));
+	spr_block_ = new BG::Sprite(BG::ResourceManager::instance()->texture(kPlatformTexture, window), window);
+	spr_center_ = new BG::Sprite(BG::ResourceManager::instance()->texture(kPlatformCenter, window), window);
+	spr_left_edge_ = new BG::Sprite(BG::ResourceManager::instance()->texture(kPlatformLeftEdge, window), window);
+	spr_right_edge_ = new BG::Sprite(BG::ResourceManager::instance()->texture(kPlatformRightEdge, window), window);
+
+	spr_block_->set_size(BG::Vector2f(kTileSize, kTileSize));
 
 	BG::Vector2f segment_position = position;
-	int segment_colour = 0;
+	int segment_colour = BG::Random::random_int(0, kSegmentColours.size() - 1);
 
 	for(unsigned int i = 0; i < length; ++i)
 	{
-		BG::GameObject* segment = new BG::GameObject(sprite_, BG::Vector2f(0.0f, 0.0f));
+		BG::GameObject* segment;
+
+		if(length == 1)
+		{
+			segment = new BG::GameObject(spr_block_, BG::Vector2f(0.0f, 0.0f));
+		}
+		else if(i == 0)
+		{
+			segment = new BG::GameObject(spr_left_edge_, BG::Vector2f(0.0f, 0.0f));
+		}
+		else if(i == length - 1)
+		{
+			segment = new BG::GameObject(spr_right_edge_, BG::Vector2f(0.0f, 0.0f));
+		}
+		else
+		{
+			segment = new BG::GameObject(spr_center_, BG::Vector2f(0.0f, 0.0f));
+		}
+		
+
 
 		segment->init_physics(b2_kinematicBody, 0.0f, BG::Vector2f(0.0f, 0.0f));
 		segment->set_position(segment_position);
 
-		segment->set_colour(kSegmentColours[segment_colour]);
-		if(++segment_colour == kSegmentColours.size())
-		{
-			segment_colour = 0;
-		}
+		//segment->set_colour(kSegmentColours[segment_colour]);
+
 
 		segments_.push_back(segment);
 
@@ -44,7 +65,7 @@ Platform::~Platform()
 		BG::ResourceManager::instance()->free_texture(kPlatformTexture);
 	}
 
-	delete sprite_;
+	delete spr_block_;
 	for(unsigned int i = 0; i < segments_.size(); ++i)
 	{
 		BG::World::instance()->DestroyBody(segments_[i]->rigidbody());
@@ -71,11 +92,6 @@ void Platform::set_position(const BG::Vector2f& position)
 BG::FloatRect Platform::bounds()
 {
 	return BG::FloatRect(segments_[0]->position().x_, segments_[0]->position().y_, kTileSize * segments_.size(), kTileSize);
-}
-
-b2Body& Platform::rigidbody() const
-{
-	return *rigidbody_;
 }
 
 const std::vector<BG::GameObject*>& Platform::segments() const

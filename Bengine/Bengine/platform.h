@@ -23,6 +23,9 @@ public:
 
 private:
 
+	const std::string kPlatformLeftEdge = "Images/Platforms/PlatformLeftEdge.png";
+	const std::string kPlatformRightEdge = "Images/Platforms/PlatformRightEdge.png";
+	const std::string kPlatformCenter = "Images/Platforms/PlatformCenter.png";
 	const std::string kPlatformTexture = "Images/Platforms/Platform.png";
 
 	static int platform_count_;
@@ -37,9 +40,10 @@ private:
 
 	std::vector<BG::GameObject*> segments_;
 
-	BG::Sprite* sprite_;
-
-	b2Body* rigidbody_;
+	BG::Sprite* spr_block_;
+	BG::Sprite* spr_left_edge_;
+	BG::Sprite* spr_right_edge_;
+	BG::Sprite* spr_center_;
 
 };
 

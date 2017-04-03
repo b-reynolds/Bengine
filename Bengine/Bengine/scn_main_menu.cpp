@@ -132,7 +132,7 @@ bool BG::ScnMainMenu::load()
 
 	// ----- Initialize Window -----
 
-	window_->set_clear_colour(kColourBackground);
+	window_->set_clear_colour(kBackgroundColour);
 
 	// -------------------------
 

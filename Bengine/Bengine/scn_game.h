@@ -24,6 +24,8 @@ namespace BG
 
 	private:
 
+		const Colour kBackgroundColour = Colour(102, 144, 184, 255);
+
 		const int kPlatformTilesMin = 0;
 
 		const unsigned int kPlatformPoolSize = 50;
@@ -32,7 +34,7 @@ namespace BG
 		const int kSpaceMin = 1;
 		const int kSpaceMax = 5;
 
-		const int kPlatformRows = 3;
+		const int kPlatformRows = 7;
 
 
 		const int kPlatformTilesMax = 6;
