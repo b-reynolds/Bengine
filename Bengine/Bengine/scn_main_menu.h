@@ -41,7 +41,7 @@ namespace BG
 		Texture* txtr_btn_exit_hovered_;
 		Texture* txtr_btn_exit_clicked_;
 
-		Music* mus_loop;
+		Music* mus_loop_;
 		
 		SoundEffect* sfx_btn_click_;
 		SoundEffect* sfx_btn_hover;

@@ -29,7 +29,7 @@ BG::ScnMainMenu::ScnMainMenu(Window& window, SceneManager& scene_manager) : Scen
 	sfx_btn_click_ = nullptr;
 	sfx_btn_hover = nullptr;
 
-	mus_loop = nullptr;
+	mus_loop_ = nullptr;
 
 	btn_play_ = nullptr;
 	btn_help_ = nullptr;
@@ -67,7 +67,7 @@ bool BG::ScnMainMenu::load()
 
 	// ----- Load Music -----
 
-	mus_loop = resource_manager->music("Audio/MenuLoop.mp3");
+	mus_loop_ = resource_manager->music("Audio/MenuLoop.mp3");
 
 	// -------------------------
 
@@ -108,7 +108,7 @@ bool BG::ScnMainMenu::load()
 
 	// ----- Start Music -----
 
-	Audio::play_music(mus_loop, -1, 0);
+	Audio::play_music(mus_loop_, -1, 0);
 	Audio::set_music_volume(128);
 
 	// -------------------------

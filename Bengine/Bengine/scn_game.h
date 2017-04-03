@@ -3,6 +3,8 @@
 #include "player.h"
 #include "platform.h"
 #include <vector>
+#include "Text.h"
+#include "timer.h"
 
 namespace BG
 {
@@ -39,6 +41,10 @@ namespace BG
 
 		const int kPlatformTilesMax = 6;
 
+		const int kScorePerSecond = 100;
+
+		int score_;
+
 		float end_platform_x_;
 
 		void update_platforms();
@@ -49,6 +55,7 @@ namespace BG
 		Texture* txtr_background_;
 		Texture* txtr_background_2_;
 
+		Music* mus_loop_;
 
 		Sprite* spr_player_;
 		Sprite* spr_background_;
@@ -56,6 +63,12 @@ namespace BG
 
 		GameObject* obj_background_;
 		GameObject* obj_background_2_;
+
+		Text txt_score_;
+
+		Font* fnt_score_;
+
+		Timer tmr_score_;
 
 
 		Player player_;

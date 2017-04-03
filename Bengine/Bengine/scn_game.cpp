@@ -24,6 +24,18 @@ bool BG::ScnGame::load()
 {
 	ResourceManager* resource_manager = ResourceManager::instance();
 
+	// ----- Load Fonts -----
+
+	fnt_score_ = resource_manager->font("Fonts/MetalReason.ttf", 90);
+
+	// -------------------------
+
+	// ----- Load Music -----
+
+	mus_loop_ = resource_manager->music("Audio/GameLoop.mp3");
+
+	// -------------------------
+
 	// ----- Load Textures -----
 
 	txtr_player_ = resource_manager->texture("Images/Game/Player.png", window_);
@@ -40,6 +52,13 @@ bool BG::ScnGame::load()
 
 	// -------------------------
 
+	// ----- Initialize Text -----
+
+	txt_score_ = Text(fnt_score_, "000", window_);
+	txt_score_.transform().set_position(Vector2f(window_->size().x_ - txt_score_.bounds().width_, 0.0f));
+
+	// -------------------------
+
 	// ----- Initialize Game Objects -----
 
 	obj_background_ = new GameObject(spr_background_, Vector2f(0.0f, 0.0f));
@@ -47,11 +66,13 @@ bool BG::ScnGame::load()
 
 	// -------------------------
 
-	// ----- Initialize Player ----- // TODO: Clean
+	// ----- Initialize Player ----- //
 
 	player_ = Player(*spr_player_, Vector2f(spr_player_->size().x_ * 5.0f, window_->size().y_ - Platform::kTileSize * (kPlatformRows + 2)));
 
 	// -------------------------
+
+	// ----- Initialize Platforms ----- //
 
 	int tiles_left = (window_->size().x_ / Platform::kTileSize) * 2;
 
@@ -78,16 +99,33 @@ bool BG::ScnGame::load()
 		}
 	}
 
+	end_platform_x_ = 0.0f;
 
+	// -------------------------
+
+	// ----- Initialize Timers ----- //
+
+	tmr_score_ = Timer(100);
+
+	// -------------------------
+
+	// ----- Initialize Variable Defaults ----- //
 
 	platform_speed_ = 1000.0f;
+	score_ = 0;
 
+	// -------------------------
 
-	window_->set_clear_colour(kBackgroundColour);
+	// ----- Start Music ----- //
+
+	Audio::stop_music(0);
+
+	Audio::play_music(mus_loop_, -1, 0);
+	Audio::set_music_volume(128);
+
+	// -------------------------
 
 	loaded_ = true;
-
-	end_platform_x_ = 0.0f;
 
 	return true;
 }
@@ -95,6 +133,18 @@ bool BG::ScnGame::load()
 bool BG::ScnGame::unload()
 {
 	ResourceManager* resource_manager = ResourceManager::instance();
+
+	// ----- Free Fonts -----
+
+	resource_manager->free_font("Fonts/MetalReason.ttf");
+
+	// -------------------------
+
+	// ----- Free Music -----
+
+	resource_manager->free_music("Audio/GameLoop.mp3");
+
+	// -------------------------
 
 	// ----- Free Textures -----
 
@@ -110,6 +160,7 @@ bool BG::ScnGame::unload()
 	{
 		delete platforms_[i];
 	}
+
 	platforms_.clear();
 
 	// -------------------------
@@ -217,6 +268,18 @@ bool BG::ScnGame::update()
 
 	// -------------------------
 
+
+	if(tmr_score_.expired())
+	{
+		score_ += kScorePerSecond / 10;
+		platform_speed_ += 1.0f;
+		tmr_score_.reset();
+	}
+
+	txt_score_.set_text(std::to_string(score_));
+	txt_score_.transform().set_position(Vector2f(window_->size().x_ - txt_score_.bounds().width_, 0.0f));
+
+
 	return true;
 }
 
@@ -228,6 +291,8 @@ bool BG::ScnGame::draw()
 	window_->draw(*obj_background_2_);
 
 	window_->draw(player_.game_object());
+
+	window_->draw(txt_score_);
 
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
 	{
