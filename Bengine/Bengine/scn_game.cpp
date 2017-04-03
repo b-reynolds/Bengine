@@ -8,13 +8,16 @@
 
 BG::ScnGame::ScnGame(Window& window, SceneManager& scene_manager) : Scene(window, scene_manager)
 {
-	txtr_player_ = nullptr;
 	txtr_background_ = nullptr;
+	txtr_background_2_ = nullptr;
 
-	spr_player_ = nullptr;
 	spr_background_ = nullptr;
 
 	obj_background_ = nullptr;
+
+	player_ = nullptr;
+
+	keyboard_ = nullptr;
 
 	end_platform_x_ = 0.0f;
 	platform_speed_ = 0.0f;
@@ -26,27 +29,25 @@ bool BG::ScnGame::load()
 
 	// ----- Load Fonts -----
 
-	fnt_score_ = resource_manager->font("Fonts/MetalReason.ttf", 90);
+	fnt_score_ = resource_manager->font(kScoreFontFilePath, kScoreTextSize);
 
 	// -------------------------
 
 	// ----- Load Music -----
 
-	mus_loop_ = resource_manager->music("Audio/GameLoop.mp3");
+	mus_loop_ = resource_manager->music(kMusicLoopFilePath);
 
 	// -------------------------
 
 	// ----- Load Textures -----
 
-	txtr_player_ = resource_manager->texture("Images/Game/Player.png", window_);
-	txtr_background_ = resource_manager->texture("Images/Game/Background1.png", window_);
-	txtr_background_2_ = resource_manager->texture("Images/Game/Background2.png", window_);
+	txtr_background_ = resource_manager->texture(kBackgroundSegOneFilePath, window_);
+	txtr_background_2_ = resource_manager->texture(kBackgroundSegTwoFilePath, window_);
 
 	// -------------------------
 
 	// ----- Initialize Sprites -----
 
-	spr_player_ = new Sprite(txtr_player_, window_);
 	spr_background_ = new Sprite(txtr_background_, window_);
 	spr_background_2_ = new Sprite(txtr_background_2_, window_);
 
@@ -55,7 +56,8 @@ bool BG::ScnGame::load()
 	// ----- Initialize Text -----
 
 	txt_score_ = Text(fnt_score_, "000", window_);
-	txt_score_.transform().set_position(Vector2f(window_->size().x_ - txt_score_.bounds().width_, 0.0f));
+	txt_score_.set_colour(kClrWhite);
+	txt_score_.transform().set_position(Vector2f(window_->size().x_ - txt_score_.bounds().width_ - 32.0f, 32.0f));
 
 	// -------------------------
 
@@ -68,7 +70,8 @@ bool BG::ScnGame::load()
 
 	// ----- Initialize Player ----- //
 
-	player_ = Player(*spr_player_, Vector2f(spr_player_->size().x_ * 5.0f, window_->size().y_ - Platform::kTileSize * (kPlatformRows + 2)));
+	player_ = new Player(Vector2f(0.0f, window_->size().y_ - Platform::kTileSize * (kPlatformRowsMax + 2)), window_);
+	player_desired_x_ = (window_->size().x_ / 2.0f) - (player_->game_object().bounds().width_ * 2.0f);
 
 	// -------------------------
 
@@ -76,11 +79,11 @@ bool BG::ScnGame::load()
 
 	int tiles_left = (window_->size().x_ / Platform::kTileSize) * 2;
 
-	int row = kPlatformRows;
+	int row = kPlatformRowsMax;
 
-	while(tiles_left >= 2)
+	while(tiles_left >= kPlatformTilesMin)
 	{
-		int tiles = Random::random_int(2, tiles_left >= 5 ? 5 : tiles_left);
+		int tiles = Random::random_int(kPlatformTilesMin, tiles_left >= kPlatformTilesMax ? kPlatformTilesMax : tiles_left);
 		tiles_left -= tiles;
 
 		if(platforms_.empty())
@@ -94,9 +97,7 @@ bool BG::ScnGame::load()
 		platforms_.push_back(new Platform(Vector2f(last.left_ + last.width_ + Platform::kTileSize / 2.0f, window_->size().y_ - Platform::kTileSize * row), tiles, window_));
 
 		if(row > 1)
-		{
 			row--;
-		}
 	}
 
 	end_platform_x_ = 0.0f;
@@ -111,7 +112,9 @@ bool BG::ScnGame::load()
 
 	// ----- Initialize Variable Defaults ----- //
 
-	platform_speed_ = 1000.0f;
+	keyboard_ = Keyboard::instance();
+	platform_speed_ = kPlatformSpeedDefault;
+	background_scroll_speed_ = kBackgroundScrollSpeedDefault;
 	score_ = 0;
 
 	// -------------------------
@@ -119,9 +122,8 @@ bool BG::ScnGame::load()
 	// ----- Start Music ----- //
 
 	Audio::stop_music(0);
-
 	Audio::play_music(mus_loop_, -1, 0);
-	Audio::set_music_volume(128);
+	Audio::set_music_volume(kMusicLoopVolume);
 
 	// -------------------------
 
@@ -136,21 +138,20 @@ bool BG::ScnGame::unload()
 
 	// ----- Free Fonts -----
 
-	resource_manager->free_font("Fonts/MetalReason.ttf");
+	resource_manager->free_font(kScoreFontFilePath);
 
 	// -------------------------
 
 	// ----- Free Music -----
 
-	resource_manager->free_music("Audio/GameLoop.mp3");
+	resource_manager->free_music(kMusicLoopFilePath);
 
 	// -------------------------
 
 	// ----- Free Textures -----
 
-	resource_manager->free_texture("Images/Game/Player.png");
-	resource_manager->free_texture("Images/Game/Background1.png");
-	resource_manager->free_texture("Images/Game/Background2.png");
+	resource_manager->free_texture(kBackgroundSegOneFilePath);
+	resource_manager->free_texture(kBackgroundSegTwoFilePath);
 
 	// -------------------------
 
@@ -167,7 +168,6 @@ bool BG::ScnGame::unload()
 
 	// ----- Free Sprites -----
 
-	delete spr_player_;
 	delete spr_background_;
 	delete spr_background_2_;
 
@@ -178,6 +178,8 @@ bool BG::ScnGame::unload()
 	delete obj_background_;
 	delete obj_background_2_;
 
+	delete player_;
+
 	// -------------------------
 
 	loaded_ = false;
@@ -187,69 +189,41 @@ bool BG::ScnGame::unload()
 
 bool BG::ScnGame::update()
 {
-	Keyboard* keyboard = Keyboard::instance();
+	if (keyboard_->key_pressed(SDLK_ESCAPE))
+		return scene_manager_->transition_to("main_menu");
 
+	// ----- Update Background -----
 
-	FloatRect player_bounds = player_.game_object().bounds();
-	player_bounds.width_ += 20;
-	player_bounds.left_ -= 10;
-	player_bounds.top_ += player_bounds.height_;
-	player_bounds.height_ /= 4;
+	update_background();
 
-	const float kBackgroundScrollSpeed = 100.0f;
+	// -------------------------
 
-	Vector2f v = Vector2f(-kBackgroundScrollSpeed * Bengine::delta_time(), 0.0f);
+	// ----- Update Player -----
 
-	obj_background_->transform().move(v);
-	obj_background_2_->transform().move(v);
+	update_player();
 
-	if(obj_background_->transform().position().x_ <= -obj_background_->bounds().width_)
-	{
-		obj_background_->transform().set_position(Vector2f(obj_background_2_->bounds().left_ + obj_background_2_->bounds().width_, 0.0f));
-	}
-
-	if (obj_background_2_->transform().position().x_ <= -obj_background_2_->bounds().width_)
-	{
-		obj_background_2_->transform().set_position(Vector2f(obj_background_->bounds().left_ + obj_background_->bounds().width_, 0.0f));
-	}
-
-	window_->draw(player_bounds, kClrPink);
-
-	bool grounded = false;
-	for(unsigned int i = 0; i < platforms_.size(); ++i)
-	{
-		for(auto & segment : platforms_[i]->segments())
-		{
-			segment->rigidbody()->SetLinearVelocity(b2Vec2(-platform_speed_ * Bengine::delta_time(), 0.0f));
-
-			if(grounded)
-			{
-				continue;
-			}
-
-			grounded = segment->bounds().intersects(player_bounds);
-		}
-	}
-	player_.set_grounded(grounded);
-
-	if(keyboard->key_pressed(SDLK_w))
-	{
-		player_.jump();
-	}
-
-	if (player_.game_object().transform().position().y_ > window_->size().y_ || player_.game_object().transform().position().x_ < 0)
+	if (player_->game_object().transform().position().y_ > window_->size().y_ || player_->game_object().transform().position().x_ < 0)
 	{
 		return scene_manager_->transition_to("game");
 	}
 
-	// ----- Update Physics -----
+	// -------------------------
+
+	// ----- Update Platforms -----
 
 	update_platforms();
 
+	// -------------------------
+
+	// ----- Update Score -----
+
+	update_score();
+
+	// -------------------------
+
+	// ----- Update Physics Objects -----
 
 	World::instance()->Step(1 / 60.0f, 8, 3);
-
-	update_platforms();
 
 	for (auto body = World::instance()->GetBodyList(); body != nullptr; body = body->GetNext())
 	{
@@ -261,24 +235,7 @@ bool BG::ScnGame::update()
 		}
 	}
 
-	b2Vec2 velocity = player_.game_object().rigidbody()->GetLinearVelocity();
-	player_.game_object().rigidbody()->SetLinearVelocity(b2Vec2(10.0f * BG::Bengine::delta_time(), velocity.y));
-
-
-
 	// -------------------------
-
-
-	if(tmr_score_.expired())
-	{
-		score_ += kScorePerSecond / 10;
-		platform_speed_ += 1.0f;
-		tmr_score_.reset();
-	}
-
-	txt_score_.set_text(std::to_string(score_));
-	txt_score_.transform().set_position(Vector2f(window_->size().x_ - txt_score_.bounds().width_, 0.0f));
-
 
 	return true;
 }
@@ -290,33 +247,47 @@ bool BG::ScnGame::draw()
 	window_->draw(*obj_background_);
 	window_->draw(*obj_background_2_);
 
-	window_->draw(player_.game_object());
-
-	window_->draw(txt_score_);
-
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
 	{
-		for(auto & segment : platforms_[i]->segments())
+		std::vector<GameObject*> segments = platforms_[i]->segments();
+		for(unsigned int j = 0; j < segments.size(); ++j)
 		{
-			window_->draw(*segment);
+			window_->draw(*segments[j]);
 		}
 	}
 
+	window_->draw(player_->game_object());
 
-	
+	window_->draw(txt_score_);
+
 	window_->display();
 
 	return true;
 }
 
+void BG::ScnGame::update_background() const
+{
+	Vector2f velocity = Vector2f(-background_scroll_speed_ * Bengine::delta_time(), 0.0f);
+
+	obj_background_->transform().move(velocity);
+	obj_background_2_->transform().move(velocity);
+
+	if (obj_background_->transform().position().x_ <= -obj_background_->bounds().width_)
+		obj_background_->transform().set_position(Vector2f(obj_background_2_->bounds().left_ + obj_background_2_->bounds().width_, 0.0f));
+
+	if (obj_background_2_->transform().position().x_ <= -obj_background_2_->bounds().width_)
+		obj_background_2_->transform().set_position(Vector2f(obj_background_->bounds().left_ + obj_background_->bounds().width_, 0.0f));
+}
+
 void BG::ScnGame::update_platforms()
 {
-
-
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
-	{
-		FloatRect platform_bounds = platforms_[i]->bounds();
+	{	
+		std::vector<GameObject*> segments = platforms_[i]->segments();
+		for (unsigned int j = 0; j < segments.size(); ++j)
+			segments[j]->rigidbody()->SetLinearVelocity(b2Vec2(-platform_speed_ * Bengine::delta_time(), 0.0f));
 
+		FloatRect platform_bounds = platforms_[i]->bounds();
 		if (platform_bounds.left_ + platform_bounds.width_ > 0)
 			continue;
 
@@ -336,11 +307,11 @@ void BG::ScnGame::update_platforms()
 			}
 		}
 
-		furthest_x += Platform::kTileSize * Random::random_int(kSpaceMin, kSpaceMax);		
+		furthest_x += Platform::kTileSize * Random::random_int(kPlatformSpaceTilesMin, kPlatformSpaceTilesMax);		
 
-		int row = 0;
+		int row;
 
-		if(furthest_row == kPlatformRows)
+		if(furthest_row == kPlatformRowsMax)
 		{
 			row = furthest_row - 1;
 		}
@@ -355,4 +326,59 @@ void BG::ScnGame::update_platforms()
 
 		platforms_[i]->set_position(Vector2f(furthest_x, window_->size().y_ - Platform::kTileSize * row));
 	}
+}
+
+void BG::ScnGame::update_score()
+{
+	if (!tmr_score_.expired())
+		return;
+
+	score_ += kScoreIncrement;
+	platform_speed_ += kPlatformSpeedIncrement;
+	background_scroll_speed_ += kBackgroundScrollSpeedIncrement;
+
+	txt_score_.set_text(std::to_string(score_));
+	txt_score_.transform().set_position(Vector2f(window_->size().x_ - txt_score_.bounds().width_ - 32.0f, 32.0f));
+
+	tmr_score_.reset();
+}
+
+void BG::ScnGame::update_player()
+{
+	bool grounded = false;
+	
+	// Create a bounding box that represents the position of the Player's feet 
+	FloatRect players_feet = player_->game_object().bounds();
+	players_feet.top_ += players_feet.height_;
+	players_feet.height_ = 10.0f;
+
+	for(unsigned int i = 0; i < platforms_.size(); ++i)
+	{
+		std::vector<GameObject*> segments = platforms_[i]->segments();
+		for(unsigned int j = 0; j < segments.size(); ++j)
+		{
+			if (!players_feet.intersects(segments[j]->bounds()))
+				continue;
+
+			// If the Player's feet intersects with any platform segment they are grounded
+			grounded = true;
+			break;
+		}
+
+		if (grounded)
+			break;
+	}
+
+	player_->set_grounded(grounded);
+
+	if (keyboard_->key_pressed(SDLK_w))
+	{
+		player_->jump();
+	}
+
+	float player_speed = abs(player_->game_object().position().x_ - player_desired_x_);
+	b2Body* player_body = player_->game_object().rigidbody();
+	player_body->SetLinearVelocity(b2Vec2(player_speed * Bengine::delta_time(), player_body->GetLinearVelocity().y));
+
+
 }

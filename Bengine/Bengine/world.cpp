@@ -6,8 +6,8 @@ b2World* BG::World::instance()
 {
 	if(instance_ == nullptr)
 	{
-		b2Vec2 kDefaultGravity = b2Vec2(0.0f, 80.0f);
-		instance_ = new b2World(kDefaultGravity);
+		b2Vec2 default_gravity = b2Vec2(0.0f, 100.0f);
+		instance_ = new b2World(default_gravity);
 	}
 	return instance_;
 }

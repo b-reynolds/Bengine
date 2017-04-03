@@ -5,6 +5,7 @@
 #include <vector>
 #include "Text.h"
 #include "timer.h"
+#include "keyboard.h"
 
 namespace BG
 {
@@ -17,63 +18,97 @@ namespace BG
 		explicit ScnGame(Window& window, SceneManager& scene_manager);
 
 		bool load() override;
-
 		bool unload() override;
 
 		bool update() override;
-
 		bool draw() override;
 
 	private:
 
-		const Colour kBackgroundColour = Colour(102, 144, 184, 255);
+		/* ---- Score ---- */
 
-		const int kPlatformTilesMin = 0;
-
-		const unsigned int kPlatformPoolSize = 50;
-
-		const int kSpaceChance = 5;
-		const int kSpaceMin = 1;
-		const int kSpaceMax = 2;
-
-		const int kPlatformRows = 3;
-
-
-		const int kPlatformTilesMax = 6;
-
-		const int kScorePerSecond = 100;
+		const std::string kScoreFontFilePath = "Fonts/MetalReason.ttf";
+		const int kScoreTextSize = 150;
+		const int kScoreIncrement = 10;
 
 		int score_;
 
-		float end_platform_x_;
+		Font* fnt_score_;
+		Text txt_score_;
 
-		void update_platforms();
+		Timer tmr_score_;
 
-		float platform_speed_;
+		void update_score();
 
-		Texture* txtr_player_;
-		Texture* txtr_background_;
-		Texture* txtr_background_2_;
+		/* ------------------------------ */
+
+		/* ---- Music ---- */
+
+		const std::string kMusicLoopFilePath = "Audio/GameLoop.mp3";
+		const float kMusicLoopVolume = 128.0f;
 
 		Music* mus_loop_;
 
-		Sprite* spr_player_;
+		/* ------------------------------ */
+
+		/* ---- Scrolling Background ---- */
+
+		const std::string kBackgroundSegOneFilePath = "Images/Game/Background1.png";
+		const std::string kBackgroundSegTwoFilePath = "Images/Game/Background2.png";
+		const float kBackgroundScrollSpeedDefault = 100.0f;
+		const float kBackgroundScrollSpeedIncrement = 1.0f;
+
+		float background_scroll_speed_;
+
+		Texture* txtr_background_;
+		Texture* txtr_background_2_;
+
 		Sprite* spr_background_;
 		Sprite* spr_background_2_;
 
 		GameObject* obj_background_;
 		GameObject* obj_background_2_;
 
-		Text txt_score_;
+		void update_background() const;
 
-		Font* fnt_score_;
+		/* ------------------------------ */
 
-		Timer tmr_score_;
+		/* ---- Platforms ---- */
 
+		const float kPlatformSpeedDefault = 1000.0f;
+		const float kPlatformSpeedIncrement = 1.0f;
 
-		Player player_;
+		const int kPlatformTilesMin = 2;
+		const int kPlatformTilesMax = 5;
+		const int kPlatformRowsMax = 3;
+		const int kPlatformSpaceProbability = 5;
+		const int kPlatformSpaceTilesMin = 0;
+		const int kPlatformSpaceTilesMax = 2;
+
+		float platform_speed_;
+		float end_platform_x_;
 
 		std::vector<Platform*> platforms_;
+
+		void update_platforms();
+
+		/* ------------------------------ */
+
+		/* ---- Player ---- */
+
+		Player* player_;
+
+		float player_desired_x_;
+
+		void update_player();
+
+		/* ------------------------------ */
+
+		/* ---- Input ---- */
+
+		Keyboard* keyboard_;
+
+		/* ------------------------------ */
 
 	};
 
