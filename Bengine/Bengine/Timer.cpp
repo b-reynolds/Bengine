@@ -24,5 +24,5 @@ void BG::Timer::reset()
 
 int BG::Timer::time() const
 {
-	return static_cast<int>(std::chrono::duration_cast<std::chrono::seconds>(Clock::now().time_since_epoch()).count());
+	return static_cast<int>(std::chrono::duration_cast<std::chrono::milliseconds>(Clock::now().time_since_epoch()).count());
 }
