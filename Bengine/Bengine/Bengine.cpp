@@ -159,6 +159,7 @@ bool BG::Bengine::run()
 
 		if(!game.run(window_))
 		{
+			game.exit();
 			exit();
 			return false;
 		}

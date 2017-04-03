@@ -59,5 +59,5 @@ void Game::draw() const
 
 void Game::exit()
 {
-
+	scene_manager_.current_scene().unload();
 }
