@@ -25,7 +25,7 @@ namespace BG
 
 	static const Colour kClrRed = Colour(255, 0, 0, 255);
 	static const Colour kClrGreen = Colour(0, 255, 0, 255);
-	static const Colour kClrblue = Colour(0, 0, 255, 255);
+	static const Colour kClrBlue = Colour(0, 0, 255, 255);
 
 	static const Colour kClrPink = Colour(255, 51, 255, 255);
 

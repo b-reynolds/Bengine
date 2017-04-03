@@ -9,6 +9,7 @@
 BG::ScnGame::ScnGame(Window& window, SceneManager& scene_manager) : Scene(window, scene_manager)
 {
 	txtr_player_ = nullptr;
+	
 }
 
 bool BG::ScnGame::load()
@@ -33,26 +34,34 @@ bool BG::ScnGame::load()
 
 	// -------------------------
 
-	int tiles_x = window_->size().x_ / kPlatformTileSize;
+	int tiles_left = window_->size().x_ / Platform::kTileSize;
 
-	for(unsigned int i = 0; i < tiles_x; ++i)
+	while(tiles_left != 0)
 	{
-		platforms_.push_back(new Platform(Vector2f(kPlatformTileSize, kPlatformTileSize), Vector2f(kPlatformTileSize * i, window_->size().y_ - kPlatformTileSize), kClrWhite, *window_));
+		int tiles = Random::random_int(1, tiles_left >= 5 ? 5 : tiles_left);
+		tiles_left -= tiles;
+
+		if(platforms_.empty())
+		{	
+			platforms_.push_back(new Platform(Vector2f(0.0f, window_->size().y_ - Platform::kTileSize), tiles, window_));
+			continue;
+		}
+
+		FloatRect last = platforms_[platforms_.size() - 1]->bounds();
+
+		platforms_.push_back(new Platform(Vector2f(last.left_ + last.width_, last.top_), tiles, window_));
 	}
 
-	int tile_size = 64;
 
-	for(unsigned int i = 1; i < tiles_x; ++i)
-	{
-	}
 
 	platform_speed_ = 1000.0f;
+
 
 	window_->set_clear_colour(kClrBlack);
 
 	loaded_ = true;
 
-
+	end_platform_x_ = 0.0f;
 
 	return true;
 }
@@ -82,6 +91,34 @@ bool BG::ScnGame::update()
 {
 	Keyboard* keyboard = Keyboard::instance();
 
+	static bool grounded;
+
+	FloatRect player_bounds = player_.game_object().bounds();
+	player_bounds.width_ += 20;
+	player_bounds.left_ -= 10;
+	player_bounds.top_ += player_bounds.height_;
+	player_bounds.height_ /= 4;
+
+
+	window_->draw(player_bounds, kClrPink);
+
+	for(unsigned int i = 0; i < platforms_.size(); ++i)
+	{
+
+		for(auto & segment : platforms_[i]->segments())
+		{
+			FloatRect segment_bounds = segment->bounds();
+			segment_bounds.height_ = Platform::kTileSize * 0.2f;
+
+			if(segment_bounds.intersects(player_bounds))
+			{
+				grounded = true;
+			}
+
+			segment->rigidbody()->SetLinearVelocity(b2Vec2(-platform_speed_ * Bengine::delta_time(), 0.0f));
+		}
+	}
+
 	if(keyboard->key_down(SDLK_a))
 	{
 		player_.move(Vector2f(-1.0f, 0.0f));
@@ -91,17 +128,26 @@ bool BG::ScnGame::update()
 		player_.move(Vector2f(1.0f, 0.0f));
 	}
 
+	if(keyboard->key_pressed(SDLK_w) && grounded)
+	{
+		player_.game_object().rigidbody()->SetLinearVelocity(b2Vec2(player_.game_object().rigidbody()->GetLinearVelocity().x, -1000.0f * Bengine::delta_time()));
+		grounded = false;
+	}
+
 	// ----- Update Physics -----
 
-	//update_platforms();
+	update_platforms();
+
 
 	World::instance()->Step(1 / 60.0f, 8, 3);
+
+	update_platforms();
 
 	for (auto body = World::instance()->GetBodyList(); body != nullptr; body = body->GetNext())
 	{
 		auto game_object = static_cast<GameObject*>(body->GetUserData());
 
-		if (game_object != nullptr)
+		if (game_object != nullptr && game_object->active())
 		{
 			game_object->apply_physics(body);
 		}
@@ -121,8 +167,20 @@ bool BG::ScnGame::draw()
 
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
 	{
-		window_->draw(platforms_[i]->game_object());
+		for(auto & segment : platforms_[i]->segments())
+		{
+			window_->draw(*segment);
+		}
+		window_->draw(platforms_[i]->bounds(), kClrGreen);
 	}
+
+	FloatRect player_bounds = player_.game_object().bounds();
+	player_bounds.width_ += 20;
+	player_bounds.left_ -= 10;
+	player_bounds.top_ += player_bounds.height_;
+	player_bounds.height_ /= 4;
+	window_->draw(player_bounds, kClrPink);
+
 	
 	window_->display();
 
@@ -131,33 +189,29 @@ bool BG::ScnGame::draw()
 
 void BG::ScnGame::update_platforms()
 {
+
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
 	{
-		platforms_[i]->game_object().rigidbody()->SetLinearVelocity(b2Vec2(-platform_speed_ * Bengine::delta_time(), 0.0f));
-
-		if(platforms_[i]->game_object().transform().position().x_ > -kPlatformTileSize)
+		if(platforms_[i]->bounds().left_ + platforms_[i]->bounds().width_ > 0)
 		{
 			continue;
 		}
 
-		Platform* end_platform = nullptr;
-		for(unsigned int j = 0; j < platforms_.size(); ++j)
+		float furthest_x = 0.0f;
+		for (unsigned int j = 0; j < platforms_.size(); ++j)
 		{
-			if(end_platform == nullptr)
-			{
-				end_platform = platforms_[j];
-				continue;
-			}
+			float platform_x = platforms_[j]->bounds().left_ + platforms_[j]->bounds().width_;
 
-			if(platforms_[j]->game_object().transform().position().x_ > end_platform->game_object().transform().position().x_)
+			if(platform_x > furthest_x)
 			{
-				end_platform = platforms_[j];
+				furthest_x = platform_x;
 			}
 		}
 
-		platforms_[i]->game_object().set_position(Vector2f(end_platform->game_object().transform().position().x_ + (kPlatformTileSize * 2.0f), end_platform->game_object().transform().position().y_ + kPlatformTileSize));
+		furthest_x += Platform::kTileSize * Random::random_int(0, 4);
+		float platform_y = window_->size().y_ - (Random::random_int(0, 1) == 0 ? Platform::kTileSize : (Platform::kTileSize * 2.0f));
+
+		platforms_[i]->set_position(Vector2f(furthest_x, platform_y));
 	}
-
-
 
 }

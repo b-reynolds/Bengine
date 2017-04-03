@@ -21,6 +21,11 @@ BG::GameObject::GameObject(Sprite* sprite, const Vector2f& position)
 	body_ = nullptr;
 }
 
+BG::GameObject::~GameObject()
+{
+	//delete sprite_;
+}
+
 /**
  * \brief Returns a reference to the Game Object's underlying Transform
  */

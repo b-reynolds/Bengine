@@ -91,6 +91,16 @@ BG::Texture* BG::ResourceManager::texture(const std::string& file_path, Window* 
 }
 
 /**
+ * \brief Determines if a given texture exists and is loaded
+ * \param file_path file path of the image resource
+ */
+bool BG::ResourceManager::texture_exists(const std::string& file_path)
+{
+	auto result = textures_.find(file_path);
+	return result != textures_.end();
+}
+
+/**
 * \brief Free the memory associated with an image resource and remove it from the textures map.
 * Iterates through the textures map, if a resource with the same file path is found, frees all associated memory and nullifies the pointer.
 * \param file_path file path of the image resource

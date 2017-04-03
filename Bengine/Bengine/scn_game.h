@@ -24,7 +24,13 @@ namespace BG
 
 	private:
 
-		const float kPlatformTileSize = 64.0f;
+		const int kPlatformTilesMin = 0;
+
+		const unsigned int kPlatformPoolSize = 50;
+
+		const int kPlatformTilesMax = 6;
+
+		float end_platform_x_;
 
 		void update_platforms();
 

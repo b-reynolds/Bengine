@@ -29,6 +29,9 @@ namespace BG
 		/* Loads an image resource into a Texture and returns it */
 		Texture* texture(const std::string &file_path, Window* window);
 
+		/* Determines if a given texture exists and is loaded */
+		bool texture_exists(const std::string& file_path);
+
 		/* Frees the memory associated with an image resource and removes it from the textures map */
 		void free_texture(const std::string &file_path);
 
