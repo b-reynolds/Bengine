@@ -30,11 +30,11 @@ namespace BG
 
 		const unsigned int kPlatformPoolSize = 50;
 
-		const int kSpaceChance = 3;
+		const int kSpaceChance = 5;
 		const int kSpaceMin = 1;
-		const int kSpaceMax = 5;
+		const int kSpaceMax = 2;
 
-		const int kPlatformRows = 7;
+		const int kPlatformRows = 3;
 
 
 		const int kPlatformTilesMax = 6;
@@ -46,8 +46,17 @@ namespace BG
 		float platform_speed_;
 
 		Texture* txtr_player_;
+		Texture* txtr_background_;
+		Texture* txtr_background_2_;
+
 
 		Sprite* spr_player_;
+		Sprite* spr_background_;
+		Sprite* spr_background_2_;
+
+		GameObject* obj_background_;
+		GameObject* obj_background_2_;
+
 
 		Player player_;
 

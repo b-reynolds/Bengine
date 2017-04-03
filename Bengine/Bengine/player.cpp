@@ -2,7 +2,7 @@
 #include "World.h"
 #include "Bengine.h"
 
-const float Player::kJumpPower = 1000.0f;
+const float Player::kJumpPower = 2000.0f;
 
 Player::Player()
 {

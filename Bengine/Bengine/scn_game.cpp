@@ -9,7 +9,15 @@
 BG::ScnGame::ScnGame(Window& window, SceneManager& scene_manager) : Scene(window, scene_manager)
 {
 	txtr_player_ = nullptr;
-	
+	txtr_background_ = nullptr;
+
+	spr_player_ = nullptr;
+	spr_background_ = nullptr;
+
+	obj_background_ = nullptr;
+
+	end_platform_x_ = 0.0f;
+	platform_speed_ = 0.0f;
 }
 
 bool BG::ScnGame::load()
@@ -18,20 +26,30 @@ bool BG::ScnGame::load()
 
 	// ----- Load Textures -----
 
-	txtr_player_ = resource_manager->texture("Images/Player/Player.png", window_);
+	txtr_player_ = resource_manager->texture("Images/Game/Player.png", window_);
+	txtr_background_ = resource_manager->texture("Images/Game/Background1.png", window_);
+	txtr_background_2_ = resource_manager->texture("Images/Game/Background2.png", window_);
 
 	// -------------------------
 
 	// ----- Initialize Sprites -----
 
 	spr_player_ = new Sprite(txtr_player_, window_);
+	spr_background_ = new Sprite(txtr_background_, window_);
+	spr_background_2_ = new Sprite(txtr_background_2_, window_);
+
+	// -------------------------
+
+	// ----- Initialize Game Objects -----
+
+	obj_background_ = new GameObject(spr_background_, Vector2f(0.0f, 0.0f));
+	obj_background_2_ = new GameObject(spr_background_2_, Vector2f(spr_background_->size().x_, 0.0f));
 
 	// -------------------------
 
 	// ----- Initialize Player ----- // TODO: Clean
 
-	player_ = Player(*spr_player_, Vector2f(spr_player_->size().x_ * 10.0f, window_->size().y_ - Platform::kTileSize * (kPlatformRows + 2)));
-
+	player_ = Player(*spr_player_, Vector2f(spr_player_->size().x_ * 5.0f, window_->size().y_ - Platform::kTileSize * (kPlatformRows + 2)));
 
 	// -------------------------
 
@@ -80,7 +98,9 @@ bool BG::ScnGame::unload()
 
 	// ----- Free Textures -----
 
-	resource_manager->free_texture("Images/Player/Player.png");
+	resource_manager->free_texture("Images/Game/Player.png");
+	resource_manager->free_texture("Images/Game/Background1.png");
+	resource_manager->free_texture("Images/Game/Background2.png");
 
 	// -------------------------
 
@@ -97,6 +117,15 @@ bool BG::ScnGame::unload()
 	// ----- Free Sprites -----
 
 	delete spr_player_;
+	delete spr_background_;
+	delete spr_background_2_;
+
+	// -------------------------
+
+	// ----- Free Game Objects -----
+
+	delete obj_background_;
+	delete obj_background_2_;
 
 	// -------------------------
 
@@ -116,6 +145,22 @@ bool BG::ScnGame::update()
 	player_bounds.top_ += player_bounds.height_;
 	player_bounds.height_ /= 4;
 
+	const float kBackgroundScrollSpeed = 100.0f;
+
+	Vector2f v = Vector2f(-kBackgroundScrollSpeed * Bengine::delta_time(), 0.0f);
+
+	obj_background_->transform().move(v);
+	obj_background_2_->transform().move(v);
+
+	if(obj_background_->transform().position().x_ <= -obj_background_->bounds().width_)
+	{
+		obj_background_->transform().set_position(Vector2f(obj_background_2_->bounds().left_ + obj_background_2_->bounds().width_, 0.0f));
+	}
+
+	if (obj_background_2_->transform().position().x_ <= -obj_background_2_->bounds().width_)
+	{
+		obj_background_2_->transform().set_position(Vector2f(obj_background_->bounds().left_ + obj_background_->bounds().width_, 0.0f));
+	}
 
 	window_->draw(player_bounds, kClrPink);
 
@@ -178,6 +223,9 @@ bool BG::ScnGame::update()
 bool BG::ScnGame::draw()
 {
 	window_->clear();
+
+	window_->draw(*obj_background_);
+	window_->draw(*obj_background_2_);
 
 	window_->draw(player_.game_object());
 
