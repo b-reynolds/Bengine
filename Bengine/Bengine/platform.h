@@ -17,6 +17,8 @@ public:
 
 	BG::FloatRect bounds();
 
+	b2Body& rigidbody() const;
+
 	const std::vector<BG::GameObject*>& segments() const;
 
 private:
@@ -36,6 +38,8 @@ private:
 	std::vector<BG::GameObject*> segments_;
 
 	BG::Sprite* sprite_;
+
+	b2Body* rigidbody_;
 
 };
 

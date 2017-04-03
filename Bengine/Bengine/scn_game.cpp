@@ -30,11 +30,12 @@ bool BG::ScnGame::load()
 
 	// ----- Initialize Player ----- // TODO: Clean
 
-	player_ = Player(*spr_player_);
+	player_ = Player(*spr_player_, Vector2f(256, window_->size().y_ - (Platform::kTileSize * 3.0f)));
+
 
 	// -------------------------
 
-	int tiles_left = window_->size().x_ / Platform::kTileSize;
+	int tiles_left = (window_->size().x_ / Platform::kTileSize) * 2;
 
 	while(tiles_left != 0)
 	{
@@ -76,6 +77,16 @@ bool BG::ScnGame::unload()
 
 	// -------------------------
 
+	// ----- Free Physics Objects -----
+
+	for(unsigned int i = 0; i < platforms_.size(); ++i)
+	{
+		delete platforms_[i];
+	}
+	platforms_.clear();
+
+	// -------------------------
+
 	// ----- Free Sprites -----
 
 	delete spr_player_;
@@ -91,7 +102,6 @@ bool BG::ScnGame::update()
 {
 	Keyboard* keyboard = Keyboard::instance();
 
-	static bool grounded;
 
 	FloatRect player_bounds = player_.game_object().bounds();
 	player_bounds.width_ += 20;
@@ -102,36 +112,31 @@ bool BG::ScnGame::update()
 
 	window_->draw(player_bounds, kClrPink);
 
+	bool grounded = false;
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
 	{
-
 		for(auto & segment : platforms_[i]->segments())
 		{
-			FloatRect segment_bounds = segment->bounds();
-			segment_bounds.height_ = Platform::kTileSize * 0.2f;
+			segment->rigidbody()->SetLinearVelocity(b2Vec2(-platform_speed_ * Bengine::delta_time(), 0.0f));
 
-			if(segment_bounds.intersects(player_bounds))
+			if(grounded)
 			{
-				grounded = true;
+				continue;
 			}
 
-			segment->rigidbody()->SetLinearVelocity(b2Vec2(-platform_speed_ * Bengine::delta_time(), 0.0f));
+			grounded = segment->bounds().intersects(player_bounds);
 		}
 	}
+	player_.set_grounded(grounded);
 
-	if(keyboard->key_down(SDLK_a))
+	if(keyboard->key_pressed(SDLK_w))
 	{
-		player_.move(Vector2f(-1.0f, 0.0f));
-	}
-	else if(keyboard->key_down(SDLK_d))
-	{
-		player_.move(Vector2f(1.0f, 0.0f));
+		player_.jump();
 	}
 
-	if(keyboard->key_pressed(SDLK_w) && grounded)
+	if (player_.game_object().transform().position().y_ > window_->size().y_ || player_.game_object().transform().position().x_ < 0)
 	{
-		player_.game_object().rigidbody()->SetLinearVelocity(b2Vec2(player_.game_object().rigidbody()->GetLinearVelocity().x, -1000.0f * Bengine::delta_time()));
-		grounded = false;
+		return scene_manager_->transition_to("game");
 	}
 
 	// ----- Update Physics -----
@@ -190,28 +195,58 @@ bool BG::ScnGame::draw()
 void BG::ScnGame::update_platforms()
 {
 
+
 	for(unsigned int i = 0; i < platforms_.size(); ++i)
 	{
-		if(platforms_[i]->bounds().left_ + platforms_[i]->bounds().width_ > 0)
-		{
+		FloatRect platform_bounds = platforms_[i]->bounds();
+
+		if (platform_bounds.left_ + platform_bounds.width_ > 0)
 			continue;
-		}
 
 		float furthest_x = 0.0f;
-		for (unsigned int j = 0; j < platforms_.size(); ++j)
-		{
-			float platform_x = platforms_[j]->bounds().left_ + platforms_[j]->bounds().width_;
 
-			if(platform_x > furthest_x)
+		for(unsigned int j = 0; j < platforms_.size(); ++j)
+		{
+			platform_bounds = platforms_[j]->bounds();
+
+			float platform_x = platform_bounds.left_ + platform_bounds.width_;
+
+			if (platform_x > furthest_x)
 			{
 				furthest_x = platform_x;
 			}
 		}
 
-		furthest_x += Platform::kTileSize * Random::random_int(0, 4);
-		float platform_y = window_->size().y_ - (Random::random_int(0, 1) == 0 ? Platform::kTileSize : (Platform::kTileSize * 2.0f));
+		if(Random::random_int(0, kSpaceChance) == 3)
+			furthest_x += Platform::kTileSize * Random::random_int(kSpaceMin, kSpaceMax);
+		
+		int row = Random::random_int(1, kPlatformRows);
 
-		platforms_[i]->set_position(Vector2f(furthest_x, platform_y));
+		platforms_[i]->set_position(Vector2f(furthest_x, window_->size().y_ - Platform::kTileSize * row));
 	}
+
+	//for(unsigned int i = 0; i < platforms_.size(); ++i)
+	//{
+	//	if(platforms_[i]->bounds().left_ + platforms_[i]->bounds().width_ > 0)
+	//	{
+	//		continue;
+	//	}
+
+	//	float furthest_x = 0.0f;
+	//	for (unsigned int j = 0; j < platforms_.size(); ++j)
+	//	{
+	//		float platform_x = platforms_[j]->bounds().left_ + platforms_[j]->bounds().width_;
+
+	//		if(platform_x > furthest_x)
+	//		{
+	//			furthest_x = platform_x;
+	//		}
+	//	}
+
+	//	furthest_x += Platform::kTileSize * Random::random_int(0, 4);
+	//	float platform_y = window_->size().y_ - (Random::random_int(0, 1) == 0 ? Platform::kTileSize : (Platform::kTileSize * 2.0f));
+
+	//	platforms_[i]->set_position(Vector2f(furthest_x, platform_y));
+	//}
 
 }

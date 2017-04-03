@@ -28,6 +28,13 @@ namespace BG
 
 		const unsigned int kPlatformPoolSize = 50;
 
+		const int kSpaceChance = 3;
+		const int kSpaceMin = 1;
+		const int kSpaceMax = 5;
+
+		const int kPlatformRows = 3;
+
+
 		const int kPlatformTilesMax = 6;
 
 		float end_platform_x_;

@@ -7,16 +7,21 @@ class Player
 public:
 
 	Player();
-	explicit Player(BG::Sprite& sprite);
+
+	explicit Player(BG::Sprite& sprite, const BG::Vector2f& position);
 	~Player();
 
-	void move(const BG::Vector2f& direction);
+	void jump() const;
 
-	BG::GameObject& game_object();
+	void set_grounded(const bool& grounded);
+
+	BG::GameObject& game_object() const;
 
 private:
 
-	static const float kMovementSpeed;
+	static const float kJumpPower;
+
+	bool grounded_;
 
 	BG::GameObject* game_object_;
 	BG::Sprite* sprite_;

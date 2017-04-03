@@ -1,6 +1,8 @@
 #include "platform.h"
 #include "resource_manager.h"
 #include "World.h"
+#include "Box2D/Collision/Shapes/b2PolygonShape.h"
+#include "Box2D/Dynamics/b2Fixture.h"
 
 const int Platform::kTileSize = 64;
 
@@ -69,6 +71,11 @@ void Platform::set_position(const BG::Vector2f& position)
 BG::FloatRect Platform::bounds()
 {
 	return BG::FloatRect(segments_[0]->position().x_, segments_[0]->position().y_, kTileSize * segments_.size(), kTileSize);
+}
+
+b2Body& Platform::rigidbody() const
+{
+	return *rigidbody_;
 }
 
 const std::vector<BG::GameObject*>& Platform::segments() const

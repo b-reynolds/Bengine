@@ -110,6 +110,7 @@ void BG::GameObject::init_physics(b2BodyType body_type, float density, const Vec
 	b2FixtureDef fixture_def;
 	fixture_def.density = density;
 	fixture_def.shape = &shape;
+	fixture_def.friction = 0.0f;
 
 	body_->CreateFixture(&fixture_def);
 }
